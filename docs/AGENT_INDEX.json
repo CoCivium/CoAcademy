@@ -1,0 +1,24 @@
+{
+  "system": "CoAcademy",
+  "generated_utc": "20260316T223159Z",
+  "roots": [
+    "README.md",
+    "COACADEMY_MANIFEST.md",
+    "COACADEMY_INDEX.md",
+    "HUMAN_OVERVIEW.md",
+    "CoTheoryCiv2.md",
+    "Cognocarta_Consenti.md",
+    "CoMegaScroller.md",
+    "CoAura.md",
+    "GIBINDEX_ADDITIONS__CoAcademyDarren.md",
+    "tutorials/collective_intelligence.md",
+    "research/curiosity_engines.md",
+    "rails/onboarding.md"
+  ],
+  "style": {
+    "vibe": "CoBeAxaKittenStyle",
+    "public_first": true,
+    "action_every_wave": true,
+    "coex_over_coint": true
+  }
+}

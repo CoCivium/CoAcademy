@@ -1,0 +1,5 @@
+PAGES_URL=https://cocivium.github.io/CoAcademy/
+CUSTOM_DOMAIN_TARGET=https://coacademy.org/
+GENERATED_UTC=20260316T222446Z
+TYPE=COACADEMY_COEX_STAGE
+DOCS_ROOT=C:\Users\rball\CoExStage\CoAcademy\docs
