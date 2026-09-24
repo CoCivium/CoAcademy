@@ -1,7 +1,8 @@
 {
-  "schema": "RickBar.TrialChannel.v0.1",
-  "state": "HOLD_PRODUCT_ENOUGH",
+  "schema": "RickBar.TrialChannel.v0.2",
+  "state": "HOLD_NATIVE_PRODUCT_ENOUGH",
   "product_id": "RickBar",
+  "portal_id": "RickBarTrialPortal",
   "participant_alias_policy": "PARTICIPANT_RELATIVE_LABEL_NE_CODE_FORK",
   "channel": "prelaunch-r2",
   "version": null,
@@ -10,26 +11,35 @@
   "package_sha256": null,
   "published_at": null,
   "currentness": {
-    "observed_at": "2026-09-24T19:17:23Z+",
-    "source": "CoCivium/CoAura@630ba5f66d5f34267f5b52ee252e77f054f1259a",
-    "status": "SERVING_PROJECTION_CREATED__PRODUCT_PACKAGE_HELD"
+    "observed_at": "2026-09-24T19:35:55Z+",
+    "source": "CoCivium/CoAcademy@e920ecdba7416d4ede7213a24d2d6a7b853e41d3",
+    "status": "STATUS_PORTAL_SERVED__NATIVE_RICKBAR_PACKAGE_HELD"
   },
   "serving_projection": {
     "repository": "CoCivium/CoAcademy",
     "path": "docs/rickbar/",
-    "role": "TEMPORARY_PARTICIPANT_SERVING_PROJECTION",
-    "source_relation": "PROJECTS_PARTICIPANT_VIEW_OF_COAURA_RICKBAR_TRIAL",
-    "projection_loss": "NO_RUNTIME_PACKAGE__NO_COEYES_TELEMETRY__NO_INSTALLER"
+    "role": "PARTICIPANT_STATUS_PORTAL_ONLY",
+    "source_relation": "PROJECTS_TRIAL_STATUS_FOR_NATIVE_RICKBAR",
+    "projection_loss": "NO_NATIVE_EDGE_BAR__NO_LOCAL_RUNTIME__NO_COEYES_RUNTIME__NO_INSTALLER"
   },
-  "participant_message": "Your RickBar trial is being prepared. You do not need to install or update anything yet. This same page will show the real start button only after the trial package passes its product-enough, update, rollback, privacy and degraded-mode checks.",
+  "native_product": {
+    "intended_surface": "WINDOWS_NATIVE_EDGE_BAR_ABOVE_TASKBAR",
+    "primary_role": "LOCAL_FIRST_OBSERVER_CONTROL_PROJECTION",
+    "tray_dependency": "NOT_PRIMARY_UX__DEPRECATION_STATUS_UNPROVEN",
+    "coeyes": "CANDIDATE_EMBODIED_OBSERVER_FEEDBACK_AFFORDANCE",
+    "runtime_binding": "UNPROVEN"
+  },
+  "participant_message": "The RickBar status portal is live. The real native desktop bar is still being prepared. You do not need to install or update anything yet. The start action will appear only after the native package passes product-enough, update, rollback, privacy and degraded-mode checks.",
   "automatic_maintenance": {
     "routine_compatible_updates": true,
     "new_permission_requires_fresh_consent": true,
     "privacy_scope_change_requires_fresh_consent": true
   },
   "gates": {
-    "product_enough": false,
+    "native_product_enough": false,
     "bootstrap": false,
+    "local_runtime_binding": false,
+    "coeyes_runtime": false,
     "autoupdate": false,
     "rollback": false,
     "degraded_mode": false,
@@ -41,13 +51,14 @@
     "participant_files": "OUT_OF_SCOPE"
   },
   "rails": [
-    "PORTAL_NE_PRODUCT_RELEASE",
+    "STATUS_PORTAL_NE_RICKBAR_RUNTIME",
+    "PORTAL_REACHABILITY_NE_PRODUCT_FUNCTIONALITY",
     "VISIBLE_NE_FUNCTIONAL",
     "PARTICIPANT_RELATIVE_LABEL_NE_CODE_FORK",
     "CONTINUAL_USE_NE_BLANKET_UPDATE_AUTHORITY",
     "AUTOUPDATE_NE_PERMISSION_EXPANSION",
     "UPDATE_BUTTON_NE_NORMAL_MAINTENANCE_PATH",
     "SERVING_PROJECTION_NE_SOURCE",
-    "COACADEMY_SERVING_ROLE_NE_RICKBAR_IDENTITY"
+    "TRAY_ICON_NE_PRIMARY_PRODUCT_IDENTITY"
   ]
 }
