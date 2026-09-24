@@ -1,0 +1,53 @@
+{
+  "schema": "RickBar.TrialChannel.v0.1",
+  "state": "HOLD_PRODUCT_ENOUGH",
+  "product_id": "RickBar",
+  "participant_alias_policy": "PARTICIPANT_RELATIVE_LABEL_NE_CODE_FORK",
+  "channel": "prelaunch-r2",
+  "version": null,
+  "release_id": null,
+  "package_url": null,
+  "package_sha256": null,
+  "published_at": null,
+  "currentness": {
+    "observed_at": "2026-09-24T19:17:23Z+",
+    "source": "CoCivium/CoAura@630ba5f66d5f34267f5b52ee252e77f054f1259a",
+    "status": "SERVING_PROJECTION_CREATED__PRODUCT_PACKAGE_HELD"
+  },
+  "serving_projection": {
+    "repository": "CoCivium/CoAcademy",
+    "path": "docs/rickbar/",
+    "role": "TEMPORARY_PARTICIPANT_SERVING_PROJECTION",
+    "source_relation": "PROJECTS_PARTICIPANT_VIEW_OF_COAURA_RICKBAR_TRIAL",
+    "projection_loss": "NO_RUNTIME_PACKAGE__NO_COEYES_TELEMETRY__NO_INSTALLER"
+  },
+  "participant_message": "Your RickBar trial is being prepared. You do not need to install or update anything yet. This same page will show the real start button only after the trial package passes its product-enough, update, rollback, privacy and degraded-mode checks.",
+  "automatic_maintenance": {
+    "routine_compatible_updates": true,
+    "new_permission_requires_fresh_consent": true,
+    "privacy_scope_change_requires_fresh_consent": true
+  },
+  "gates": {
+    "product_enough": false,
+    "bootstrap": false,
+    "autoupdate": false,
+    "rollback": false,
+    "degraded_mode": false,
+    "privacy_authority": false
+  },
+  "privacy": {
+    "telemetry": "NONE_BY_THIS_PORTAL",
+    "cookies": "NONE_BY_THIS_PORTAL",
+    "participant_files": "OUT_OF_SCOPE"
+  },
+  "rails": [
+    "PORTAL_NE_PRODUCT_RELEASE",
+    "VISIBLE_NE_FUNCTIONAL",
+    "PARTICIPANT_RELATIVE_LABEL_NE_CODE_FORK",
+    "CONTINUAL_USE_NE_BLANKET_UPDATE_AUTHORITY",
+    "AUTOUPDATE_NE_PERMISSION_EXPANSION",
+    "UPDATE_BUTTON_NE_NORMAL_MAINTENANCE_PATH",
+    "SERVING_PROJECTION_NE_SOURCE",
+    "COACADEMY_SERVING_ROLE_NE_RICKBAR_IDENTITY"
+  ]
+}
