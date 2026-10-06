@@ -95,6 +95,36 @@ CoAcademy can teach publication literacy as part of inquiry literacy:
 - test whether different readers reconstruct the same meaning
 - practice public-safe translation of speculative or technical material
 
+
+## External signal intake
+
+Publication intelligence may consume public or explicitly subscribed feeds such as RSS/Atom, public newsroom feeds, public GitHub activity, and other lawful read-only sources as discovery inputs.
+
+Signal handling:
+
+```
+discover
+-> bind source/date
+-> dedupe
+-> classify
+-> qualify trust/currentness
+-> relate to existing publication/theory objects
+-> route for review
+```
+
+Discovery is not endorsement, truth, urgency, or permission to publish.
+
+```
+SOURCE_DISCOVERY_NE_TRUST
+TRENDING_NE_IMPORTANT
+FEED_ITEM_NE_TASK
+MENTION_NE_ACK
+RSS_NE_AUTHORITY
+AUTO_INGEST_NE_AUTO_PUBLISH
+```
+
+Prefer one reusable intake contract over a separate watcher per source. News/feed items should become candidate relations or research prompts only when they add material information, challenge, currentness, or receiver value.
+
 ## Boundary
 
 This candidate does not authorize publishing, outreach, targeting, profiling, recommendation manipulation, hidden persuasion, platform automation, or collection of private reader data.
