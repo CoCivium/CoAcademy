@@ -1,6 +1,6 @@
 {
   "system": "CoAcademy",
-  "generated_utc": "20261006T180723Z",
+  "generated_utc": "20261006T181125Z",
   "roots": [
     "README.md",
     "COACADEMY_MANIFEST.md",
@@ -14,6 +14,7 @@
     "tutorials/collective_intelligence.md",
     "research/curiosity_engines.md",
     "research/CoPublicationAdaptiveLens_R0A.md",
+    "research/CoPressProof_R0A.md",
     "rails/onboarding.md"
   ],
   "style": {
@@ -27,6 +28,9 @@
     "discovery_ne_trust": true,
     "feed_item_ne_task": true,
     "auto_ingest_ne_auto_publish": true,
-    "public_release_separate_gate": true
+    "public_release_separate_gate": true,
+    "mention_ne_coverage": true,
+    "aggregation_ne_editorial_reporting": true,
+    "search_summary_ne_source_article": true
   }
 }
