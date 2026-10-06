@@ -14,11 +14,15 @@ Welcome to **CoAcademy**. This is a public learning surface for people, AIs, age
 ☞ [CoAura.md](CoAura.md)
 
 ## 📰 Publication literacy
-☞ [Adaptive publication & public-signal literacy](research/CoPublicationAdaptiveLens_R0A.md)
+☞ [Adaptive publication & public-signal literacy](research/CoPublicationAdaptiveLens_R0A.md)  
+☞ [Press/media evidence register](research/CoPressProof_R0A.md)
 
 Useful habits:
 - a headline is not the underlying claim;
 - a news/RSS item is discovery, not authority;
+- a mention is not independent coverage;
+- aggregation is not editorial reporting;
+- a search/AI summary is not the source article;
 - virality is not validity;
 - provenance, accessibility, correction, challenge, and currentness matter;
 - public release remains separately gated from drafting/testing.
