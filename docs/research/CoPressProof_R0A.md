@@ -2,6 +2,8 @@
 
 State: PUBLIC-SAFE CANDIDATE · NOT CANON · NOT MEDIA CLAIM · NOT PRESS ENDORSEMENT
 
+Machine-readable twin: [CoPressProof_R0A.json](CoPressProof_R0A.json)
+
 ## Purpose
 
 Provide a small evidence register for external media/public-attention claims about CoCivium.
