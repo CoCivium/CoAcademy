@@ -1,0 +1,83 @@
+{
+  "schema": "CoAcademy.CoPressProof.R0A",
+  "state": "PUBLIC_SAFE_CANDIDATE",
+  "generated_utc": "2026-10-08T16:52:00Z",
+  "purpose": "Machine-readable evidence register for external media/public-attention claims about CoCivium.",
+  "evidence_classes": [
+    "SELF_PUBLISHED",
+    "AGGREGATOR_OR_DIRECTORY",
+    "PUBLIC_FORUM_OR_THREAD",
+    "INDEPENDENT_CITATION",
+    "INDEPENDENT_ARTICLE",
+    "INTERVIEW_OR_APPEARANCE",
+    "EDITORIAL_COVERAGE",
+    "SEARCH_OR_AI_SUMMARY",
+    "UNVERIFIED_REFERENCE"
+  ],
+  "required_fields": [
+    "source_or_outlet",
+    "url_or_stable_native_id",
+    "title",
+    "publication_or_observation_date",
+    "evidence_class",
+    "independence_assessment",
+    "direct_source_bound",
+    "archive_snapshot_or_hash",
+    "what_is_actually_said",
+    "what_is_not_established",
+    "currentness",
+    "correction_or_challenge_path"
+  ],
+  "currentness": {
+    "checked_utc": "2026-10-08T16:45:12Z",
+    "checked_terms": [
+      "CoCivium",
+      "CoCivia",
+      "CoTheoryAll",
+      "BeAxaKitten",
+      "Cognocarta Consenti",
+      "Headless Magic Dragon"
+    ],
+    "disposition": "NO_NEW_VERIFIED_INDEPENDENT_COVERAGE_IN_BOUNDED_CHECK",
+    "observed": [
+      "project-controlled GitHub/public material"
+    ],
+    "not_observed_in_bounded_result_set": [
+      "fresh independently verified major-newsroom article",
+      "fresh independently verified interview",
+      "fresh independently verified editorial feature"
+    ],
+    "nonclaims": [
+      "NO_RESULT_IN_BOUNDED_CHECK_NE_GLOBAL_ABSENCE",
+      "PROJECT_OWNED_RESULT_NE_INDEPENDENT_PRESS",
+      "CURRENTNESS_CHECK_NE_MONITORING_COVERAGE"
+    ]
+  },
+  "rails": [
+    "MENTION_NE_COVERAGE",
+    "AGGREGATION_NE_EDITORIAL_REPORTING",
+    "SEARCH_SUMMARY_NE_SOURCE_ARTICLE",
+    "PUBLICITY_NE_VALIDATION",
+    "CITATION_NE_ENDORSEMENT",
+    "INTERVIEW_NE_APPROVAL",
+    "OUTLET_NAME_NE_VERIFIED_ARTICLE",
+    "ABSENCE_IN_BOUNDED_SEARCH_NE_GLOBAL_ABSENCE"
+  ],
+  "promotion_ladder": [
+    "DISCOVERED_LEAD",
+    "SOURCE_BOUND",
+    "CONTENT_INSPECTED",
+    "INDEPENDENCE_CLASSIFIED",
+    "DATE_AND_IDENTITY_VERIFIED",
+    "CLAIMS_NONCLAIMS_EXTRACTED",
+    "VERIFIED_PRESS_REGISTER_ROW"
+  ],
+  "effect_boundary": {
+    "authorizes_outreach": false,
+    "authorizes_reply": false,
+    "authorizes_press_release": false,
+    "authorizes_targeting": false,
+    "authorizes_publication": false
+  },
+  "markdown_twin": "CoPressProof_R0A.md"
+}
