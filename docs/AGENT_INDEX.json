@@ -1,6 +1,6 @@
 {
   "system": "CoAcademy",
-  "generated_utc": "20261006T181125Z",
+  "generated_utc": "20261008T165200Z",
   "roots": [
     "README.md",
     "COACADEMY_MANIFEST.md",
@@ -15,6 +15,7 @@
     "research/curiosity_engines.md",
     "research/CoPublicationAdaptiveLens_R0A.md",
     "research/CoPressProof_R0A.md",
+    "research/CoPressProof_R0A.json",
     "rails/onboarding.md"
   ],
   "style": {
@@ -32,5 +33,10 @@
     "mention_ne_coverage": true,
     "aggregation_ne_editorial_reporting": true,
     "search_summary_ne_source_article": true
+  },
+  "press_proof": {
+    "human": "research/CoPressProof_R0A.md",
+    "machine": "research/CoPressProof_R0A.json",
+    "current_disposition": "NO_NEW_VERIFIED_INDEPENDENT_COVERAGE_IN_BOUNDED_CHECK"
   }
 }
