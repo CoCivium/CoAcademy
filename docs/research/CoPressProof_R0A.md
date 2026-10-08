@@ -122,3 +122,25 @@ CoPressProof+ supplies external-attention evidence to the publication/public-sig
 It does not authorize outreach, replies, press releases, targeting, promotion, or publication.
 
 Press/outreach effects remain separately gated.
+
+
+## Bounded currentness check — 2026-10-08
+
+A fresh read-only public-web scan checked project-specific terms including CoCivium, CoCivia, CoTheoryAll, BeAxaKitten, Cognocarta Consenti, and Headless Magic Dragon.
+
+Observed in the bounded result set:
+
+- project-controlled GitHub/public material;
+- no fresh independently verified major-newsroom article, interview, or editorial feature.
+
+Disposition: `NO_NEW_VERIFIED_INDEPENDENT_COVERAGE_IN_BOUNDED_CHECK`
+
+This is negative bounded evidence only. It does not establish global absence of coverage, and it should be superseded whenever a directly bound independent source appears.
+
+Preserve:
+
+```
+NO_RESULT_IN_BOUNDED_CHECK_NE_GLOBAL_ABSENCE
+PROJECT_OWNED_RESULT_NE_INDEPENDENT_PRESS
+CURRENTNESS_CHECK_NE_MONITORING_COVERAGE
+```
