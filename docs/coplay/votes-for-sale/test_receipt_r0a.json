@@ -1,0 +1,144 @@
+{
+  "schema": "CoCivium.CoPlay.VotesForSale.SourceAndMockUIReceipt.R0A",
+  "date": "2026-10-24",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/votes-for-sale/index.html",
+  "source_blob_sha": "ccbbfdb381144e5f2f6805921da5e33f9389413e",
+  "method": "Exact committed GitHub source in isolated V8 with mocked DOM; no real browser or outside HTTPS client",
+  "passed": 31,
+  "total": 31,
+  "checks": [
+    {
+      "name": "EXACT_R0A_SOURCE",
+      "pass": true
+    },
+    {
+      "name": "MOCK_JS_RUNTIME",
+      "pass": true
+    },
+    {
+      "name": "FICTION_LABEL",
+      "pass": true
+    },
+    {
+      "name": "FEC_OFFICIAL_LINK",
+      "pass": true
+    },
+    {
+      "name": "FEC_REPORTING_PERIOD",
+      "pass": true
+    },
+    {
+      "name": "FEC_THREE_NUMBERS",
+      "pass": true
+    },
+    {
+      "name": "ANTI_ADDITIVE_WARNING",
+      "pass": true
+    },
+    {
+      "name": "DOJ_HISTORIC_CASE_DISTINCT",
+      "pass": true
+    },
+    {
+      "name": "DOJ_PRIMARY_LINK",
+      "pass": true
+    },
+    {
+      "name": "IDEA_PRIMARY_LINK",
+      "pass": true
+    },
+    {
+      "name": "TI_PRIMARY_LINK",
+      "pass": true
+    },
+    {
+      "name": "SOURCE_SCOPE_LIMITS",
+      "pass": true
+    },
+    {
+      "name": "NO_REGIONAL_TARGETING",
+      "pass": true
+    },
+    {
+      "name": "NO_IND_BALLOT_INFERENCE",
+      "pass": true
+    },
+    {
+      "name": "NO_REAL_DONOR_ALLEGATION",
+      "pass": true
+    },
+    {
+      "name": "NO_NETWORK_CALLS",
+      "pass": true
+    },
+    {
+      "name": "NO_PERSISTENCE",
+      "pass": true
+    },
+    {
+      "name": "NO_EXTERNAL_JS",
+      "pass": true
+    },
+    {
+      "name": "NO_FORMS",
+      "pass": true
+    },
+    {
+      "name": "VISIBLE_MACHINE_SOURCE_LINK",
+      "pass": true
+    },
+    {
+      "name": "NO_JS_GUIDANCE",
+      "pass": true
+    },
+    {
+      "name": "RESPONSIVE",
+      "pass": true
+    },
+    {
+      "name": "ROI_CLICK_SWITCH",
+      "pass": true
+    },
+    {
+      "name": "ARIA_SELECTED_ONE",
+      "pass": true
+    },
+    {
+      "name": "INTEGRITY_AD_SWITCH",
+      "pass": true
+    },
+    {
+      "name": "SCORE_WITHHELD",
+      "pass": true
+    },
+    {
+      "name": "SATIRE_RESTORED",
+      "pass": true
+    },
+    {
+      "name": "SOURCE_CHECK_OPENS",
+      "pass": true
+    },
+    {
+      "name": "INDEPENDENT_SOURCE_CHECK_OPENS",
+      "pass": true
+    },
+    {
+      "name": "DISCLOSURE_COUNTER",
+      "pass": true
+    },
+    {
+      "name": "USER_CAN_CLOSE",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Real audience reach and public hosted page independent readback unverified",
+    "No voters, campaigns, donors or officials were contacted",
+    "No actual election finances newly calculated",
+    "DOJ case source is historical and not a finding about 2026",
+    "No real-world study of comprehension, accessibility, or satirical misunderstanding"
+  ],
+  "publication": "PUBLIC_SOURCE_ONLY_PENDING_PAGES_RELEASE_CHECK"
+}
