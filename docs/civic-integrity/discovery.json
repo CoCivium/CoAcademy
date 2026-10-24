@@ -12,14 +12,14 @@
   "public": {
     "intended_url": "https://cocivium.github.io/CoAcademy/civic-integrity/",
     "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
-    "source_blob_sha": "52083a79da73ef5d26583666bed9034f6e1b7996",
+    "source_blob_sha": "98cc530e1501de45f3635b71965f1048f2a20ad4",
     "reviewer_brief": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/BRIEF_FOR_REVIEWERS_R0.md"
   },
   "release_status": {
     "html_source": "GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK",
-    "machine_discovery": "SOURCE_COMMIT_PENDING_IN_THIS_WAVE",
-    "github_pages": "LATEST_COMMIT_WORKFLOW_RESULT_SEPARATELY_CHECK",
-    "independent_http": "NOT_YET_VERIFIED",
+    "machine_discovery": "GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK",
+    "github_pages": "WORKFLOW_SUCCESS_FOR_HEAD_1ad422a11e1ed3c02b9ffed3fb9a07839bedc050__SUBSEQUENT_COMMITS_REQUIRE_RECHECK",
+    "independent_http": "INCONCLUSIVE_LOCAL_TEST_ENVIRONMENT_DNS_RESOLUTION_FAILED",
     "native_browser": "NOT_YET_VERIFIED",
     "public_government_affiliation": "NONE",
     "election_system_access": "NONE",
@@ -151,5 +151,18 @@
     "No allegation intake or public doxxing"
   ],
   "lifecycle": "PUBLIC_SOURCE_R0 -> VERIFIED_BROWSER_R0 -> INDEPENDENT_REVIEW_R0 -> SCOPED_LEARNING_IMPROVEMENT_R1",
-  "maintenance": "Evergreen desire does not entail always-running automation; use an actually authorized independent scheduler/receiver, otherwise state no monitor exists."
+  "maintenance": "Evergreen desire does not entail always-running automation; use an actually authorized independent scheduler/receiver, otherwise state no monitor exists.",
+  "verification_observed": {
+    "pages_workflow": "https://github.com/CoCivium/CoAcademy/actions/runs/40080694342",
+    "workflow_head_sha": "1ad422a11e1ed3c02b9ffed3fb9a07839bedc050",
+    "outcome": "success",
+    "independent_host_fetch": "DNS_RESOLUTION_FAILED_IN_THIS_SANDBOX_NOT_PROOF_OF_SITE_OUTAGE",
+    "isolated_V8_tests": {
+      "passed": 24,
+      "total": 24,
+      "source_sha": "52083a79da73ef5d26583666bed9034f6e1b7996",
+      "receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/test_receipt_r0.json",
+      "source_delta_after_test": "REVIEWER_BRIEF_LINK_CHANGED_ONLY; FULL_NATIVE_BROWSER_RETEST_UNDONE"
+    }
+  }
 }
