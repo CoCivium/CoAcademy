@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CoObserverMap: an evidence-labeled, public-safe inventory of who may view, influence or interact with CoCivium, without identifying imaginary spies or publicly accusing people.">
+<meta name="robots" content="index,follow"><meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/relay/observer-map/">
+<link rel="alternate" type="application/json" title="Observer and potential influence classes" href="./registry.json">
+<title>Who can see what? | CoObserverMap</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Who can see what? CoObserverMap R0","url":"https://cocivium.github.io/CoAcademy/relay/observer-map/","description":"Evidence-aware public observer, dependency, influence and recovery risk inventory. No actual adversary identification or surveillance is claimed.","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-10-24"}</script>
+<style>
+:root{color-scheme:dark;--bg:#071720;--card:#153440;--border:#507e86;--ink:#f2fbfa;--muted:#bed8da;--aqua:#9ee7d9;--gold:#f1dda5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 54% -10%,#255563,transparent 54%),var(--bg);color:var(--ink);font:16px/1.56 system-ui,Segoe UI,Arial,sans-serif}
+a{color:var(--aqua);text-underline-offset:4px}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1140px;margin:auto;padding:21px}
+header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;padding:6px 0 17px;border-bottom:1px solid var(--border)}
+.logo{font-size:20px;font-weight:780}
+.eyebrow{font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:740;color:var(--gold)}
+h1{font-size:clamp(37px,5.8vw,64px);line-height:1.05;letter-spacing:-.04em;max-width:950px;margin:32px 0 14px}
+h2{font-size:clamp(25px,3vw,34px);line-height:1.19;margin:9px 0 13px}h3{font-size:19px;margin:8px 0}
+.lead{font-size:19px;color:var(--muted);max-width:910px}
+.banner{border-left:4px solid var(--gold);background:#263b43;padding:16px;border-radius:0 13px 13px 0;margin:18px 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:19px 0}.stat{background:#102c37;border:1px solid var(--border);border-radius:12px;padding:14px}
+.stat b{display:block;font-size:clamp(24px,3.7vw,34px)}.stat span{font-size:13px;color:var(--muted)}
+.panel{background:linear-gradient(135deg,#20434b,#13323f);padding:22px;border:1px solid var(--border);border-radius:16px;margin:19px 0}
+.controls{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}
+.filter{background:#1d4652;color:var(--ink);padding:9px 13px;border:1px solid #86abae;border-radius:10px}
+.filter[aria-pressed=true]{background:var(--aqua);color:#08272f;font-weight:760}
+.actors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.actor{border:1px solid var(--border);background:#0e2a37;padding:17px;border-radius:14px;min-width:0}
+.actor[hidden]{display:none}
+.actor-top{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid #78a7a8;border-radius:999px;font-size:11px;padding:4px 8px;color:var(--gold)}.tag.subtle{color:var(--muted)}
+.scope,.small{font-size:13px;color:var(--muted)}
+details{border:1px solid #436c77;border-radius:9px;padding:12px;margin:11px 0 0}
+details p{margin:8px 0}
+summary{cursor:pointer;font-weight:710}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:14px 0}
+.step{border:1px solid #639298;background:#0a2a34;border-radius:11px;padding:13px}
+.step strong{display:block;color:var(--gold);font-size:15px}.step p{font-size:13px;color:var(--muted);margin-bottom:0}
+ul{padding-left:24px}li{margin:8px 0}
+footer{font-size:13px;color:var(--muted);margin-top:30px;padding:17px 0;border-top:1px solid var(--border)}
+@media(max-width:820px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:690px){.actors,.stats{grid-template-columns:1fr}}
+@media(max-width:500px){.wrap{padding:14px}.panel{padding:17px}.steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body><div class="wrap">
+<header><strong class="logo">CoCivium ⊂ CoObserverMap</strong><a href="../">Back to CoRelay</a></header>
+<main>
+<h1>Who can see us?<br>Who can affect us?<br>What do we actually know?</h1>
+<p class="lead">People, search engines, AI agents, hosting providers, collaborators, archives and hostile activity can have different relationships with a public project. This map keeps <strong>capability</strong>, <strong>observation</strong> and <strong>accusation</strong> separate.</p>
+<div class="banner"><strong>Important:</strong> This is a public-safe <em>capability-class inventory</em>, not a surveillance report, visitor analytics dashboard, detected-attack log, or blacklist of people. Being a critic, an outsider, an archive or a government employee does not make someone an adversary.</div>
+<div class="stats">
+<div class="stat"><b>15</b><span>Classes in the current candidate ontology</span></div>
+<div class="stat"><b>0 identified</b><span>Individual watchers or malicious actors established by this source audit</span></div>
+<div class="stat"><b>Not live</b><span>No continuous observer, security monitor, recovery robot or incident telemetry claimed</span></div>
+</div>
+<section class="panel" aria-labelledby="inventory">
+<div class="eyebrow">Evidence and exposure classes</div><h2 id="inventory">Explore the classes, not imagined enemies</h2>
+<p>Filter by the strength of the current evidence. <strong>Verified source</strong> means a public artifact or setting was inspected, not that a particular visitor was seen. Historic observations can expire. Potential means a relationship is possible, not present.</p>
+<div class="controls" role="group" aria-label="Filter exposure classes">
+<button type="button" class="filter" data-group="ALL" aria-pressed="true">All classes</button>
+<button type="button" class="filter" data-group="VERIFIED_SOURCE" aria-pressed="false">Verified public sources</button>
+<button type="button" class="filter" data-group="RECENT_OBSERVATION" aria-pressed="false">Bounded observations</button>
+<button type="button" class="filter" data-group="ARCHITECTURAL_CAPABILITY" aria-pressed="false">Possible capabilities</button>
+<button type="button" class="filter" data-group="CANDIDATE" aria-pressed="false">Unverified candidates</button>
+<button type="button" class="filter" data-group="HELD" aria-pressed="false">Held private systems</button>
+<button type="button" class="filter" data-group="NOT_OBSERVED" aria-pressed="false">Unknown space</button>
+</div>
+<p class="small" id="filter-status" aria-live="polite">15 of 15 classes displayed. No identities have been inferred.</p>
+<div class="actors"><article class="actor" data-basis="VERIFIED_SOURCE" data-id="github_public_readers">
+<div class="actor-top"><span class="tag">01 · verified source</span><span class="tag subtle">can view public</span></div>
+<h3>Readers of public GitHub repos and published source</h3>
+<p class="scope">Public CoAcademy/CoCivium repositories and GitHub Pages source</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> VERIFIED_SOURCE. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Public readers can copy material; not an accusation</p>
+<p><strong>Privacy:</strong> Public publication cannot be assumed reversible</p>
+<p><strong>Action:</strong> Keep versions, source citations and corrections; never upload credentials or unverified allegations</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="RECENT_OBSERVATION" data-id="github_host_and_connected_client">
+<div class="actor-top"><span class="tag">02 · recent observation</span><span class="tag subtle">can change public output</span></div>
+<h3>GitHub platform, hosting pipeline and authorized connector</h3>
+<p class="scope">GitHub repository commits, Pages workflow and connected GitHub API</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> RECENT_OBSERVATION. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Provider/dependency concentration</p>
+<p><strong>Privacy:</strong> App/repo permissions should be reviewed separately, not exposed in the public inventory</p>
+<p><strong>Action:</strong> Least privilege, branch protections, provenance validation, atomic updates and independent host readback</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/actions">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="ARCHITECTURAL_CAPABILITY" data-id="general_visitors">
+<div class="actor-top"><span class="tag">03 · architectural capability</span><span class="tag subtle">can view public</span></div>
+<h3>People choosing to visit public CoCivium links</h3>
+<p class="scope">Public HTML, linked resources and GitHub Issues</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> ARCHITECTURAL_CAPABILITY. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Unknown reach is not zero reach and not proven adoption</p>
+<p><strong>Privacy:</strong> Do not create identity, political or visitor-risk profiles</p>
+<p><strong>Action:</strong> Offer accessible content, optional feedback and visible privacy disclosures</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/index.html">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="ARCHITECTURAL_CAPABILITY" data-id="bots_crawlers_ai_systems">
+<div class="actor-top"><span class="tag">04 · architectural capability</span><span class="tag subtle">can view public</span></div>
+<h3>Search crawlers, AI systems, archive spiders and independent feed readers</h3>
+<p class="scope">Sitemaps, llms.txt, JSON, RSS and public HTML</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> ARCHITECTURAL_CAPABILITY. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Crawlability does not establish indexing, endorsement, obedience or AI ingestion</p>
+<p><strong>Privacy:</strong> No hidden prompt injection, model instructions, or demand for endorsement</p>
+<p><strong>Action:</strong> Use versioned source metadata; measure actual verified referrals only when lawful, consented and available</p>
+<p class="small"><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/AI_DISCOVERY_POLICY.md">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="VERIFIED_SOURCE" data-id="feedback_platform">
+<div class="actor-top"><span class="tag">05 · verified source</span><span class="tag subtle">can request feedback</span></div>
+<h3>Voluntary GitHub issue authors, maintainers and moderation systems</h3>
+<p class="scope">Public CoAcademy GitHub Issues and issue templates</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> VERIFIED_SOURCE. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Public intake can attract spam or leaks if unsupervised</p>
+<p><strong>Privacy:</strong> GitHub login and public visibility; no private reports, voter data or identifying accusations</p>
+<p><strong>Action:</strong> Human review, source-link correction, respect opt-out; ordinary comments are not verified facts</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/issues">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="CANDIDATE" data-id="domain_host_registrar">
+<div class="actor-top"><span class="tag">06 · candidate</span><span class="tag subtle">can route or index</span></div>
+<h3>DNS, registrars, web hosting, CDNs and certificates</h3>
+<p class="scope">Planned CoCivium and CoPolitic custom domains; actual service must be confirmed for each</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> CANDIDATE. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Brand impersonation, domain expiry, DNS tampering or single-host dependence are scenarios, not observed incidents</p>
+<p><strong>Privacy:</strong> Do not publish private admin access, registrar credentials, origin IPs or protective controls</p>
+<p><strong>Action:</strong> Independently verify DNS, certificates, ownership, redirect, recovery and failures; do not mark an alias live because it was planned</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="CANDIDATE" data-id="social_channels_and_ranking">
+<div class="actor-top"><span class="tag">07 · candidate</span><span class="tag subtle">can moderate channel</span></div>
+<h3>Social platforms, feeds, media publishers and ranking/recommendation systems</h3>
+<p class="scope">YouTube, Bluesky, Substack, Metricool-related connectors and future authorized channels</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> CANDIDATE. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Ranking can change reach without implying targeting of CoCivium</p>
+<p><strong>Privacy:</strong> Connected account does not prove CoCivium publishing authority; no covert profiling or fake engagement</p>
+<p><strong>Action:</strong> Track publication permission, receipt, corrections and appeals on each exact channel</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="ARCHITECTURAL_CAPABILITY" data-id="human_reviewers_and_collaborators">
+<div class="actor-top"><span class="tag">08 · architectural capability</span><span class="tag subtle">can view public</span></div>
+<h3>Advisers, researchers, builders, journalists, accessibility reviewers and skeptics</h3>
+<p class="scope">Public invite, opted-in reviews and documented contributions</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> ARCHITECTURAL_CAPABILITY. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Independence must be proven, not counted by duplicated AI responses</p>
+<p><strong>Privacy:</strong> A mention or invitation is not consent, endorsement, partnership or co-ownership</p>
+<p><strong>Action:</strong> Track source lineage, voluntary review, permissions, conflict of interest, acknowledgement and corrections</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/README.md">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="ARCHITECTURAL_CAPABILITY" data-id="public_agencies_and_regulators">
+<div class="actor-top"><span class="tag">09 · architectural capability</span><span class="tag subtle">can view public</span></div>
+<h3>Government, election administration, civil-rights offices and regulators</h3>
+<p class="scope">Public official information and lawful reporting channels</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> ARCHITECTURAL_CAPABILITY. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Public agency interest cannot be assumed from the project&#39;s political subject matter</p>
+<p><strong>Privacy:</strong> No assumed official review, surveillance, endorsement or authority to audit</p>
+<p><strong>Action:</strong> Link to official sources, respect due process and legal obligations, do not misrepresent affiliation</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="CANDIDATE" data-id="archives_and_mirrors">
+<div class="actor-top"><span class="tag">10 · candidate</span><span class="tag subtle">can view public</span></div>
+<h3>Wayback Machine, cache operators, independent backups and public mirrors</h3>
+<p class="scope">Copies or snapshots of released static pages and source, if actually captured</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> CANDIDATE. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Archive copy does not imply an executing backend, update receiver or current data</p>
+<p><strong>Privacy:</strong> Archives may preserve retracted public mistakes; removal is not guaranteed</p>
+<p><strong>Action:</strong> Request permissioned snapshots and verify retrieve/render/source integrity; label stale versions</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="HELD" data-id="private_nodes_and_devices">
+<div class="actor-top"><span class="tag">11 · held</span><span class="tag subtle">can control own account</span></div>
+<h3>CoStead, CoGateway, X2 and private/later devices</h3>
+<p class="scope">Potential private custody and transport, not a claimed live public mirror</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> HELD. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Unknown connectivity is not failure nor proof of active surveillance</p>
+<p><strong>Privacy:</strong> No device probing, local logs or private topology published. X2 explicitly held untouched.</p>
+<p><strong>Action:</strong> Separate authenticated source, owner permission, machine-owned readproof and least-privilege canary before use</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="ARCHITECTURAL_CAPABILITY" data-id="service_dependencies">
+<div class="actor-top"><span class="tag">12 · architectural capability</span><span class="tag subtle">can fail or block</span></div>
+<h3>Cloud APIs, runtime libraries, browser extensions, builders and other suppliers</h3>
+<p class="scope">Supply chain and permissioned services, only when installed or actually used</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> ARCHITECTURAL_CAPABILITY. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Compromised dependency is a threat scenario unless supported by logs/advisories</p>
+<p><strong>Privacy:</strong> Permission and data-sharing scope differs by vendor/service</p>
+<p><strong>Action:</strong> Maintain private dependency inventory, update provenance, recovery/rollback test and authorization checks</p>
+<p class="small"><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COWAITLESS_EXECUTION_R0.md">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="ARCHITECTURAL_CAPABILITY" data-id="potential_abusive_actors">
+<div class="actor-top"><span class="tag">13 · architectural capability</span><span class="tag subtle">can harm if compromised</span></div>
+<h3>Unattributed spam, phishing, scraping, impersonation, content poisoning or destructive behavior</h3>
+<p class="scope">Potential attacks on public sites, accounts, users or brand; no case asserted</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> ARCHITECTURAL_CAPABILITY. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> Threat modeling != evidence any specific actor is hostile</p>
+<p><strong>Privacy:</strong> No identity attribution, doxxing, blacklist, secret surveillance or unverified public accusation</p>
+<p><strong>Action:</strong> Record confirmed event privately, preserve lawful evidence, contain/restore, disclose responsibly and permit correction/appeal</p>
+<p class="small"><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/AI_DISCOVERY_POLICY.md">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="CANDIDATE" data-id="internal_watchers_and_agents">
+<div class="actor-top"><span class="tag">14 · candidate</span><span class="tag subtle">can request feedback</span></div>
+<h3>Authorized CoSession, logical AI reviewers, CoPulse/CoAlive observers and tool agents</h3>
+<p class="scope">Potential observer/verification processes; current live binding unverified</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> CANDIDATE. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> A logical observer is not a live process or independently witnessed event</p>
+<p><strong>Privacy:</strong> Every watcher needs permission, bounded resources, no covert device sensing, and no extra authority from replicas</p>
+<p><strong>Action:</strong> Many passive verifiers, few selected actuators, source/version receipts and receiver ACK; no fake always-on agents</p>
+<p class="small"><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Operations/COSESSION_SHADOW_LEDGER_R1.md">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article>
+<article class="actor" data-basis="NOT_OBSERVED" data-id="unknown_other">
+<div class="actor-top"><span class="tag">15 · not observed</span><span class="tag subtle">can view public</span></div>
+<h3>Unclassified observers, unconsidered dependencies, missing data and indirect effects</h3>
+<p class="scope">The negative space of the inventory</p>
+<details><summary>Evidence, limits and response</summary>
+<p><strong>Basis:</strong> NOT_OBSERVED. <strong>Specific watchers identified:</strong> none from this evidence.</p>
+<p><strong>What could matter:</strong> No monitoring system can enumerate all readers or eliminate every failure</p>
+<p><strong>Privacy:</strong> Never invent identities or events to complete a theoretical ALL list</p>
+<p><strong>Action:</strong> Reserve unknown classes, record changed hypotheses and invite bounded independent counterexamples</p>
+<p class="small"><a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/">Inspect source or relevant policy</a>. This link does not prove a specific event occurred.</p>
+</details>
+</article></div>
+</section>
+<section class="panel" id="resilience">
+<div class="eyebrow">CoPhoenix+ · Recovery is a test, not a slogan</div>
+<h2>When one surface fails, can something else actually keep serving?</h2>
+<p>Archives, copied repositories, mirrors, independent hosting and private custody are different failure domains only when independently available and verified. An archive snapshot may preserve static material, but it cannot be assumed to perform live server actions, receive feeds or restore private data.</p>
+<div class="steps">
+<div class="step"><strong>1. Detect</strong><p>Confirm the outage or anomaly from a separate authorized observer and timestamped source</p></div>
+<div class="step"><strong>2. Contain</strong><p>Protect credentials, private information and any compromised output with least privilege</p></div>
+<div class="step"><strong>3. Recover</strong><p>Read exact last-known-good content from an independently verified and permitted copy</p></div>
+<div class="step"><strong>4. Prove</strong><p>Outside client reads correct version; only then resume eligible publishing or delivery</p></div>
+</div>
+<p class="small"><a href="./registry.json">Machine-readable failure-domain and source relationships</a>. No failover test, Wayback restore, CoStead landing or CoGateway receiver handshake was executed by this page.</p>
+</section>
+<section class="panel" id="incident">
+<div class="eyebrow">Actual bad behavior belongs in an evidence-led incident process</div>
+<h2>What if we encounter impersonation, harassment or an intrusion?</h2>
+<ul>
+<li>Preserve relevant **lawfully available** evidence, with timestamp, source provenance and affected public asset. Keep credentials, identifying data and sensitive system details out of public issues.</li>
+<li>Separate user error, automated bots, provider outages, misinformation, genuine security vulnerability and potentially intentional abuse before attributing motives.</li>
+<li>Verify scope, independent evidence and alternatives. Avoid automated naming, public blacklists or harassment campaigns.</li>
+<li>Contain and recover through authorized platforms and appropriate official channels; issue clear public corrections when necessary, with a route to challenge inaccurate conclusions.</li>
+<li>Retain unknowns. If no event has been confirmed, record <strong>NOT OBSERVED</strong>, not a fictional attack or categorical guarantee of safety.</li>
+</ul>
+<p><a href="./README.md">Read the incident and privacy protocol</a> · <a href="https://github.com/CoCivium/CoAcademy/issues">Voluntary public source corrections (not security incident intake)</a>.</p>
+</section>
+<noscript><section class="panel"><strong>JavaScript is off.</strong> Every class remains displayed and readable. The filters are optional; this static page sends no query to any monitoring service.</section></noscript>
+</main>
+<footer>CoCivium public educational security/transparency sketch R0. No visitor tracking, automatic network calls, local storage or private-source ingestion in this page. Source links contact their destinations only after a click. X2 is explicitly untouched, and no CoStead/CoGateway connectivity or operational threat surveillance is claimed. <a href="./registry.json">Evidence registry</a>.</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var controls=Array.from(document.querySelectorAll("[data-group]"));
+var cards=Array.from(document.querySelectorAll("[data-basis]"));
+controls.forEach(function(control){
+ control.addEventListener("click",function(){
+ var choice=control.getAttribute("data-group"),count=0;
+ cards.forEach(function(card){var show=choice==="ALL"||card.getAttribute("data-basis")===choice;card.hidden=!show;if(show)count++});
+ controls.forEach(function(other){other.setAttribute("aria-pressed",String(other===control))});
+ document.getElementById("filter-status").textContent=count+" of "+cards.length+" classes displayed. No identities have been inferred.";
+ });
+});
+})();
+</script>
+</body></html>
