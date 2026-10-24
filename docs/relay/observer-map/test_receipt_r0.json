@@ -1,0 +1,142 @@
+{
+  "schema": "CoCivium.CoObserverMap.IsolatedSourceAndDOMTest.R0",
+  "date": "2026-10-24",
+  "registry_sha": "911de430a6dd9e9788350d0bbc9e6718e846dfff",
+  "html_sha": "36cf1838675f8171b102ae6a661da492b1a7c989",
+  "method": "Exact committed GitHub source readback and V8 simulated DOM interaction; no real outside client, observer process, logs, devices or incident response",
+  "total": 28,
+  "passed": 28,
+  "failed": [],
+  "checks": [
+    {
+      "check": "DOM_mock_script_executes",
+      "pass": true
+    },
+    {
+      "check": "all_visible_initially",
+      "pass": true
+    },
+    {
+      "check": "all_15_public_safe_categories",
+      "pass": true
+    },
+    {
+      "check": "all_basis_evidenced",
+      "pass": true
+    },
+    {
+      "check": "X2_private_hold",
+      "pass": true
+    },
+    {
+      "check": "no_unverified_named_bad_actors",
+      "pass": true
+    },
+    {
+      "check": "archives_not_live_backend",
+      "pass": true
+    },
+    {
+      "check": "no_external_scripts",
+      "pass": true
+    },
+    {
+      "check": "no_fetch_or_analytics",
+      "pass": true
+    },
+    {
+      "check": "no_storage_or_forms",
+      "pass": true
+    },
+    {
+      "check": "keyboard_semantics",
+      "pass": true
+    },
+    {
+      "check": "reduced_motion",
+      "pass": true
+    },
+    {
+      "check": "outage_distinct_from_attack",
+      "pass": true
+    },
+    {
+      "check": "protected_reports_not_public",
+      "pass": true
+    },
+    {
+      "check": "filter_ALL",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_ALL",
+      "pass": true
+    },
+    {
+      "check": "filter_VERIFIED_SOURCE",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_VERIFIED_SOURCE",
+      "pass": true
+    },
+    {
+      "check": "filter_RECENT_OBSERVATION",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_RECENT_OBSERVATION",
+      "pass": true
+    },
+    {
+      "check": "filter_ARCHITECTURAL_CAPABILITY",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_ARCHITECTURAL_CAPABILITY",
+      "pass": true
+    },
+    {
+      "check": "filter_CANDIDATE",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_CANDIDATE",
+      "pass": true
+    },
+    {
+      "check": "filter_HELD",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_HELD",
+      "pass": true
+    },
+    {
+      "check": "filter_NOT_OBSERVED",
+      "pass": true
+    },
+    {
+      "check": "filter_a11y_NOT_OBSERVED",
+      "pass": true
+    }
+  ],
+  "operational_state": {
+    "actual_watchers_identified": "NONE",
+    "actual_threat_events_observed": "NONE",
+    "real_log_ingestion": "NOT_ENABLED",
+    "live_monitor": "NOT_DEPLOYED",
+    "private_endpoints_or_credentials": "NOT_READ",
+    "independent_HTTP": "NOT_VERIFIED",
+    "native_browser": "NOT_TESTED",
+    "X2": "UNCHANGED"
+  },
+  "nonclaims": [
+    "CAN_VIEW_NE_DID_VIEW",
+    "AI_CRAWLER_POSSIBLE_NE_AI_INDEXED",
+    "CRITIC_NE_HOSTILE_ACTOR",
+    "ARCHIVE_NE_RUNNING_BACKUP",
+    "SOURCE_FILTER_PASS_NE_REAL_SECURITY_AUDIT",
+    "POTENTIAL_THREAT_NE_INCIDENT"
+  ]
+}
