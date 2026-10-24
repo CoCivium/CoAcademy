@@ -65,7 +65,8 @@
     "phoenix/probe_public.py",
     "phoenix/triage_public.py",
     "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.md",
-    "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.json"
+    "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.json",
+    "phoenix/PORTABLE_R3_RECEIPT_20261024.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -215,5 +216,11 @@
     "state": "UNRATIFIED_CANDIDATE__PUBLIC_EVIDENCE_ASSESSMENT__NO_PRIVATE_NODE_AUDIT",
     "hard_gates": 16,
     "transition_claim": "NOT_ACHIEVED"
+  },
+  "phoenix_offline_r3": {
+    "source": "phoenix/PORTABLE_R3_RECEIPT_20261024.json",
+    "human": "phoenix/#portable-r3",
+    "status": "FIVE_HISTORICAL_OFFLINE_PAGES__61_61_SCOPED_TESTS__PRIVATE_DOWNLOAD",
+    "nonclaim": "NOT_LIVE_DOMAIN_OR_INDEPENDENT_PROVIDER_CUSTODY"
   }
 }

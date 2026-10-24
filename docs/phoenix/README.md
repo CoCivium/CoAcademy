@@ -1,5 +1,15 @@
 # CoPhoenix R0: public source-backed cold-start contract
 
+## R3 portable offline capsule: five independent cold starts (2026-10-24)
+
+The R0 source-backed capsule and 26/26 receipt remain preserved below. A distinct R3 **private conversation download** now covers five historical browser experiences, has a complete 49,489-byte ZIP with SHA-256 `0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2`, and passed **61/61 scoped tests** in an isolated Linux container. See [the public R3 receipt](./PORTABLE_R3_RECEIPT_20261024.json).
+
+The new download contains `MANIFEST.json`, `VERIFY.py`, a safe bounded `RESTORE_ZIP.py`, a localhost-only `RUN_LOCAL.py`, a static launcher and five historical HTML pages. The ZIP and checksum are available separately in the originating conversation, **not here as a public file**. They are not CoStead custody, an independently operated hosted mirror, current CoRelay source, an official election tool or a universal AI agent.
+
+Tests include two fresh extractions, deliberately corrupted/missing content, ZIP traversal and duplicate checks, six Python localhost HTTP 200 reads, and five direct extracted-HTML Chromium render/interactions. Chromium's direct localhost URL navigation was blocked by this sandbox administrator, so that case remains **unverified**, not a hidden success. The private originating dream and sensitive data are not bundled.
+
+Next independent gate: a real separately administered non-GitHub custodian must receive the archive, prove exact custody and restore it during a simulated GitHub outage. A separate public origin is a further gate, not automatically granted by this R3 archive.
+
 October 24, 2026. The capsule itself is a chat-only private download, not a public ZIP release.
 
 ## Verified

@@ -82,5 +82,24 @@
     "autonomous_repair": false,
     "real_user_impact": "NOT_MEASURED",
     "external_independent_receiver": "NOT_YET_VERIFIED"
+  },
+  "portable_r3": {
+    "version": "R3",
+    "date": "2026-10-24",
+    "type": "PRIVATE_USER_DOWNLOAD__FIVE_HISTORICAL_STATIC_HTML_DEMOS__NO_PUBLIC_ZIP_ON_THIS_REPO",
+    "tested": "PASS_61_OF_61_CONTAINER_SCOPED_CHECKS",
+    "archive_bytes": 49489,
+    "archive_sha256": "0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2",
+    "public_receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/PORTABLE_R3_RECEIPT_20261024.json",
+    "independently_restored_twice": true,
+    "verified_http_client_paths": 6,
+    "Chromium_extracted_html_rendered": 5,
+    "Chromium_direct_localhost_navigation": "INCONCLUSIVE_BLOCKED_BY_SANDBOX_ADMINISTRATOR",
+    "private_dream_included": false,
+    "current_online_site_mirror": false,
+    "real_off_GitHub_custody": "NOT_PROVEN",
+    "real_public_failover": "NOT_IMPLEMENTED",
+    "rights_review_before_public_remirror": "REQUIRED",
+    "wake_condition": "INDEPENDENT_REAL_CUSTODIAN_AND_BOUNDED_FAILOVER_RECEIVER_AVAILABLE"
   }
 }
