@@ -63,7 +63,9 @@
     "phoenix/README.md",
     "phoenix/WORRY_REGISTER_R2.md",
     "phoenix/probe_public.py",
-    "phoenix/triage_public.py"
+    "phoenix/triage_public.py",
+    "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.md",
+    "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -206,5 +208,12 @@
     "independent_provider": false,
     "self_repair": false,
     "privacy": "FIXED_PUBLIC_LINKS_ONLY"
+  },
+  "civ2_civ3_boundary_candidate": {
+    "human": "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.md",
+    "machine": "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.json",
+    "state": "UNRATIFIED_CANDIDATE__PUBLIC_EVIDENCE_ASSESSMENT__NO_PRIVATE_NODE_AUDIT",
+    "hard_gates": 16,
+    "transition_claim": "NOT_ACHIEVED"
   }
 }

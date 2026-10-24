@@ -1,0 +1,275 @@
+{
+  "schema": "CoCivium.Civ2ToCiv3BoundaryGap.CANDIDATE_R0",
+  "observed_on": "2026-10-24",
+  "assessment_kind": "PUBLIC_EVIDENCE_LENS_NOT_GLOBAL_ASSET_AUDIT",
+  "statuses": {
+    "civ2": "SOURCE_CONSTITUTION_V0_2_0_EXISTS",
+    "civ3": "PROPOSED_FEDERATED_CIVILIZATION_TRANSITION__NOT_RATIFIED_SPEC",
+    "kardashev": "SEPARATE_PHYSICAL_ENERGY_CLASSIFICATION__NOT_EQUIVALENT",
+    "project": "PUBLIC_PROTOTYPING_AND_SOURCE_EVIDENCE__NOT_CIV2_SOCIAL_DEPLOYMENT",
+    "x2": "NOT_ACCESSED_USER_HOLD_RESPECTED",
+    "local_private_assets": "NOT_VERIFIED_THIS_WAVE",
+    "rights": "SPECIFIED_NOT_SOCIETALLY_ENFORCED",
+    "ecology": "SYSTEM_FOOTPRINT_NOT_MEASURED"
+  },
+  "proposed_definition": {
+    "civ2_plus": "Durable, rights-respecting human, AI and other relevant agents coordinating across institutions with epistemic integrity, reversible options, pluralism and concrete mechanisms for exit, remedy and independent review.",
+    "near_civ3_boundary": "A federating society of independent Civ2+ institutions that can replicate essential capability, govern cross-boundary disputes, survive founder/provider failure, protect dissenters, honor ecology and pass stewardship to new communities without a central crown.",
+    "civ3_plus": "Candidate label for a durable, self-renewing polycentric inter-civilizational federation; must be independently specified, challenged and ratified. Not a prediction or existing capability.",
+    "no_single_global_organization_required": true
+  },
+  "no_single_score": true,
+  "veto_rule": "A critical rights, safety, truth, consent, ecology or anti-capture failure blocks claims of civilization-level graduation even if software throughput is exceptional.",
+  "source_refs": {
+    "civ2_core": "https://github.com/CoCivium/CoBusMirror/blob/main/docs/CIV2/CIV2__COCONSTITUTION__CORE.md",
+    "civ2_governance": "https://github.com/CoCivium/CoBusMirror/blob/main/docs/CIV2/ANNEX/CIV2__GOVERNANCE.md",
+    "civ2_metrics": "https://github.com/CoCivium/CoBusMirror/blob/main/docs/CIV2/ANNEX/CIV2__METRICS.md",
+    "civ2_safety": "https://github.com/CoCivium/CoBusMirror/blob/main/docs/CIV2/ANNEX/CIV2__SAFETY_AND_SANITY.md",
+    "civ2_amendment": "https://github.com/CoCivium/CoBusMirror/blob/main/docs/CIV2/ANNEX/CIV2__AMENDMENT_PROCESS.md",
+    "civ2_disagreement": "https://github.com/CoCivium/CoBusMirror/blob/main/docs/CIV2/ANNEX/CIV2__DISAGREEMENT_LEDGER.md",
+    "coacademy_theory": "https://github.com/CoCivium/CoAcademy/blob/master/docs/CoTheoryCiv2.md",
+    "cophoenix": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/README.md",
+    "cophoenix_worry": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/WORRY_REGISTER_R2.md",
+    "corelay": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/discovery.json",
+    "coevo": "https://github.com/CoCivium/CoCivium/blob/main/docs/Evolution/EVO_ALL_BETTERS_EVERGREEN_PULSE_20261023.md",
+    "UN": "https://www.un.org/pact-for-the-future/en/annex-i-global-digital-compact",
+    "NIST": "https://www.nist.gov/itl/ai-risk-management-framework"
+  },
+  "gates": [
+    {
+      "id": "C23.GATE-01",
+      "name": "Non-domination in practice",
+      "priority": "HARD",
+      "evidence": "CIV2 constitutional and governance design documented",
+      "status": "DESIGN_ONLY_NO_INDEPENDENT_CASE",
+      "test": "Independent minority successfully contests and reverses a high-impact decision under published rules",
+      "source": "civ2_core"
+    },
+    {
+      "id": "C23.GATE-02",
+      "name": "Right to exit with continuity",
+      "priority": "HARD",
+      "evidence": "CIV2 right-to-exit, disagreement and fork principles documented",
+      "status": "NO_PORTABLE_FORK_DEMONSTRATED",
+      "test": "An independent participant exports portable state, exits, and continues useful work without incumbent consent",
+      "source": "civ2_disagreement"
+    },
+    {
+      "id": "C23.GATE-03",
+      "name": "Legitimate distributed governance",
+      "priority": "HARD",
+      "evidence": "Polycentric roles, audit, judiciary and remedy specified",
+      "status": "NO_INDEPENDENT_MULTI_PARTY_GOVERNANCE_PILOT",
+      "test": "Distinct authorized people/operators adjudicate a real disagreement and publish a non-sensitive decision/appeal receipt",
+      "source": "civ2_governance"
+    },
+    {
+      "id": "C23.GATE-04",
+      "name": "Independent proof of human usefulness",
+      "priority": "HARD",
+      "evidence": "Public browser prototypes, public source and some GitHub-runner HTTP checks",
+      "status": "REAL_END_USER_OUTCOMES_NOT_VERIFIED",
+      "test": "Voluntary first-time users complete useful tasks on independent devices and can identify critical limitations",
+      "source": "corelay"
+    },
+    {
+      "id": "C23.GATE-05",
+      "name": "Multiple independently operated implementations",
+      "priority": "HARD",
+      "evidence": "Machine-readable manifests and federation concepts exist",
+      "status": "INTEROPERABLE_OPERATOR_TO_OPERATOR_TRANSFER_NOT_PROVEN",
+      "test": "Two separately administered implementations exchange a scoped evidence object and independent ACK across provider boundary",
+      "source": "coevo"
+    },
+    {
+      "id": "C23.GATE-06",
+      "name": "Provider-independent cold recovery",
+      "priority": "HARD",
+      "evidence": "CoPhoenix 26/26 local capsule checks; same GitHub provider monitoring",
+      "status": "SECOND_PROVIDER_RECOVERY_NOT_VERIFIED",
+      "test": "Authorized clean restoration on separately controlled storage and hosting during simulated loss of the primary forge/provider",
+      "source": "cophoenix"
+    },
+    {
+      "id": "C23.GATE-07",
+      "name": "Trusted identity and effect authority",
+      "priority": "HARD",
+      "evidence": "Scope/revocation and fail-closed principles specified",
+      "status": "INDEPENDENT_END_TO_END_MULTI_AGENT_AUTHORITY_NOT_PROVEN",
+      "test": "Revocation, least privilege and no-ACK/no-action enforced across heterogeneous agents and one real receiver",
+      "source": "civ2_governance"
+    },
+    {
+      "id": "C23.GATE-08",
+      "name": "Corroboration and epistemic calibration",
+      "priority": "HARD",
+      "evidence": "Evidence classes, provenance, CoPatterna and receipt doctrine specified",
+      "status": "INDEPENDENT_CALIBRATION_AT_SCALE_NOT_MEASURED",
+      "test": "Blind multi-source review separates duplicated agent reports from original observations and measures correction latency",
+      "source": "civ2_metrics"
+    },
+    {
+      "id": "C23.GATE-09",
+      "name": "Self-modification and sanity-mode control",
+      "priority": "HARD",
+      "evidence": "Safety tripwires and amendment process specified",
+      "status": "HIGH_STAKES_CONTROLLED_AMENDMENT_DRILL_NOT_PROVEN",
+      "test": "Proposed constitutional mutation is contested, challenged, safety-gated, safely reverted or rejected, with minority report",
+      "source": "civ2_safety"
+    },
+    {
+      "id": "C23.GATE-10",
+      "name": "No common-mode single-owner failure",
+      "priority": "HARD",
+      "evidence": "CoPhoenix catalogs same-provider concentration",
+      "status": "FULL_FAILOVER_NOT_VERIFIED",
+      "test": "Remove founder, principal provider and public issue service during bounded exercise; prove retained essential independent utility",
+      "source": "cophoenix_worry"
+    },
+    {
+      "id": "C23.GATE-11",
+      "name": "Accessible, low-tech and multilingual participation",
+      "priority": "HARD",
+      "evidence": "Readable public demos and no-JS routes exist; accessibility intentions documented",
+      "status": "INDEPENDENT_ACCESSIBILITY_AND_DIGITAL_DIVIDE_OUTCOMES_NOT_PROVEN",
+      "test": "Consent-based diverse device, screen-reader, low-bandwidth, print/translation trials verify equitable access",
+      "source": "corelay"
+    },
+    {
+      "id": "C23.GATE-12",
+      "name": "Anti-capture financing and incentives",
+      "priority": "HARD",
+      "evidence": "Anti-capture principles and commons stewardship documented",
+      "status": "ACTUAL_MULTI_STEWARD_FUNDING_AND_CONFLICT_DISCLOSURE_NOT_PROVEN",
+      "test": "Public budget/interest declaration, separation of financing from safety veto, and third-party conflict review",
+      "source": "civ2_governance"
+    },
+    {
+      "id": "C23.GATE-13",
+      "name": "Ecology, resource and physical limits",
+      "priority": "HARD",
+      "evidence": "Metrics require energy, material, ecosystem and supply-chain measures; CoStretch bounded benchmark",
+      "status": "SYSTEM_LEVEL_ENERGY_MATERIAL_FOOTPRINT_NOT_MEASURED",
+      "test": "Measure energy/benefit/material burden under representative workloads and operational disruption; retire damaging policies",
+      "source": "civ2_metrics"
+    },
+    {
+      "id": "C23.GATE-14",
+      "name": "Human consequences and remedy",
+      "priority": "HARD",
+      "evidence": "Rights, consent and remedy path specified",
+      "status": "REAL_PUBLIC_CONTEST_AND_REMEDIATION_LOOP_NOT_VERIFIED",
+      "test": "A real harm report is safely received by an independent body, reviewed, remedied, and appealed without retaliatory loss of service",
+      "source": "civ2_governance"
+    },
+    {
+      "id": "C23.GATE-15",
+      "name": "Intergenerational and cross-cultural transmission",
+      "priority": "CANDIDATE",
+      "evidence": "CIV2 modular stable IDs, receipts and amendability; CoTurtle lineage concept",
+      "status": "MULTI_GENERATION_SOCIAL_TRANSFER_NOT_DEMONSTRATED",
+      "test": "Fresh team in another community/culture accurately rebuilds, adapts, criticizes and maintains a project without original author",
+      "source": "civ2_amendment"
+    },
+    {
+      "id": "C23.GATE-16",
+      "name": "Evidence of usefulness at institutional scale",
+      "priority": "HARD",
+      "evidence": "CoRelay public source and accessible onboarding invitation; verified source/readproof not measured adoption",
+      "status": "SOCIETY_SCALE_ADOPTION_AND_VALUE_NOT_MEASURED",
+      "test": "Unaffiliated institutions independently replicate a useful pilot, disclose their criteria and opt out freely",
+      "source": "corelay"
+    },
+    {
+      "id": "C23.GATE-17",
+      "name": "Civ3 boundary definition and legitimacy",
+      "priority": "HARD",
+      "evidence": "Civ2 v0.2 core published, Civ3 status not publicly ratified",
+      "status": "NO_RATIFIED_FALSIFIABLE_CIV3_CRITERIA",
+      "test": "A plural, independently reviewed Civ3 transition proposal passes constitutional process with dissent and safeguards documented",
+      "source": "civ2_amendment"
+    },
+    {
+      "id": "C23.GATE-18",
+      "name": "Unknown unknowns and negative-space tests",
+      "priority": "CANDIDATE",
+      "evidence": "CoNull/CoPatterna/CoEvo concepts and negative-result policy documented",
+      "status": "GENERALIZED_NOVEL_FAILURE_MODE_SEARCH_NOT_VALIDATED",
+      "test": "Independent red team finds a previously missing failure class that produces a verified correction without increasing coercion",
+      "source": "coevo"
+    }
+  ],
+  "prioritized_waves": [
+    {
+      "order": 1,
+      "name": "Publish falsifiable boundary criteria",
+      "work": "Present this candidate report for independent challenge, without promoting it to Civ2 canon",
+      "receipts": "public source and reader correction"
+    },
+    {
+      "order": 2,
+      "name": "Human first-use and actual usefulness",
+      "work": "Obtain consenting external feedback across devices and needs; correct one independently reproducible problem",
+      "receipts": "opt-in participation, reproducible issue, source-committed fix, readproof"
+    },
+    {
+      "order": 3,
+      "name": "Independent custody and host recovery",
+      "work": "Rebuild one non-sensitive public service from sealed independently held source on another authorized provider",
+      "receipts": "off-provider bytes, HTTPS outside GET, user action and failback"
+    },
+    {
+      "order": 4,
+      "name": "Governed interoperability",
+      "work": "Two independent agents/operators exchange a scoped record with formal ACK, revocation and disagreement handling",
+      "receipts": "source IDs, mutual challenge and exact receiver ACK"
+    },
+    {
+      "order": 5,
+      "name": "Real constitutional mini-pilot",
+      "work": "Demonstrate one genuine consent-bound appeal, fork/exit, minority report and resolved remedy",
+      "receipts": "independent reviewer approval, anonymized case proof, rollback and rights audit"
+    },
+    {
+      "order": 6,
+      "name": "Resources and cross-generation proof",
+      "work": "Measure energy/cost/benefit, involve outside institution/community for transfer and maintenance",
+      "receipts": "measured footprint, independent service ownership, reproducible successor"
+    },
+    {
+      "order": 7,
+      "name": "Ratification or rejection",
+      "work": "Ask diverse legitimate stakeholders whether proposed Civ3 criteria deserve adoption; preserve rejection and alternate frameworks",
+      "receipts": "versioned proposal, accepted dissent, consent and authority trail"
+    }
+  ],
+  "readiness_summary": {
+    "mature_constitutional_concepts": true,
+    "multiple_public_prototypes": true,
+    "useful_limited_recovery_demos": true,
+    "measured_multi_institution_value": false,
+    "independent_cross_provider_recovery": false,
+    "independent_operational_civ3_definition": false,
+    "at_near_civ3_boundary": false
+  },
+  "failure_resolutions": [
+    "REPAIR",
+    "REFRAME",
+    "BOUNDED_RETRY",
+    "REFER",
+    "STOP_RETRACT",
+    "DORMANT"
+  ],
+  "no_claims": [
+    "PUBLIC_DOC_NE_RATIFIED_CONSTITUTION",
+    "MORE_AGENTS_NE_INDEPENDENT_WITNESSES",
+    "PAGES_PROBE_NE_REAL_USER_BENEFIT",
+    "COLD_START_LOCAL_NE_PROVIDER_INDEPENDENCE",
+    "FUTURES_UNBOUNDED_NE_INFINITE_COMPUTE",
+    "OBSERVERS_POSSIBLE_NE_CONSENTING_AGENTS",
+    "RIGHTS_DECLARED_NE_RIGHTS_ENFORCED",
+    "CIV3_METAPHOR_NE_STELLAR_OR_GALACTIC_ENERGY",
+    "FORGOTTEN_WEAKNESSES_NE_PERMANENT_FIX",
+    "CIVILIZATION_NOT_PROPERTY_OF_ONE_BRAND"
+  ]
+}
