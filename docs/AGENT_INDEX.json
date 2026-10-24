@@ -30,7 +30,10 @@
     "civic-integrity/index.html",
     "civic-integrity/discovery.json",
     "civic-integrity/BRIEF_FOR_REVIEWERS_R0.md",
-    "civic-integrity/test_receipt_r0.json"
+    "civic-integrity/test_receipt_r0.json",
+    "civic-integrity/POST_ELECTION_CONTINUITY_R0.md",
+    "civic-integrity/POST_ELECTION_CONTINUITY_R0.json",
+    "civic-integrity/POST_ELECTION_TEST_R0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -90,5 +93,14 @@
     "government_affiliation": false,
     "voter_profiling": false,
     "real_allegation_intake": false
+  },
+  "post_election_continuity": {
+    "human": "civic-integrity/#after",
+    "review": "civic-integrity/POST_ELECTION_CONTINUITY_R0.md",
+    "machine": "civic-integrity/POST_ELECTION_CONTINUITY_R0.json",
+    "test": "civic-integrity/POST_ELECTION_TEST_R0.json",
+    "evidence": "ACTUAL_PRIMARY_SOURCES_REQUIRED__AI_RESPONSES_NOT_AUTOMATIC_INDEPENDENT_CORROBORATION",
+    "receiver_state": "PUBLIC_SOURCE__NOT_INDEPENDENT_HOST_READBACK",
+    "auto_monitor": "NOT_CREATED"
   }
 }
