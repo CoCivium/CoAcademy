@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CoCivicLens+ is a source-linked, nonpartisan, private-by-design civic-learning experiment. Choose a perspective, inspect official U.S. election guidance and explore evidence gaps.">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/civiclens/">
+<link rel="alternate" type="application/json" href="./discovery.json" title="CoCivicLens machine-readable discovery">
+<title>CoCivicLens+ | Look closer. Learn together.</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CoCivicLens+ R1","description":"Nonpartisan civic literacy exploration with sourced questions, learner-selectable perspectives and honest evidence gaps.","url":"https://cocivium.github.io/CoAcademy/civiclens/","applicationCategory":"EducationalApplication","operatingSystem":"Any standards-compatible browser","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"CoCivium","url":"https://github.com/CoCivium/CoCivium"},"datePublished":"2026-10-24","inLanguage":"en","usageInfo":"https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/README.md"}</script>
+<style>
+:root{color-scheme:dark;--bg:#07131b;--card:#122631;--edge:#376473;--white:#f3f8f9;--muted:#b7d0d5;--aqua:#a3eadc;--sun:#efdcaa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#205063 0%,transparent 45%),var(--bg);color:var(--white);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif}
+a{color:var(--aqua);text-underline-offset:4px}
+a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:22px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--edge);padding-bottom:16px}
+.brand{font-weight:750;letter-spacing:.03em;font-size:20px}
+.tiny{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(34px,5.4vw,60px);letter-spacing:-.045em;line-height:1.04;max-width:830px;margin:32px 0 17px}
+.lead{max-width:780px;color:var(--muted);font-size:18px}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}
+.pill{padding:6px 11px;border:1px solid var(--edge);border-radius:999px;color:#d4e8eb;font-size:12px}
+.layout{display:grid;grid-template-columns:minmax(300px,1.1fr) minmax(290px,1fr);gap:18px}
+.panel{border:1px solid var(--edge);background:linear-gradient(150deg,#173746dc,var(--card));border-radius:19px;padding:23px;min-width:0}
+.title{font-size:13px;color:var(--sun);letter-spacing:.1em;text-transform:uppercase;margin:0}
+h2{font-size:clamp(24px,3vw,33px);margin:9px 0}
+h3{font-size:18px}
+.orbmap{position:relative;min-height:400px;background:radial-gradient(circle at center,#143947,#0d1f2a 64%,#091721);overflow:hidden;border:1px solid var(--edge);border-radius:16px;margin:15px 0}
+.orbmap:before,.orbmap:after{content:"";position:absolute;left:50%;top:50%;height:64%;width:64%;border-radius:50%;border:1px dashed #5ca49a50;transform:translate(-50%,-50%) rotate(25deg);pointer-events:none}
+.orbmap:after{height:39%;width:72%;transform:translate(-50%,-50%) rotate(-23deg)}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;text-align:center;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#e4fffc 0%,#85c8ca 12%,#23647a 39%,#12364a 75%,#0a1e2b 100%);box-shadow:0 0 50px #6cdbd143,inset 0 0 40px #d9efec31;border:1px solid #a3eadc;color:white;font-weight:770;line-height:1.2}
+.core small{display:block;font-weight:450;color:#e3fcf1;margin-top:7px;font-size:12px}
+.node{position:absolute;padding:11px 14px;background:#1b4554;border-radius:14px;border:1px solid #76b1b3;color:var(--white);font-size:14px;font-weight:650;max-width:42%;box-shadow:0 10px 20px #0005}
+.node[aria-pressed="true"]{background:var(--aqua);color:#042530;border-color:#e4fff7}
+.n1{top:9%;left:7%}.n2{top:10%;right:8%}.n3{bottom:10%;left:8%}.n4{bottom:10%;right:7%}
+.lenses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}
+.lens{border:1px solid #608a98;color:#f5ffff;border-radius:12px;padding:10px;background:#1a3f4e;text-align:left}
+.lens[aria-pressed="true"]{background:var(--aqua);color:#10212a;border-color:var(--aqua);font-weight:800}
+.status{display:inline-block;font-size:12px;color:#fce8ba;border:1px solid #a18b51;border-radius:999px;padding:4px 8px}
+.explainer{margin:8px 0 16px;min-height:82px}
+.sourcegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.source{display:block;text-decoration:none;padding:15px;border-radius:12px;border:1px solid #517c85;background:#133541}
+.source:hover{background:#1d4955}
+.source strong{display:block}
+.source small{display:block;color:var(--muted);margin-top:5px}
+.gaps{border-top:1px solid var(--edge);padding-top:14px;margin-top:16px}
+.gaps p{margin:8px 0}
+.exercise{border:1px solid var(--edge);padding:15px;border-radius:14px;margin-bottom:13px;background:#102b37}
+.exercise strong{display:block}
+.exercise button{background:#214953;color:white;border:1px solid #83c2c5;border-radius:9px;padding:7px 12px;margin-top:11px}
+.exercise .answer{padding:9px;border-left:3px solid var(--aqua);margin-top:10px}
+textarea{display:block;width:100%;background:#081f29;border:1px solid #598893;color:white;padding:13px;border-radius:10px;font:inherit;min-height:100px}
+.primary{padding:9px 13px;background:var(--sun);color:#081b24;border:0;border-radius:10px;font-weight:750;margin-top:10px}
+.secondary{padding:9px 13px;background:transparent;border:1px solid var(--muted);color:white;border-radius:10px;margin-top:10px}
+footer{margin-top:30px;color:var(--muted);border-top:1px solid var(--edge);padding:18px 0;font-size:13px}
+.note{font-size:13px;color:var(--muted)}
+@media(max-width:800px){.layout,.sourcegrid{grid-template-columns:1fr}.orbmap{min-height:360px}.wrap{padding:14px}.panel{padding:17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><span class="brand">CoCivium ⊂ CoCivicLens+</span><span class="tiny">R1 · public research candidate · not a government service</span></header>
+<main>
+<h1>Look closer.<br>Learn together.</h1>
+<p class="lead">One shared set of sources. Four ways to explore it. A small <strong>CoOrbWare-inspired</strong> experiment in learning, challenging claims and finding the unknowns, without telling anyone how to vote.</p>
+<div class="pills"><span class="pill">Election Day: November 3, 2026</span><span class="pill">State and local rules differ</span><span class="pill">No voter profiling</span><span class="pill">No analytics or account required</span></div>
+<div class="layout">
+<section class="panel">
+<p class="title">01 / CoOrb+ relational exploration</p>
+<h2>Select what you want to understand</h2>
+<p class="note">These four nodes are navigation choices, not assertions of invisible connections. The underlying sources remain the same.</p>
+<div class="orbmap" aria-label="CoOrb graph with four selectable source questions">
+<div class="core" aria-hidden="true">CoCivicLens<small>Evidence · Agency · Unknowns</small></div>
+<button type="button" class="node n1" data-topic="register" aria-pressed="true">Registration</button>
+<button type="button" class="node n2" data-topic="where" aria-pressed="false">Where to vote</button>
+<button type="button" class="node n3" data-topic="methods" aria-pressed="false">Voting methods</button>
+<button type="button" class="node n4" data-topic="verify" aria-pressed="false">Check a claim</button>
+</div>
+<p class="title">02 / CoSeeker+ optional perspective</p>
+<div class="lenses" aria-label="Choose a perspective">
+<button type="button" class="lens" data-lens="voter" aria-pressed="true">Practical question</button>
+<button type="button" class="lens" data-lens="learner" aria-pressed="false">Curious learner</button>
+<button type="button" class="lens" data-lens="teacher" aria-pressed="false">Educator</button>
+<button type="button" class="lens" data-lens="checker" aria-pressed="false">Source checker</button>
+</div>
+</section>
+<section class="panel" aria-live="polite" aria-atomic="false">
+<p class="title">03 / Inspect evidence · CoMap+ / CoNull+</p>
+<h2 id="topic-title">Registration</h2>
+<span class="status" id="evidence">Verified general guidance · local details not checked</span>
+<p id="summary" class="explainer">Registration deadlines and procedures differ by state. Begin with the official state or territory route.</p>
+<p class="title">Your selected perspective</p>
+<p id="lens-guidance">Find your state election office before relying on a deadline or method.</p>
+<div class="sourcegrid">
+<a id="primary" class="source" target="_blank" rel="noopener noreferrer" href="https://vote.gov/register"><strong id="primary-name">Vote.gov</strong><small>Official federal route to state-specific guidance</small></a>
+<a class="source" target="_blank" rel="noopener noreferrer" href="https://www.eac.gov/vote"><strong>Election Assistance Commission</strong><small>Find your state election-office information</small></a>
+<a class="source" target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/"><strong>Federal Election Commission</strong><small>Election calendar and division of jurisdiction</small></a>
+<a class="source" target="_blank" rel="noopener noreferrer" href="https://www.usa.gov/midterm-elections"><strong>USAGov</strong><small>How congressional elections work</small></a>
+</div>
+<div class="gaps">
+<p class="title">CoNull+ | what remains unknown</p>
+<p id="unknown">Your registration status, jurisdiction and deadlines are unknown to this page. We do not ask for or store them.</p>
+<p class="note"><strong>Provenance:</strong> official reference links reviewed October 24, 2026. Open the source to check for subsequent changes. A source link is not proof of your local status.</p>
+</div>
+</section>
+</div>
+<section class="panel" style="margin-top:19px">
+<p class="title">04 / CoLearn+ source-check experiments</p>
+<h2>Can you distinguish a claim from a verified answer?</h2>
+<div class="exercise"><strong>Claim: Every U.S. state has identical voter-registration deadlines.</strong><button type="button" data-reveal="a1" aria-expanded="false">Inspect explanation</button><div id="a1" class="answer" hidden>Not supported. Vote.gov says registration deadlines vary by state or territory. <a href="https://vote.gov/register" target="_blank" rel="noopener noreferrer">Read the official registration guidance.</a></div></div>
+<div class="exercise"><strong>Claim: Election-night reports always equal certified final results.</strong><button type="button" data-reveal="a2" aria-expanded="false">Inspect explanation</button><div id="a2" class="answer" hidden>Not supported. The EAC distinguishes unofficial election-night totals from canvassing, certification and recount procedures. <a href="https://www.eac.gov/voters/voter-faqs" target="_blank" rel="noopener noreferrer">See the Election Assistance Commission FAQ.</a></div></div>
+<div class="exercise"><strong>Claim: The federal election calendar tells each voter which polling place to use.</strong><button type="button" data-reveal="a3" aria-expanded="false">Inspect explanation</button><div id="a3" class="answer" hidden>Not supported. Polling locations are administered by state and local officials. <a href="https://www.usa.gov/find-polling-place" target="_blank" rel="noopener noreferrer">Read USAGov polling-place guidance.</a></div></div>
+<p class="title">05 / CoAfterglow+ : what will you take away?</p>
+<label for="reflection">One question to investigate independently, or something you learned</label>
+<textarea id="reflection" placeholder="My next question is ... (please do not enter personal voting details)"></textarea>
+<button type="button" class="secondary" id="clear">Clear my note</button>
+<button type="button" class="primary" id="copy">Copy my note</button>
+<p class="note" id="copy-status">Notes stay in this open tab until cleared or reloaded. No save, cookie, account, network submission or automatic export.</p>
+</section>
+<noscript><p class="panel">JavaScript is optional. The official registration, EAC, FEC and USAGov links remain usable. Selectable graph nodes and answers require JavaScript.</p></noscript>
+</main>
+<footer>
+<strong>CoCivium experimental learning surface.</strong> Not affiliated with the U.S. government or any candidate, party or campaign. Nonpartisan civic information only. No candidate rankings, political profiling, persuasive targeting, covert sensing or vote-intention collection. Official sources govern factual claims; art is only an invitation to examine them.
+<p><a href="./discovery.json">Machine-readable discovery</a> · <a href="./README.md">Scope, testing and limitations</a> · <a href="https://github.com/CoCivium/CoCivium">CoCivium public R&amp;D</a> · <a href="https://github.com/CoCivium/CoCivium/blob/main/PRELAUNCH.md">Status and nonclaims</a></p>
+</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var topic="register",lens="voter";
+var topics={
+ register:{title:"Registration",summary:"Registration deadlines and procedures differ by state. Begin with the official state or territory route.",primary:"https://vote.gov/register",name:"Vote.gov registration",unknown:"We do not know your state, eligibility, registration status or deadlines. Check the official election office."},
+ where:{title:"Where to vote",summary:"Your assigned polling place and voting hours are jurisdiction-specific and can change. Check with the responsible election office.",primary:"https://www.usa.gov/find-polling-place",name:"USAGov polling places",unknown:"Your polling place, opening times and accessibility needs are not known or collected."},
+ methods:{title:"Voting methods",summary:"In-person, early and mail voting rules and availability vary by jurisdiction. Start with official state or local guidance.",primary:"https://vote.gov/guide-to-voting",name:"Vote.gov voting guide",unknown:"We have not determined which methods, deadlines or identification rules apply to any individual."},
+ verify:{title:"Check a claim",summary:"Identify precisely what is being claimed; distinguish sourced facts from inference, interpretation and outdated information.",primary:"https://www.eac.gov/voters/voter-faqs",name:"EAC voter questions",unknown:"A general statement alone cannot resolve an individual local rule. Seek the original official election office source."}
+};
+var guidance={
+ voter:"For a practical question, find the jurisdiction-specific election office and verify the current rule directly.",
+ learner:"Ask what the claim refers to, who administers it and where the source stops being applicable.",
+ teacher:"Have learners distinguish a national statement from state-level rules without asking about their political preferences.",
+ checker:"Identify source publisher, publication date, scope, possible amendments and independent verification routes."
+};
+function paint(){
+ var t=topics[topic];
+ document.getElementById("topic-title").textContent=t.title;
+ document.getElementById("summary").textContent=t.summary;
+ document.getElementById("unknown").textContent=t.unknown;
+ document.getElementById("primary-name").textContent=t.name;
+ document.getElementById("primary").href=t.primary;
+ document.getElementById("lens-guidance").textContent=guidance[lens];
+ document.querySelectorAll("[data-topic]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-topic")===topic));});
+ document.querySelectorAll("[data-lens]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lens")===lens));});
+}
+document.querySelectorAll("[data-topic]").forEach(function(b){b.addEventListener("click",function(){topic=b.getAttribute("data-topic");paint();});});
+document.querySelectorAll("[data-lens]").forEach(function(b){b.addEventListener("click",function(){lens=b.getAttribute("data-lens");paint();});});
+document.querySelectorAll("[data-reveal]").forEach(function(b){b.addEventListener("click",function(){var a=document.getElementById(b.getAttribute("data-reveal"));a.hidden=!a.hidden;b.setAttribute("aria-expanded",String(!a.hidden));});});
+document.getElementById("clear").addEventListener("click",function(){document.getElementById("reflection").value="";document.getElementById("copy-status").textContent="Cleared. No note was sent.";});
+document.getElementById("copy").addEventListener("click",function(){
+ var val=document.getElementById("reflection").value;
+ if(!val){document.getElementById("copy-status").textContent="Nothing to copy.";return;}
+ if(navigator.clipboard && navigator.clipboard.writeText){navigator.clipboard.writeText(val).then(function(){document.getElementById("copy-status").textContent="Copied to your clipboard.";},function(){document.getElementById("copy-status").textContent="Clipboard unavailable; select and copy the text manually.";});}
+ else{document.getElementById("copy-status").textContent="Clipboard unavailable; select and copy the text manually.";}
+});
+paint();
+})();
+</script>
+</body>
+</html>
