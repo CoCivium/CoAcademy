@@ -6,9 +6,9 @@
   "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/device-first/index.html",
   "device_policy": "https://github.com/CoCivium/CoCivium/blob/main/ai/device-enrollment-policy.json",
   "status": {
-    "public_source": "GITHUB_BLOB_STAGED__ATOMIC_COMMIT_NEXT",
-    "pages": "NOT_VERIFIED_FOR_THIS_SOURCE",
-    "outside_https": "NOT_VERIFIED",
+    "public_source": "PUBLIC_GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK",
+    "pages": "SUCCESS_FOR_INITIAL_DEVICE_FIRST_COMMIT_21f656efe3260e9f93a1d854ec257639cbaceda3__LATEST_MANIFEST_REVISION_REQUIRES_WORKFLOW_CHECK",
+    "outside_https": "NOT_INDEPENDENTLY_RETRIEVED_FROM_THIS_ENVIRONMENT",
     "real_phone": "NOT_TESTED",
     "real_tablet": "NOT_TESTED",
     "real_laptop": "NOT_TESTED",
@@ -63,5 +63,7 @@
     "checks_passed": 26,
     "checks_total": 26,
     "qualification": "DOM_MOCK_FAKE_DIGEST_NOT_NATIVE_BROWSER"
-  }
+  },
+  "source_commit": "21f656efe3260e9f93a1d854ec257639cbaceda3",
+  "pages_receipt": "https://github.com/CoCivium/CoAcademy/actions/runs/40113846951"
 }
