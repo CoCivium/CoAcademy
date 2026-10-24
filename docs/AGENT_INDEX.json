@@ -37,7 +37,11 @@
     "civic-integrity/money-and-elections/index.html",
     "civic-integrity/money-and-elections/discovery.json",
     "civic-integrity/money-and-elections/test_receipt_r0.json",
-    "civic-integrity/money-and-elections/README.md"
+    "civic-integrity/money-and-elections/README.md",
+    "coplay/votes-for-sale/index.html",
+    "coplay/votes-for-sale/README.md",
+    "coplay/votes-for-sale/discovery.json",
+    "coplay/votes-for-sale/test_receipt_r0a.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -114,5 +118,14 @@
     "scope": "NONPARTISAN_VOLUNTARY_USER_ENTERED_AGGREGATES_NOT_VOTE_PRICES",
     "status": "PUBLIC_SOURCE__MOCK_V8_30_OF_30__NATIVE_BROWSER_AND_HUMAN_OUTCOMES_UNKNOWN",
     "no_geotargeting": true
+  },
+  "coplay_votes_for_sale": {
+    "human": "coplay/votes-for-sale/",
+    "machine": "coplay/votes-for-sale/discovery.json",
+    "method": "coplay/votes-for-sale/README.md",
+    "tests": "coplay/votes-for-sale/test_receipt_r0a.json",
+    "status": "PUBLIC_SOURCE__31_31_MOCK_V8__INDEPENDENT_BROWSER_AND_AUDIENCE_UNKNOWN",
+    "kind": "FICTIONAL_NONPARTISAN_SATIRE_WITH_PUBLIC_SOURCES",
+    "limitations": "NO_VOTER_PROFILING_NO_ILLEGAL_BUYING_INFERENCE_NO_PAID_ADS_NO_GEO_TARGETING"
   }
 }
