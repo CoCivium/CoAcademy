@@ -1,0 +1,49 @@
+{
+  "schema": "CoCivium.StaticEducationalPageDiscovery.R0",
+  "title": "Votes For Sale? Fictional satire with public election-finance sources",
+  "language": "en",
+  "date": "2026-10-24",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/votes-for-sale/index.html",
+  "method": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/votes-for-sale/README.md",
+  "revision_blob": "ccbbfdb381144e5f2f6805921da5e33f9389413e",
+  "fiction": true,
+  "nonpartisan": true,
+  "references": [
+    {
+      "subject": "Federal campaign committee financial statistics, through June 2026",
+      "url": "https://www.fec.gov/updates/statistical-summary-of-18-month-campaign-activity-of-the-2025-2026-election-cycle/"
+    },
+    {
+      "subject": "Federal campaign finance methodology",
+      "url": "https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/"
+    },
+    {
+      "subject": "Historically adjudicated vote-buying case, DOJ 2022",
+      "url": "https://www.justice.gov/archives/opa/pr/former-louisiana-police-chief-city-councilmember-and-additional-co-conspirator-sentenced-vote"
+    },
+    {
+      "subject": "Political finance regulations",
+      "url": "https://www.idea.int/data-tools/data/political-finance-database"
+    },
+    {
+      "subject": "Corruption Perceptions Index 2025",
+      "url": "https://www.transparency.org/en/cpi/2025"
+    }
+  ],
+  "verification": {
+    "repository_source": "EXACT_GITHUB_READBACK",
+    "deployment": "SEPARATE_WORKFLOW_PROOF_NEEDED",
+    "outside_browser": "NOT_VERIFIED",
+    "reader_understanding": "NOT_MEASURED",
+    "previous_interaction_mock": "30_OF_30_FOR_INITIAL_SOURCE_PRECEDING_HISTORICAL_CASE_INSERTION",
+    "election_audit": "NONE"
+  },
+  "limitations": [
+    "Fictional advertising examples are not offers or real claims.",
+    "Campaign spending figures do not establish illegal vote purchases.",
+    "One historic conviction does not establish wrongdoing in another election.",
+    "Political finance laws and corruption perceptions are not local election audits.",
+    "No voter data or voter-level inferences are used.",
+    "No automatic communication, sponsored placement, or data collection takes place."
+  ]
+}
