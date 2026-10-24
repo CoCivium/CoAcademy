@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Nonpartisan source-first aggregate election finance comparisons, privacy-first by design. Spending per ballot is not a vote price.">
+<meta name="robots" content="index,follow"><meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/civic-integrity/money-and-elections/">
+<link rel="alternate" type="application/json" href="./discovery.json" title="Machine-readable scope and sources">
+<title>Money and Elections | Not the price of a vote</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Money and Elections Aggregate Lab R0","url":"https://cocivium.github.io/CoAcademy/civic-integrity/money-and-elections/","description":"Nonpartisan source-first voluntary aggregate finance calculator, not a vote-purchase estimate or electoral integrity grade.","isAccessibleForFree":true,"applicationCategory":"EducationalApplication","inLanguage":"en","datePublished":"2026-10-24","creator":{"@type":"Organization","name":"CoCivium","url":"https://github.com/CoCivium/CoCivium"}}</script>
+<style>
+:root{color-scheme:dark;--bg:#08161e;--surface:#13323e;--edge:#4b7880;--ink:#f0faf8;--muted:#c4d8dc;--sea:#a7ebdb;--gold:#f1dca5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#245869 0%,transparent 52%),var(--bg);font:16px/1.56 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}
+a{color:var(--sea);text-underline-offset:4px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1130px;margin:auto;padding:22px}
+.header{border-bottom:1px solid var(--edge);padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-size:19px;font-weight:800}h1{font-size:clamp(35px,5.6vw,62px);line-height:1.05;letter-spacing:-.04em;max-width:930px;margin:29px 0 13px}
+h2{font-size:clamp(24px,3vw,32px);margin:7px 0 13px}h3{font-size:18px;margin:3px 0 8px}
+.lead{font-size:18px;color:var(--muted);max-width:850px}
+.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px;font-weight:800;color:var(--gold)}
+.panel{border:1px solid var(--edge);background:linear-gradient(135deg,#1a414c,var(--surface));border-radius:17px;padding:22px;margin:18px 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+.tile,.region{background:#0a2a35;border:1px solid #608f94;border-radius:13px;padding:17px}
+.tile p{font-size:14px;color:var(--muted);margin:4px 0}
+.notice{border-left:4px solid var(--gold);padding:13px 16px;background:#1d3742;border-radius:0 12px 12px 0;margin:18px 0}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.field{margin:12px 0}.field label{display:block;font-size:14px;font-weight:680;margin-bottom:7px}
+input,select,button{font:inherit}input,select{width:100%;padding:11px;background:#071f2b;border:1px solid #89abb0;border-radius:9px;color:var(--ink)}
+input::placeholder{color:#bbd0d4}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}
+.btn{background:var(--sea);color:#08272d;border:1px solid var(--sea);border-radius:10px;padding:11px 14px;font-weight:760;cursor:pointer}
+.btn.secondary{color:var(--ink);background:transparent;border-color:#9bbfbe}
+.output{min-height:105px;border:1px solid var(--edge);background:#082733;padding:16px;border-radius:13px;white-space:pre-wrap;overflow-wrap:anywhere}
+.status{font-size:13px;color:var(--gold);min-height:20px}.small{font-size:13px;color:var(--muted)}
+.sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.source{display:block;padding:13px;border:1px solid #679d9d;background:#0b2d38;border-radius:11px;text-decoration:none}
+.source strong{display:block;color:var(--ink)}.source span{font-size:13px;display:block;color:var(--muted);margin-top:5px}
+details{border:1px solid var(--edge);padding:14px;border-radius:11px;margin:9px 0}summary{cursor:pointer;font-weight:700}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--edge);padding:17px 0;margin-top:30px}
+@media(max-width:830px){.three{grid-template-columns:1fr}.fields{grid-template-columns:1fr}}
+@media(max-width:520px){.sources{grid-template-columns:1fr}.wrap{padding:14px}.panel{padding:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head><body><div class="wrap">
+<header class="header"><span class="brand">CoCivium · Civic Integrity</span><a href="../">Official voter and audit information</a></header>
+<main>
+<h1>Money in elections is measurable.<br>A ballot is not a commodity.</h1>
+<p class="lead">Compare documented aggregate figures without inventing a “price” for someone's vote or guessing what residents believe. No automatic geolocation, voter files, campaigning, profiling, or regional messages.</p>
+<div class="three">
+<div class="tile"><div class="eyebrow">Reported political spending</div><h3>Spending / counted ballots</h3><p>Descriptive arithmetic with strict source, period and scope limitations. Not evidence of votes purchased.</p></div>
+<div class="tile"><div class="eyebrow">Government costs</div><h3>Administration / counted ballots</h3><p>A separate public operations measure; states and localities finance elections differently.</p></div>
+<div class="tile"><div class="eyebrow">Actual misconduct</div><h3>Requires evidence, not ratios</h3><p>Vote buying and coercion are distinct legal issues. No inference about people, precincts or elections is made here.</p></div>
+</div>
+<div class="notice"><strong>Secret ballot means secret ballot.</strong> U.S. voter files can contain participation information but not whom a person voted for. Aggregates do not authorize individual prediction. <a href="https://www.eac.gov/election-officials/voter-lists-registration-confidentiality-and-voter-list-maintenance">Source: U.S. Election Assistance Commission</a>.</div>
+<section class="panel" aria-labelledby="calc-title">
+<div class="eyebrow">01 / Self-service source-labeled aggregate calculator</div><h2 id="calc-title">Compare two public datasets you choose</h2>
+<p>Two aggregates, one reporting definition, one election year, and separately identified sources. The page performs arithmetic only. Real records are not preloaded or fetched.</p>
+<div class="fields">
+<div class="field"><label for="measure">Select a shared measure</label><select id="measure"><option value="campaign">Reported campaign spending / ballot (USD)</option><option value="administration">Election administration spending / ballot (USD)</option></select></div>
+<div class="field"><label for="year">Election year for both</label><input type="number" id="year" min="2000" max="2026" step="1" value="2024"></div>
+</div>
+<div class="fields">
+<div class="region"><h3>Public aggregate A</h3>
+<div class="field"><label for="a-label">Jurisdiction label</label><input id="a-label" type="text" maxlength="80" placeholder="Aggregate A; no individual identities"></div>
+<div class="field"><label for="a-money">Reported expenses in USD</label><input id="a-money" type="number" inputmode="decimal" step="any" min="0" max="1000000000000" placeholder="No data preloaded"></div>
+<div class="field"><label for="a-ballots">Counted ballots (aggregate)</label><input id="a-ballots" type="number" inputmode="numeric" step="1" min="1000" max="1000000000" placeholder="At least 1,000 for this demonstration"></div>
+<div class="field"><label for="a-money-url">Documented money source URL</label><input id="a-money-url" type="url" maxlength="600" placeholder="https://..."></div>
+<div class="field"><label for="a-ballots-url">Documented ballots source URL</label><input id="a-ballots-url" type="url" maxlength="600" placeholder="https://..."></div></div>
+<div class="region"><h3>Public aggregate B</h3>
+<div class="field"><label for="b-label">Jurisdiction label</label><input id="b-label" type="text" maxlength="80" placeholder="Aggregate B; no individual identities"></div>
+<div class="field"><label for="b-money">Reported expenses in USD</label><input id="b-money" type="number" inputmode="decimal" step="any" min="0" max="1000000000000" placeholder="No data preloaded"></div>
+<div class="field"><label for="b-ballots">Counted ballots (aggregate)</label><input id="b-ballots" type="number" inputmode="numeric" step="1" min="1000" max="1000000000" placeholder="At least 1,000 for this demonstration"></div>
+<div class="field"><label for="b-money-url">Documented money source URL</label><input id="b-money-url" type="url" maxlength="600" placeholder="https://..."></div>
+<div class="field"><label for="b-ballots-url">Documented ballots source URL</label><input id="b-ballots-url" type="url" maxlength="600" placeholder="https://..."></div></div>
+</div>
+<div class="actions"><button type="button" class="btn" id="calculate">Compare aggregates</button><button type="button" class="btn secondary" id="example">Load unmistakably fictional example</button><button type="button" class="btn secondary" id="clear">Clear all</button><button type="button" class="btn secondary" id="copy">Copy current result</button></div>
+<p class="status" id="status" aria-live="polite">No user data is loaded, transmitted or saved.</p>
+<div class="output" role="status" aria-live="polite" id="result">Enter two source-documented aggregates or load a fictional arithmetic exercise.</div>
+<p class="small">Minimum 1,000 ballots is a coarse restriction, not a guarantee of statistical privacy. Input URLs are only strings and aren't validated against authorities. The ratios are not political ratings, “vote prices,” voter susceptibility estimates, proof of corruption, or evidence that money caused voting outcomes. Do not add campaign receipts, transfers and independent expenditures indiscriminately, or compare fiscal years with election cycles without reconciliation.</p>
+</section>
+<section class="panel">
+<div class="eyebrow">02 / Primary-source paths</div><h2>Use the right numerator and denominator</h2>
+<div class="sources">
+<a class="source" href="https://www.fec.gov/campaign-finance-data/campaign-finance-statistics/"><strong>FEC: campaign finance tables</strong><span>Federal reporting by committee type, cycle and filing period</span></a>
+<a class="source" href="https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/"><strong>FEC: methodology</strong><span>Distinguishes cycles, expenditures, receipts and other reporting concepts</span></a>
+<a class="source" href="https://www.eac.gov/research-and-data/studies-and-reports"><strong>EAC: election participation data</strong><span>2024 Election Administration and Voting Survey corrected datasets (2026 revision)</span></a>
+<a class="source" href="https://www.ncsl.org/elections-and-campaigns/funding-election-administration"><strong>NCSL: administration financing</strong><span>Budgets and responsibility vary among states and local governments</span></a>
+<a class="source" href="https://www.idea.int/data-tools/data/political-finance-database"><strong>International IDEA: global finance rules</strong><span>Funding, disclosure, spending restrictions, oversight and sanctions</span></a>
+<a class="source" href="https://uscode.house.gov/us/usc/119-118/t52/s10307/"><strong>Federal law: specified voting payments</strong><span>52 U.S.C. § 10307(c), not an aggregate expenditure formula</span></a>
+</div>
+<p class="small">The EAC reported more than 158 million ballots counted in the 2024 U.S. general election. That national figure is not automatically the correct denominator for any particular spending dataset. <a href="https://www.eac.gov/news/2025/06/30/us-election-assistance-commission-releases-2024-election-administration-and-voting">EAC 2024 survey summary</a>.</p>
+</section>
+<section class="panel">
+<div class="eyebrow">03 / National, global and future scrutiny</div><h2>Comparing different countries requires more than converting currencies</h2>
+<details><summary>Can this calculate the integrity of an election?</summary><p>No. Campaign spending per ballot does not measure fraud, corruption, administrative reliability or voting rights. A verified legal violation, a source coverage gap, a funding rule and an audit result have different evidentiary meanings.</p></details>
+<details><summary>Can we compare different countries?</summary><p>International IDEA supplies a public comparative political-finance framework. Country rules, disclosure coverage, currency and purchasing power, reporting periods and election systems differ. Compare the definitions and documented controls first; don't manufacture a global integrity grade from this ratio.</p></details>
+<details><summary>Could indirect regional analysis reveal an individual's vote?</summary><p>No reliable individual choice follows from a local aggregate. Inferring personal political preferences from group statistics invites ecological fallacy and privacy risks. We intentionally exclude voter-file joins, precinct-level targeting and predictive political profiling.</p></details>
+<details><summary>What makes AI-assisted evolution genuinely faster?</summary><p>New independent evidence, a confirmed correction, a fresh counterexample, or a demonstrated useful outcome. Repeating a calculation across a million agents does not provide a million independent observations. Preserve failure receipts; repair, reframe, refer, stop or retry with a changed hypothesis and bounded budget.</p></details>
+<p><a href="../POST_ELECTION_CONTINUITY_R0.md">Post-election review protocol</a> · <a href="./discovery.json">Evidence and privacy manifest</a> · <a href="../">Full civic integrity support</a></p>
+</section>
+<noscript><p class="panel">JavaScript is optional. Sources and methodology remain available without scripts. Calculation requires JavaScript; it does not submit anything.</p></noscript>
+</main>
+<footer>CoCivium Civic Integrity, independent educational candidate R0. Not a government service, election audit, legal finding, vote-buying allegation, party recommendation or individual voting prediction. Nothing is silently sent, logged, scheduled or sent to a user's region. All input stays in this tab until cleared or reloaded. External sites receive requests only after a voluntary link click. Last source review: October 24, 2026.</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var $=function(k){return document.getElementById(k)},fictional=false,current="";
+var ids=["year","measure","a-label","a-money","a-ballots","a-money-url","a-ballots-url","b-label","b-money","b-ballots","b-money-url","b-ballots-url"];
+function v(k){return String($(k).value===undefined?"":$(k).value).trim()}
+function st(x){$("status").textContent=x}
+function finite(k,lo,hi,integer){var text=v(k),n=Number(text);return text!==""&&Number.isFinite(n)&&n>=lo&&n<=hi&&(!integer||Number.isInteger(n))?n:null}
+function url(x){return x.length>=10&&x.length<=600&&/^https:\/\//i.test(x)&&!/\s/.test(x)}
+function item(p){
+ var label=v(p+"-label"),money=finite(p+"-money",0,1e12,false),ballots=finite(p+"-ballots",1000,1e9,true),ms=v(p+"-money-url"),bs=v(p+"-ballots-url");
+ if(!label||label.length>80||money===null||ballots===null||(!fictional&&(!url(ms)||!url(bs))))return null;
+ return {label:label,money:money,ballots:ballots,ms:ms,bs:bs,ratio:money/ballots};
+}
+function compare(){
+ var year=finite("year",2000,2026,true),a=item("a"),b=item("b");
+ if(year===null||!a||!b){current="";$("result").textContent="Held: enter two labeled aggregates with USD amounts, at least 1,000 counted ballots each, a common year, and an HTTPS money and ballot source for each non-fictional record.";st("INSUFFICIENT OR UNSOURCED INPUTS. Nothing transmitted.");return}
+ if(a.label.toLowerCase()===b.label.toLowerCase()){current="";$("result").textContent="Held: use distinct labels to avoid describing the same record as a comparison.";st("DUPLICATED AGGREGATE LABELS.");return}
+ var money=x=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(x);
+ var kind=v("measure")==="administration"?"Public election administration cost":"Reported campaign spending";
+ current=(fictional?"FICTIONAL ARITHMETIC ONLY - no real election data.":"USER-ENTERED AGGREGATES - source URLs NOT independently verified.")+"\n"+kind+" per counted ballot, "+year+"\n"+
+ a.label+": "+money(a.money)+" / "+a.ballots.toLocaleString("en-US")+" = "+money(a.ratio)+" per ballot\n"+
+ b.label+": "+money(b.money)+" / "+b.ballots.toLocaleString("en-US")+" = "+money(b.ratio)+" per ballot\n"+
+ (fictional?"Sources: NONE, because these are illustrative invented amounts.":"A expense source: "+a.ms+"\nA counted-ballots source: "+a.bs+"\nB expense source: "+b.ms+"\nB counted-ballots source: "+b.bs)+
+ "\n\nThis is NOT the cost to buy a vote, evidence of electoral fraud, proof of political persuasion, an integrity rating, or an individual voter's choice. Reporting scope and transfers must be independently reconciled.";
+ $("result").textContent=current;st(fictional?"FICTITIOUS, not actual jurisdictions or expenditure figures.":"SELF-REPORTED, unverified sources. Descriptive arithmetic only.");
+}
+ids.forEach(function(k){$(k).addEventListener("input",function(){fictional=false;current="";$("result").textContent="Inputs changed. Recalculate to see the updated result.";st("Previous result invalidated. Nothing transmitted.");});});
+$("calculate").addEventListener("click",compare);
+$("example").addEventListener("click",function(){
+ var fake={year:"2024",measure:"campaign","a-label":"FICTIONAL REGION A","a-money":"200000","a-ballots":"18000","b-label":"FICTIONAL REGION B","b-money":"110000","b-ballots":"15000","a-money-url":"","a-ballots-url":"","b-money-url":"","b-ballots-url":""};
+ Object.keys(fake).forEach(k=>$(k).value=fake[k]);fictional=true;compare();
+});
+$("clear").addEventListener("click",function(){
+ ids.forEach(function(k){$(k).value=k==="year"?"2024":k==="measure"?"campaign":""});
+ current="";fictional=false;$("result").textContent="Enter two source-documented aggregates or load a fictional arithmetic exercise.";st("Cleared. Nothing transmitted.");
+});
+$("copy").addEventListener("click",function(){
+ if(!current){st("No current result to copy. Calculate first.");return}
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(current).then(function(){st("Copied by choice. Nothing was sent.");},function(){st("Clipboard unavailable. Select the result manually.");});
+ else st("Clipboard unavailable. Select the result manually.");
+});
+})();
+</script></body></html>
