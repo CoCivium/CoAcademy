@@ -1,0 +1,98 @@
+{
+  "schema": "CoCivium.CoPlay.StaticAndIsolatedDOMTest.R0",
+  "source_blob_sha": "a5d638b3e62dbd9cd51510beb15994372e930792",
+  "execution": "V8 isolated source script with DOM mock only; NOT actual browser rendering or outside-network accessibility",
+  "checks": [
+    {
+      "name": "SOURCE_EXACT_READBACK_HASH",
+      "pass": true
+    },
+    {
+      "name": "FICTIONAL_LABEL_ABOVE_AD",
+      "pass": true
+    },
+    {
+      "name": "NO_EXTERNAL_SCRIPT_IMPORTS",
+      "pass": true
+    },
+    {
+      "name": "NO_FORM_AND_COOKIES",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTOMATIC_NETWORK_CALLS",
+      "pass": true
+    },
+    {
+      "name": "NO_PRIVATE_COLLECTION_FIELDS",
+      "pass": true
+    },
+    {
+      "name": "LINKS_TO_RESEARCH_AND_CIVIC_LANE",
+      "pass": true
+    },
+    {
+      "name": "ACCESSIBLE_TABBED_BUTTONS",
+      "pass": true
+    },
+    {
+      "name": "MOBILE_CSS",
+      "pass": true
+    },
+    {
+      "name": "REDUCED_MOTION_CSS",
+      "pass": true
+    },
+    {
+      "name": "PUBLIC_RELEASE_DISCLOSURE",
+      "pass": true
+    },
+    {
+      "name": "VALID_STRUCTURED_DATA",
+      "pass": true
+    },
+    {
+      "name": "CLIENT_SCRIPT_SYNTAX",
+      "pass": true
+    },
+    {
+      "name": "CLIENT_SCRIPT_RUNS_IN_ISOLATED_DOM_MOCK",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTOMATIC_CLIPBOARD_COPY",
+      "pass": true
+    },
+    {
+      "name": "TAB_COLLECTIVE_CHANGES_STORY",
+      "pass": true
+    },
+    {
+      "name": "SINGLE_ACTIVE_SPOOF_CONTROL",
+      "pass": true
+    },
+    {
+      "name": "PERMISSION_AD_CHANGES_STORY",
+      "pass": true
+    },
+    {
+      "name": "FIRST_SPOOF_RESTORED",
+      "pass": true
+    },
+    {
+      "name": "EXPLICIT_SHARE_COPIES_TEXT",
+      "pass": true
+    }
+  ],
+  "passed": 20,
+  "total": 20,
+  "status": "PASS_STATIC_AND_DOM_MOCK",
+  "limitations": [
+    "No independent HTTP or HTML CSS render test",
+    "No human comprehension data",
+    "No browser clipboard permissions/environment test",
+    "No independent AI retrieval",
+    "No external posting or paid media"
+  ],
+  "source_link": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/index.html"
+}
