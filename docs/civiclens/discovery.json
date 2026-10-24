@@ -9,15 +9,15 @@
   "created_date": "2026-10-24",
   "status": {
     "repository": "PUBLIC_SOURCE_COMMITTED",
-    "website": "PAGES_PIPELINE_REQUIRED_CHECK_LATEST_RUN",
-    "independent_remote_browser_readback": "NOT_YET_PROVEN",
+    "website": "GITHUB_PAGES_SERVING_PENDING_CORRESPONDING_WORKFLOW_PROOF",
+    "independent_remote_browser_readback": "INCONCLUSIVE_EXTERNAL_FETCH_IN_THIS_ENVIRONMENT",
     "external_AI_pickup": "NOT_TESTED",
     "reader_learning_effect": "NOT_MEASURED"
   },
   "human": {
     "intended_url": "https://cocivium.github.io/CoAcademy/civiclens/",
     "public_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/index.html",
-    "source_blob_sha": "f22cc8f92634203bc0e8f54185a35cb8f60b6a1f"
+    "source_blob_sha": "862e5621143af89ce08d4cb7958a6a021e4c035b"
   },
   "machine": {
     "raw": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/civiclens/discovery.json",
@@ -103,5 +103,26 @@
     "UI_TEST_NE_LEARNING_EFFECT",
     "NONPARTISAN_CIVIC_LITERACY_NE_VOTER_PERSUASION",
     "SOURCE_LINK_NE_JURISDICTIONALLY_CURRENT"
+  ],
+  "updated_date": "2026-10-24",
+  "release_revision": "R1A_OFFICIAL_SOURCES_FIRST",
+  "first_use_acceptance": {
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/FIRST_USE_ACCEPTANCE_R0.md",
+    "state": "PUBLIC_PROTOCOL__NO_PARTICIPANT_STUDY",
+    "purpose": "Independent external retrieval, source accuracy, accessibility, voluntary real-user learning/usefulness checks",
+    "no_voter_profiling": true
+  },
+  "reviewed_official_sources": [
+    "https://vote.gov/register",
+    "https://vote.gov/guide-to-voting",
+    "https://www.usa.gov/find-polling-place",
+    "https://www.eac.gov/vote",
+    "https://www.eac.gov/voters/voter-faqs"
+  ],
+  "new_revision_nonclaims": [
+    "OFFICIAL_LINKS_IN_SOURCE_NE_PROVEN_VISITOR_USE",
+    "SYNTHETIC_CYCLES_NE_INDEPENDENT_READER_OUTCOMES",
+    "ACCESSIBILITY_SOURCE_DESIGN_NE_COMPLETED_SCREENREADER_TESTS",
+    "PAGES_DEPLOY_NE_INDEPENDENT_HTTPS_RECEIVER_PROOF"
   ]
 }
