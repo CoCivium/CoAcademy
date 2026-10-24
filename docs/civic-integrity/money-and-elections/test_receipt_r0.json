@@ -1,0 +1,146 @@
+{
+  "schema": "CoCivium.MoneyElections.IsolatedV8Test.R0",
+  "date": "2026-10-24",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/money-and-elections/index.html",
+  "source_blob_sha": "569522824243bf21d144752375974222dff35366",
+  "method": "Exact GitHub readback plus source JavaScript in an isolated V8 DOM/clipboard mock; not native browser rendering or public HTTPS receiver proof.",
+  "total": 30,
+  "passed": 30,
+  "failed": [],
+  "checks": [
+    {
+      "name": "EXECUTABLE_SOURCE_IN_V8_MOCK",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTO_CLIPBOARD",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTO_NETWORK",
+      "pass": true
+    },
+    {
+      "name": "NO_IMPORT_SCRIPT",
+      "pass": true
+    },
+    {
+      "name": "NO_PERSISTENT_STORAGE",
+      "pass": true
+    },
+    {
+      "name": "NO_FORMS",
+      "pass": true
+    },
+    {
+      "name": "COUNTRY_RATINGS_NOT_CLAIMED",
+      "pass": true
+    },
+    {
+      "name": "FINANCE_AND_OPERATIONS_DIFFER",
+      "pass": true
+    },
+    {
+      "name": "SECRET_BALLOT_LINK",
+      "pass": true
+    },
+    {
+      "name": "OFFICIAL_FINANCE_AND_TURNOUT",
+      "pass": true
+    },
+    {
+      "name": "GLOBAL_RULES_SOURCE",
+      "pass": true
+    },
+    {
+      "name": "MIN_AGGREGATE_BOUNDED_IN_HTML_AND_JS",
+      "pass": true
+    },
+    {
+      "name": "NO_GEO_TARGETING",
+      "pass": true
+    },
+    {
+      "name": "CLEAR_NOT_AUTOMATIC",
+      "pass": true
+    },
+    {
+      "name": "SOURCE_BLOB_MATCH",
+      "pass": true
+    },
+    {
+      "name": "FICTION_EXPLICIT",
+      "pass": true
+    },
+    {
+      "name": "A_FICTION_RATIO",
+      "pass": true
+    },
+    {
+      "name": "B_FICTION_RATIO",
+      "pass": true
+    },
+    {
+      "name": "FICTION_NO_REAL_SOURCE_CLAIM",
+      "pass": true
+    },
+    {
+      "name": "FICTION_NOT_SENT",
+      "pass": true
+    },
+    {
+      "name": "CHANGED_DEMO_REQUIRES_REAL_SOURCE",
+      "pass": true
+    },
+    {
+      "name": "REAL_ENTRIES_COMPUTE",
+      "pass": true
+    },
+    {
+      "name": "DETERMINISTIC_RATIO_A",
+      "pass": true
+    },
+    {
+      "name": "DETERMINISTIC_RATIO_B",
+      "pass": true
+    },
+    {
+      "name": "REAL_SOURCES_NOT_VERIFIED_CAVEAT",
+      "pass": true
+    },
+    {
+      "name": "COPY_ONLY_ON_USER_CLICK",
+      "pass": true
+    },
+    {
+      "name": "SMALL_REGION_REJECTED",
+      "pass": true
+    },
+    {
+      "name": "INVALID_NOT_COPIED",
+      "pass": true
+    },
+    {
+      "name": "DUPLICATE_LABELS_HELD",
+      "pass": true
+    },
+    {
+      "name": "CLEAR_REMOVES_INPUTS",
+      "pass": true
+    }
+  ],
+  "candidate_state": "PUBLIC_SOURCE_COMMITTED__SYNTHETIC_TESTED",
+  "independent_browser": "NOT_TESTED",
+  "public_HTTPS": "HOST_UNAVAILABLE_TO_WEB_TOOL__NOT_OUTAGE_PROOF",
+  "real_election_data": "NONE",
+  "participant_benefit": "NOT_MEASURED",
+  "political_personalization": "NONE",
+  "automated_distribution": "NONE",
+  "no_claims": [
+    "AGGREGATE_RATIO_NE_VOTE_PRICE",
+    "SOURCE_URL_NE_INDEPENDENT_CROSS_CHECK",
+    "SIMULATED_MATH_NE_REGIONAL_SOURCE_DATA",
+    "MANY_AI_MODELS_NE_INDEPENDENT_EVIDENCE",
+    "NO_INTEGRITY_SCORE"
+  ]
+}
