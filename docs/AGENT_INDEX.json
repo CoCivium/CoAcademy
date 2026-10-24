@@ -26,7 +26,11 @@
     "coplay/README.md",
     "coplay/campaigns/index.html",
     "coplay/campaigns/campaigns.json",
-    "coplay/campaigns/test_receipt_r0.json"
+    "coplay/campaigns/test_receipt_r0.json",
+    "civic-integrity/index.html",
+    "civic-integrity/discovery.json",
+    "civic-integrity/BRIEF_FOR_REVIEWERS_R0.md",
+    "civic-integrity/test_receipt_r0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -77,5 +81,14 @@
     "class": "SIX_DIFFERENT_VOLUNTARY_EXPERIMENTS",
     "evidence": "SOURCE_COMMITTED__PAGES_AND_INDEPENDENT_USER_EFFECTS_SEPARATE",
     "gates": "NO_HIDDEN_ANALYTICS__NO_AUTOMATIC_BROADCAST__POLITICAL_NEUTRALITY"
+  },
+  "civic_integrity": {
+    "human": "civic-integrity/",
+    "machine": "civic-integrity/discovery.json",
+    "scope": "NONPARTISAN_OFFICIAL_VOTER_LINKS_AUDIT_LITERACY_RESPONSIBLE_REPORTING_AND_GLOBAL_RESEARCH",
+    "status": "PUBLIC_SOURCE__HOST_AND_REAL_USE_RECEIPTS_SEPARATE",
+    "government_affiliation": false,
+    "voter_profiling": false,
+    "real_allegation_intake": false
   }
 }
