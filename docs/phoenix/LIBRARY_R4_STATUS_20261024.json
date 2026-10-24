@@ -1,0 +1,52 @@
+{
+  "schema": "CoCivium.CoPhoenix.LibraryCrossSessionRecovery.PublicStatus.R4",
+  "issued": "2026-10-24",
+  "observation_utc": "2026-10-24T16:43:39.685670+00:00",
+  "coverage": "One complete previous-session private 49,489-byte portable static capsule with five historical browser experiences, not the current live CoAcademy source tree",
+  "source_archive_sha256": "0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2",
+  "original_history": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/PORTABLE_R3_RECEIPT_20261024.json",
+  "restore_receipt_sha256": "5c1efe4cf4562e9c79501a84a0d0c09d4570427e737a3e1c76f9a9e43e575350",
+  "receipt_custody": "PRIVATE_CHATGPT_LIBRARY__EXACT_READBACK_SUCCEEDED__NOT_PUBLIC",
+  "verification": {
+    "archive_bytes": 49489,
+    "sha256_match": true,
+    "separately_stored_checksum_match": true,
+    "cross_session_library_retrieval": true,
+    "two_clean_extractions": true,
+    "manifest_and_members_checked": true,
+    "historical_apps": 5,
+    "localhost_http_gets": 6,
+    "localhost_http_exact_content": 6,
+    "negative_tests": [
+      "modified member rejected without extraction",
+      "missing member rejected without extraction",
+      "traversal rejected without extraction",
+      "duplicate entry rejected without extraction"
+    ],
+    "passes": 32,
+    "failures": 0,
+    "inconclusive": 0,
+    "source_zip_scripts_executed": false,
+    "external_network_access_used": false,
+    "x2_used": false
+  },
+  "achieved_state": "PROVEN_PRIVATE_LIBRARY_SOURCE_READBACK_AND_ISOLATED_LOCAL_RESTORE_FOR_HISTORICAL_CAPSULE_ONLY",
+  "not_achieved": [
+    "independent durable custodian outside ChatGPT user account",
+    "CoStead/CoGateway actual backup receiver ACK",
+    "current production CoAcademy or GitHub account reconstruction",
+    "separate-provider public HTTPS origin",
+    "Wayback capture of this release",
+    "native client accessibility/human use",
+    "provider-neutral scheduler or indefinitely running service"
+  ],
+  "next_wake": "Authorized separately administered custodian can cold-restore verified archive and report exact readback under simulated loss of ChatGPT and Github",
+  "nonclaims": [
+    "LIBRARY_BYTES_NE_USER_CONTROLLED_OFFSITE_REPLICA",
+    "COLD_RESTORE_NE_LIVE_PUBLIC_FAILOVER",
+    "STATIC_SOURCE_NE_FRESH_ELECTION_CONTENT",
+    "SECOND_SESSION_NE_SECOND_PROVIDER",
+    "BACKUP_NE_RUNNING_APPLICATION",
+    "PASS_32_NE_GLOBAL_IMMUNITY"
+  ]
+}

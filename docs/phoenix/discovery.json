@@ -101,5 +101,21 @@
     "real_public_failover": "NOT_IMPLEMENTED",
     "rights_review_before_public_remirror": "REQUIRED",
     "wake_condition": "INDEPENDENT_REAL_CUSTODIAN_AND_BOUNDED_FAILOVER_RECEIVER_AVAILABLE"
+  },
+  "library_cross_session_r4": {
+    "date": "2026-10-24",
+    "public_summary": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/LIBRARY_R4_STATUS_20261024.json",
+    "private_library_receipt": "EXACT_BYTES_STORED_AND_READBACK__PRIVATE_NOT_PUBLISHED",
+    "prior_archive_sha256": "0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2",
+    "receipt_sha256": "5c1efe4cf4562e9c79501a84a0d0c09d4570427e737a3e1c76f9a9e43e575350",
+    "checks": "PASS_32_OF_32_FRESH_SECOND_ISOLATED_RESTORE",
+    "independent_local_http": "SIX_OF_SIX_HTTP_200_AND_EXACT_BYTES",
+    "source_origin": "NATIVE_CHATGPT_LIBRARY_RETRIEVAL",
+    "GitHub_fetch_required_for_test": false,
+    "actual_coStead_or_coGateway_custody": "NOT_VERIFIED",
+    "independence_from_ChatGPT_account": "NOT_PROVEN",
+    "live_mirror": "NOT_IMPLEMENTED",
+    "archive_public": false,
+    "future_wake": "SEPARATELY_ADMINISTERED_CUSTODIAN_WITH_COLD_RESTORE_AND_RECEIVER_READPROOF"
   }
 }

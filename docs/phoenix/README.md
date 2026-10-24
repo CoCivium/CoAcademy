@@ -1,5 +1,17 @@
 # CoPhoenix R0: public source-backed cold-start contract
 
+## R4 Library cross-session recovery: 32/32 fresh checks (2026-10-24)
+
+A separate interactive work session rediscovered the **actual R3 49,489-byte ZIP** and its separately stored checksum through the user's private ChatGPT Library, without using GitHub, X2 or CoStead. The restored ZIP SHA-256 exactly matched the originally published R3 reference `0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2`.
+
+A new independent, isolated extraction program (not executing the ZIP's bundled scripts) performed **32/32 checks**, including two clean restores, each of the five historical HTML experiences, six local-only HTTP responses matching exact extracted bytes, absence of automatic JavaScript network calls in scoped source inspection, and fail-closed handling for changed/missing/traversal/duplicate ZIP members. It reported **zero failed and zero inconclusive** checks. The receipt was saved back to the private Library and independently read back at the exact whole-receipt SHA-256 `5c1efe4cf4562e9c79501a84a0d0c09d4570427e737a3e1c76f9a9e43e575350`.
+
+**Important limitation:** This proves that one known historical, public-safe static-content package was recoverable from a separate Library file path and test environment. It does **not** establish CoStead or CoGateway custody, user-administered off-provider backup, a current copy of online CoAcademy, an independent public mirror, native X2 runtime, live civic facts, active social audience, independent user benefit, or a continuously executing repair daemon. The private R3 archive is **not made public by this entry**.
+
+[Sanitized machine-readable R4 status](./LIBRARY_R4_STATUS_20261024.json) · [Earlier R3 bounded receipt](./PORTABLE_R3_RECEIPT_20261024.json)
+
+**Next high-value proof:** receiver-controlled cold restore of the exact archive on a separately administered host that remains usable if GitHub and the ChatGPT account become inaccessible. The complete recovery of live project source/metadata and publishing identity is a subsequent, larger proof, not a free consequence of static HTML restoration.
+
 ## R3 portable offline capsule: five independent cold starts (2026-10-24)
 
 The R0 source-backed capsule and 26/26 receipt remain preserved below. A distinct R3 **private conversation download** now covers five historical browser experiences, has a complete 49,489-byte ZIP with SHA-256 `0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2`, and passed **61/61 scoped tests** in an isolated Linux container. See [the public R3 receipt](./PORTABLE_R3_RECEIPT_20261024.json).
