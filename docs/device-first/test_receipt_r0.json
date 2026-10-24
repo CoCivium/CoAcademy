@@ -1,0 +1,121 @@
+{
+  "schema": "CoDeviceBridge.IsolatedV8Simulation.R0",
+  "date": "2026-10-24",
+  "source_blob_sha": "dc2d9ec5c262b15d5630769ef35f3d85abeeb8ce",
+  "method": "GitHub blob exact readback; isolated V8 inline browser script run with two+ independently instantiated mock DOM sessions and deterministic FAKE hash. Tests control/shape/tamper handling only; NOT browser SHA-256 validation or real device proof.",
+  "checks": [
+    {
+      "name": "JS_ISOLATED_INIT",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTOMATIC_CLIPBOARD",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTO_WORKER",
+      "pass": true
+    },
+    {
+      "name": "PERMISSION_FREE_CAPABILITY_CARDS",
+      "pass": true
+    },
+    {
+      "name": "NO_DEVICE_ID_CAPTURE",
+      "pass": true
+    },
+    {
+      "name": "NO_TELEMETRY",
+      "pass": true
+    },
+    {
+      "name": "NO_PERSISTENT_INPUTS",
+      "pass": true
+    },
+    {
+      "name": "HELLO_OUTPUT_CREATED",
+      "pass": true
+    },
+    {
+      "name": "HELLO_HAS_DIGEST",
+      "pass": true
+    },
+    {
+      "name": "HELLO_NOT_AUTOSENT",
+      "pass": true
+    },
+    {
+      "name": "SECOND_CONTEXT_ACCEPTS_HELLO",
+      "pass": true
+    },
+    {
+      "name": "RECEIVER_ACK_OPTION_ENABLED",
+      "pass": true
+    },
+    {
+      "name": "ACK_GENERATED",
+      "pass": true
+    },
+    {
+      "name": "ACK_MATCHED_ORIGINAL",
+      "pass": true
+    },
+    {
+      "name": "ACK_HELD_WITHOUT_ORIGINAL",
+      "pass": true
+    },
+    {
+      "name": "TAMPERED_PACKET_REJECTED",
+      "pass": true
+    },
+    {
+      "name": "REJECTED_CANNOT_ACK",
+      "pass": true
+    },
+    {
+      "name": "OVERSIZED_INPUT_HELD",
+      "pass": true
+    },
+    {
+      "name": "UNRECOGNIZED_SCHEMA_REJECTED",
+      "pass": true
+    },
+    {
+      "name": "COPY_REQUIRES_CLICK",
+      "pass": true
+    },
+    {
+      "name": "OFFLINE_OPTIN_REGISTRATION",
+      "pass": true
+    },
+    {
+      "name": "OFFLINE_UNREGISTER_CALLED",
+      "pass": true
+    },
+    {
+      "name": "CACHE_CLEANUP_SCOPED",
+      "pass": true
+    },
+    {
+      "name": "CLEAR_INVALIDATES_CURRENT_CHALLENGE",
+      "pass": true
+    },
+    {
+      "name": "CLEARED_ORIGIN_REJECTS_LATE_ACK",
+      "pass": true
+    },
+    {
+      "name": "CHECKS_CLEAR",
+      "pass": true
+    }
+  ],
+  "total": 26,
+  "passed": 26,
+  "failures": [],
+  "independent_host": "NOT_VERIFIED",
+  "real_device": "NOT_TESTED",
+  "offline_reload": "NOT_TESTED",
+  "authenticated_remote_receiver": "NOT_IMPLEMENTED",
+  "actual_device_enrollment": "NONE",
+  "X2": "NOT_ACCESSED"
+}

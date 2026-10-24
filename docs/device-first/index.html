@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CoDevice Bridge R0: opt-in offline browser shell, capability checks and a manually carried SHA-256 handoff and ACK demonstration. No enrollment or device tracking.">
+<meta name="robots" content="index,follow"><meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/device-first/">
+<link rel="manifest" href="./manifest.json"><link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="alternate" type="application/json" href="./discovery.json" title="Evidence and privacy scope">
+<title>CoDevice Bridge R0 | One useful device at a time</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1922;--panel:#153540;--line:#4d7d88;--ink:#ecfaf6;--muted:#bbd4d8;--mint:#a2eadb;--gold:#f8dda4}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#235762,var(--bg) 72%);color:var(--ink);font:16px/1.55 system-ui,Segoe UI,sans-serif}
+a{color:var(--mint);text-underline-offset:4px}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+button,input,textarea{font:inherit}button{cursor:pointer;background:var(--mint);color:#0a2931;font-weight:780;padding:11px 14px;border:1px solid var(--mint);border-radius:10px}
+button.alt{background:transparent;color:var(--ink)}button:disabled{opacity:.5;cursor:not-allowed}
+.wrap{max-width:1040px;margin:auto;padding:19px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:15px 0}
+h1{font-size:clamp(37px,5.5vw,63px);line-height:1.04;letter-spacing:-.04em;max-width:780px}
+h2{font-size:clamp(25px,3vw,34px);margin:6px 0 14px}h3{margin:7px 0}
+.lead{font-size:19px;color:var(--muted);max-width:800px}.label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:760}
+.panel{background:linear-gradient(145deg,#1d4450,var(--panel));border:1px solid var(--line);border-radius:15px;padding:23px;margin:20px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.box{border:1px solid var(--line);border-radius:12px;padding:16px;background:#0b2c37}
+.buttons{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.status{color:var(--gold);font-size:14px;min-height:24px;overflow-wrap:anywhere}
+.label-input{display:block;font-weight:700;margin:14px 0 6px}input,textarea{width:100%;background:#071f2b;color:var(--ink);border:1px solid #91aeb7;padding:12px;border-radius:10px}
+textarea{min-height:145px;resize:vertical;font:13px/1.5 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.check{background:#0c2e39;border:1px solid #5b8c95;border-radius:11px;padding:13px}.check strong{display:block}.check span{font-size:13px;color:var(--muted)}
+.warn{background:#2a383c;border-left:4px solid var(--gold);padding:14px;margin:14px 0}.small{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:22px 0;font-size:13px;color:var(--muted)}
+@media(max-width:750px){.grid,.checks{grid-template-columns:1fr}}@media(max-width:520px){.wrap{padding:12px}.panel{padding:16px}.buttons button{width:100%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style></head><body><div class="wrap">
+<header class="top"><strong>CoCivium · CoDevice Bridge</strong><span class="label">R0 · Browser-first · Unenrolled</span></header>
+<main>
+<h1>One useful device at a time.</h1>
+<p class="lead">Before declaring an intelligent fleet, prove a phone, tablet or laptop can complete something useful. Here are three independent steps: a local capability check, an optional offline shell and a manually acknowledged handoff. No account, sensor permissions or native device agent.</p>
+<section class="panel"><div class="label">01 / Local capability check</div><h2>What can this browser actually do?</h2>
+<p>Click to inspect permission-free features. These are browser hints, not a hardware fingerprint, remote device census or verified Internet availability.</p>
+<div class="buttons"><button type="button" id="run-checks">Run local capability check</button><button type="button" id="clear-checks" class="alt">Clear result</button></div>
+<div class="checks" id="checks"><div class="check"><strong>NOT TESTED</strong><span>Nothing has been inspected yet.</span></div></div>
+<p class="status" id="check-status" aria-live="polite">No device check has been run.</p></section>
+<section class="panel"><div class="label">02 / Opt-in CoPhoenix micro-shell</div><h2>Make just this page available offline.</h2>
+<p>An explicitly requested service worker caches only public app files within this device-first path. It does not run an AI, read your notes, enroll a device or provide CoStead disaster recovery. You can remove its registration and cache.</p>
+<div class="buttons"><button type="button" id="enable-offline">Enable offline shell</button><button type="button" id="remove-offline" class="alt">Remove offline shell</button></div>
+<p class="status" id="offline-status" aria-live="polite">Offline not enabled or tested in this tab.</p>
+<p class="small">HTTPS and service-worker support required. Actual offline reload on the device remains a separate acceptance test. A browser may evict caches.</p></section>
+<section class="panel"><div class="label">03 / Manual receiver ACK</div><h2>One portable packet, one explicit acknowledgment.</h2>
+<div class="warn"><strong>Strict limit:</strong> This demonstrates text integrity and a user-mediated round trip. SHA-256 is not a digital signature, and a matching ACK does not prove that another physical device or authenticated person received the text. Use only harmless, non-private notes.</div>
+<div class="grid">
+<div class="box"><h3>Outgoing from this browser</h3>
+<label class="label-input" for="task">Short harmless task (max 220 characters)</label>
+<input type="text" id="task" maxlength="220" autocomplete="off" value="Confirm this browser received one harmless CoDevice packet">
+<div class="buttons"><button type="button" id="make-hello">Create HELLO</button><button type="button" id="make-ack" class="alt" disabled>ACK received HELLO</button></div>
+<label class="label-input" for="outgoing">Copy this packet to the other browser</label><textarea id="outgoing" readonly spellcheck="false"></textarea>
+<div class="buttons"><button type="button" id="copy-outgoing" class="alt">Copy outgoing text</button></div>
+<p class="status" id="out-status" aria-live="polite">No packet or ACK created or sent.</p></div>
+<div class="box"><h3>Incoming to this browser</h3>
+<label class="label-input" for="incoming">Paste a HELLO or ACK (max 8,000 characters)</label>
+<textarea id="incoming" maxlength="8000" spellcheck="false" placeholder="Paste voluntarily received packet or acknowledgment here."></textarea>
+<div class="buttons"><button type="button" id="verify-incoming">Verify pasted text</button><button type="button" id="clear-bridge" class="alt">Clear local handoff</button></div>
+<p class="status" id="in-status" aria-live="polite">Nothing received or checked.</p></div></div>
+<p class="small">Browser A creates HELLO and copies it. Browser B pastes, verifies and generates ACK. Browser A pastes ACK and verifies the match to its current HELLO. The transfer uses a channel you choose. This page never reads the clipboard automatically or contacts a receiver.</p></section>
+<section class="panel"><div class="label">04 / What remains unproved</div><h2>Source is not a device result.</h2>
+<p>To qualify this as a multi-device service we still need real phone/tablet readback, an actual offline reload, distinct consented device evidence, accessibility checks, and eventually a separately authorized authenticated transport. The current dependent-device enrollment policy still requires an X2 primary pilot before enrolling a dependent device. X2 is untouched here.</p>
+<p><a href="./README.md">Device test instructions</a> · <a href="./discovery.json">Release and evidence states</a> · <a href="../relay/">Voluntary feedback</a> · <a href="https://github.com/CoCivium/CoCivium/blob/main/ai/device-enrollment-policy.json">Device enrollment policy</a></p></section>
+<noscript><div class="panel">JavaScript is disabled. The privacy boundary and instructions are readable; local tests, opt-in offline cache and digest handoff require JavaScript.</div></noscript>
+</main><footer>Public browser experiment, not native RickBar, autonomous background software or a fleet census. No forms submit data, no analytics, cookies, camera/microphone/location requests, account or personal device identifiers. The optional service worker caches only same-origin public shell resources after an explicit click. No machine including X2, CoStead or CoGateway was accessed by publishing this page.</footer>
+</div>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const HELLO="CoDeviceBridge.Hello.R0",ACK="CoDeviceBridge.Ack.R0";
+let sent=null,received=null;
+function say(id,text){$(id).textContent=text}
+function isID(s){return typeof s==="string"&&/^(?:[0-9a-f]{32}|[0-9a-f-]{36})$/.test(s)}
+function isHash(s){return typeof s==="string"&&/^[0-9a-f]{64}$/.test(s)}
+function isTime(s){return typeof s==="string"&&s.length<=35&&/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d/.test(s)&&Number.isFinite(Date.parse(s))}
+function secureID(){
+ if(crypto.randomUUID)return crypto.randomUUID();
+ const bytes=new Uint8Array(16);crypto.getRandomValues(bytes);
+ return Array.from(bytes).map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+function hcore(x){return {schema:HELLO,id:x.id,time:x.time,task:x.task}}
+function acore(x){return {schema:ACK,id:x.id,time:x.time,for_id:x.for_id,for_sha256:x.for_sha256}}
+async function sum(obj){
+ if(!crypto||!crypto.subtle||!globalThis.TextEncoder)throw new Error("SHA-256 unavailable in this browser");
+ const hash=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(JSON.stringify(obj)));
+ return Array.from(new Uint8Array(hash)).map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+async function validate(x){
+ if(!x||typeof x!=="object"||Array.isArray(x))throw new Error("Packet must be an object");
+ if(x.schema===HELLO){
+  if(!isID(x.id)||!isTime(x.time)||typeof x.task!=="string"||x.task.length<1||x.task.length>220||!isHash(x.sha256))throw new Error("Invalid HELLO shape");
+  if(await sum(hcore(x))!==x.sha256)throw new Error("HELLO digest mismatch");
+  return HELLO;
+ }
+ if(x.schema===ACK){
+  if(!isID(x.id)||!isTime(x.time)||!isID(x.for_id)||!isHash(x.for_sha256)||!isHash(x.sha256))throw new Error("Invalid ACK shape");
+  if(await sum(acore(x))!==x.sha256)throw new Error("ACK digest mismatch");
+  return ACK;
+ }
+ throw new Error("Unknown packet schema");
+}
+function addCheck(title,value,detail){
+ const node=document.createElement("div");node.className="check";
+ const h=document.createElement("strong"),s=document.createElement("span");
+ h.textContent=title+": "+value;s.textContent=detail;node.append(h,s);$("checks").appendChild(node);
+}
+$("run-checks").addEventListener("click",function(){
+ $("checks").replaceChildren();
+ addCheck("Secure context",globalThis.isSecureContext===true?"YES":"NO","HTTPS context for offline and crypto features");
+ addCheck("Cryptographic browser APIs",!!(globalThis.crypto&&crypto.subtle&&crypto.getRandomValues)?"AVAILABLE":"UNAVAILABLE","SHA-256 and random nonce; not a device identity");
+ addCheck("Service-worker API","serviceWorker" in navigator?"AVAILABLE":"UNAVAILABLE","Not registered until requested");
+ addCheck("Clipboard write",!!(navigator.clipboard&&navigator.clipboard.writeText)?"AVAILABLE":"UNAVAILABLE","Never read automatically");
+ addCheck("Share sheet",!!navigator.share?"AVAILABLE":"UNAVAILABLE","No share-sheet action launched");
+ addCheck("Network hint",typeof navigator.onLine==="boolean"?String(navigator.onLine):"UNKNOWN","Browser hint, not connectivity proof");
+ say("check-status","Local check completed; no result was transmitted or persisted.");
+});
+$("clear-checks").addEventListener("click",function(){$("checks").replaceChildren();addCheck("State","NOT TESTED","Run a new local check when useful");say("check-status","Results cleared.")});
+$("enable-offline").addEventListener("click",async function(){
+ if(!globalThis.isSecureContext||!("serviceWorker" in navigator)){say("offline-status","HELD: HTTPS and service-worker support required.");return}
+ try{
+  say("offline-status","Installing public-shell cache on request...");
+  const registration=await navigator.serviceWorker.register("./sw.js",{scope:"./"});
+  const state=registration.active?"active":registration.installing?"installing":registration.waiting?"waiting":"registered";
+  say("offline-status","App-scoped worker "+state+". Do a real airplane-mode reload before claiming offline availability.");
+ }catch(e){say("offline-status","NOT VERIFIED: "+String(e.message||e).slice(0,110))}
+});
+$("remove-offline").addEventListener("click",async function(){
+ try{
+  let changed=false;
+  if("serviceWorker" in navigator){const r=await navigator.serviceWorker.getRegistration("./");if(r)changed=await r.unregister();}
+  if("caches" in globalThis){for(const key of await caches.keys())if(key.startsWith("cocivium-device-first-")){await caches.delete(key);changed=true}}
+  say("offline-status",changed?"App-only cache and registration removal requested. Reload to check release.":"No app-scoped cache or worker was found.");
+ }catch(e){say("offline-status","Removal failed or not verified: "+String(e.message||e).slice(0,110))}
+});
+$("make-hello").addEventListener("click",async function(){
+ const task=$("task").value.trim();
+ if(!task||task.length>220){say("out-status","Provide a harmless task within 220 characters.");return}
+ try{
+  const core={schema:HELLO,id:secureID(),time:new Date().toISOString(),task};
+  sent={...core,sha256:await sum(core)};received=null;
+  $("make-ack").disabled=true;$("outgoing").value=JSON.stringify(sent,null,2);
+  say("out-status","HELLO generated locally. No external receiver contacted.");
+  say("in-status","Awaiting a pasted receiver acknowledgment.");
+ }catch(e){say("out-status","HELD: "+String(e.message||e).slice(0,110))}
+});
+$("verify-incoming").addEventListener("click",async function(){
+ const raw=$("incoming").value;
+ if(raw.length===0||raw.length>8000){say("in-status","HELD: incoming packet must be 1–8,000 characters.");return}
+ try{
+  const x=JSON.parse(raw),kind=await validate(x);
+  if(kind===HELLO){
+   received=x;$("make-ack").disabled=false;
+   say("in-status","HELLO digest matches its text. You can create an ACK, but device identity is NOT authenticated.");
+  }else{
+   received=null;$("make-ack").disabled=true;
+   if(sent&&x.for_id===sent.id&&x.for_sha256===sent.sha256){
+    say("in-status","ACK MATCHED the current challenge in this tab. Manually returned text verified; independent device NOT proven.");
+   }else say("in-status","ACK digest valid but it does not match a current challenge in this tab.");
+  }
+ }catch(e){received=null;$("make-ack").disabled=true;say("in-status","REJECTED: "+String(e.message||e).slice(0,140))}
+});
+$("make-ack").addEventListener("click",async function(){
+ if(!received){say("out-status","No valid received HELLO available.");return}
+ try{
+  const core={schema:ACK,id:secureID(),time:new Date().toISOString(),for_id:received.id,for_sha256:received.sha256};
+  $("outgoing").value=JSON.stringify({...core,sha256:await sum(core)},null,2);
+  say("out-status","ACK generated locally. Copy it back voluntarily; this is not authenticated remote delivery.");
+ }catch(e){say("out-status","ACK held: "+String(e.message||e).slice(0,110))}
+});
+$("copy-outgoing").addEventListener("click",async function(){
+ if(!$("outgoing").value){say("out-status","No current outgoing text.");return}
+ if(!navigator.clipboard||!navigator.clipboard.writeText){say("out-status","Clipboard unavailable. Select text manually.");return}
+ try{await navigator.clipboard.writeText($("outgoing").value);say("out-status","Text copied by request; not sent.");}
+ catch(e){say("out-status","Clipboard denied; select visible text manually.");}
+});
+$("clear-bridge").addEventListener("click",function(){
+ sent=null;received=null;$("task").value="";$("incoming").value="";$("outgoing").value="";$("make-ack").disabled=true;
+ say("out-status","Local outgoing challenge and ACK state cleared.");say("in-status","No receiver pending.");
+});
+})();
+</script></body></html>

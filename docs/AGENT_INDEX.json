@@ -66,7 +66,14 @@
     "phoenix/triage_public.py",
     "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.md",
     "research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.json",
-    "phoenix/PORTABLE_R3_RECEIPT_20261024.json"
+    "phoenix/PORTABLE_R3_RECEIPT_20261024.json",
+    "device-first/index.html",
+    "device-first/sw.js",
+    "device-first/manifest.json",
+    "device-first/icon.svg",
+    "device-first/discovery.json",
+    "device-first/README.md",
+    "device-first/test_receipt_r0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -222,5 +229,13 @@
     "human": "phoenix/#portable-r3",
     "status": "FIVE_HISTORICAL_OFFLINE_PAGES__61_61_SCOPED_TESTS__PRIVATE_DOWNLOAD",
     "nonclaim": "NOT_LIVE_DOMAIN_OR_INDEPENDENT_PROVIDER_CUSTODY"
+  },
+  "device_first": {
+    "human": "device-first/",
+    "machine": "device-first/discovery.json",
+    "tests": "device-first/test_receipt_r0.json",
+    "status": "26_OF_26_V8_SIMULATION_ONLY__NO_REAL_DEVICE_OR_OUTSIDE_HTTP_PROOF",
+    "privacy": "NO_ENROLLMENT_NO_TELEMETRY__SW_EXPLICIT_OPTIN",
+    "dependency": "X2_PRIMARY_DEPENDENT_ENROLLMENT_POLICY_UNCHANGED"
   }
 }

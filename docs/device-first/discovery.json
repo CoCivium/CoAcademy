@@ -1,0 +1,67 @@
+{
+  "schema": "CoCivium.CoDeviceBridge.BrowserFirst.R0",
+  "date": "2026-10-24",
+  "purpose": "Get a genuine non-X2 browser first-use result without enrolling devices.",
+  "human_candidate": "https://cocivium.github.io/CoAcademy/device-first/",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/device-first/index.html",
+  "device_policy": "https://github.com/CoCivium/CoCivium/blob/main/ai/device-enrollment-policy.json",
+  "status": {
+    "public_source": "GITHUB_BLOB_STAGED__ATOMIC_COMMIT_NEXT",
+    "pages": "NOT_VERIFIED_FOR_THIS_SOURCE",
+    "outside_https": "NOT_VERIFIED",
+    "real_phone": "NOT_TESTED",
+    "real_tablet": "NOT_TESTED",
+    "real_laptop": "NOT_TESTED",
+    "actual_offline_reload": "NOT_TESTED",
+    "real_distinct_device_ack": "NOT_TESTED",
+    "enrolled_devices": 0,
+    "CoGateway": "NOT_CONNECTED",
+    "CoStead": "NOT_CONNECTED",
+    "RickBar": "NOT_DEPLOYED_BY_THIS_ARTIFACT",
+    "X2": "NOT_TOUCHED"
+  },
+  "capabilities": [
+    "one-click permission-free local API report",
+    "user-click-to-register app-scoped public cache",
+    "user-click-to-remove offline cache",
+    "browser-local SHA-256 challenge",
+    "paste/verify incoming packet",
+    "generate manually transported ACK",
+    "copy only on user click"
+  ],
+  "privacy": {
+    "local_telemetry": false,
+    "personal_fingerprint": false,
+    "automatic_clipboard_reads": false,
+    "sensor_permissions": false,
+    "background_AI": false,
+    "cache_private_packets": false,
+    "user_input_persisted": false
+  },
+  "proof_required": [
+    "exact-source readback",
+    "isolated V8 mock test with tamper rejection",
+    "successful corresponding Pages build",
+    "independent public HTTPS response and mobile DOM",
+    "real non-X2 capability check",
+    "actual offline reload",
+    "distinct consented hardware round-trip",
+    "accessibility check"
+  ],
+  "limits": [
+    "SHA256_DIGEST_NE_SIGNATURE",
+    "ACK_NE_DEVICE_AUTHENTICATION",
+    "SOURCE_NE_REAL_DEVICE",
+    "OFFLINE_CACHE_NE_COSTEAD_RECOVERY",
+    "BROWSER_PROJECTION_NE_NATIVE_OS_CONTROL",
+    "X2_DEPENDENT_POLICY_NOT_OVERRIDDEN",
+    "FINITE_RESOURCE_BUDGET"
+  ],
+  "verified_candidate_source_blob": "dc2d9ec5c262b15d5630769ef35f3d85abeeb8ce",
+  "isolated_test_receipt": {
+    "blob": "4c2a70f69ee82083be6d66e24baa02c3370cc155",
+    "checks_passed": 26,
+    "checks_total": 26,
+    "qualification": "DOM_MOCK_FAKE_DIGEST_NOT_NATIVE_BROWSER"
+  }
+}

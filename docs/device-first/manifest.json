@@ -1,0 +1,19 @@
+{
+  "name": "CoDevice Bridge | CoCivium",
+  "short_name": "CoDevice Bridge",
+  "description": "Opt-in browser capability, offline public shell and manual HELLO/ACK experiment",
+  "id": "/CoAcademy/device-first/",
+  "start_url": "/CoAcademy/device-first/",
+  "scope": "/CoAcademy/device-first/",
+  "display": "standalone",
+  "theme_color": "#153540",
+  "background_color": "#0a1922",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
