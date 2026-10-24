@@ -1,0 +1,118 @@
+{
+  "schema": "CoCivium.CoPlay.SpoofLab.PublicDiscovery.R0",
+  "name": "CoPlay+ Spoof Lab",
+  "published_source_date": "2026-10-24",
+  "status": {
+    "source": "PUBLIC_GITHUB_SOURCE_VERIFIED",
+    "hosted_page": "GITHUB_PAGES_DEPLOYMENT_AND_INDEPENDENT_HTTP_READBACK_REQUIRE_SEPARATE_PROOF",
+    "user_outcomes": "NOT_MEASURED",
+    "public_social_posts": "NOT_SENT",
+    "paid_campaign": "NOT_STARTED",
+    "independent_AI_discovery": "NOT_TESTED"
+  },
+  "subject": "A no-account, no-tracking source-grounded and clearly satirical human-AI coordination campaign experiment",
+  "prototype_not_product": true,
+  "human": {
+    "web_candidate": "https://cocivium.github.io/CoAcademy/coplay/",
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/index.html",
+    "source_blob_sha": "a5d638b3e62dbd9cd51510beb15994372e930792",
+    "project": "https://github.com/CoCivium/CoCivium"
+  },
+  "components": [
+    {
+      "id": "human-middleware",
+      "form": "fictional_spoof_commercial",
+      "status": "SOURCE_IMPLEMENTED",
+      "label": "FICTIONAL SPOOF AD"
+    },
+    {
+      "id": "tab-collective",
+      "form": "fictional_spoof_commercial",
+      "status": "SOURCE_IMPLEMENTED",
+      "label": "FICTIONAL SPOOF AD"
+    },
+    {
+      "id": "permission-paradise",
+      "form": "fictional_spoof_commercial",
+      "status": "SOURCE_IMPLEMENTED",
+      "label": "FICTIONAL SPOOF AD"
+    },
+    {
+      "id": "CoOrb_first_look",
+      "form": "linked_public_research",
+      "status": "SOURCE_LINK_ONLY",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coorb/index.html"
+    },
+    {
+      "id": "CoCivicLens",
+      "form": "linked_nonpartisan_civic_literacy",
+      "status": "SOURCE_LINK_ONLY",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/index.html"
+    }
+  ],
+  "candidate_strategy": {
+    "public_proposition": "You were never supposed to be the operating system.",
+    "cycle": "RECOGNIZE -> LAUGH -> INSPECT -> CHALLENGE -> TRY -> VOLUNTARILY_SHARE_OR_REJECT -> IMPROVE",
+    "optimize_for": "Independently verified comprehension, usefulness, correction quality and voluntary participation; not raw impressions",
+    "scope": "International nonpartisan public educational and software research invitation",
+    "distribution": "PUBLIC_SITE_FIRST__EXTERNAL_SOCIAL_POSTS_REQUIRE_SEPARATE_AUTHORIZED_DELIVERY_AND_RECEIPTS",
+    "adaptation": "Audience chooses a question or use case; no covert psychological profiles",
+    "egress": "NO_AUTOMATIC_SEND_OR_SCHEDULE",
+    "economics": "Start with low-effect proof-of-value before paid promotion"
+  },
+  "privacy": {
+    "third_party_scripts": false,
+    "automatic_analytics": false,
+    "forms": false,
+    "cookies_in_source": false,
+    "account_required": false,
+    "user_data_export": false,
+    "auto_social_share": false,
+    "copy_on_explicit_click_only": true,
+    "note": "External links contact their destination when voluntarily clicked"
+  },
+  "advertising_truth": {
+    "satire_labeled_in_main_view": true,
+    "fake_endorsements": false,
+    "fabricated_metrics": false,
+    "real_officials_or_government_impersonation": false,
+    "electoral_persuasion": false,
+    "claim_of_completed_universal_OS": false,
+    "disclosure": "Static page itself labels all creative ad examples fictional",
+    "guidance": [
+      "https://www.ftc.gov/news-events/topics/truth-advertising/advertisement-endorsements",
+      "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+    ]
+  },
+  "epistemic_limits": [
+    "A public repo is not evidence of a running cross-device CoOrbWare operating system.",
+    "Three humorous concepts are not proof of public engagement or virality.",
+    "A public URL candidate is not evidence of independent browser reachability.",
+    "The word 'ad' denotes a satirical creative format, not a purchased or distributed ad.",
+    "No political party, candidate, ballot choice or voter targeting is involved.",
+    "The AI Wars fictional laboratory motif is not a report of a real event."
+  ],
+  "release_acceptance": [
+    "Exact source readback and latest Pages workflow success",
+    "Independent HTTP retrieval with correct title and version",
+    "Keyboard and mobile browser checks with reduced-motion and no-script fallback",
+    "Independent reader identifies that all three ads are fiction",
+    "Reader can reach CoOrb evidence and identify a missing proof",
+    "No private data collection, false endorser or hidden background broadcast",
+    "Any posts are separately authorized and have publication receipts"
+  ],
+  "append_only_event_kind": "COPLAY_PUBLIC_CANDIDATE",
+  "meta": {
+    "cadence": "UNSCHEDULED__NO_BACKGROUND_EXECUTION_PROMISED",
+    "receiver_ack": null,
+    "real_participants": 0,
+    "advertising_spend": 0
+  },
+  "nonclaims": [
+    "SPOOF_NE_DECEPTION",
+    "PUBLISHED_SOURCE_NE_INDEPENDENTLY_REACHABLE",
+    "RENDERED_NE_UNDERSTOOD",
+    "VOLUNTARY_SHARE_NE_CONSENT_TO_BROADCAST",
+    "AI_ASSISTANCE_NE_AUTONOMOUS_BACKGROUND_CAMPAIGN"
+  ]
+}
