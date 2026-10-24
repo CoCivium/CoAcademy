@@ -23,7 +23,10 @@
     "coorb/discovery.json",
     "coplay/index.html",
     "coplay/discovery.json",
-    "coplay/README.md"
+    "coplay/README.md",
+    "coplay/campaigns/index.html",
+    "coplay/campaigns/campaigns.json",
+    "coplay/campaigns/test_receipt_r0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -67,5 +70,12 @@
     "status": "PUBLIC_SOURCE_COMMITTED__INDEPENDENT_RECEIVER_AND_REAL_AUDIENCE_RESPONSE_UNPROVEN",
     "satire": "LABEL_VISIBLE",
     "autoshare": false
+  },
+  "coplay_campaign_portfolio": {
+    "human": "coplay/campaigns/",
+    "machine": "coplay/campaigns/campaigns.json",
+    "class": "SIX_DIFFERENT_VOLUNTARY_EXPERIMENTS",
+    "evidence": "SOURCE_COMMITTED__PAGES_AND_INDEPENDENT_USER_EFFECTS_SEPARATE",
+    "gates": "NO_HIDDEN_ANALYTICS__NO_AUTOMATIC_BROADCAST__POLITICAL_NEUTRALITY"
   }
 }
