@@ -18,7 +18,9 @@
     "research/CoPressProof_R0A.json",
     "rails/onboarding.md",
     "civiclens/index.html",
-    "civiclens/discovery.json"
+    "civiclens/discovery.json",
+    "coorb/index.html",
+    "coorb/discovery.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -48,5 +50,11 @@
     "evidence": "PUBLIC_SOURCE_COMMITTED__PAGES_SERVING_AND_EXTERNAL_AI_PICKUP_SEPARATELY_VERIFIED",
     "neutrality": "NONPARTISAN_SOURCE_LITERACY",
     "no_covert_collection": true
+  },
+  "coorb_first_look": {
+    "human": "coorb/",
+    "machine": "coorb/discovery.json",
+    "state": "PUBLIC_SOURCE_COMMITTED__PAGES_AND_RECEIVER_EVIDENCE_SEPARATE",
+    "meaning": "CoOrb+ CoMap+ CoNull+ source-grounded first-use, not installed OS"
   }
 }
