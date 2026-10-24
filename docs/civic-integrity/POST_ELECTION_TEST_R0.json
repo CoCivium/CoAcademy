@@ -1,0 +1,132 @@
+{
+  "schema": "CoCivium.CivicIntegrity.PostElectionSourceV8Test.R0",
+  "reported_at": "2026-10-24",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
+  "source_blob_sha": "6131008adb9600cb63f5092b3cb06a9bc750f72c",
+  "method": "Isolated V8 execution of the committed inline JavaScript with a mocked DOM, events and clipboard; no real browser or system integration",
+  "passed": 28,
+  "total": 28,
+  "checks": [
+    {
+      "name": "SPECIFIC_SOURCE_READBACK",
+      "passed": true
+    },
+    {
+      "name": "PRESENT_SIX_ORIGINAL_LANES_PLUS_POST",
+      "passed": true
+    },
+    {
+      "name": "AFTER_SECTION_AFTER_PROCESS_BEFORE_REPORTS",
+      "passed": true
+    },
+    {
+      "name": "OFFICIAL_EAC_LINKS",
+      "passed": true
+    },
+    {
+      "name": "NCSL_AUDIT_REFERENCE",
+      "passed": true
+    },
+    {
+      "name": "SEPARATES_COPY_FROM_CORROBORATION",
+      "passed": true
+    },
+    {
+      "name": "NO_EXTERNAL_JS",
+      "passed": true
+    },
+    {
+      "name": "NO_AUTO_NETWORK",
+      "passed": true
+    },
+    {
+      "name": "NO_FORMS_OR_STORAGE",
+      "passed": true
+    },
+    {
+      "name": "NO_READER_IDENTITY_COLLECTION",
+      "passed": true
+    },
+    {
+      "name": "NO_ELECTION_SYSTEM_ACCESS",
+      "passed": true
+    },
+    {
+      "name": "NO_NAMED_CITIZEN_ALLEGATIONS",
+      "passed": true
+    },
+    {
+      "name": "UNVERIFIED_AGENCY_DISTINCTION",
+      "passed": true
+    },
+    {
+      "name": "NOT_REAL_AUDIT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "EVIDENCE_TEMPLATE_READABLE_WITHOUT_JS",
+      "passed": true
+    },
+    {
+      "name": "POST_ELECTION_PROTOCOL_LINK_PRESENT",
+      "passed": true
+    },
+    {
+      "name": "3_HYPOTHETICAL_TESTS_PRESERVED",
+      "passed": true
+    },
+    {
+      "name": "RESPONSE_ACCESSIBILITY_STATE",
+      "passed": true
+    },
+    {
+      "name": "SCRIPT_SYNTAX",
+      "passed": true
+    },
+    {
+      "name": "MOCK_DOM_SCRIPT_RUNTIME",
+      "passed": true
+    },
+    {
+      "name": "NO_AUTOMATIC_CLIPBOARD",
+      "passed": true
+    },
+    {
+      "name": "DEFAULT_SCENARIOS_HIDDEN",
+      "passed": true
+    },
+    {
+      "name": "ELECTION_NIGHT_EXPLANATION_OPENS",
+      "passed": true
+    },
+    {
+      "name": "INDEPENDENT_SCENARIOS_COEXIST",
+      "passed": true
+    },
+    {
+      "name": "SCENARIO_TOGGLE_REVERSES",
+      "passed": true
+    },
+    {
+      "name": "EXPLICIT_TEMPLATE_COPY_ONLY",
+      "passed": true
+    },
+    {
+      "name": "NO_PERSONAL_DATA_REQUEST_IN_TEMPLATE",
+      "passed": true
+    },
+    {
+      "name": "CLIPBOARD_STATUS_ACCURATE",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "independent_http": "NOT_TESTED",
+  "real_browser": "NOT_TESTED",
+  "accessibility": "SOURCE_SEMANTICS_ONLY_NOT_SCREENREADER",
+  "official_sources": "URLs_REVIEWED_FROM_AUTHORITIES__NO_REAL_ELECTION_RESULT_INGEST",
+  "participant_study": "NONE",
+  "autonomous_agents": "NONE",
+  "real_election_audit": "NONE",
+  "external_effects": "NO_NETWORK_OR_PUBLIC_CASE_REPORT_SUBMITTED"
+}
