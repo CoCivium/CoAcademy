@@ -1,0 +1,83 @@
+{
+  "schema": "CoRelay.AIBeacon.R1",
+  "issued": "2026-10-24",
+  "purpose": "Non-directive human/AI discovery pointer and source-version status, not a push command, live health certification or authorization token.",
+  "human": "https://cocivium.github.io/CoAcademy/relay/",
+  "release_feed": "https://cocivium.github.io/CoAcademy/relay/feed.xml",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/index.html",
+  "raw_source": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/relay/index.html",
+  "public_root": "https://github.com/CoCivium/CoAcademy",
+  "machine_index": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/AGENT_INDEX.json",
+  "canonical_brand": "CoCivium",
+  "surface_brand": "CoRelay+",
+  "public_alias_candidate": "CoPolitic (policy-facing project, domain NOT verified active)",
+  "revision_parent": {
+    "relay_initial_source_blob": "c65852357d394f4f5b7723e16b50d36ae107bf5c",
+    "relay_rss_initial_blob": "d47ecfe6d5e2a65ef8d6975d186e1d00544fe43d",
+    "mode": "INDEXED_SNAPSHOT_NOT_LIVE_VERSION_HASH"
+  },
+  "proof_classes": [
+    "SOURCE_READBACK",
+    "PAGES_WORKFLOW",
+    "INDEPENDENT_HTTP",
+    "NATIVE_BROWSER",
+    "RECEIVER_PICKUP",
+    "HUMAN_BENEFIT"
+  ],
+  "current_status": {
+    "source": "VERIFIED_REPO_READBACK",
+    "pages": "RECENT_COMPLETED_SUCCESS",
+    "independent_http": "UNVERIFIED",
+    "actual_ai_pickup": "UNVERIFIED",
+    "human_benefit": "NOT_MEASURED",
+    "realtime_delivery": "NOT_CONFIGURED"
+  },
+  "review_entrypoints": [
+    "https://github.com/CoCivium/CoAcademy/issues/new?template=source-correction.md",
+    "https://github.com/CoCivium/CoAcademy/issues/new?template=first-use.md"
+  ],
+  "public_roadmap": [
+    "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+  ],
+  "independent_failure_domains": {
+    "github_pages": "GITHUB",
+    "github_raw": "GITHUB",
+    "github_repository": "GITHUB",
+    "copolitic_org": "DNS_HOST_NOT_VERIFIED",
+    "costead": "PRIVATE_RECEIVER_NOT_QUALIFIED",
+    "covia": "TRANSPORT_NOT_QUALIFIED",
+    "metricool": "CONNECTED_ACCOUNT_NOT_AUTHORIZED_TO_BRAND_OR_BROADCAST"
+  },
+  "fallback_order": [
+    {
+      "if": "PAGE_UNAVAILABLE",
+      "action": "ATTEMPT_GITHUB_SOURCE_READBACK",
+      "claim": "Fallback within same GitHub provider only"
+    },
+    {
+      "if": "GITHUB_PROVIDER_UNAVAILABLE",
+      "action": "REPORT_NO_VERIFIED_OFF_PROVIDER_PUBLIC_MIRROR",
+      "claim": "No guarantee of availability"
+    },
+    {
+      "if": "CORRUPTION_OR_MISLEADING_SOURCE",
+      "action": "REFER_OFFICIAL_OR_INDEPENDENT_PRIMARY_AUTHORITIES",
+      "claim": "No automatic correction or defamation"
+    }
+  ],
+  "security": {
+    "secrets": false,
+    "user_identity": false,
+    "active_commands": false,
+    "recipient_targeting": false,
+    "claims_of_ai_endorsement": false
+  },
+  "nonclaims": [
+    "BEACON_NE_RECEIVER_ACK",
+    "THREE_GITHUB_ENDPOINTS_NE_THREE_FAILURE_DOMAINS",
+    "PUBLIC_DISCOVERY_NE_MODEL_INGESTION",
+    "CONNECTED_ACCOUNT_NE_PERMISSION_TO_POST",
+    "SOURCE_CONSENT_NE_USER_DATA_CONSENT"
+  ]
+}

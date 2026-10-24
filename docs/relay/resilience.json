@@ -1,0 +1,121 @@
+{
+  "schema": "CoRelay.FailureDomainAndReadproofPlan.R1",
+  "issued": "2026-10-24",
+  "goal": "Failures of an individual page, renderer, transport or publisher should degrade safely rather than corrupt shared source. No claim of zero-impact failures without independent redundancy.",
+  "invariants": [
+    "Canonical source has versioned Git history",
+    "Public projections carry source pointer and correction route",
+    "No required sign-in to read source or try public research",
+    "No source contains private voter records or credentials",
+    "Site outage cannot trigger automatic political messages",
+    "Published correction supersedes misleading claim; old versions remain attributable",
+    "No single numeric integrity score manufactures allegations"
+  ],
+  "failure_domains": [
+    {
+      "id": "GitHub",
+      "contains": [
+        "CoAcademy repo",
+        "GitHub Pages",
+        "GitHub Raw",
+        "GitHub Issues",
+        "CoPolitic repo"
+      ],
+      "independent": false,
+      "if_lost": "Most current public source and Pages paths may fail together",
+      "verified_off_provider_replacement": false
+    },
+    {
+      "id": "Domain_Registrar_DNS",
+      "contains": [
+        "copolitic.org",
+        "copolitic.com",
+        "cocivium.org"
+      ],
+      "independent": "UNVERIFIED",
+      "if_lost": "Custom-domain entrypoints may fail; do not claim operational redirects"
+    },
+    {
+      "id": "Metricool",
+      "contains": [
+        "RickPublic channel scheduling"
+      ],
+      "independent_from_source": "LIKELY_SEPARATE_PLATFORM_BUT_ACCOUNT_AND_DELIVERY_LIMITS_UNPROVEN",
+      "if_lost": "Existing public source may still be available; no automatic backup social account"
+    },
+    {
+      "id": "Private_Custody",
+      "contains": [
+        "CoStead",
+        "CoGateway",
+        "CoVIA"
+      ],
+      "independent": "NOT_QUALIFIED",
+      "if_lost": "No readproof or failover role is established"
+    },
+    {
+      "id": "Public_Election_Authorities",
+      "contains": [
+        "EAC",
+        "FEC",
+        "state and local offices"
+      ],
+      "independent": true,
+      "role": "Authoritative original-source paths rather than fallback CoCivium hosting"
+    }
+  ],
+  "degrade_rules": [
+    {
+      "event": "CoRelay page unavailable",
+      "next": "Use original GitHub source where independently reachable; report DEGRADED_SAME_PROVIDER",
+      "stop": "Do not automatically claim mirror or send mass redirection"
+    },
+    {
+      "event": "One project experiment broken",
+      "next": "Hide affected projection or label HELD; other independently usable experiments remain",
+      "stop": "Do not bury limitation in footer"
+    },
+    {
+      "event": "GitHub unavailable",
+      "next": "Report NO_VERIFIED_OFFSITE_SOURCE; refer to official public authorities for election procedures",
+      "stop": "Do not claim CoStead/CoVIA failover"
+    },
+    {
+      "event": "Metricool or publisher disconnected",
+      "next": "Hold posts; preserve approved source and draft",
+      "stop": "No impersonated account or automatic substitute"
+    },
+    {
+      "event": "Unverified allegation or privacy risk",
+      "next": "Stop propagation; preserve safely attributed correction and refer to competent official process",
+      "stop": "No blanket broadcast, reputation scoring, personal doxxing"
+    },
+    {
+      "event": "New evidence disagrees with existing content",
+      "next": "Label DISPUTED, preserve source lineage and invite independent counterexample",
+      "stop": "No majority-vote-of-AI claim"
+    }
+  ],
+  "proof_trail": [
+    "Commit SHA",
+    "Pages workflow result",
+    "External HTTPS retrieval in independent runtime",
+    "Correct title and essential content",
+    "Keyboard/mobile and human first-use check",
+    "User-visible correction/rollback",
+    "Optional actual recipient acknowledgment"
+  ],
+  "desired_probes": {
+    "cadence": "GITHUB_ACTIONS_4_PER_DAY_CANDIDATE",
+    "scope": "Public-read-only, bounded, no secrets and no private node checks",
+    "repository_status": "WORKFLOW_SOURCE_PENDING_FIRST_RUN",
+    "actual_offsite_mirror": "NONE"
+  },
+  "success_metric": "Independent readers still obtain a correct source or explicit status when any one proven independent dependency fails.",
+  "nonclaims": [
+    "NO_ZERO_IMPACT_OUTAGE_GUARANTEE",
+    "FALLBACK_LINK_NE_INDEPENDENT_INFRASTRUCTURE",
+    "MIRROR_CANNOT_PROVE_CURRENTNESS_WITHOUT_RECEIVER_PROOF",
+    "PAGES_WORKFLOW_NE_OUTSIDE_USER_SUCCESS"
+  ]
+}

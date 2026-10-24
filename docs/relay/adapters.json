@@ -1,0 +1,118 @@
+{
+  "schema": "CoRelay.ChannelAdapterCatalogue.R1",
+  "issued": "2026-10-24",
+  "purpose": "Public-safe proposed binding rules; no keys, credentials, secret account metadata, or implied public execution.",
+  "brand_contract": {
+    "source_publisher": "CoCivium",
+    "source_license": "MUST_CHECK_MATERIAL_AND_THIRD_PARTY_RIGHTS",
+    "projections_are_separate_brands": true,
+    "policy": "Do not overwrite connected brands or impersonate CoCivium organization channels; byline must reflect actual publisher and relationship.",
+    "subscriber_consent": "PER_CHANNEL_OPT_IN_AND_REVOCATION"
+  },
+  "adapters": [
+    {
+      "id": "GitHub_CoAcademy",
+      "status": "PUBLIC_SOURCE_VERIFIED",
+      "function": "Source, issues, RSS files, Pages builder",
+      "authority": "Read and bounded public-source updates through connected repository",
+      "receiver_proof": "GitHub commit SHA and Pages workflow are not independent user uptake"
+    },
+    {
+      "id": "Metricool_RickPublic_Bluesky",
+      "status": "CONNECTED_PROFILE_READ_ONLY_VERIFIED",
+      "brand_relation": "RickPublic connected profile, NOT automatically a CoCivium-owned brand",
+      "function": "Potential public self-selected general-interest organic post",
+      "posting": "HOLD_CHANNEL_APPROVAL_AND_FINAL_TEXT_CHECK",
+      "political_targeting": false,
+      "spam": false
+    },
+    {
+      "id": "Metricool_RickPublic_YouTube",
+      "status": "CHANNEL_METADATA_READ_ONLY_VERIFIED",
+      "brand_relation": "Connected YouTube account, NOT verified as CoCivium outlet",
+      "function": "Potential video publishing when real accessible media exists",
+      "posting": "HOLD_VIDEO_RIGHTS_CHANNEL_BRANDING_AND_APPROVAL",
+      "video_asset_exists": false
+    },
+    {
+      "id": "RickPublic_Substack",
+      "status": "GITHUB_PUBLICATION_PLAN_ONLY",
+      "function": "Potential newsletter editorial projection",
+      "actual_substack_connector": "NOT_QUALIFIED",
+      "publication": "NOT_SENT"
+    },
+    {
+      "id": "CoVIA",
+      "status": "NOT_QUALIFIED_TRANSPORT",
+      "function": "Candidate model/voice/visual receiver adapter",
+      "inputs": "STRUCTURED_PUBLIC_SAFE_SOURCE_POINTERS_ONLY",
+      "delivery": "NONE",
+      "receiver_ack": null
+    },
+    {
+      "id": "CoGateway",
+      "status": "NO_CURRENT_RECEIVER_ACK",
+      "function": "Candidate authenticated notification and transport layer",
+      "delivery": "NONE",
+      "receiver_ack": null
+    },
+    {
+      "id": "CoStead",
+      "status": "NO_CURRENT_CUSTODY_READPROOF",
+      "function": "Candidate durable private source history and recovery",
+      "cross_account_sync": "NOT_CLAIMED"
+    },
+    {
+      "id": "CoPolitic_public_repo",
+      "status": "PUBLIC_NONPARTISAN_POINTER_ONLY",
+      "function": "Policy-facing source reference",
+      "public_domain": "NOT_VERIFIED",
+      "political_campaign": false
+    },
+    {
+      "id": "Public_RSS",
+      "status": "STATIC_SNAPSHOT_COMMITTED",
+      "function": "Reader-initiated subscriptions",
+      "subscriber_count": "NOT_MEASURED",
+      "automatic_feed_update": "NOT_CONFIGURED"
+    },
+    {
+      "id": "Voluntary_GitHub_issues",
+      "status": "ISSUE_TEMPLATE_SOURCE_COMMITTED",
+      "function": "Consent-based public correction and first-use reports",
+      "intake": "USER_CLICK_AND_GITHUB_SIGNIN",
+      "privacy_warning": "PUBLIC_NO_SENSITIVE_REPORTS"
+    },
+    {
+      "id": "Books_podcasts_comics",
+      "status": "OUTLINES_OR_CANDIDATE_ONLY",
+      "function": "Future accessible editorial projections",
+      "deliveries": "NONE"
+    }
+  ],
+  "gate_sequence": [
+    "SOURCE_TRUTH_AND_VERSION",
+    "ACTUAL_RIGHTS_AND_LICENSE",
+    "CORRECT_BRAND_BYLINE",
+    "CHANNEL_OWNER_PERMISSION",
+    "AUDIENCE_IS_SELF_SELECTED",
+    "NONPARTISAN_AND_PRIVACY_REVIEW",
+    "PUBLISH_ACTUAL_ASSET",
+    "DELIVERY_RECEIPT",
+    "INDEPENDENT_FEEDBACK",
+    "CORRECTION_AND_OPT_OUT"
+  ],
+  "declined_effects": [
+    "Unsolicited bulk commercial mail",
+    "Political voter segmentation",
+    "Mass synthetic endorsement",
+    "Publishing on an unrelated brand without authority",
+    "Rerouting a domain without registrar/hosting permissions",
+    "Silent cross-provider execution"
+  ],
+  "nonclaims": [
+    "PUBLISHABLE_KIT_NE_PUBLICATION",
+    "CHANNEL_CONNECTION_NE_ACCOUNT_PURPOSE",
+    "MATERIAL_IN_PUBLIC_REPO_NE_RIGHT_TO_REPUBLISH_ANYWHERE"
+  ]
+}
