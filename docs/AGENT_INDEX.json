@@ -33,7 +33,11 @@
     "civic-integrity/test_receipt_r0.json",
     "civic-integrity/POST_ELECTION_CONTINUITY_R0.md",
     "civic-integrity/POST_ELECTION_CONTINUITY_R0.json",
-    "civic-integrity/POST_ELECTION_TEST_R0.json"
+    "civic-integrity/POST_ELECTION_TEST_R0.json",
+    "civic-integrity/money-and-elections/index.html",
+    "civic-integrity/money-and-elections/discovery.json",
+    "civic-integrity/money-and-elections/test_receipt_r0.json",
+    "civic-integrity/money-and-elections/README.md"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -102,5 +106,13 @@
     "evidence": "ACTUAL_PRIMARY_SOURCES_REQUIRED__AI_RESPONSES_NOT_AUTOMATIC_INDEPENDENT_CORROBORATION",
     "receiver_state": "PUBLIC_SOURCE__NOT_INDEPENDENT_HOST_READBACK",
     "auto_monitor": "NOT_CREATED"
+  },
+  "money_and_elections": {
+    "human": "civic-integrity/money-and-elections/",
+    "machine": "civic-integrity/money-and-elections/discovery.json",
+    "tests": "civic-integrity/money-and-elections/test_receipt_r0.json",
+    "scope": "NONPARTISAN_VOLUNTARY_USER_ENTERED_AGGREGATES_NOT_VOTE_PRICES",
+    "status": "PUBLIC_SOURCE__MOCK_V8_30_OF_30__NATIVE_BROWSER_AND_HUMAN_OUTCOMES_UNKNOWN",
+    "no_geotargeting": true
   }
 }
