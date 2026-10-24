@@ -12,14 +12,14 @@
   "public": {
     "intended_url": "https://cocivium.github.io/CoAcademy/civic-integrity/",
     "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
-    "source_blob_sha": "98cc530e1501de45f3635b71965f1048f2a20ad4",
+    "source_blob_sha": "6131008adb9600cb63f5092b3cb06a9bc750f72c",
     "reviewer_brief": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/BRIEF_FOR_REVIEWERS_R0.md"
   },
   "release_status": {
-    "html_source": "GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK",
+    "html_source": "GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK__POST_ELECTION_R0",
     "machine_discovery": "GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK",
-    "github_pages": "WORKFLOW_SUCCESS_FOR_HEAD_1ad422a11e1ed3c02b9ffed3fb9a07839bedc050__SUBSEQUENT_COMMITS_REQUIRE_RECHECK",
-    "independent_http": "INCONCLUSIVE_LOCAL_TEST_ENVIRONMENT_DNS_RESOLUTION_FAILED",
+    "github_pages": "POST_ELECTION_LATEST_BUILD_CONFIRM_SEPARATELY",
+    "independent_http": "HOST_UNAVAILABLE_TO_THIS_TOOL__NO_OUTAGE_CONCLUSION",
     "native_browser": "NOT_YET_VERIFIED",
     "public_government_affiliation": "NONE",
     "election_system_access": "NONE",
@@ -164,5 +164,16 @@
       "receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/test_receipt_r0.json",
       "source_delta_after_test": "REVIEWER_BRIEF_LINK_CHANGED_ONLY; FULL_NATIVE_BROWSER_RETEST_UNDONE"
     }
+  },
+  "post_election": {
+    "human": "https://cocivium.github.io/CoAcademy/civic-integrity/#after",
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/POST_ELECTION_CONTINUITY_R0.md",
+    "machine": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/civic-integrity/POST_ELECTION_CONTINUITY_R0.json",
+    "tests": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/POST_ELECTION_TEST_R0.json",
+    "test_state": "PASS_28_OF_28_ISOLATED_V8_CHECKS__NOT_NATIVE_BROWSER",
+    "stage": "PUBLIC_EDUCATIONAL_SOURCE__NO_ELECTION_AUDIT",
+    "status": "NO_ACTUAL_ELECTION_DATA_NO_OTHER_AGENT_OPINIONS_NO_INDEPENDENT_HUMAN_STUDY",
+    "evidence_rule": "REPEATED_MODEL_OUTPUTS_NE_INDEPENDENT_SOURCE_CORROBORATION",
+    "retry_rule": "FAIL_CAN_CAUSE_REPAIR_REFRAME_BOUNDED_RETRY_REFER_STOP_OR_DORMANCY"
   }
 }
