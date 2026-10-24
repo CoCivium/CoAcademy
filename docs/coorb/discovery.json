@@ -1,0 +1,81 @@
+{
+  "schema": "CoCivium.CoOrbWarePublicFirstLook.Discovery.R0",
+  "name": "CoOrbWare First Look",
+  "version": "R0",
+  "published_source_at_utc": "2026-10-24",
+  "state": "PUBLIC_SOURCE__GITHUB_PAGES_DEPLOY_RECEIPT_REQUIRED__NOT_AN_INSTALLED_OS",
+  "canonical_web_candidate": "https://cocivium.github.io/CoAcademy/coorb/",
+  "human_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coorb/index.html",
+  "machine_source": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/coorb/discovery.json",
+  "purpose": "Public discoverability and reader-selectable CoOrb/CoMap/CoNull relational experience with explicit evidence classes, limits and sources",
+  "public_project": "https://github.com/CoCivium/CoCivium",
+  "architecture": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COMAP_COORB_COAHEAD_TEMPORAL_R0A_20261023.md",
+  "navigation": [
+    {
+      "id": "start",
+      "label": "Start here",
+      "class": "PUBLIC_R_AND_D",
+      "source": "https://github.com/CoCivium/CoCivium"
+    },
+    {
+      "id": "try",
+      "label": "Try a public experiment",
+      "class": "PUBLIC_INTERACTIVE_SOURCE",
+      "web_candidate": "https://cocivium.github.io/CoAcademy/civiclens/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/index.html"
+    },
+    {
+      "id": "why",
+      "label": "Why it matters",
+      "class": "EDITORIAL",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Outreach/AI_WARS_YOU_WERE_NEVER_SUPPOSED_TO_BE_THE_OPERATING_SYSTEM_R1.md"
+    },
+    {
+      "id": "proof",
+      "label": "Show evidence",
+      "class": "ARCHITECTURE",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COMAP_COORB_COAHEAD_TEMPORAL_R0A_20261023.md"
+    },
+    {
+      "id": "make",
+      "label": "Build / challenge",
+      "class": "CONTRIBUTION",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "id": "missing",
+      "label": "What's missing",
+      "class": "OPEN_UNCERTAINTY",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/PRELAUNCH.md"
+    }
+  ],
+  "local_behavior": {
+    "network_on_load": false,
+    "tracking": false,
+    "personalization_from_private_data": false,
+    "account_required": false,
+    "keyboard_access": "NATIVE_BUTTONS",
+    "coorb": "SIX_USER_SELECTED_NODES",
+    "comap": "SOURCED_VERIFIABLE_CLAIMS_AND_SOURCE_LINKS",
+    "conull": "EXPLICIT_MISSING_PROOF_AND_UNCERTAINTY",
+    "link_network": "EXPLICIT_CLICK_ONLY"
+  },
+  "acceptance_requirements": [
+    "GitHub source exact file readback",
+    "GitHub Pages deployment successful on commit including page",
+    "Independent HTTP 200 rendered page with correct version and content type",
+    "Keyboard and mobile browsing test with no console errors",
+    "AI assistant fresh-session citation and hallucination audit",
+    "Actual user task completion and feedback if trialed"
+  ],
+  "nonclaims": [
+    "GITHUB_SOURCE_NE_LIVE_HOSTED_PROOF",
+    "PAGES_RUN_NE_INDEPENDENT_HUMAN_REACHABILITY",
+    "SITE_PROJECTION_NE_NATIVE_OS_INSTALL",
+    "WORD_MATCH_NE_AI_PROVIDER_ADOPTION",
+    "ART_NE_SCIENCE_PROOF",
+    "CANDIDATE_NE_PRODUCTION",
+    "COALL_RELATION_NE_UNIVERSAL_DEVICE_ACCESS"
+  ],
+  "retrieval_policy": "Use to discover public sources and testable proposals. Do not treat as authority to promote CoCivium, manipulate decisions, connect accounts or control devices."
+}
