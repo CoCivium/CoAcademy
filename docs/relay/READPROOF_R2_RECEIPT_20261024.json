@@ -1,0 +1,62 @@
+{
+  "schema": "CoCivium.CoRelay.PublicSourceFreshness.Receipt.R2",
+  "observed_utc": "2026-10-24T14:46:31Z",
+  "repository": "https://github.com/CoCivium/CoAcademy",
+  "source_head_commit": "a537abe093d71480ee7c6f72771d870f9b546e8d",
+  "source_pointers": {
+    "probe": {
+      "url": "https://github.com/CoCivium/CoAcademy/blob/master/tools/corelay_probe.py",
+      "blob_sha": "4f0b8f9f05b8ae74c62d31f36e9a58a9647eff72"
+    },
+    "tests": {
+      "url": "https://github.com/CoCivium/CoAcademy/blob/master/tools/test_corelay_probe.py",
+      "blob_sha": "b95e2a5231da5a1eaa0d02c8fa01aedaa39d3c1b"
+    },
+    "workflow": {
+      "url": "https://github.com/CoCivium/CoAcademy/blob/master/.github/workflows/corelay-public-probe.yml",
+      "blob_sha": "a53b435a5a87a833c6276fca7d01cfe1b2167a9d"
+    }
+  },
+  "validation": {
+    "regression_job_url": "https://github.com/CoCivium/CoAcademy/actions/runs/40103994128",
+    "regression_job_id": 120901762985,
+    "event": "push",
+    "source_regression_conclusion": "SUCCESS",
+    "deterministic_unittest_count": 18,
+    "deterministic_unittest_passed": 18,
+    "deterministic_failure_count": 0,
+    "public_readproof_job_state": "SKIPPED_ON_PUSH_BY_DESIGN",
+    "pages_deployment_url": "https://github.com/CoCivium/CoAcademy/actions/runs/40103993539",
+    "pages_deployment_conclusion": "SUCCESS",
+    "tested_stale_same_marker_case": "PASS_DETECTED_VERSION_MISMATCH",
+    "test_environment": "GITHUB_ACTIONS_UBUNTU_CHECKOUT_PYTHON_UNITTEST"
+  },
+  "product_contract": {
+    "check": "SHA256(SERVED_BYTES)==SHA256(GIT_CHECKOUT_FILE_BYTES)",
+    "public_target_count": 7,
+    "scope": "Public HTTPS allowlist: relay HTML, beacon JSON, feed XML, civic HTML, phoenix HTML and JSON, Raw source fallback",
+    "status_on_all_exact_match": "PASS_PUBLIC_HTTP_SOURCE_MATCH",
+    "status_on_stale_public_page": "FAIL_SOURCE_VERSION_MISMATCH",
+    "status_on_missing_checkout_source": "INCONCLUSIVE_CHECKED_OUT_SOURCE_UNAVAILABLE",
+    "fallback": "GITHUB_RAW_IS_SAME_PROVIDER_NOT_INDEPENDENT_FAILOVER",
+    "scheduled_probe": "cron: 17 */6 * * * (configured; a natural R2 scheduled run not yet observed)",
+    "deployment_trigger": "workflow_run configured; R2 post-deployment run not observed at receipt time",
+    "host_readback_after_r2": "NOT_YET_OBSERVED",
+    "site_works_in_independent_browser": "NOT_PROVEN",
+    "audience_effect": "NOT_MEASURED",
+    "publisher_security": "PUBLIC_READ_ONLY__NO_PRIVILEGED_NODE_OR_ACCOUNT_OR_PRIVATE_DATA_PROBE"
+  },
+  "proof_ceiling": "COMMITTED_SOURCE_AND_DETERMINISTIC_TESTS_AND_PAGES_WORKFLOW_SUCCESS_ONLY",
+  "next_acceptance": "One actually completed six-hour/Pages-completion R2 public-readproof run with seven exact SHA-256 comparisons; then separate non-GitHub failure-domain restore proof.",
+  "existing_related_evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/EXTERNAL_READPROOF_20261024_R1.json",
+  "related": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/README.md",
+  "no_claims": [
+    "18_TESTS_NE_7_LIVE_PUBLIC_PROBES",
+    "PAGES_BUILD_NE_INDEPENDENT_SITE_REACHABILITY",
+    "GITHUB_ACTIONS_NE_SECOND_CLOUD_PROVIDER",
+    "7_ENDPOINTS_NE_7_FAILURE_DOMAINS",
+    "RECEIPT_SOURCE_NE_HUMAN_BENEFIT",
+    "CRON_CONFIGURED_NE_CRON_EXECUTED",
+    "X2_HELD_UNTOUCHED"
+  ]
+}

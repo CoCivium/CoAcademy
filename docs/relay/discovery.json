@@ -68,7 +68,10 @@
     "real_runner_readproof": "PASS_5_OF_5_AFTER_DEPLOYMENT",
     "deterministic_tests": "PASS_9_OF_9",
     "latest_source_reverification": "PENDING_AS_SOURCE_HAS_SINCE_CHANGED",
-    "off_provider_redundancy": "NOT_PROVEN"
+    "off_provider_redundancy": "NOT_PROVEN",
+    "r2_version_bytes": "SHA256_EQUALITY_REQUIRED_FOR_7_ALLOWLISTED_HTTP_TARGETS",
+    "r2_actual_end_to_end_run": "NOT_YET_OBSERVED",
+    "r2_deterministic_run": "https://github.com/CoCivium/CoAcademy/actions/runs/40103994128"
   },
   "observer_map": {
     "human": "https://cocivium.github.io/CoAcademy/relay/observer-map/",
@@ -79,5 +82,13 @@
     "current_status": "PUBLIC_SOURCE_ONLY__NO_LIVE_OBSERVER_TELEMETRY_OR_KNOWN_BAD_ACTOR",
     "private_device_status": "X2_AND_COSTEAD_COGATEWAY_NOT_PROBED",
     "evidence_rule": "POTENTIAL_VISIBILITY_NE_OBSERVED_WATCHING"
+  },
+  "readproof_r2": {
+    "source_receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/READPROOF_R2_RECEIPT_20261024.json",
+    "source_commit": "a537abe093d71480ee7c6f72771d870f9b546e8d",
+    "checks_passed": "18_OF_18_DETERMINISTIC",
+    "pages_success": true,
+    "host_sha_match_after_r2": "PENDING",
+    "failure_domains": "GITHUB_ONLY"
   }
 }

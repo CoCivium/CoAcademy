@@ -79,5 +79,12 @@
     "PUBLIC_DISCOVERY_NE_MODEL_INGESTION",
     "CONNECTED_ACCOUNT_NE_PERMISSION_TO_POST",
     "SOURCE_CONSENT_NE_USER_DATA_CONSENT"
-  ]
+  ],
+  "readproof_r2": {
+    "receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/READPROOF_R2_RECEIPT_20261024.json",
+    "sha256_rules": "EXACT_SERVING_BYTES_NE_STALE_MARKER",
+    "deterministic_tests": "PASS_18_OF_18",
+    "public_target_sha_readback": "UNPROVEN_AFTER_R2_DEPLOYMENT",
+    "external_provider_recovery": "NOT_VERIFIED"
+  }
 }
