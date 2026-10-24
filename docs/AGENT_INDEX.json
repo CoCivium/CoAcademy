@@ -16,7 +16,9 @@
     "research/CoPublicationAdaptiveLens_R0A.md",
     "research/CoPressProof_R0A.md",
     "research/CoPressProof_R0A.json",
-    "rails/onboarding.md"
+    "rails/onboarding.md",
+    "civiclens/index.html",
+    "civiclens/discovery.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -38,5 +40,13 @@
     "human": "research/CoPressProof_R0A.md",
     "machine": "research/CoPressProof_R0A.json",
     "current_disposition": "NO_NEW_VERIFIED_INDEPENDENT_COVERAGE_IN_BOUNDED_CHECK"
+  },
+  "civic_learning": {
+    "id": "CoCivicLens+ R1",
+    "machine": "civiclens/discovery.json",
+    "human": "civiclens/",
+    "evidence": "PUBLIC_SOURCE_COMMITTED__PAGES_SERVING_AND_EXTERNAL_AI_PICKUP_SEPARATELY_VERIFIED",
+    "neutrality": "NONPARTISAN_SOURCE_LITERACY",
+    "no_covert_collection": true
   }
 }
