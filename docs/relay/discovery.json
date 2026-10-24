@@ -10,8 +10,8 @@
   "feedback": "https://github.com/CoCivium/CoAcademy/issues/new",
   "status": {
     "source": "PUBLIC_GITHUB_SOURCE_COMMITTED_AND_INDEPENDENT_GITHUB_API_READBACK_VERIFIED",
-    "host": "GITHUB_PAGES_WORKFLOW_SUCCESS_ON_COACADEMY_HEAD_8d970e72d5b8e7d5ed7fd961ab7eab4e34a43569__THIS_LATER_METADATA_COMMIT_REQUIRES_OWN_RECEIPT",
-    "outside_browser": "INCONCLUSIVE_FETCH_NOT_SITE_OUTAGE_PROOF",
+    "host": "GITHUB_PAGES_SUCCESS_AND_GITHUB_RUNNER_5_OF_5_ON_2026_10_24_PRIOR_VERSION__NEW_UPDATES_REQUIRE_NEW_READPROOF",
+    "outside_browser": "GITHUB_HOSTED_RUNNER_INDEPENDENT_HTTP_GET_PASS_5_OF_5_FOR_PRIOR_RELEASE__NOT_HUMAN_BROWSING",
     "feedback_received": "NONE_VERIFIED",
     "rss": "STATIC_SNAPSHOT_NOT_PUSH_JOB",
     "external_posts": "NONE",
@@ -20,7 +20,9 @@
     "brand_adapter_contract": "PUBLIC_GITHUB_SOURCE_VERIFIED__METRICOOL_ACCOUNT_NOT_COCIVIUM_PUBLISH_AUTH",
     "reuse_rights": "NO_REPO_LICENSE_NOTICE_FILE_FOUND__UNRESTRICTED_REUSE_NOT_GRANTED_BY_SOURCE_VISIBILITY",
     "failover": "SINGLE_GITHUB_PROVIDER_FOR_SOURCE_PAGES_FEED_AND_ISSUES__NO_INDEPENDENT_RESTORE",
-    "voluntary_public_issue": "https://github.com/CoCivium/CoAcademy/issues/3__OPEN_ZERO_COMMENTS_AT_OBSERVATION"
+    "voluntary_public_issue": "https://github.com/CoCivium/CoAcademy/issues/3__OPEN_ZERO_COMMENTS_AT_OBSERVATION",
+    "CoVIA": "DEDICATED_TRANSPORT_UNQUALIFIED",
+    "Metricool": "RICKPUBLIC_CONNECTED_READ_ONLY__NO_COCIVIUM_PUBLICATION_SENT"
   },
   "protocol": "Consent-respecting independent first-use and source corrections, not an unsolicited contact campaign or voter segmentation",
   "source_pointers": [
@@ -55,5 +57,17 @@
     "CoPolitic_readme_commit": "0fb29d921fb95b1d2aad055dbac792d0139086a1",
     "actual_volunteer_feedback": "NOT_OBSERVED"
   },
-  "product_contract": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/product_contract_r0.json"
+  "product_contract": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/product_contract_r0.json",
+  "beacon": "https://cocivium.github.io/CoAcademy/relay/beacon.json",
+  "channel_adapter_contract": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/adapters.json",
+  "failure_domains": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/resilience.json",
+  "readproof_receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/EXTERNAL_READPROOF_20261024_R1.json",
+  "monitor": {
+    "workflow": "https://github.com/CoCivium/CoAcademy/actions/workflows/corelay-public-probe.yml",
+    "configured_frequency": "EVERY_6_HOURS_PLUS_SUCCESSFUL_PAGES_DEPLOYMENT",
+    "real_runner_readproof": "PASS_5_OF_5_AFTER_DEPLOYMENT",
+    "deterministic_tests": "PASS_9_OF_9",
+    "latest_source_reverification": "PENDING_AS_SOURCE_HAS_SINCE_CHANGED",
+    "off_provider_redundancy": "NOT_PROVEN"
+  }
 }
