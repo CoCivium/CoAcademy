@@ -20,7 +20,10 @@
     "civiclens/index.html",
     "civiclens/discovery.json",
     "coorb/index.html",
-    "coorb/discovery.json"
+    "coorb/discovery.json",
+    "coplay/index.html",
+    "coplay/discovery.json",
+    "coplay/README.md"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -56,5 +59,13 @@
     "machine": "coorb/discovery.json",
     "state": "PUBLIC_SOURCE_COMMITTED__PAGES_AND_RECEIVER_EVIDENCE_SEPARATE",
     "meaning": "CoOrb+ CoMap+ CoNull+ source-grounded first-use, not installed OS"
+  },
+  "coplay_spoof_lab": {
+    "human": "coplay/",
+    "machine": "coplay/discovery.json",
+    "strategy": "coplay/README.md",
+    "status": "PUBLIC_SOURCE_COMMITTED__INDEPENDENT_RECEIVER_AND_REAL_AUDIENCE_RESPONSE_UNPROVEN",
+    "satire": "LABEL_VISIBLE",
+    "autoshare": false
   }
 }
