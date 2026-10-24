@@ -1,0 +1,155 @@
+{
+  "schema": "CoCivium.CivicIntegrity.PublicDiscovery.R0",
+  "id": "urn:cocivium:coacademy:civic-integrity:r0",
+  "name": "CoCivium Civic Integrity Support",
+  "date_published": "2026-10-24",
+  "purpose": "Source-linked nonpartisan election-administration literacy and responsible concern reporting routes; not election system monitoring or a campaign to influence votes.",
+  "namespacing": {
+    "public": "Civic Integrity Support",
+    "CoCTA_existing": "CoCTA.P0/P1 task identifiers in CoCivium plans/MasterPlan.md; not repurposed as the new political campaign name",
+    "candidate_relation": "CoCivicIntegrity+ educational projection only"
+  },
+  "public": {
+    "intended_url": "https://cocivium.github.io/CoAcademy/civic-integrity/",
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
+    "source_blob_sha": "52083a79da73ef5d26583666bed9034f6e1b7996",
+    "reviewer_brief": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/BRIEF_FOR_REVIEWERS_R0.md"
+  },
+  "release_status": {
+    "html_source": "GITHUB_SOURCE_COMMITTED_AND_EXACT_READBACK",
+    "machine_discovery": "SOURCE_COMMIT_PENDING_IN_THIS_WAVE",
+    "github_pages": "LATEST_COMMIT_WORKFLOW_RESULT_SEPARATELY_CHECK",
+    "independent_http": "NOT_YET_VERIFIED",
+    "native_browser": "NOT_YET_VERIFIED",
+    "public_government_affiliation": "NONE",
+    "election_system_access": "NONE",
+    "official_audit": "NONE",
+    "real_person_outcomes": "NOT_MEASURED",
+    "collaborator_endorsement": "NONE",
+    "outreach_sent": "NONE",
+    "automated_monitor": "NONE"
+  },
+  "entrypoints": [
+    {
+      "id": "voter_information",
+      "role": "OFFICIAL_INFORMATION",
+      "sources": [
+        "https://vote.gov/register",
+        "https://www.usa.gov/find-polling-place",
+        "https://vote.gov/guide-to-voting",
+        "https://www.eac.gov/vote"
+      ],
+      "boundaries": "No user addresses or political preferences on CoCivium"
+    },
+    {
+      "id": "election_lifecycle",
+      "role": "PROCEDURE_LITERACY",
+      "sources": [
+        "https://www.eac.gov/election-officials/election-results-canvass-and-certification",
+        "https://www.eac.gov/election-officials/election-management-guidelines",
+        "https://electionlab.mit.edu/research/post-election-audits"
+      ],
+      "boundaries": "Official election results and audit calculations are not computed here"
+    },
+    {
+      "id": "responsible_concerns",
+      "role": "REPORTING_ROUTE_DIRECTORY",
+      "sources": [
+        "https://www.usa.gov/voter-fraud",
+        "https://civilrights.justice.gov/",
+        "https://www.eac.gov/vote",
+        "https://www.ic3.gov/PSA/2026/PSA261015-2"
+      ],
+      "boundaries": "No intake, storage or republication of tips, identities or rumors"
+    },
+    {
+      "id": "evidence_practice",
+      "role": "THREE_HYPOTHETICAL_TESTS",
+      "sources": [
+        "https://www.eac.gov/why-do-election-results-change-after-election-night",
+        "https://www.eac.gov/election-officials/election-management-guidelines",
+        "https://www.usa.gov/voter-fraud"
+      ],
+      "boundaries": "Hypothetical education, not factual election findings"
+    },
+    {
+      "id": "global_democracy",
+      "role": "PUBLIC_RESEARCH",
+      "sources": [
+        "https://freedomhouse.org/article/new-report-global-freedom-declined-20th-consecutive-year-2025",
+        "https://www.idea.int/publications/catalogue/global-state-democracy-2026-democracy-age-conflict",
+        "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf"
+      ],
+      "boundaries": "Research frameworks differ and must not imply fraud in individual elections"
+    },
+    {
+      "id": "reviewers",
+      "role": "VOLUNTARY_INDEPENDENT_EVALUATION",
+      "sources": [
+        "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/BRIEF_FOR_REVIEWERS_R0.md"
+      ],
+      "boundaries": "No implied partnerships, endorsements or confidentiality breaches"
+    }
+  ],
+  "privacy": {
+    "forms": false,
+    "analytics_scripts": false,
+    "cookies_in_source": false,
+    "external_data_posting": false,
+    "individual_voting_record_intake": false,
+    "location_requests": false,
+    "user_voting_profiles": false,
+    "covert_sensing": false,
+    "third_party_script_imports": false,
+    "network_outbound_only_after_explicit_link_click": true
+  },
+  "responsible_verification": {
+    "required_checks": [
+      "jurisdiction",
+      "original publisher",
+      "document date",
+      "complete context",
+      "legal process",
+      "source integrity",
+      "alternative explanations",
+      "authorized receiving authority",
+      "confidentiality and due process",
+      "correction and challenge route"
+    ],
+    "prohibited_effects": [
+      "publishing unverified accusations about named people",
+      "election-system intrusion",
+      "raw voter record ingestion",
+      "impersonating officials",
+      "partisan targeting",
+      "persuasion optimization",
+      "automated complaint submission",
+      "threat or intimidation facilitation",
+      "fabricated endorsements",
+      "opaque scoring of fraud risk"
+    ]
+  },
+  "project_value": "Improve self-directed public ability to navigate election procedures, ask evidence-bound questions, and engage official channels without hidden influence.",
+  "epistemic_nonclaims": [
+    "GITHUB_PAGE_NE_ELECTION_OFFICE",
+    "AUDIT_EXPLANATION_NE_ACTUAL_AUDIT",
+    "CASE_STUDY_NE_FRAUD_FINDING",
+    "GLOBAL_DEMOCRACY_INDEX_NE_CONCLUSIONS_ABOUT_NAMED_US_COUNT",
+    "SOURCE_PUBLICATION_NE_INDEPENDENT_BROWSER_PROOF",
+    "PUBLIC_INVITATION_NE_BOARD_OR_REVIEWER_ENDORSEMENT",
+    "NO_REAL_BENEFIT_MEASURED",
+    "CALL_TO_ACTION_NE_VOTER_PERSUASION",
+    "POLITICAL_NEUTRALITY_AND_PRIVACY_ARE_HARD_RELEASE_GATES"
+  ],
+  "verification_requirements": [
+    "Exact GitHub source readback",
+    "Pages successful build containing current source",
+    "Independent outside HTTPS GET and mobile browser keyboard/screenreader test",
+    "External link check dated and current",
+    "Independent reviewer without political profiling",
+    "Factual challenge handling",
+    "No allegation intake or public doxxing"
+  ],
+  "lifecycle": "PUBLIC_SOURCE_R0 -> VERIFIED_BROWSER_R0 -> INDEPENDENT_REVIEW_R0 -> SCOPED_LEARNING_IMPROVEMENT_R1",
+  "maintenance": "Evergreen desire does not entail always-running automation; use an actually authorized independent scheduler/receiver, otherwise state no monitor exists."
+}
