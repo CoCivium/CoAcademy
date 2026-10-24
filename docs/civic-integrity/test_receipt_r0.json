@@ -1,0 +1,124 @@
+{
+  "schema": "CoCivium.CivicIntegrity.StaticAndMockV8Test.R0",
+  "date": "2026-10-24",
+  "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
+  "exact_source_blob_sha": "52083a79da73ef5d26583666bed9034f6e1b7996",
+  "method": "Source readback and isolated JavaScript execution with mocked DOM; not an independent native browser, HTTPS receiver, user study or election system test.",
+  "passed": 24,
+  "total": 24,
+  "failures": [],
+  "checks": [
+    {
+      "name": "OFFICIAL_SOURCES_FIRST",
+      "pass": true
+    },
+    {
+      "name": "SIX_LANES_PRESENT",
+      "pass": true
+    },
+    {
+      "name": "THREE_SYNTHETIC_CASES",
+      "pass": true
+    },
+    {
+      "name": "NO_EXTERNAL_SCRIPT",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTO_NETWORK_CALLS",
+      "pass": true
+    },
+    {
+      "name": "NO_FORM_COLLECTION",
+      "pass": true
+    },
+    {
+      "name": "NO_PERSISTENCE",
+      "pass": true
+    },
+    {
+      "name": "NO_CANDIDATE_PROMOTION",
+      "pass": true
+    },
+    {
+      "name": "NOT_GOVERNMENT_OR_AUDIT",
+      "pass": true
+    },
+    {
+      "name": "OFFICIAL_REPORTING_NOT_INTERNAL",
+      "pass": true
+    },
+    {
+      "name": "FOREIGN_RESEARCH_SEPARATE",
+      "pass": true
+    },
+    {
+      "name": "NO_INFERRED_AFFILIATION",
+      "pass": true
+    },
+    {
+      "name": "RESPONSIVE_CSS",
+      "pass": true
+    },
+    {
+      "name": "REDUCED_MOTION",
+      "pass": true
+    },
+    {
+      "name": "NO_SCRIPT_FALLBACK",
+      "pass": true
+    },
+    {
+      "name": "OFFICIAL_DEADLINE_QUALIFICATION",
+      "pass": true
+    },
+    {
+      "name": "INLINE_JS_SYNTAX",
+      "pass": true
+    },
+    {
+      "name": "ISOLATED_V8_RUNTIME",
+      "pass": true
+    },
+    {
+      "name": "DEFAULT_NO_CASE_OPEN",
+      "pass": true
+    },
+    {
+      "name": "ELECTION_NIGHT_CASE_EXPANDS",
+      "pass": true
+    },
+    {
+      "name": "NO_CASE_DATA_TRANSFERS",
+      "pass": true
+    },
+    {
+      "name": "MULTIPLE_CASES_OPEN",
+      "pass": true
+    },
+    {
+      "name": "CASE_TOGGLE_REVERSIBLE",
+      "pass": true
+    },
+    {
+      "name": "COERCION_ROUTE_EXPLANATION",
+      "pass": true
+    }
+  ],
+  "nonclaims": [
+    "SOURCE_NE_EXTERNAL_BROWSER_READBACK",
+    "SOURCE_SAFETY_CHECK_NE_PROFESSIONAL_AUDIT",
+    "SCENARIO_QUIZ_NE_ELECTION_FORENSICS",
+    "WEB_LINK_NE_OFFICIAL_PARTNERSHIP",
+    "NO_REAL_ELECTION_DATA_INGESTED",
+    "NO_PRIVATE_REPORTS_COLLECTED"
+  ],
+  "next_tests": [
+    "Independent HTTPS GET and Pages deploy receipt",
+    "Keyboard/mobile and screen-reader actual browser checks",
+    "Official link validation and review by experienced election administrator",
+    "Voluntary skeptical first-use comprehension check",
+    "Correction procedure for stale official instructions"
+  ],
+  "notes": "All three interactive examples are hypothetical with no claim of corruption, candidate evaluation or voting-preference inference."
+}
