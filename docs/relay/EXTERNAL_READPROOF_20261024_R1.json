@@ -1,0 +1,82 @@
+{
+  "schema": "CoRelay.ExternalRunnerReadproofRecord.20261024.R1",
+  "evidence_date": "2026-10-24",
+  "source_repo": "https://github.com/CoCivium/CoAcademy",
+  "initial_revision": "91bd2978d7cbfa2d399643e281724a5d2a103e81",
+  "runner": "GitHub Actions hosted Ubuntu",
+  "initial_attempt": {
+    "run": "https://github.com/CoCivium/CoAcademy/actions/runs/40083802504",
+    "attempt": 1,
+    "status": "FAILED",
+    "deterministic_tests": {
+      "pass": 9,
+      "total": 9
+    },
+    "checks": {
+      "CoRelay page": "PASS",
+      "CoRelay RSS": "PASS",
+      "CoRelay beacon": "FAIL_BEFORE_NEW_PAGES_DEPLOY",
+      "Civic Integrity page": "PASS",
+      "GitHub Raw fallback": "PASS"
+    },
+    "cause": "Release race inferred from beacon missing while Pages was in progress, not an outage proven for other site paths."
+  },
+  "deployment": {
+    "run": "https://github.com/CoCivium/CoAcademy/actions/runs/40083801447",
+    "commit": "91bd2978d7cbfa2d399643e281724a5d2a103e81",
+    "status": "COMPLETED_SUCCESS"
+  },
+  "recovered_attempt": {
+    "run": "https://github.com/CoCivium/CoAcademy/actions/runs/40083802504",
+    "attempt": 2,
+    "status": "SUCCESS",
+    "deterministic_tests": {
+      "pass": 9,
+      "total": 9
+    },
+    "checks": {
+      "CoRelay page": "PASS",
+      "CoRelay RSS": "PASS",
+      "CoRelay beacon": "PASS",
+      "Civic Integrity page": "PASS",
+      "GitHub Raw fallback": "PASS"
+    },
+    "job_id": 120842743694
+  },
+  "successful_scope": "Five public HTTP/source checks from a GitHub runner and nine deterministic checks, not independent off-GitHub failover and not a human/browser accessibility test",
+  "repair": {
+    "source_workflow": "https://github.com/CoCivium/CoAcademy/blob/master/.github/workflows/corelay-public-probe.yml",
+    "approach": "Trigger after successful Pages deployment, retaining bounded six-hour schedule and manual dispatch",
+    "commit": "c70137fca4a80c45aaecf9033f62b9d6e13db0f2",
+    "new_trigger_first_execution": "NOT_YET_OBSERVED_AT_RECORD_TIME"
+  },
+  "cost_and_privacy": {
+    "probe_frequency": "4/day from GitHub Actions where scheduled execution actually occurs",
+    "timeout_minutes": 5,
+    "secrets_used": false,
+    "private_devices_touched": false,
+    "mail_sent": false,
+    "social_posting": false,
+    "election_system_access": false,
+    "read_only": true
+  },
+  "provider_failure_domain": {
+    "pages": "GITHUB",
+    "raw": "GITHUB",
+    "source_repo": "GITHUB",
+    "off_provider_backup": "NOT_QUALIFIED",
+    "status": "Single correlated provider despite distinct hostnames"
+  },
+  "expected_next_proof": [
+    "A successful Pages-completion triggered readproof following new workflow",
+    "At least one actual scheduled cron run",
+    "Independent non-GitHub and real screenreader/mobile reception",
+    "CoStead/CoGateway/CoVIA separately scoped receiver ACK before claimed"
+  ],
+  "counterclaims": [
+    "RUNNER_SUCCESS_NE_HUMAN_BENEFIT",
+    "THREE_GITHUB_ENDPOINTS_NE_INDEPENDENT_REDUNDANCY",
+    "SCHEDULE_CONFIGURED_NE_FUTURE_JOB_ALREADY_EXECUTED",
+    "RECOVERY_AFTER_DEPLOYMENT_NE_NO_OUTAGE"
+  ]
+}
