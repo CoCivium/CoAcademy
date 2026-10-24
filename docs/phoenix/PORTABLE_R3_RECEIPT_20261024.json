@@ -1,0 +1,96 @@
+{
+  "schema": "CoPhoenix.PortableOfflineCapsule.ExternalRecoveryReceipt.R3",
+  "issued": "2026-10-24",
+  "state": "PRIVATE_CHAT_FILE_VERIFIED__NOT_PUBLIC_FAILOVER_OR_DURABLE_OFFSITE_CUSTODY",
+  "downloadable_filename": "CoPhoenix_R3_Portable_Offline_Capsule_20261024.zip",
+  "archive_bytes": 49489,
+  "archive_sha256": "0f40f2f2f6d6b5494574351ca685d498c41f1738a3eed76d1e0f2f5e3290b4f2",
+  "separately_downloadable_checksum": "CoPhoenix_R3_Portable_Offline_Capsule_20261024.zip.sha256",
+  "independently_downloadable_full_test_record": "CoPhoenix_R3_Test_Receipt_20261024.json",
+  "browser_experiences": [
+    {
+      "id": "civic_literacy",
+      "source": "Earlier CoCivicLens R0 static browser experiment",
+      "currentness": "HISTORICAL__AUTHORITATIVE_ELECTION_SOURCES_MUST_BE_RECHECKED"
+    },
+    {
+      "id": "relational_seed",
+      "source": "CoTrillSeed RD1 local relational map",
+      "currentness": "HISTORICAL__NOT_CONNECTED_COVIA_OR_X2"
+    },
+    {
+      "id": "possibility_observatory",
+      "source": "CoPig/CoNull possibility observatory",
+      "currentness": "HISTORICAL_LOCAL_RESEARCH"
+    },
+    {
+      "id": "first_voyage",
+      "source": "CoUX First Voyage R1 public-safe art",
+      "currentness": "HISTORICAL__PRIVATE_ORIGIN_EXCLUDED"
+    },
+    {
+      "id": "aperture_experience",
+      "source": "CoAperture Seeker Experience R0 public-safe art",
+      "currentness": "HISTORICAL__PRIVATE_ORIGIN_EXCLUDED"
+    }
+  ],
+  "verification": {
+    "environment": "Separate ephemeral Linux/container sandbox. X2/CoStead untouched.",
+    "result": "PASS",
+    "checks_passed": 61,
+    "checks_total": 61,
+    "safe_restore": "TWO_INDEPENDENT_FRESH_DIRECTORIES",
+    "integrity": "MANIFEST_MEMBER_SHA256_AND_EXTERNAL_WHOLE_ARCHIVE_SHA256",
+    "negative_tests": [
+      "CORRUPTION_FAIL_CLOSED",
+      "MISSING_MEMBER_FAIL_CLOSED",
+      "TAMPERED_ZIP_HELD_BEFORE_EXTRACT",
+      "PATH_TRAVERSAL_HELD",
+      "DUPLICATE_NAME_HELD"
+    ],
+    "localhost_http": "PYTHON_HTTP_CLIENT_6_OF_6_PATHS_RETURNED_200",
+    "browser": "CHROMIUM_DIRECT_EXTRACTED_HTML_RENDER_5_OF_5",
+    "browser_interactions": "FIVE_BASIC_USER_SELECTED_CONTROLS_EXERCISED",
+    "autonomous_networking": "NONE_OBSERVED_FROM_SCOPED_BROWSER_RENDER",
+    "direct_browser_localhost_navigation": "INCONCLUSIVE_BLOCKED_BY_ADMINISTRATOR__SEPARATE_PYTHON_HTTP_200_AND_HTML_RENDER_PASS",
+    "known_browser_js_errors": 0,
+    "complete_zip_crc": "PASS",
+    "standalone_restore_scripts": "VERIFY.py__RESTORE_ZIP.py__RUN_LOCAL.py_INCLUDED"
+  },
+  "scope": {
+    "bundled_bytes": "FIVE_HISTORICAL_SELF_CONTAINED_HTML_PAGES__NOT_LATEST_ONLINE_RELEASES",
+    "private_dream_source": "EXCLUDED",
+    "credentials": "EXCLUDED",
+    "election_personal_data": "EXCLUDED",
+    "public_zip_hosted": "NO",
+    "coStead_real_custody": "NOT_CONFIRMED",
+    "coGateway_runtime": "NOT_CONFIRMED",
+    "independent_public_provider_failover": "NOT_IMPLEMENTED",
+    "wayback_capture": "NOT_VERIFIED",
+    "native_OS_agent": "NOT_RESTORED",
+    "real_reader_impact": "NOT_MEASURED"
+  },
+  "important_caveats": [
+    "An archive and its internal manifest can both be replaced by an adversary. A separately retained trusted checksum is necessary but not sufficient to prove publisher identity.",
+    "The private ZIP does not recover CoAcademy, CoRelay, GitHub Issues, linked official source currentness, accounts or remote publication.",
+    "R0 and R3 remain separate preserved historical lineage; success counters and artifacts are not interchangeable.",
+    "The sandbox blocks browser URL navigation to localhost. The human-browser URL case is untested rather than falsely passed.",
+    "No purported live watcher, automatically evolving bot, magical service continuation or independent durable offsite mirror was created."
+  ],
+  "next_acceptance": [
+    "Copy actual ZIP+checksum to a separately administered custodian with verifiable readback and restore authority",
+    "Verify a full restore after deliberately disconnecting GitHub and the original source mount",
+    "Establish an independently hosted public mirror only after rights, privacy, DNS and independent HTTPS checks",
+    "Create an approved second feedback receiver that does not share the GitHub provider failure domain",
+    "Perform accessibility and local network browser tests outside this administrator-restricted sandbox"
+  ],
+  "principles": [
+    "BACKUP_NE_RESTORE",
+    "RESTORE_NE_LIVE_PUBLIC_SERVICE",
+    "ARCHIVAL_COPY_NE_CURRENTNESS",
+    "HASH_NE_IDENTITY_AUTHENTICATION",
+    "TWO_GITHUB_URLS_NE_TWO_PROVIDERS",
+    "NEGATIVE_TESTS_ARE_USEFUL_EVIDENCE",
+    "RUNTIME_MUST_NEVER_ASSUME_EXTERNAL_AUTHORITY"
+  ]
+}
