@@ -3,7 +3,7 @@
   "date": "2026-10-24",
   "human_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/index.html",
   "web_candidate": "https://cocivium.github.io/CoAcademy/phoenix/",
-  "public_host_independent_readback": "PENDING",
+  "public_host_independent_readback": "GITHUB_HOSTED_RUNNER_CONFIRMED_HTTP_200_AND_MARKER_5_OF_5_FOR_SCOPE_20261024__NOT_SEPARATE_PROVIDER",
   "private_capsule_26_checks": "PASS",
   "private_capsule_zip_sha256": "868a2f8f9ca9276e359917b526c24cc178639b19a600e2c358b514e8f82f0d9f",
   "public_capsule_hosted": false,
@@ -51,7 +51,7 @@
     "UNVERIFIED_AI_RECIPIENT"
   ],
   "rule": "Feedback of feedback terminates in source, independent test, authorization, exact receipt, or UNKNOWN; never infinite blind retry",
-  "public_actions": "NONE_EXCEPT_STATIC_SOURCE_PUBLICATION",
+  "public_actions": "PUBLIC_GITHUB_STATIC_SOURCE_PUBLICATION_PLUS_READ_ONLY_SCHEDULED_HTTP_AND_TRIAGE_OUTPUT__NO_AUTOMATIC_REPAIR",
   "no_claims": [
     "ARCHIVE_NE_RUNNING",
     "BACKUP_NE_RESTORED_SERVICE",
@@ -60,5 +60,27 @@
     "ABSENCE_OF_FAILURE_NE_ZERO_EXPOSURE",
     "CO_STEAD_NE_CUSTODY_PROVEN",
     "X2_NOT_TOUCHED"
-  ]
+  ],
+  "public_readproof_r1": {
+    "run": "https://github.com/CoCivium/CoAcademy/actions/runs/40110119757",
+    "result": "PASS_5_OF_5_PAGES_AND_5_RAW_FROM_GITHUB_RUNNER",
+    "time_utc": "2026-10-24T16:07:53Z",
+    "limits": "GITHUB_RUNNER_AND_GITHUB_HOSTS_SHARED_FAILURE_DOMAIN_NOT_A_BROWSER"
+  },
+  "worry_register_r2": {
+    "methodology": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/WORRY_REGISTER_R2.md",
+    "workflow": "https://github.com/CoCivium/CoAcademy/actions/workflows/cophoenix-public-readproof.yml",
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/triage_public.py",
+    "first_run": "https://github.com/CoCivium/CoAcademy/actions/runs/40110486300",
+    "first_run_as_of": "2026-10-24T16:12:39Z",
+    "first_run_observed_pages_passed": 5,
+    "first_run_P0": 0,
+    "first_run_P1": 3,
+    "first_run_P2": 4,
+    "output": "RUN_SCOPED_JSON_AND_MARKDOWN_ACTION_ARTIFACTS__NOT_LIVE_STATIC_SCORE",
+    "automated": "FIXED_PUBLIC_OBSERVATION_AND_BOUNDED_TRIAGE_ONLY",
+    "autonomous_repair": false,
+    "real_user_impact": "NOT_MEASURED",
+    "external_independent_receiver": "NOT_YET_VERIFIED"
+  }
 }

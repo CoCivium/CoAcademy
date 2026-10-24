@@ -60,7 +60,10 @@
     "phoenix/index.html",
     "phoenix/discovery.json",
     "phoenix/test_receipt_r0.json",
-    "phoenix/README.md"
+    "phoenix/README.md",
+    "phoenix/WORRY_REGISTER_R2.md",
+    "phoenix/probe_public.py",
+    "phoenix/triage_public.py"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -193,5 +196,15 @@
     "CoStead": "NO_ACCESS_THIS_WAVE",
     "CoGateway": "NO_RECEIVER_ACK",
     "purpose": "NONPARTISAN_PROVIDER_INDEPENDENT_RECOVERY_EXPERIMENT_NOT_AUTO_FAILOVER"
+  },
+  "co_phoenix_worry_monitor": {
+    "run_link": "https://github.com/CoCivium/CoAcademy/actions/workflows/cophoenix-public-readproof.yml",
+    "guide": "phoenix/WORRY_REGISTER_R2.md",
+    "source": "phoenix/triage_public.py",
+    "status": "LIVE_GITHUB_SCHEDULE_SOURCE__FIRST_SUCCESS_2026_10_24__WORRIES_ARTIFACT_PER_RUN",
+    "observed_result": "PAGE_PASS_5_OF_5__P0_0__P1_3__P2_4_FIRST_R2_RUN_ONLY",
+    "independent_provider": false,
+    "self_repair": false,
+    "privacy": "FIXED_PUBLIC_LINKS_ONLY"
   }
 }
