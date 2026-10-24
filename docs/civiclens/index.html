@@ -63,6 +63,17 @@ footer{margin-top:30px;color:var(--muted);border-top:1px solid var(--edge);paddi
 .note{font-size:13px;color:var(--muted)}
 @media(max-width:800px){.layout,.sourcegrid{grid-template-columns:1fr}.orbmap{min-height:360px}.wrap{padding:14px}.panel{padding:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* CoCivicLens R1A: put official public information before experimental exploration. */
+.official-first{border:1px solid #badfd5;background:linear-gradient(130deg,#214d58,#102f3a);border-radius:16px;padding:21px;margin:20px 0 22px}
+.official-first h2{margin:5px 0 8px}
+.official-first .help{color:#dcebea;margin:0 0 14px}
+.official-routes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}
+.official-route{display:block;background:#092b35;border:1px solid #79c7ba;padding:12px;border-radius:11px;min-height:92px;color:#d6fff3}
+.official-route strong{display:block;font-size:15px}
+.official-route span{display:block;font-size:12px;color:#c4d8d8;margin-top:4px}
+@media(max-width:900px){.official-routes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:450px){.official-routes{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -72,6 +83,19 @@ footer{margin-top:30px;color:var(--muted);border-top:1px solid var(--edge);paddi
 <h1>Look closer.<br>Learn together.</h1>
 <p class="lead">One shared set of sources. Four ways to explore it. A small <strong>CoOrbWare-inspired</strong> experiment in learning, challenging claims and finding the unknowns, without telling anyone how to vote.</p>
 <div class="pills"><span class="pill">Election Day: November 3, 2026</span><span class="pill">State and local rules differ</span><span class="pill">No voter profiling</span><span class="pill">No analytics or account required</span></div>
+
+<section class="official-first" aria-labelledby="official-first-title">
+  <p class="title">First: practical information from official election sources</p>
+  <h2 id="official-first-title">Looking for voting information? Start here.</h2>
+  <p class="help">CoCivicLens is an experimental learning tool, not an election office. For personal voting rules and deadlines, use official state and local election sources. You do not need to use our interactive experience.</p>
+  <nav aria-label="Official U.S. voting information" class="official-routes">
+    <a class="official-route" href="https://vote.gov/register"><strong>Register or check status</strong><span>Vote.gov: choose your state or territory</span></a>
+    <a class="official-route" href="https://www.usa.gov/find-polling-place"><strong>Find where to vote</strong><span>USAGov: reach your election office</span></a>
+    <a class="official-route" href="https://vote.gov/guide-to-voting"><strong>Voting methods and dates</strong><span>Vote.gov: voting in person or by mail</span></a>
+    <a class="official-route" href="https://www.eac.gov/vote"><strong>State and local authorities</strong><span>Election Assistance Commission: state offices</span></a>
+  </nav>
+  <p class="note"><strong>For the November 3, 2026 federal election:</strong> requirements, registration deadlines, early-voting options and polling places vary by jurisdiction. Follow the linked election office's latest instructions, including accessibility accommodations if needed. Do not enter your address or voting preferences on this page.</p>
+</section>
 <div class="layout">
 <section class="panel">
 <p class="title">01 / CoOrb+ relational exploration</p>
