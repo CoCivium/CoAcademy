@@ -4,7 +4,7 @@
   "published_source_date": "2026-10-24",
   "status": {
     "source": "PUBLIC_GITHUB_SOURCE_VERIFIED",
-    "hosted_page": "GITHUB_PAGES_DEPLOYMENT_AND_INDEPENDENT_HTTP_READBACK_REQUIRE_SEPARATE_PROOF",
+    "hosted_page": "GITHUB_PAGES_DEPLOYMENT_SUCCESS_OBSERVED__INDEPENDENT_HTTP_READBACK_UNVERIFIED",
     "user_outcomes": "NOT_MEASURED",
     "public_social_posts": "NOT_SENT",
     "paid_campaign": "NOT_STARTED",
@@ -114,5 +114,15 @@
     "RENDERED_NE_UNDERSTOOD",
     "VOLUNTARY_SHARE_NE_CONSENT_TO_BROADCAST",
     "AI_ASSISTANCE_NE_AUTONOMOUS_BACKGROUND_CAMPAIGN"
-  ]
+  ],
+  "campaign_portfolio": {
+    "name": "CoCivium Campaign Experiments R0",
+    "human_candidate": "https://cocivium.github.io/CoAcademy/coplay/campaigns/",
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/campaigns/index.html",
+    "manifest": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/coplay/campaigns/campaigns.json",
+    "activities": 6,
+    "status": "PUBLIC_SOURCE_COMMITTED__INDEPENDENT_AUDIENCE_OUTCOMES_UNVERIFIED",
+    "election_scope": "NONPARTISAN_OFFICIAL_SOURCE_LINKS_ONLY",
+    "auto_broadcast": false
+  }
 }
