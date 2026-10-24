@@ -1,0 +1,130 @@
+{
+  "schema": "CoCivium.CoPlayCampaignPortfolio.IsolatedV8Regression.R0",
+  "date": "2026-10-24",
+  "source_blob_sha": "d9d7cb31437d85bf5fa8703dba53142cf38de1ed",
+  "source_url": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/campaigns/index.html",
+  "environment": "Isolated V8 evaluation of exact GitHub inline script with mock DOM, events, clipboard, and CSS class changes. NOT a real browser, device, HTTP receiver or human observation.",
+  "passed": 27,
+  "total": 27,
+  "failed": [],
+  "checks": [
+    {
+      "name": "SOURCE_HAS_SIX_DISTINCT_ACTIVITIES",
+      "pass": true
+    },
+    {
+      "name": "CIVIC_AUTHORITATIVE_LINKS_PRESENT",
+      "pass": true
+    },
+    {
+      "name": "CIVIC_INTERNAL_ROUTE_CORRECT",
+      "pass": true
+    },
+    {
+      "name": "NO_EXTERNAL_JS",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTO_NETWORK",
+      "pass": true
+    },
+    {
+      "name": "NO_PERSISTENT_STORAGE",
+      "pass": true
+    },
+    {
+      "name": "NO_IMPLICIT_CLIPBOARD_WRITE",
+      "pass": true
+    },
+    {
+      "name": "REDUCED_MOTION_CSS",
+      "pass": true
+    },
+    {
+      "name": "NARROW_MOBILE_CSS",
+      "pass": true
+    },
+    {
+      "name": "NO_UNVERIFIED_AUDIENCE_CLAIM",
+      "pass": true
+    },
+    {
+      "name": "INSPIRATION_HYPOTHESIS_TEST_DISTINGUISHED",
+      "pass": true
+    },
+    {
+      "name": "FICTIONAL_AD_DISCLOSURE",
+      "pass": true
+    },
+    {
+      "name": "HANDOFF_GENERATES_JSON",
+      "pass": true
+    },
+    {
+      "name": "HANDOFF_HAS_NO_RECEIVER_ACK",
+      "pass": true
+    },
+    {
+      "name": "HANDOFF_BUILD_DOES_NOT_COPY",
+      "pass": true
+    },
+    {
+      "name": "HANDOFF_COPIED_ONLY_ON_CLICK",
+      "pass": true
+    },
+    {
+      "name": "PROOF_THREE_ANSWERS",
+      "pass": true
+    },
+    {
+      "name": "PROOF_ACCESSIBLE_SELECTION_STATE",
+      "pass": true
+    },
+    {
+      "name": "PROOF_WRONG_ANSWER_INFORMS",
+      "pass": true
+    },
+    {
+      "name": "PROOF_NO_DOUBLE_COUNT",
+      "pass": true
+    },
+    {
+      "name": "SPOOF_CREATOR_WRITES_SCRIPT",
+      "pass": true
+    },
+    {
+      "name": "SPOOF_NOT_AUTO_PUBLISHED",
+      "pass": true
+    },
+    {
+      "name": "LARGE_TEXT_CHANGES_LOCAL_CSS",
+      "pass": true
+    },
+    {
+      "name": "HIGH_CONTRAST_CHANGES_LOCAL_CSS",
+      "pass": true
+    },
+    {
+      "name": "LOCAL_PRESENTATION_CAN_REVERSE",
+      "pass": true
+    },
+    {
+      "name": "WONDER_NOTE_GENERATES_COUNTEREXAMPLE",
+      "pass": true
+    },
+    {
+      "name": "WONDER_IS_NOT_CLAIMED_PROOF",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "No native DOM/browser rendering test",
+    "No independent external HTTPS fetch",
+    "No actual participant outcomes",
+    "No verified accessibility-screenreader assessment",
+    "No external receiver proof, emails or public social posts",
+    "No actual adoption, virality or campaign revenue"
+  ],
+  "candidate_status": "PUBLIC_SOURCE_TESTED__RUNTIME_AND_HUMAN_PROOF_SEPARATE",
+  "notes": "One earlier test compared an outdated expected wording string; this corrected test validates the actual claim separation, not a weakened behavior."
+}
