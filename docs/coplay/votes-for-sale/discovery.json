@@ -35,8 +35,10 @@
     "deployment": "SEPARATE_WORKFLOW_PROOF_NEEDED",
     "outside_browser": "NOT_VERIFIED",
     "reader_understanding": "NOT_MEASURED",
-    "previous_interaction_mock": "30_OF_30_FOR_INITIAL_SOURCE_PRECEDING_HISTORICAL_CASE_INSERTION",
-    "election_audit": "NONE"
+    "previous_interaction_mock": "30_OF_30_FOR_INITIAL_SOURCE",
+    "election_audit": "NONE",
+    "current_mock_receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/votes-for-sale/test_receipt_r0a.json",
+    "current_mock_result": "31_OF_31_SOURCE_AND_ISOLATED_V8_CHECKS_PASS__NOT_NATIVE_BROWSER_OR_INDEPENDENT_HTTPS"
   },
   "limitations": [
     "Fictional advertising examples are not offers or real claims.",

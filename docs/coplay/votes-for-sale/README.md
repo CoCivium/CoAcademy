@@ -12,7 +12,7 @@ This is a nonpartisan, widely accessible invitation to understand how money move
 
 - [Interactive satirical exhibit](./index.html)
 - [Machine-readable claims and source map](./discovery.json)
-- [Mock interaction receipt](./test_receipt_r0.json) (earlier R0 source)
+- [Revised-source interaction receipt](./test_receipt_r0a.json) (31/31 isolated V8 checks; not a real browser)
 - [Aggregate Money and Elections laboratory](../../civic-integrity/money-and-elections/)
 - [Post-election documentation review](../../civic-integrity/POST_ELECTION_CONTINUITY_R0.md)
 
@@ -103,7 +103,7 @@ Respect a real receiver's permissions, never infer endorsement from an AI-genera
 ## Evidence ledger (as of the initial source wave)
 
 - Static HTML source in public CoAcademy: **confirmed by exact GitHub readback**.
-- Earlier mock DOM/source test: **30/30 on first source**; revised R0A contains an additional sourced historical adjudicated case.
+- Mock DOM/source tests: **30/30 on the initial version and 31/31 on revised R0A**, including the sourced historical adjudicated case. Neither constitutes independent browser, accessibility or human-impact proof.
 - Independent browser and hosted-page retrieval: **not yet proven**.
 - Real human first-use, comparative correctness, reader understanding, or public reach: **not measured**.
 - Real financial data joins, influence correlations or fraud assessments: **not performed**.
