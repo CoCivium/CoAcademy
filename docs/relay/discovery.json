@@ -69,5 +69,15 @@
     "deterministic_tests": "PASS_9_OF_9",
     "latest_source_reverification": "PENDING_AS_SOURCE_HAS_SINCE_CHANGED",
     "off_provider_redundancy": "NOT_PROVEN"
+  },
+  "observer_map": {
+    "human": "https://cocivium.github.io/CoAcademy/relay/observer-map/",
+    "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/observer-map/index.html",
+    "machine": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/relay/observer-map/registry.json",
+    "test": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/observer-map/test_receipt_r0.json",
+    "class_count": 15,
+    "current_status": "PUBLIC_SOURCE_ONLY__NO_LIVE_OBSERVER_TELEMETRY_OR_KNOWN_BAD_ACTOR",
+    "private_device_status": "X2_AND_COSTEAD_COGATEWAY_NOT_PROBED",
+    "evidence_rule": "POTENTIAL_VISIBILITY_NE_OBSERVED_WATCHING"
   }
 }

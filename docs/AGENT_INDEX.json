@@ -52,7 +52,11 @@
     "relay/beacon.json",
     "relay/adapters.json",
     "relay/resilience.json",
-    "relay/EXTERNAL_READPROOF_20261024_R1.json"
+    "relay/EXTERNAL_READPROOF_20261024_R1.json",
+    "relay/observer-map/index.html",
+    "relay/observer-map/registry.json",
+    "relay/observer-map/README.md",
+    "relay/observer-map/test_receipt_r0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -163,5 +167,16 @@
     "scheduled_workflow": ".github/workflows/corelay-public-probe.yml",
     "last_actual_readproof": "PASS_5_OF_5_GITHUB_RUNNER_PREVIOUS_SOURCE_VERSION",
     "nonclaims": "NO_OFF_PROVIDER_MIRROR__NO_COVIA_RECEIVER__NO_METRICOOL_SEND"
+  },
+  "observer_and_dependency_map": {
+    "human": "relay/observer-map/",
+    "machine": "relay/observer-map/registry.json",
+    "method": "relay/observer-map/README.md",
+    "test": "relay/observer-map/test_receipt_r0.json",
+    "current_state": "PUBLIC_SOURCE_VERIFIED__28_OF_28_ISOLATED_FILTER_TESTS__NOT_LIVE_MONITOR",
+    "actor_classes": 15,
+    "no_personal_threat_attribution": true,
+    "private_nodes_untouched": true,
+    "independent_browser_proof": "NOT_VERIFIED"
   }
 }
