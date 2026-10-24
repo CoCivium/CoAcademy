@@ -56,7 +56,11 @@
     "relay/observer-map/index.html",
     "relay/observer-map/registry.json",
     "relay/observer-map/README.md",
-    "relay/observer-map/test_receipt_r0.json"
+    "relay/observer-map/test_receipt_r0.json",
+    "phoenix/index.html",
+    "phoenix/discovery.json",
+    "phoenix/test_receipt_r0.json",
+    "phoenix/README.md"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -178,5 +182,16 @@
     "no_personal_threat_attribution": true,
     "private_nodes_untouched": true,
     "independent_browser_proof": "NOT_VERIFIED"
+  },
+  "co_phoenix_recovery": {
+    "human": "phoenix/",
+    "machine": "phoenix/discovery.json",
+    "test": "phoenix/test_receipt_r0.json",
+    "stage": "PUBLIC_SOURCE_PRODUCT_CONTRACT_WITH_LOCAL_OFFLINE_26_OF_26",
+    "independent_remote_backup": "NOT_PROVEN",
+    "wayback_capture": "NOT_PROVEN",
+    "CoStead": "NO_ACCESS_THIS_WAVE",
+    "CoGateway": "NO_RECEIVER_ACK",
+    "purpose": "NONPARTISAN_PROVIDER_INDEPENDENT_RECOVERY_EXPERIMENT_NOT_AUTO_FAILOVER"
   }
 }
