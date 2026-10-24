@@ -1,0 +1,193 @@
+{
+  "schema": "CoCivium.CoRelay.SourceAndProductRegressionReceipt.R0B",
+  "observed_date": "2026-10-24",
+  "lineage": {
+    "prior_receipt": "docs/relay/test_receipt_r0.json",
+    "prior_blob_sha": "529e08be531314dd4b3c23e1d453a2b1267095b1",
+    "relation": "ADDITIVE_NO_CLOBBER_NOT_REPLACEMENT"
+  },
+  "implementation_commit": "e200585f89ec8231d66b98737992e4caa2d0cb12",
+  "sources": [
+    {
+      "path": "docs/relay/index.html",
+      "blob_sha": "eb2826a19fde3d00bfcdaecc2ab5ecd5fee856ee"
+    },
+    {
+      "path": "docs/relay/product_contract_r0.json",
+      "blob_sha": "15bd4998832b553a8e65734f130bbcee1b75f4d1"
+    },
+    {
+      "path": "docs/relay/feed.xml",
+      "blob_sha": "d47ecfe6d5e2a65ef8d6975d186e1d00544fe43d"
+    }
+  ],
+  "checks": [
+    {
+      "name": "NINE_EXACT_GITHUB_SOURCE_READS",
+      "result": "PASS"
+    },
+    {
+      "name": "ROOT_ADVERTISES_FEED",
+      "result": "PASS"
+    },
+    {
+      "name": "ROOT_ADVERTISES_JSON",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_HAS_SELF_DESCRIBING_H1",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_HAS_PUBLIC_ISSUE_LINK",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_ISSUES_PRIVACY_WARNING",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_CIVIC_OFFICIAL_REFERRAL",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_DOES_NOT_IMPORT_SCRIPTS",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_NO_AUTOMATIC_FETCH",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_NO_FORM",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_NO_LOCAL_PERSISTENCE",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_INCLUDES_BRAND_PRODUCT_CONTRACT",
+      "result": "PASS"
+    },
+    {
+      "name": "RELAY_LICENSE_CAVEAT_VISIBLE",
+      "result": "PASS"
+    },
+    {
+      "name": "MACHINE_INDEX_HAS_RELAY",
+      "result": "PASS"
+    },
+    {
+      "name": "MACHINE_INDEX_HAS_PRODUCT_CONTRACT",
+      "result": "PASS"
+    },
+    {
+      "name": "DISCOVERY_LINKS_PRODUCT_CONTRACT",
+      "result": "PASS"
+    },
+    {
+      "name": "STATIC_RSS_HAS_FOUR_ITEMS",
+      "result": "PASS"
+    },
+    {
+      "name": "STATIC_RSS_HAS_CANONICAL_ROOT",
+      "result": "PASS"
+    },
+    {
+      "name": "STATIC_RSS_GUIS_DISTINCT",
+      "result": "PASS"
+    },
+    {
+      "name": "STATIC_RSS_HAS_NO_UNSUPPORTED_CLAIM",
+      "result": "PASS"
+    },
+    {
+      "name": "RSS_TAG_NESTING_BALANCED_IN_SOURCE",
+      "result": "PASS"
+    },
+    {
+      "name": "PUBLISHER_KIT_NO_VIDEO_CLAIM",
+      "result": "PASS"
+    },
+    {
+      "name": "PUBLISHER_KIT_NO_BOOK_CLAIM",
+      "result": "PASS"
+    },
+    {
+      "name": "METRICOOL_NOT_COCIVIUM_IMPLICIT_AUTHORITY",
+      "result": "PASS"
+    },
+    {
+      "name": "COVIA_DEDICATED_TRANSPORT_UNBOUND",
+      "result": "PASS"
+    },
+    {
+      "name": "POLITIC_DOMAIN_UNVERIFIED",
+      "result": "PASS"
+    },
+    {
+      "name": "GITHUB_SHARED_FAILURE_DOMAIN_RECORDED",
+      "result": "PASS"
+    },
+    {
+      "name": "NOT_CLAIMING_AUTOMATIC_FAILOVER",
+      "result": "PASS"
+    },
+    {
+      "name": "PUBLIC_ISSUE_REAL_PROOF_POINTER",
+      "result": "PASS"
+    },
+    {
+      "name": "REUSE_RIGHTS_UNPROVEN",
+      "result": "PASS"
+    },
+    {
+      "name": "STATIC_SOURCE_NOT_ALWAYS_ON",
+      "result": "PASS"
+    },
+    {
+      "name": "NO_PUBLIC_BULK_OR_VOTER_TARGETING",
+      "result": "PASS"
+    },
+    {
+      "name": "SOURCE_GUIDE_PRESERVES_UNKNOWN",
+      "result": "PASS"
+    }
+  ],
+  "passed": 33,
+  "total": 33,
+  "method": "Nine exact connected GitHub source readbacks, isolated V8 source checks and a simple stack-based XML tag nesting check. Structural proxy only, not complete XML standards validation, live outside HTTP, native browser rendering, accessibility evaluation, real subscriber, CoVIA or Metricool execution.",
+  "proof": {
+    "public_source": "VERIFIED_EXACT_GITHUB_READBACK",
+    "deployment_prior_to_current_receipt": "SUCCESS_GITHUB_PAGES_WORKFLOW",
+    "deploy_receipt": "https://github.com/CoCivium/CoAcademy/actions/runs/40083389198",
+    "issue": "https://github.com/CoCivium/CoAcademy/issues/3",
+    "issue_state": "OPEN_WITH_ZERO_COMMENTS_OBSERVED",
+    "outside_http": "INCONCLUSIVE",
+    "actual_first_use": "NOT_MEASURED",
+    "automated_channel_publication": "NONE",
+    "coving_adapter": "NOT_ACTIVATED",
+    "independent_failover": "NOT_PROVEN",
+    "CoAcademy_unrestricted_source_license": "NOT_VERIFIED"
+  },
+  "residual": [
+    "GitHub hosts repo, Pages and feedback issues in one correlated failure domain.",
+    "A working independent host+reader readback is missing.",
+    "A public issue is a volunteer feedback invitation, not a reviewer or beneficiary.",
+    "No CoCivium publishing authority is established for the connected Metricool personal brand.",
+    "CoVIA dedicated transport and CoStead/CoGateway independent receiver/custody remain unproven.",
+    "No repo license or notice file found; source visibility does not automatically grant reuse rights."
+  ],
+  "next_acceptance": "Independent client retrieves Pages, validates feed with a real RSS reader, completes keyboard/mobile accessibility checks and reports a non-sensitive source-bound result; independent failover would require another proven host and custody.",
+  "nonclaims": [
+    "SOURCE_NE_BROWSER_PROOF",
+    "TAG_NESTING_NE_FULL_XML_VALIDITY",
+    "PAGES_WORKFLOW_NE_READER_ACK",
+    "METRICOOL_ACCOUNT_NE_BRAND_PERMISSION",
+    "COVIA_NAME_NE_RECEIVER",
+    "EXISTING_ISSUE_NE_EXTERNAL_FEEDBACK",
+    "NO_LICENSE_FILE_NE_PUBLIC_REUSE_GRANT",
+    "FOREVER_INTENT_NE_UNLIMITED_BACKGROUND_COMPUTE"
+  ]
+}
