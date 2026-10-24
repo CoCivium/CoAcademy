@@ -1,0 +1,150 @@
+{
+  "schema": "CoCivium.CoPlay.VotesForSale.SyntheticSourceAndInteractionTest.R0",
+  "date": "2026-10-24",
+  "source_url": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/votes-for-sale/index.html",
+  "exact_source_blob_sha": "ff1a22bcdb8075d12872a7ea349c5a068883f3e6",
+  "method": "V8 isolated committed inline JS evaluation with mocked DOM; NOT a native browser, outside HTTPS receiver or human study",
+  "checks": [
+    {
+      "name": "SOURCE_READBACK",
+      "pass": true
+    },
+    {
+      "name": "SOURCE_JS_MOCK_RUNTIME",
+      "pass": true
+    },
+    {
+      "name": "SATIRE_DISCLOSURE",
+      "pass": true
+    },
+    {
+      "name": "FEC_2026_DATA",
+      "pass": true
+    },
+    {
+      "name": "FEC_REPORT_PERIOD",
+      "pass": true
+    },
+    {
+      "name": "DISBURSEMENT_LIMIT",
+      "pass": true
+    },
+    {
+      "name": "NO_CAUSAL_INFERENCE",
+      "pass": true
+    },
+    {
+      "name": "NO_TARGETING",
+      "pass": true
+    },
+    {
+      "name": "LEGAL_BOUNDARIES",
+      "pass": true
+    },
+    {
+      "name": "FEC_SOURCE",
+      "pass": true
+    },
+    {
+      "name": "IDEA_SOURCE",
+      "pass": true
+    },
+    {
+      "name": "CPI_SOURCE",
+      "pass": true
+    },
+    {
+      "name": "ACTUAL_AUDIT_NOT_CLAIMED",
+      "pass": true
+    },
+    {
+      "name": "NO_EXTERNAL_SCRIPTS",
+      "pass": true
+    },
+    {
+      "name": "NO_AUTO_HTTP",
+      "pass": true
+    },
+    {
+      "name": "NO_PERSISTENCE",
+      "pass": true
+    },
+    {
+      "name": "NO_FORMS",
+      "pass": true
+    },
+    {
+      "name": "NO_JS_FALLBACK",
+      "pass": true
+    },
+    {
+      "name": "RESPONSIVE",
+      "pass": true
+    },
+    {
+      "name": "REDUCED_MOTION",
+      "pass": true
+    },
+    {
+      "name": "ROI_CARD",
+      "pass": true
+    },
+    {
+      "name": "ROI_NOT_CAUSAL",
+      "pass": true
+    },
+    {
+      "name": "ARIA_SINGLE_ACTIVE",
+      "pass": true
+    },
+    {
+      "name": "METER_CARD",
+      "pass": true
+    },
+    {
+      "name": "SCORE_WITHHELD",
+      "pass": true
+    },
+    {
+      "name": "DEFAULT_AD_RESTORED",
+      "pass": true
+    },
+    {
+      "name": "ALL_ANSWERS_INITIAL_CLOSED",
+      "pass": true
+    },
+    {
+      "name": "FIRST_REVEALS",
+      "pass": true
+    },
+    {
+      "name": "MULTIPLE_REVEALS",
+      "pass": true
+    },
+    {
+      "name": "REVERSIBLE_REVEAL",
+      "pass": true
+    }
+  ],
+  "total": 30,
+  "passed": 30,
+  "failed": [],
+  "scope": {
+    "public_fec_data": "18_month_2026_FEC_PRESS_SUMMARY_ONLY",
+    "individual_voting_data": "NONE",
+    "actual_election_integrity_analysis": "NONE",
+    "model_corroboration": "NONE",
+    "targeted_distribution": "NONE",
+    "actual_sponsored_ads": "NONE",
+    "user_collection": "NONE",
+    "independent_host_readback": "NOT_VERIFIED",
+    "actual_audience_effect": "NOT_MEASURED"
+  },
+  "nonclaims": [
+    "SPOOF_NE_REAL_OFFER",
+    "FEC_SPENDING_NE_BOUGHT_VOTES",
+    "ROI_CLAIM_NE_CAUSAL_FINDING",
+    "SOURCES_NE_COMPLETE_2026_ELECTION",
+    "SYNTHETIC_V8_NE_NATIVE_BROWSER"
+  ]
+}
