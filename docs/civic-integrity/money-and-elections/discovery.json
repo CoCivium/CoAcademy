@@ -1,0 +1,162 @@
+{
+  "schema": "CoCivium.MoneyElections.PublicDiscovery.R0",
+  "issued": "2026-10-24",
+  "name": "Money and Elections: Aggregate Comparison Lab",
+  "purpose": "Neutral public education on campaign finance, election-administration costs, counted ballots, data comparability and the secret ballot.",
+  "lead": "Money in elections is measurable. A ballot is not a commodity.",
+  "status": {
+    "source": "PUBLIC_GITHUB_SOURCE_VERIFIED",
+    "github_pages": "LATEST_DEPLOY_RECEIPT_SEPARATE",
+    "public_page_independent_http": "INCONCLUSIVE_WEB_FETCH__NOT_EVIDENCE_OF_OUTAGE",
+    "native_browser": "NOT_VERIFIED",
+    "interaction_tests": "30_OF_30_ISOLATED_V8_MOCK_PASS",
+    "real_regional_dataset_ingestion": "NONE",
+    "verified_region_comparison": "NONE",
+    "political_personalization": "NONE",
+    "automatic_regional_message_delivery": "NONE",
+    "election_integrity_or_fraud_finding": "NONE",
+    "actual_vote_buying_allegations": "NONE",
+    "user_learning": "NOT_MEASURED"
+  },
+  "human_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/money-and-elections/index.html",
+  "intended_web": "https://cocivium.github.io/CoAcademy/civic-integrity/money-and-elections/",
+  "test_receipt": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/money-and-elections/test_receipt_r0.json",
+  "source_blob_sha": "569522824243bf21d144752375974222dff35366",
+  "source_rules": [
+    {
+      "name": "Federal campaign finance statistics",
+      "url": "https://www.fec.gov/campaign-finance-data/campaign-finance-statistics/",
+      "access": "OPEN_REFERENCE",
+      "meaning": "Aggregate money reported by committee types and periods; different categories not freely addable"
+    },
+    {
+      "name": "Federal reporting method",
+      "url": "https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/",
+      "access": "OPEN_REFERENCE",
+      "meaning": "Election cycles, disbursements, independent expenditures and reporting scope"
+    },
+    {
+      "name": "2024 EAVS and corrected 2026 version",
+      "url": "https://www.eac.gov/research-and-data/studies-and-reports",
+      "access": "OPEN_REFERENCE",
+      "meaning": "Official election participation and administration data including 2024 V2 release"
+    },
+    {
+      "name": "EAC ballot privacy",
+      "url": "https://www.eac.gov/election-officials/voter-lists-registration-confidentiality-and-voter-list-maintenance",
+      "access": "OPEN_REFERENCE",
+      "meaning": "Voting history is not individual's marked ballot"
+    },
+    {
+      "name": "NCSL public administration funding",
+      "url": "https://www.ncsl.org/elections-and-campaigns/funding-election-administration",
+      "access": "OPEN_REFERENCE",
+      "meaning": "State/local cost responsibility varies"
+    },
+    {
+      "name": "International IDEA global political finance",
+      "url": "https://www.idea.int/data-tools/data/political-finance-database",
+      "access": "OPEN_REFERENCE",
+      "meaning": "Country regulations and oversight, not globally comparable individual vote purchase price"
+    },
+    {
+      "name": "Federal prohibited voting payments",
+      "url": "https://uscode.house.gov/us/usc/119-118/t52/s10307/",
+      "access": "OPEN_REFERENCE",
+      "meaning": "Relevant federal law, not a calculation on campaign spending"
+    }
+  ],
+  "inputs": {
+    "reader_voluntary_only": true,
+    "numerators": [
+      "reported campaign spending USD",
+      "election-administration cost USD"
+    ],
+    "denominator": "counted ballots from matched aggregate, minimum 1000 in this educational harness",
+    "year": "shared user-entered 2000-2026",
+    "sources": "two HTTPS references for each region in non-fictional mode",
+    "example": "EXPLICIT_FICTITIOUS_A_B_MONEY_AND_BALLOTS",
+    "typed_data_persistence": "TAB_ONLY",
+    "clipboard": "EXPLICIT_BUTTON_CLICK_ONLY"
+  },
+  "output": {
+    "type": "descriptive_USD_per_ballot",
+    "epistemic_status": "READER_ENTERED_UNVERIFIED_OR_SYNTHETIC",
+    "formula": "gross_money_USD / counted_ballots",
+    "comparability": "Matched scope, cycle, coverage, jurisdiction, exclusions for internal transfers, current publications required before interpretation",
+    "causality": "NOT_ESTABLISHED",
+    "election_integrity": "NOT_COMPUTED"
+  },
+  "cross_country": {
+    "scope": "Comparative political-finance regulations and reporting systems rather than invented scalar election integrity ratings",
+    "requires": [
+      "stable common reporting definitions",
+      "coverage of financial activity",
+      "political finance legislation and enforcement evidence",
+      "exchange-rate or purchasing-power normalization when appropriate",
+      "election type and timeline",
+      "non-overlapping expenditures",
+      "independent original sources"
+    ],
+    "released_rankings": false
+  },
+  "prohibited": [
+    "inference of named individual's vote",
+    "voter-level political preference prediction",
+    "precinct-level susceptibility scoring",
+    "personal or small-group targeting",
+    "vote price inferred from campaign spend",
+    "fraud labels inferred from spending metrics",
+    "candidate or party recommendations",
+    "location-triggered political messages",
+    "mass unsolicited outreach",
+    "official elections claims without source validation"
+  ],
+  "agency": "Equal public access; no hidden location, visitor ID or differential political content. User selects what public aggregate figures to examine and chooses whether to copy.",
+  "fast_evolution": {
+    "principle": "Faster independently validated learning, not more repetitions",
+    "success_indicators": [
+      "verified correction",
+      "new independent counterexample",
+      "faster access to correct official source",
+      "verified user understanding",
+      "reduced coordination cost",
+      "preserved negative result"
+    ],
+    "bad_proxies": [
+      "cycles",
+      "number of agreeing AI agents",
+      "raw content count",
+      "unverified reach",
+      "brand exposure without useful action"
+    ],
+    "retry_states": [
+      "REPAIR",
+      "REFRAME",
+      "RETRY_BOUNDED",
+      "REFER",
+      "STOP_RETRACT",
+      "DORMANT"
+    ],
+    "cross_agent_rule": "Model opinions do not establish observer independence; trace original evidence lineage before counting corroboration."
+  },
+  "provenance": {
+    "creator": "CoCivium experimental public research",
+    "affiliations": "NONE_VERIFIED_WITH_ELECTION_AUTHORITIES",
+    "source_level_test": "PASS_30_OF_30_MOCK_DOM",
+    "external_user_test": "NOT_DONE",
+    "privacy_review": "SOURCE_GUARDS_ONLY_NOT_PROFESSIONAL_AUDIT",
+    "freshness": "Source references reviewed Oct 24 2026; update or expire assumptions as records change"
+  },
+  "nonclaims": [
+    "MONEY_SPENT_PER_BALLOT_NE_VOTE_BRIBE_PRICE",
+    "REPORTED_EXPENSES_NE_CAUSAL_PERSUASION",
+    "REGIONAL_AGGREGATE_NE_INDIVIDUAL_BALLOT",
+    "CANDIDATE_PUBLICATION_NE_INDEPENDENT_FINANCIAL_RECONCILIATION",
+    "PUBLIC_SOURCE_NE_EXTERNAL_BROWSER_READPROOF",
+    "30_SYNTHETIC_TESTS_NE_HUMAN_LEARNING",
+    "SCALE_OF_POSSIBILITIES_NE_UNLIMITED_RUNNING_COMPUTE",
+    "OPEN_FINANCE_RULE_NE_COMPLIANCE",
+    "NO_CANDIDATE_RANKINGS"
+  ]
+}
