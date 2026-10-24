@@ -41,7 +41,13 @@
     "coplay/votes-for-sale/index.html",
     "coplay/votes-for-sale/README.md",
     "coplay/votes-for-sale/discovery.json",
-    "coplay/votes-for-sale/test_receipt_r0a.json"
+    "coplay/votes-for-sale/test_receipt_r0a.json",
+    "relay/index.html",
+    "relay/feed.xml",
+    "relay/discovery.json",
+    "relay/publisher_kit.json",
+    "relay/domain_routes.json",
+    "relay/README.md"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -127,5 +133,16 @@
     "status": "PUBLIC_SOURCE__31_31_MOCK_V8__INDEPENDENT_BROWSER_AND_AUDIENCE_UNKNOWN",
     "kind": "FICTIONAL_NONPARTISAN_SATIRE_WITH_PUBLIC_SOURCES",
     "limitations": "NO_VOTER_PROFILING_NO_ILLEGAL_BUYING_INFERENCE_NO_PAID_ADS_NO_GEO_TARGETING"
+  },
+  "co_relay_public_feedback": {
+    "human": "relay/",
+    "rss": "relay/feed.xml",
+    "machine": "relay/discovery.json",
+    "publisher_kit": "relay/publisher_kit.json",
+    "domains": "relay/domain_routes.json",
+    "status": "PUBLIC_SOURCE_COMMITTED__PAGES_WORKFLOW_AND_OUTSIDE_BROWSER_PROOF_SEPARATE",
+    "email_or_social_broadcast": "NOT_SENT",
+    "subscriber_count": "NOT_MEASURED",
+    "issue_templates": "PUBLIC_GITHUB_ISSUES_WITH_USER_SIGNIN"
   }
 }
