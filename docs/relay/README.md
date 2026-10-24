@@ -42,3 +42,12 @@ CoAcademy GitHub Issues are enabled; account sign-in is required. The provided p
 Source code, successful Pages workflow, outside host readback, real participant completion, useful correction, and recurring subscription must remain separate statuses. RSS here is a static snapshot until an authorized publication workflow updates the exact file and verifies the host. Failures may lead to repair, reframing, retirement, dormant state or bounded retry.
 
 ALL_RELATIONS_ADDRESSABLE does not imply ALL_SUBSTRATES_ACTIVE or ALL_PEOPLE_CONTACTED. Public usefulness and voluntary co-creation are the growth targets, not artificial engagement or spam.
+
+## Branding, reuse rights and failure-domain status (R0)
+
+- [CoRelay public product/brand contract](./product_contract_r0.json) distinguishes CoCivium, CoPlay, Civic Integrity and the still-unbound dedicated CoVIA adapter. Metricool account connection is a read-only channel fact, not proof of CoCivium-branded publishing permission.
+- As of the October 24 repository-tree inspection (89 objects), **no license/NOTICE file was found** in CoAcademy. This does not prove that no source text contains a licensing grant; it means an unrestricted FOSS redistribution license was not verified. Original content and third-party marks/assets must be rights-checked before promising forks, remixes, books, or redistribution.
+- Source, Pages, feed and public issues share **GitHub as one failure domain**. Multiple URLs do not prove redundancy. An independent remote mirror and a cold restoration into another host are unproven and remain important next experiments.
+- CoPolitic.org returned 404 during a recent public fetch; the planned .com alias has no verified redirection, and its source repository is a placeholder. Do not migrate readers to those domains until independent ownership/DNS/HTTPS receipts exist.
+- The safest useful growth loop remains: one source → inspectable demonstration → explicit voluntary first use → source-specific correction → reproduced fix → justified distribution. Repeated AI consensus and page impressions do not substitute for that.
+

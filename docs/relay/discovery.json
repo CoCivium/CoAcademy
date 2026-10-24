@@ -16,7 +16,11 @@
     "rss": "STATIC_SNAPSHOT_NOT_PUSH_JOB",
     "external_posts": "NONE",
     "scheduled_outreach": "NONE",
-    "users_measured": "NONE"
+    "users_measured": "NONE",
+    "brand_adapter_contract": "PUBLIC_GITHUB_SOURCE_VERIFIED__METRICOOL_ACCOUNT_NOT_COCIVIUM_PUBLISH_AUTH",
+    "reuse_rights": "NO_REPO_LICENSE_NOTICE_FILE_FOUND__UNRESTRICTED_REUSE_NOT_GRANTED_BY_SOURCE_VISIBILITY",
+    "failover": "SINGLE_GITHUB_PROVIDER_FOR_SOURCE_PAGES_FEED_AND_ISSUES__NO_INDEPENDENT_RESTORE",
+    "voluntary_public_issue": "https://github.com/CoCivium/CoAcademy/issues/3__OPEN_ZERO_COMMENTS_AT_OBSERVATION"
   },
   "protocol": "Consent-respecting independent first-use and source corrections, not an unsolicited contact campaign or voter segmentation",
   "source_pointers": [
@@ -50,5 +54,6 @@
     "CoPolitic_readme_guide": "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
     "CoPolitic_readme_commit": "0fb29d921fb95b1d2aad055dbac792d0139086a1",
     "actual_volunteer_feedback": "NOT_OBSERVED"
-  }
+  },
+  "product_contract": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/product_contract_r0.json"
 }

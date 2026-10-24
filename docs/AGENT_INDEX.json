@@ -47,7 +47,8 @@
     "relay/discovery.json",
     "relay/publisher_kit.json",
     "relay/domain_routes.json",
-    "relay/README.md"
+    "relay/README.md",
+    "relay/product_contract_r0.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -143,6 +144,10 @@
     "status": "PUBLIC_SOURCE_COMMITTED__PAGES_WORKFLOW_AND_OUTSIDE_BROWSER_PROOF_SEPARATE",
     "email_or_social_broadcast": "NOT_SENT",
     "subscriber_count": "NOT_MEASURED",
-    "issue_templates": "PUBLIC_GITHUB_ISSUES_WITH_USER_SIGNIN"
+    "issue_templates": "PUBLIC_GITHUB_ISSUES_WITH_USER_SIGNIN",
+    "product_contract": "relay/product_contract_r0.json",
+    "feedback_issue": "https://github.com/CoCivium/CoAcademy/issues/3",
+    "licensing": "NO_UNRESTRICTED_SOURCE_REUSE_GRANT_VERIFIED",
+    "failure_domain": "GITHUB_SINGLE_ORIGIN__NO_INDEPENDENT_MIRROR"
   }
 }
