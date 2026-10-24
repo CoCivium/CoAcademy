@@ -1,0 +1,64 @@
+{
+  "schema": "CoCivium.CoPhoenix.RecoverabilityProduct.R0",
+  "date": "2026-10-24",
+  "human_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/phoenix/index.html",
+  "web_candidate": "https://cocivium.github.io/CoAcademy/phoenix/",
+  "public_host_independent_readback": "PENDING",
+  "private_capsule_26_checks": "PASS",
+  "private_capsule_zip_sha256": "868a2f8f9ca9276e359917b526c24cc178639b19a600e2c358b514e8f82f0d9f",
+  "public_capsule_hosted": false,
+  "types": [
+    {
+      "name": "HISTORICAL_WITNESS",
+      "state": "WAYBACK_CAPABILITY_EXISTS_BUT_CAPTURE_NOT_PROVEN"
+    },
+    {
+      "name": "OFFLINE_RECONSTRUCTABLE",
+      "state": "THREE_SCOPED_LOCAL_PAGES_TESTED"
+    },
+    {
+      "name": "OFFSITE_DURABLE_CUSTODY",
+      "state": "NOT_CONFIRMED"
+    },
+    {
+      "name": "PUBLIC_ALTERNATE_ORIGIN",
+      "state": "NOT_CONFIRMED"
+    },
+    {
+      "name": "AUTHENTICATED_STATEFUL_NODE",
+      "state": "NOT_CONFIRMED"
+    }
+  ],
+  "lifecycle": [
+    "CAPTURED",
+    "INTEGRITY_CHECKED",
+    "COLD_STARTED",
+    "INDEPENDENT_CUSTODY_VERIFIED",
+    "PUBLIC_RECEIVER_READPROOF",
+    "ACK",
+    "REAL_USE"
+  ],
+  "negative_space": [
+    "CORRUPTED_COPY",
+    "ALL_COPIES_SAME_PROVIDER",
+    "STALLED_MONITOR",
+    "EXPIRED_SOURCE",
+    "REVOKED_CONSENT",
+    "POISONED_RECOVERY_POINTER",
+    "FEEDBACK_ROUTE_LOST",
+    "INVALID_RIGHTS_TO_REPUBLISH",
+    "FALSE_GREEN_DEPLOYMENT",
+    "UNVERIFIED_AI_RECIPIENT"
+  ],
+  "rule": "Feedback of feedback terminates in source, independent test, authorization, exact receipt, or UNKNOWN; never infinite blind retry",
+  "public_actions": "NONE_EXCEPT_STATIC_SOURCE_PUBLICATION",
+  "no_claims": [
+    "ARCHIVE_NE_RUNNING",
+    "BACKUP_NE_RESTORED_SERVICE",
+    "SOURCE_NE_INDEPENDENT_HOST",
+    "MANY_SESSIONS_NE_INDEPENDENT_AGENTS",
+    "ABSENCE_OF_FAILURE_NE_ZERO_EXPOSURE",
+    "CO_STEAD_NE_CUSTODY_PROVEN",
+    "X2_NOT_TOUCHED"
+  ]
+}
