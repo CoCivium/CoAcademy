@@ -38,6 +38,14 @@ A connected Metricool brand lists a YouTube channel and Bluesky profile, with no
 ## Public feedback route
 CoAcademy GitHub Issues are enabled; account sign-in is required. The provided public issue templates prohibit private voter records, secrets, identifiable allegations or health data. For real voting rights incidents, redirect to https://www.usa.gov/voter-fraud . Publishing a public issue template does not prove anyone has used it or that a maintainer is continuously watching.
 
+## CoRelay readproof R2 source-currentness hardening
+
+The seven allowlisted public endpoints are now expected to match the **exact bytes of the checked-out Git source** by SHA-256. An old page that retains the right title but contains outdated content is `SOURCE_VERSION_MISMATCH`, not a green check.
+
+The six-hour read-only probe and manual trigger remain. Changes to the probe code trigger **deterministic tests only**, avoiding misleading red alerts while GitHub Pages may still be deploying. The Pages-completion hook is configured; its execution is not assumed without a separate runner receipt. The green condition is `PASS_PUBLIC_HTTP_SOURCE_MATCH`, which does not establish a native browser, real reader, or truly independent failure domain.
+
+All checked URLs and source paths are allowlisted. No private node, X2, credentials, election systems, social accounts or recipients are probed. Failures produce records, not automatic publication or messaging. GitHub Pages, Raw and GitHub source continue to share one provider failure domain.
+
 ## Maintenance and evidence
 Source code, successful Pages workflow, outside host readback, real participant completion, useful correction, and recurring subscription must remain separate statuses. RSS here is a static snapshot until an authorized publication workflow updates the exact file and verifies the host. Failures may lead to repair, reframing, retirement, dormant state or bounded retry.
 

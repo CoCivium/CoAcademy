@@ -2,6 +2,7 @@
 """Public-only CoRelay readproof. Never scans private hosts or accepts dynamic URLs."""
 import argparse
 import datetime
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -19,6 +20,31 @@ TARGETS = (
 )
 USER_AGENT = "CoCivium-CoRelay-PublicReadproof/1.0"
 LIMIT = 400_000
+SOURCE_PATHS = {
+    "relay": "docs/relay/index.html",
+    "beacon": "docs/relay/beacon.json",
+    "feed": "docs/relay/feed.xml",
+    "civic": "docs/civic-integrity/index.html",
+    "phoenix": "docs/phoenix/index.html",
+    "phoenix_contract": "docs/phoenix/discovery.json",
+    "source_fallback": "docs/relay/index.html",
+}
+
+def verify_source_bytes(name, received, root=Path(".")):
+    """Check the actual served public bytes against the checked-out Git source."""
+    served_sha = hashlib.sha256(received).hexdigest()
+    rel = SOURCE_PATHS.get(name)
+    if rel is None:
+        return "FAIL", "UNLISTED_TARGET", None, served_sha
+    try:
+        expected = (root / rel).read_bytes()
+    except OSError:
+        return "INCONCLUSIVE", "CHECKED_OUT_SOURCE_UNAVAILABLE", None, served_sha
+    expected_sha = hashlib.sha256(expected).hexdigest()
+    if served_sha != expected_sha:
+        return "FAIL", "SOURCE_VERSION_MISMATCH", expected_sha, served_sha
+    return "PASS", "SOURCE_SHA256_MATCH", expected_sha, served_sha
+
 
 def assess_content(status, body, expected):
     if status != 200:
@@ -44,6 +70,11 @@ def probe(target, timeout=9):
         result["state"], result["reason"] = assess_content(status, payload, markers)
         result["http_status"] = status
         result["bytes_inspected"] = len(payload)
+        if result["state"] == "PASS":
+            state, reason, expected_sha, served_sha = verify_source_bytes(name, payload)
+            result["state"], result["reason"] = state, reason
+            result["expected_source_sha256"] = expected_sha
+            result["served_sha256"] = served_sha
     except error.HTTPError as exc:
         result["state"], result["reason"] = "FAIL", "HTTP_STATUS_" + str(exc.code)
         result["http_status"] = exc.code
@@ -54,8 +85,10 @@ def probe(target, timeout=9):
 def classify(checks):
     pages = [p for p in checks if p["id"] != "source_fallback"]
     fallback = next(p for p in checks if p["id"] == "source_fallback")
+    if all(p["state"] == "PASS" for p in checks):
+        return "PASS_PUBLIC_HTTP_SOURCE_MATCH"
     if all(p["state"] == "PASS" for p in pages):
-        return "PASS_PUBLIC_RENDER"
+        return "PAGES_MATCH_BUT_RAW_SOURCE_UNAVAILABLE"
     if fallback["state"] == "PASS":
         return "DEGRADED_WITH_SAME_PROVIDER_SOURCE"
     return "PUBLIC_READPROOF_FAILED_OR_INCONCLUSIVE"
@@ -74,7 +107,7 @@ def main():
         "runner": "GitHub Actions" if os.getenv("GITHUB_ACTIONS") else "LOCAL_EXPLICIT_EXECUTION",
         "state": state,
         "readproof": checks,
-        "note": "All tested GitHub sites and GitHub Raw belong to one provider failure domain. Green proves readback from this runner at this instant, not multi-provider resilience or human benefit.",
+        "note": "PASS requires every public target to match exact checked-out Git source bytes by SHA-256. GitHub Pages and Raw remain ONE common provider failure domain. HTTP checks are not a full browser, accessibility, real audience, or independent provider restoration test.",
         "never_checked": ["copolitic.org", "copolitic.com", "CoStead", "CoVIA", "CoGateway", "Metricool private profiles", "real election systems"]
     }
     out = Path(options.output)
@@ -90,7 +123,7 @@ def main():
                 fp.write("| " + result["id"] + " | " + result["state"] + " | " + result["reason"] + " |\n")
             fp.write("\nProvider caveat: GitHub Pages and GitHub Raw share a failure domain.\n")
     print(json.dumps({"state": state, "targets": [{"id": x["id"], "state": x["state"]} for x in checks]}))
-    return 0 if state == "PASS_PUBLIC_RENDER" else 1
+    return 0 if state == "PASS_PUBLIC_HTTP_SOURCE_MATCH" else 1
 
 if __name__ == "__main__":
     sys.exit(main())

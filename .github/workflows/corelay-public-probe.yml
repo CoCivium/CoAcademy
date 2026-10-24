@@ -1,5 +1,11 @@
 name: CoRelay public readproof
 on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/corelay_probe.py'
+      - 'tools/test_corelay_probe.py'
+      - '.github/workflows/corelay-public-probe.yml'
   workflow_run:
     workflows: ['pages build and deployment']
     types: [completed]
@@ -12,8 +18,19 @@ concurrency:
   group: corelay-public-readproof
   cancel-in-progress: false
 jobs:
+  source-regression:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source only
+        uses: actions/checkout@v4
+      - name: Run deterministic source-freshness and failure-injection tests
+        run: python3 -m unittest discover -s tools -p 'test_corelay_probe.py' -v
   public-readproof:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name != 'push' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
