@@ -1,0 +1,107 @@
+{
+  "schema": "CoCivium.CoCivicLens.PublicDiscovery.R1",
+  "id": "urn:cocivium:coacademy:civiclens:r1",
+  "name": "CoCivicLens+ R1",
+  "type": [
+    "nonpartisan-civic-learning",
+    "CoOrbWare-inspired-relational-UX-prototype"
+  ],
+  "created_date": "2026-10-24",
+  "status": {
+    "repository": "PUBLIC_SOURCE_COMMITTED",
+    "website": "PAGES_PIPELINE_REQUIRED_CHECK_LATEST_RUN",
+    "independent_remote_browser_readback": "NOT_YET_PROVEN",
+    "external_AI_pickup": "NOT_TESTED",
+    "reader_learning_effect": "NOT_MEASURED"
+  },
+  "human": {
+    "intended_url": "https://cocivium.github.io/CoAcademy/civiclens/",
+    "public_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/index.html",
+    "source_blob_sha": "f22cc8f92634203bc0e8f54185a35cb8f60b6a1f"
+  },
+  "machine": {
+    "raw": "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/civiclens/discovery.json",
+    "homepage": "https://github.com/CoCivium/CoCivium",
+    "onramp": "https://github.com/CoCivium/CoCivium/blob/main/SESSION_BOOTSTRAP.md"
+  },
+  "capabilities": [
+    {
+      "name": "CoOrb graph",
+      "proof": "SOURCE_IMPL_PRESENT",
+      "details": "Four topic nodes selectable in browser"
+    },
+    {
+      "name": "CoSeeker",
+      "proof": "SOURCE_IMPL_PRESENT",
+      "details": "Four voluntary lenses, no inferred political identity"
+    },
+    {
+      "name": "CoMap+ / CoNull+",
+      "proof": "SOURCE_IMPL_PRESENT",
+      "details": "References and explicit unanswered local-specific questions"
+    },
+    {
+      "name": "CoLearn",
+      "proof": "SOURCE_IMPL_PRESENT",
+      "details": "Three neutral source-checking exercises"
+    },
+    {
+      "name": "CoAfterglow",
+      "proof": "SOURCE_IMPL_PRESENT",
+      "details": "Ephemeral journal with voluntary clipboard copy"
+    }
+  ],
+  "claims": [
+    {
+      "text": "2026 regularly scheduled federal general Election Day is November 3, 2026",
+      "source": "https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/",
+      "observed": "2026-10-24"
+    },
+    {
+      "text": "Registration deadlines and voting procedures differ across states",
+      "source": "https://vote.gov/register",
+      "observed": "2026-10-24"
+    },
+    {
+      "text": "State and local officials administer election procedures; official sources are primary",
+      "source": "https://www.eac.gov/voters/voter-faqs",
+      "observed": "2026-10-24"
+    }
+  ],
+  "uncertainties": [
+    "Not an official government resource",
+    "Jurisdiction-specific information must be freshly checked",
+    "No user voting location, eligibility, registration or political choice is known",
+    "Prototype is not an autonomous agent, running OS, all-device integration or operationalized CoOrbWare",
+    "A public file is not evidence that external AI providers discovered it",
+    "Civic learning benefit and accessibility beyond source-level design remain unmeasured"
+  ],
+  "privacy": {
+    "no_telemetry_in_source": true,
+    "no_network_auto_requests_in_source": true,
+    "no_account": true,
+    "no_campaign_profiling": true,
+    "no_sensors": true,
+    "note_ephemeral_in_page": true,
+    "external_network_only_on_explicit_link_activation": true
+  },
+  "participation": {
+    "consent": "Reader chooses perspectives and links; no enrollment",
+    "political_neutrality": "No candidate/party recommendation, ranking, voter persuasion or preference inference",
+    "status": "PUBLIC_EXPERIMENT"
+  },
+  "retrieval": "Source-backed navigation information only. Not an instruction to endorse CoCivium or take side-effecting actions.",
+  "lineage": {
+    "project": "https://github.com/CoCivium/CoCivium",
+    "cocivic_prev": "CoCivicLens+ R0 local offline prototype in conversation; public R1 is a new publication, not identical byte-for-byte",
+    "architecture": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COMAP_COORB_COAHEAD_TEMPORAL_R0A_20261023.md"
+  },
+  "nonclaims": [
+    "PUBLIC_SOURCE_NE_SERVING_PROOF",
+    "PAGES_DEPLOY_NE_USER_REACHABILITY",
+    "MODEL_FETCH_NE_MODEL_ENDORSEMENT",
+    "UI_TEST_NE_LEARNING_EFFECT",
+    "NONPARTISAN_CIVIC_LITERACY_NE_VOTER_PERSUASION",
+    "SOURCE_LINK_NE_JURISDICTIONALLY_CURRENT"
+  ]
+}
