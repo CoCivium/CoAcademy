@@ -1,0 +1,142 @@
+{
+  "schema": "CoCivium.CivicIntegrity.PostElectionContinuity.R0",
+  "issued": "2026-10-24",
+  "scope": "Source-linked, nonpartisan, post-election process education and independent review readiness. Not an official election audit or a report intake.",
+  "human_entrypoint": "https://cocivium.github.io/CoAcademy/civic-integrity/#after",
+  "public_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
+  "expected_implementation_blob": "6131008adb9600cb63f5092b3cb06a9bc750f72c",
+  "status": {
+    "source": "PUBLIC_SOURCE_CANDIDATE",
+    "page_deployment": "MUST_VERIFY_RUN_FOR_LATEST_COMMIT",
+    "independent_http": "NOT_PROVEN",
+    "native_browser": "NOT_TESTED",
+    "real_ballot_data": "NONE",
+    "election_audit": "NONE",
+    "human_participants": "NONE",
+    "cross_session_agent_views": "NOT_OBSERVED",
+    "multi_provider_integration": "NOT_OBSERVED",
+    "ongoing_scheduler": "NOT_CONFIGURED"
+  },
+  "semantics": {
+    "candidate_field": "OPEN_ENDED_ADDRESSABLE_POSSIBILITIES",
+    "runtime": "BOUNDED_OPERATION",
+    "observer_model": "PROPOSED_VIEW_NE_CONSENTING_OR_EMBODIED_OBSERVER",
+    "reality_model": "METAPHOR_OR_VIRTUAL_MODEL_NE_PHYSICAL_PROOF",
+    "source_model": "REPETITION_OR_REPOST_NE_INDEPENDENT_CORROBORATION",
+    "evidence_states": [
+      "OBSERVED_FROM_SOURCE",
+      "INFERRED",
+      "HYPOTHESIS",
+      "DISPUTED",
+      "UNKNOWN",
+      "RETRACTED",
+      "SUPERSEDED"
+    ],
+    "failure_states": [
+      "PASS",
+      "FAIL",
+      "INCONCLUSIVE",
+      "HELD",
+      "NOT_RUN"
+    ]
+  },
+  "election_process": {
+    "unofficial_results": "https://www.eac.gov/where-do-i-find-election-results",
+    "changing_results": "https://www.eac.gov/why-do-election-results-change-after-election-night",
+    "canvass_certification": "https://www.eac.gov/election-officials/election-results-canvass-and-certification",
+    "audits": "https://www.ncsl.org/elections-and-campaigns/post-election-audits",
+    "official_reporting": "https://www.usa.gov/voter-fraud",
+    "jurisdiction": "STATE_AND_LOCAL_PRIMARY_SOURCES_REQUIRED"
+  },
+  "review_packet_fields": [
+    "object_id",
+    "version",
+    "jurisdiction_scope",
+    "process_stage",
+    "primary_source_uri",
+    "published_at",
+    "observed_at",
+    "producer_identity",
+    "producer_class",
+    "permission_scope",
+    "source_lineage",
+    "epistemic_class",
+    "claim",
+    "independent_support",
+    "credible_counterevidence",
+    "alternate_explanations",
+    "unknowns",
+    "confidentiality",
+    "affected_people",
+    "proposed_action",
+    "stop_conditions",
+    "public_projection",
+    "readproof",
+    "receiver_ack"
+  ],
+  "candidate_review_roles": [
+    "election_administration",
+    "election_law",
+    "accessibility",
+    "journalism",
+    "statistical_methods",
+    "privacy_security",
+    "community_reader",
+    "AI_evaluator",
+    "archivist",
+    "translator",
+    "creative_skeptic"
+  ],
+  "independence_gate": [
+    "distinguish original public source from copies",
+    "date records",
+    "trace quoted source and method",
+    "consider competing explanations",
+    "review with qualified consenting participants",
+    "do not count repeated synthetic AI answers as independent witnesses"
+  ],
+  "action_resolutions": [
+    "REPAIR",
+    "REFRAME",
+    "RETRY_BOUNDED",
+    "REFER",
+    "STOP_RETRACT",
+    "DORMANT"
+  ],
+  "ethics": [
+    "No voters' personal records",
+    "No coercive persuasion",
+    "No party or candidate preference inference",
+    "No unverified named fraud allegations",
+    "No impersonation of election officials",
+    "No unauthorized system interaction",
+    "No invented reviewer endorsement",
+    "No automatic external publishing",
+    "No infinite compute assertion",
+    "No guarantee every experiment eventually succeeds"
+  ],
+  "maintenance": {
+    "desired": "SOURCE_CHANGE_TRIGGERED_REVIEW_AND_ACCESSIBILITY_CHECKS",
+    "actual": "NO_NEW_AUTOMATION_CREATED",
+    "receiver_ack": null,
+    "retention": "PRESERVE_VERSIONED_NEGATIVE_RESULTS",
+    "wake": "OFFICIAL_SOURCE_CHANGE_OR_DOCUMENTED_NEW_COUNTEREXAMPLE"
+  },
+  "next_acceptance": [
+    "Exact committed HTML and protocol readback",
+    "Mock DOM interaction check including explicit-only clipboard",
+    "Pages workflow success for commit containing latest HTML",
+    "Independent HTTPS 200, keyboard/mobile/screenreader tests",
+    "Independent human comprehension trial and source validation with permissions"
+  ],
+  "no_claims": [
+    "SOURCE_NE_DEPLOYED_BROWSER",
+    "MODEL_OPINION_NE_EYEWITNESS",
+    "COPY_NE_CORROBORATION",
+    "FAIL_NE_AUTO_RETRY",
+    "POST_ELECTION_EDUCATION_NE_AUTHORIZED_AUDIT",
+    "PUBLIC_FEEDELEMENT_NE_ACTUAL_RECEIVER_PICKUP",
+    "ONRAMP_NE_EFFECT",
+    "REQUESTED_FOREVER_NE_BACKGROUND_SCHEDULER"
+  ]
+}
