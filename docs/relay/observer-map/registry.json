@@ -1,0 +1,345 @@
+{
+  "schema": "CoCivium.CoExposureRelations.PublicObserverRegistry.R0",
+  "created_date": "2026-10-24",
+  "title": "Who can see, influence or interact with CoCivium?",
+  "purpose": "Public-safe class-and-capability inventory, NOT identification of visitors or any suspected adversary.",
+  "state": "PUBLIC_CANDIDATE_SCHEMA_WITH_SOURCE_BOUNDED_OBSERVATIONS__NO_RUNTIME_MONITOR",
+  "evidence_vocabulary": {
+    "VERIFIED_SOURCE": "Directly inspected current public artifact or setting, NOT proof of a visitor",
+    "RECENT_OBSERVATION": "Bounded observation with a recorded source and time, may become stale",
+    "ARCHITECTURAL_CAPABILITY": "A class of system can perform this action in principle; no evidence it did so here",
+    "CANDIDATE": "Planned/substrate possibility without verified deployment or readback",
+    "NOT_OBSERVED": "No current event/identity/telemetry proof; does not mean impossible",
+    "HELD": "Requires privacy/security/human authority before probing or activating",
+    "DISPUTED": "Contradictory observations preserved pending investigation"
+  },
+  "directions": [
+    "CAN_VIEW_PUBLIC",
+    "CAN_ROUTE_OR_INDEX",
+    "CAN_CHANGE_PUBLIC_OUTPUT",
+    "CAN_CONTROL_OWN_ACCOUNT",
+    "CAN_MODERATE_CHANNEL",
+    "CAN_REQUEST_FEEDBACK",
+    "CAN_HARM_IF_COMPROMISED",
+    "CAN_PROVIDE_INDEPENDENT_CRITIQUE",
+    "CAN_PRESERVE_COPY",
+    "CAN_FAIL_OR_BLOCK"
+  ],
+  "actor_classes": [
+    {
+      "id": "github_public_readers",
+      "class": "Readers of public GitHub repos and published source",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_PROVIDE_INDEPENDENT_CRITIQUE"
+      ],
+      "basis": "VERIFIED_SOURCE",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Public CoAcademy/CoCivium repositories and GitHub Pages source",
+      "evidence": "https://github.com/CoCivium/CoAcademy",
+      "public_data": "Already deliberately released documents, code and static experiments",
+      "privacy_boundary": "Public publication cannot be assumed reversible",
+      "response": "Keep versions, source citations and corrections; never upload credentials or unverified allegations",
+      "risk": "Public readers can copy material; not an accusation"
+    },
+    {
+      "id": "github_host_and_connected_client",
+      "class": "GitHub platform, hosting pipeline and authorized connector",
+      "role": [
+        "CAN_CHANGE_PUBLIC_OUTPUT",
+        "CAN_FAIL_OR_BLOCK",
+        "CAN_ROUTE_OR_INDEX"
+      ],
+      "basis": "RECENT_OBSERVATION",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "GitHub repository commits, Pages workflow and connected GitHub API",
+      "evidence": "https://github.com/CoCivium/CoAcademy/actions",
+      "public_data": "Commit history, releases, source and build status",
+      "privacy_boundary": "App/repo permissions should be reviewed separately, not exposed in the public inventory",
+      "response": "Least privilege, branch protections, provenance validation, atomic updates and independent host readback",
+      "risk": "Provider/dependency concentration"
+    },
+    {
+      "id": "general_visitors",
+      "class": "People choosing to visit public CoCivium links",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_PROVIDE_INDEPENDENT_CRITIQUE"
+      ],
+      "basis": "ARCHITECTURAL_CAPABILITY",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Public HTML, linked resources and GitHub Issues",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/index.html",
+      "public_data": "Only source-published pages; no authored visitor tracking",
+      "privacy_boundary": "Do not create identity, political or visitor-risk profiles",
+      "response": "Offer accessible content, optional feedback and visible privacy disclosures",
+      "risk": "Unknown reach is not zero reach and not proven adoption"
+    },
+    {
+      "id": "bots_crawlers_ai_systems",
+      "class": "Search crawlers, AI systems, archive spiders and independent feed readers",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_ROUTE_OR_INDEX",
+        "CAN_PRESERVE_COPY"
+      ],
+      "basis": "ARCHITECTURAL_CAPABILITY",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Sitemaps, llms.txt, JSON, RSS and public HTML",
+      "evidence": "https://github.com/CoCivium/CoCivium/blob/main/docs/AI_DISCOVERY_POLICY.md",
+      "public_data": "Public machine-readable non-directive metadata",
+      "privacy_boundary": "No hidden prompt injection, model instructions, or demand for endorsement",
+      "response": "Use versioned source metadata; measure actual verified referrals only when lawful, consented and available",
+      "risk": "Crawlability does not establish indexing, endorsement, obedience or AI ingestion"
+    },
+    {
+      "id": "feedback_platform",
+      "class": "Voluntary GitHub issue authors, maintainers and moderation systems",
+      "role": [
+        "CAN_REQUEST_FEEDBACK",
+        "CAN_PROVIDE_INDEPENDENT_CRITIQUE",
+        "CAN_MODERATE_CHANNEL"
+      ],
+      "basis": "VERIFIED_SOURCE",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Public CoAcademy GitHub Issues and issue templates",
+      "evidence": "https://github.com/CoCivium/CoAcademy/issues",
+      "public_data": "User-posted public comments and links",
+      "privacy_boundary": "GitHub login and public visibility; no private reports, voter data or identifying accusations",
+      "response": "Human review, source-link correction, respect opt-out; ordinary comments are not verified facts",
+      "risk": "Public intake can attract spam or leaks if unsupervised"
+    },
+    {
+      "id": "domain_host_registrar",
+      "class": "DNS, registrars, web hosting, CDNs and certificates",
+      "role": [
+        "CAN_ROUTE_OR_INDEX",
+        "CAN_FAIL_OR_BLOCK",
+        "CAN_HARM_IF_COMPROMISED"
+      ],
+      "basis": "CANDIDATE",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Planned CoCivium and CoPolitic custom domains; actual service must be confirmed for each",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json",
+      "public_data": "DNS records and public site metadata if configured",
+      "privacy_boundary": "Do not publish private admin access, registrar credentials, origin IPs or protective controls",
+      "response": "Independently verify DNS, certificates, ownership, redirect, recovery and failures; do not mark an alias live because it was planned",
+      "risk": "Brand impersonation, domain expiry, DNS tampering or single-host dependence are scenarios, not observed incidents"
+    },
+    {
+      "id": "social_channels_and_ranking",
+      "class": "Social platforms, feeds, media publishers and ranking/recommendation systems",
+      "role": [
+        "CAN_MODERATE_CHANNEL",
+        "CAN_ROUTE_OR_INDEX",
+        "CAN_FAIL_OR_BLOCK"
+      ],
+      "basis": "CANDIDATE",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "YouTube, Bluesky, Substack, Metricool-related connectors and future authorized channels",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json",
+      "public_data": "Only posts actually approved and sent with channel receipts",
+      "privacy_boundary": "Connected account does not prove CoCivium publishing authority; no covert profiling or fake engagement",
+      "response": "Track publication permission, receipt, corrections and appeals on each exact channel",
+      "risk": "Ranking can change reach without implying targeting of CoCivium"
+    },
+    {
+      "id": "human_reviewers_and_collaborators",
+      "class": "Advisers, researchers, builders, journalists, accessibility reviewers and skeptics",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_PROVIDE_INDEPENDENT_CRITIQUE"
+      ],
+      "basis": "ARCHITECTURAL_CAPABILITY",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Public invite, opted-in reviews and documented contributions",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/README.md",
+      "public_data": "Attributable published feedback only after permission",
+      "privacy_boundary": "A mention or invitation is not consent, endorsement, partnership or co-ownership",
+      "response": "Track source lineage, voluntary review, permissions, conflict of interest, acknowledgement and corrections",
+      "risk": "Independence must be proven, not counted by duplicated AI responses"
+    },
+    {
+      "id": "public_agencies_and_regulators",
+      "class": "Government, election administration, civil-rights offices and regulators",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_MODERATE_CHANNEL",
+        "CAN_PROVIDE_INDEPENDENT_CRITIQUE"
+      ],
+      "basis": "ARCHITECTURAL_CAPABILITY",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Public official information and lawful reporting channels",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civic-integrity/index.html",
+      "public_data": "Published election procedures and public legal sources",
+      "privacy_boundary": "No assumed official review, surveillance, endorsement or authority to audit",
+      "response": "Link to official sources, respect due process and legal obligations, do not misrepresent affiliation",
+      "risk": "Public agency interest cannot be assumed from the project's political subject matter"
+    },
+    {
+      "id": "archives_and_mirrors",
+      "class": "Wayback Machine, cache operators, independent backups and public mirrors",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_PRESERVE_COPY",
+        "CAN_FAIL_OR_BLOCK"
+      ],
+      "basis": "CANDIDATE",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Copies or snapshots of released static pages and source, if actually captured",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json",
+      "public_data": "Public snapshot if independently observed; none claimed verified here",
+      "privacy_boundary": "Archives may preserve retracted public mistakes; removal is not guaranteed",
+      "response": "Request permissioned snapshots and verify retrieve/render/source integrity; label stale versions",
+      "risk": "Archive copy does not imply an executing backend, update receiver or current data"
+    },
+    {
+      "id": "private_nodes_and_devices",
+      "class": "CoStead, CoGateway, X2 and private/later devices",
+      "role": [
+        "CAN_CONTROL_OWN_ACCOUNT",
+        "CAN_FAIL_OR_BLOCK"
+      ],
+      "basis": "HELD",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Potential private custody and transport, not a claimed live public mirror",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json",
+      "public_data": "NONE",
+      "privacy_boundary": "No device probing, local logs or private topology published. X2 explicitly held untouched.",
+      "response": "Separate authenticated source, owner permission, machine-owned readproof and least-privilege canary before use",
+      "risk": "Unknown connectivity is not failure nor proof of active surveillance"
+    },
+    {
+      "id": "service_dependencies",
+      "class": "Cloud APIs, runtime libraries, browser extensions, builders and other suppliers",
+      "role": [
+        "CAN_FAIL_OR_BLOCK",
+        "CAN_HARM_IF_COMPROMISED"
+      ],
+      "basis": "ARCHITECTURAL_CAPABILITY",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Supply chain and permissioned services, only when installed or actually used",
+      "evidence": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COWAITLESS_EXECUTION_R0.md",
+      "public_data": "No credentials or detailed private component versions published here",
+      "privacy_boundary": "Permission and data-sharing scope differs by vendor/service",
+      "response": "Maintain private dependency inventory, update provenance, recovery/rollback test and authorization checks",
+      "risk": "Compromised dependency is a threat scenario unless supported by logs/advisories"
+    },
+    {
+      "id": "potential_abusive_actors",
+      "class": "Unattributed spam, phishing, scraping, impersonation, content poisoning or destructive behavior",
+      "role": [
+        "CAN_HARM_IF_COMPROMISED",
+        "CAN_FAIL_OR_BLOCK"
+      ],
+      "basis": "ARCHITECTURAL_CAPABILITY",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Potential attacks on public sites, accounts, users or brand; no case asserted",
+      "evidence": "https://github.com/CoCivium/CoCivium/blob/main/docs/AI_DISCOVERY_POLICY.md",
+      "public_data": "Generic threat classes only, no alleged bad-person roster",
+      "privacy_boundary": "No identity attribution, doxxing, blacklist, secret surveillance or unverified public accusation",
+      "response": "Record confirmed event privately, preserve lawful evidence, contain/restore, disclose responsibly and permit correction/appeal",
+      "risk": "Threat modeling != evidence any specific actor is hostile"
+    },
+    {
+      "id": "internal_watchers_and_agents",
+      "class": "Authorized CoSession, logical AI reviewers, CoPulse/CoAlive observers and tool agents",
+      "role": [
+        "CAN_REQUEST_FEEDBACK",
+        "CAN_ROUTE_OR_INDEX"
+      ],
+      "basis": "CANDIDATE",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "Potential observer/verification processes; current live binding unverified",
+      "evidence": "https://github.com/CoCivium/CoCivium/blob/main/docs/Operations/COSESSION_SHADOW_LEDGER_R1.md",
+      "public_data": "Source-bound shadow summaries only; no provider-session census",
+      "privacy_boundary": "Every watcher needs permission, bounded resources, no covert device sensing, and no extra authority from replicas",
+      "response": "Many passive verifiers, few selected actuators, source/version receipts and receiver ACK; no fake always-on agents",
+      "risk": "A logical observer is not a live process or independently witnessed event"
+    },
+    {
+      "id": "unknown_other",
+      "class": "Unclassified observers, unconsidered dependencies, missing data and indirect effects",
+      "role": [
+        "CAN_VIEW_PUBLIC",
+        "CAN_ROUTE_OR_INDEX",
+        "CAN_FAIL_OR_BLOCK"
+      ],
+      "basis": "NOT_OBSERVED",
+      "observed_actual_people": "NOT_OBSERVED",
+      "surface": "The negative space of the inventory",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/",
+      "public_data": "Unknown",
+      "privacy_boundary": "Never invent identities or events to complete a theoretical ALL list",
+      "response": "Reserve unknown classes, record changed hypotheses and invite bounded independent counterexamples",
+      "risk": "No monitoring system can enumerate all readers or eliminate every failure"
+    }
+  ],
+  "relation_fields": [
+    "actor_class_id",
+    "asset_ref",
+    "direction",
+    "capability",
+    "actual_event_id_optional",
+    "source_ref",
+    "observation_utc",
+    "authority_scope",
+    "visibility",
+    "privacy_class",
+    "evidence_state",
+    "confidence_and_reason",
+    "effect_magnitude",
+    "independence_lineage",
+    "failure_domain",
+    "remediation",
+    "review_state",
+    "expires_at",
+    "correction_link",
+    "receiver_ack"
+  ],
+  "observation_policy": {
+    "default": "POTENTIAL_NOT_ACTUAL",
+    "public_view": "Only classes and evidenced infrastructure state, never private identities or device secrets",
+    "private_event_minimum": "timestamp | observed asset | action | authenticated source/ref | impact | consent | affected data scope | confidence | independent corroboration | containment | correction | retention deadline",
+    "attribution_gate": "Do not label a person, group or organization malicious without corroborated relevant conduct and fair process",
+    "false_positive_rule": "Allow benign interpretation, recorded dispute and complete correction/removal of mistaken labels",
+    "sampling": "Least-invasive, authorized logs and official service audit feeds only; no covert sensors, network interception or population profiling",
+    "audience": "Use aggregated service health/proof-of-delivery metrics only when actually authorized, not as political persuasion inputs"
+  },
+  "resilience": {
+    "goal": "No single untested surface should be represented as a guarantee of survival.",
+    "candidate_layers": [
+      "versioned public Git source",
+      "independent verified hosted mirror",
+      "authorized durable offline copy",
+      "transparent public snapshots",
+      "independent recovery credentials/custody",
+      "status and source readproof after failover"
+    ],
+    "warning": "Wayback/archive/static copies can sometimes render static HTML/JS, but do not automatically execute backend services, receive live feeds, preserve private custody or prove currentness.",
+    "test": "Take one deliberately isolated failure domain, verify an independent receiver can fetch the exact intended artifact, then validate permitted recovery/rollback without exposing private secrets.",
+    "result": "NOT_TESTED_IN_THIS_WAVE"
+  },
+  "privacy_gates": [
+    "NO_COVERT_SURVEILLANCE",
+    "NO_PERSON_LEVEL_WATCHER_DOSSIERS",
+    "NO_VOTER_POLITICAL_PROFILING",
+    "NO_UNVERIFIED_BAD_ACTOR_ACCUSATION",
+    "NO_UNAUTHORIZED_DEVICE_PROBES",
+    "NO_PRIVATE_ENDPOINTS_IN_PUBLIC_GRAPH",
+    "NO_GUARANTEE_OF_INFINITE_MONITORING"
+  ],
+  "current_nonclaims": [
+    "ACTOR_CLASS_NE_ACTUAL_VISITOR",
+    "POTENTIAL_ACCESS_NE_OBSERVED_MONITORING",
+    "LOG_ABSENCE_NE_NO_EVENT",
+    "PROVIDER_CAN_VIEW_NE_PROVIDER_IS_SPYING",
+    "AI_DISCOVERABLE_NE_AI_READING",
+    "ARCHIVED_NE_RUNNING",
+    "MIRROR_NE_INDEPENDENT_RECOVERY",
+    "REPLICA_NE_INDEPENDENT_EVIDENCE",
+    "CRITIC_NE_ADVERSARY",
+    "ATTACK_SURFACE_NE_CONFIRMED_ATTACK",
+    "TOTAL_LIST_NE_ALL_OBSERVERS"
+  ]
+}
