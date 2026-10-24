@@ -1,0 +1,36 @@
+{
+  "schema": "CoRelay.GitHubSourceAndWorkflowReceipt.R0",
+  "observed_date": "2026-10-24",
+  "actual_first_8_file_commit": "77a258b8da89db59d32e87801209a7c91ece1128",
+  "actual_4_file_navigation_commit": "8d970e72d5b8e7d5ed7fd961ab7eab4e34a43569",
+  "AI_index_commit": "44d27c29ae14d613389c04be7b341d30b5216d22",
+  "CoPolitic_readme_commit": "0fb29d921fb95b1d2aad055dbac792d0139086a1",
+  "checks": {
+    "pre_commit_static": 16,
+    "passed": 16,
+    "initial_8_files_readback": true,
+    "main_4_navigation_files_readback": true,
+    "AI_index_and_llms_readback": true,
+    "CoPolitic_readme_readback": true,
+    "GitHub_Pages_workflow_latest_before_this_receipt": "SUCCESS",
+    "workflow_url": "https://github.com/CoCivium/CoAcademy/actions/runs/40083181954"
+  },
+  "source_blobs": {
+    "relay_page": "c65852357d394f4f5b7723e16b50d36ae107bf5c",
+    "relay_rss": "d47ecfe6d5e2a65ef8d6975d186e1d00544fe43d",
+    "publisher_kit": "a441f08cff6da82523b8134227d1c6f056541f1e",
+    "domain_map_prior": "0dfca29cc7d8997b4acd41c8264e4f33c4bbfff3",
+    "initial_discovery": "5cddf452689de359bf45b3b2c699e292338d1ce4",
+    "CoPolitic_readme": "9a8017ff175a3f6515a8d4ffd547780ea1a64455"
+  },
+  "limitations": [
+    "Exact source readback is not outside HTTPS/browser readback",
+    "Github Pages build success is not site traffic, accessibility compliance, or subscription proof",
+    "GitHub issue template creation is not real first-use feedback",
+    "No actual Bluesky/YouTube/Substack distribution, mass email or paid promotion",
+    "No CoStead/CoGateway or X2 action",
+    "DNS and domain registration/redirect state still unverified"
+  ],
+  "release_gate": "INDEPENDENT_BROWSER_RETRIEVAL_AND_VOLUNTARY_FIRST_USE_STILL_OPEN",
+  "no_new_automation": true
+}

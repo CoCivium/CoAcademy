@@ -29,7 +29,7 @@ Canada's CRTC says commercial electronic messages generally require consent, ide
 ## Content object contract
 Each adaptation should preserve identity, source version, actual origin and author, format, factual caveats, accessibility, license and rights checks, destination, authorizing actor, publication timestamp, receiver readproof, corrective link and any observed benefit. Another AI's repetition is not an independent fact.
 
-The CoCivium Master Plan assigns the main mission role to cocivium.org, a policy-facing role to copolitic.org and an alias role to copolitic.com. Those are not verified active domains today. The separate CoPolitic-site repository currently has only a placeholder README. The live DNS, certificates, redirects, mirrors and rights to post require distinct provider-side receipts.
+The CoCivium Master Plan assigns the main mission role to cocivium.org, a policy-facing role to copolitic.org and an alias role to copolitic.com. Those are not verified active domains today. The separate CoPolitic-site repository now has an honest GitHub README with neutral source links, but it is not a verified deployed website. The live DNS, certificates, redirects, mirrors and rights to post require distinct provider-side receipts.
 
 CoStead and CoGateway remain candidate storage/relay substrates rather than connected distribution nodes in this wave. X2 is explicitly untouched.
 

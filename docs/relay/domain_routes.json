@@ -21,7 +21,9 @@
     {
       "id": "CoPolitic-site",
       "role": "Separate public Github repository",
-      "status": "EXISTS__PLACEHOLDER_README_ONLY__NOT_LIVE_POLITICAL_SITE"
+      "status": "PUBLIC_README_NOW_HAS_NONPARTISAN_EVIDENCE_POINTERS_ONLY__NO_HOSTED_SITE_VERIFIED",
+      "public_source": "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
+      "commit": "0fb29d921fb95b1d2aad055dbac792d0139086a1"
     },
     {
       "id": "cocivium.org",

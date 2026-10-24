@@ -9,9 +9,9 @@
   "domain_map": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/domain_routes.json",
   "feedback": "https://github.com/CoCivium/CoAcademy/issues/new",
   "status": {
-    "source": "COMMIT_PENDING",
-    "host": "DEPLOY_WORKFLOW_SEPARATE",
-    "outside_browser": "UNVERIFIED",
+    "source": "PUBLIC_GITHUB_SOURCE_COMMITTED_AND_INDEPENDENT_GITHUB_API_READBACK_VERIFIED",
+    "host": "GITHUB_PAGES_WORKFLOW_SUCCESS_ON_COACADEMY_HEAD_8d970e72d5b8e7d5ed7fd961ab7eab4e34a43569__THIS_LATER_METADATA_COMMIT_REQUIRES_OWN_RECEIPT",
+    "outside_browser": "INCONCLUSIVE_FETCH_NOT_SITE_OUTAGE_PROOF",
     "feedback_received": "NONE_VERIFIED",
     "rss": "STATIC_SNAPSHOT_NOT_PUSH_JOB",
     "external_posts": "NONE",
@@ -38,5 +38,17 @@
     "CONNECTED_ACCOUNT_NE_CHANNEL_LICENSE",
     "MANY_SESSIONS_NE_MANY_WITNESSES",
     "BULK_REACH_NE_VERIFIED_BENEFIT"
-  ]
+  ],
+  "latest_verified_pages_workflow": "https://github.com/CoCivium/CoAcademy/actions/runs/40083181954",
+  "exact_source_blob_sha": "c65852357d394f4f5b7723e16b50d36ae107bf5c",
+  "release_verification": {
+    "static_source_checks": 16,
+    "static_source_checks_passed": 16,
+    "GitHub_readback_files": 8,
+    "GitHub_nav_readback_files": 4,
+    "GitHub_AI_navigation_readback": "VERIFIED",
+    "CoPolitic_readme_guide": "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
+    "CoPolitic_readme_commit": "0fb29d921fb95b1d2aad055dbac792d0139086a1",
+    "actual_volunteer_feedback": "NOT_OBSERVED"
+  }
 }
