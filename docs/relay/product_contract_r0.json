@@ -1,0 +1,191 @@
+{
+  "schema": "CoCivium.CoRelay.PortableProductAndBrandContract.R0",
+  "observed_date": "2026-10-24",
+  "title": "CoRelay public participation, brand adapters, and resilience truth",
+  "status": "GITHUB_SOURCE_PUBLISHED__PUBLIC_PAGES_BUILD_SUCCESS__EXTERNAL_BROWSER_AND_HUMAN_USE_UNPROVEN",
+  "canonical_brand": "CoCivium",
+  "offer": "A voluntary source-linked invitation to try, criticize and improve small public software and civic-literacy experiments.",
+  "components": [
+    {
+      "name": "CoRelay",
+      "role": "Opt-in public onramp, source feedback routes, source-feed snapshot",
+      "status": "SOURCE_AND_PAGES_DEPLOYMENT_VERIFIED"
+    },
+    {
+      "name": "CoPlay",
+      "role": "Fictional satire and public creative variants",
+      "status": "PUBLIC_SOURCE__NOT_PAID_MEDIA"
+    },
+    {
+      "name": "Civic Integrity",
+      "role": "Nonpartisan official election-source literacy",
+      "status": "PUBLIC_EDUCATIONAL_SOURCE__NOT_ELECTION_AUTHORITY"
+    },
+    {
+      "name": "CoVIA",
+      "role": "Potential agent/reviewer/client adapter subject to identity and receiver proof",
+      "status": "DEDICATED_TRANSPORT_UNBOUND__NO_ACTUAL_PICKUP"
+    },
+    {
+      "name": "CoPatterna",
+      "role": "Trace distinct source lineages and discriminating counterexamples",
+      "status": "EVALUATION_RULE_NOT_LIVE_GLOBAL_CLASSIFIER"
+    }
+  ],
+  "canonical_public_entries": {
+    "source_repository": "https://github.com/CoCivium/CoAcademy",
+    "branch": "master",
+    "relay_source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/index.html",
+    "relay_host_candidate": "https://cocivium.github.io/CoAcademy/relay/",
+    "feed_candidate": "https://cocivium.github.io/CoAcademy/relay/feed.xml",
+    "publisher_kit": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/publisher_kit.json",
+    "public_feedback_issue": "https://github.com/CoCivium/CoAcademy/issues/3",
+    "public_feedback_status": "OPEN_AT_REVIEW__ZERO_COMMENTS_OBSERVED"
+  },
+  "qualified_adapters": [
+    {
+      "adapter": "GitHub repository",
+      "authority": "PUBLIC_SOURCE_VERIFIED",
+      "proof": "Connected repository exact source readback",
+      "allowed": "Host source, accept public issues under repository settings",
+      "not_proven": "External AI ingestion or actual user benefit"
+    },
+    {
+      "adapter": "GitHub Pages",
+      "authority": "STATIC_DEPLOYMENT_WORKFLOW_CONFIRMED",
+      "proof": "https://github.com/CoCivium/CoAcademy/actions/runs/40083389198",
+      "allowed": "Serve static public candidate after successful workflow",
+      "not_proven": "Independent outside-client HTTP 200 or accessibility"
+    },
+    {
+      "adapter": "GitHub Issues",
+      "authority": "OPEN_PUBLIC_FEEDBACK_ROUTE",
+      "proof": "https://github.com/CoCivium/CoAcademy/issues/3",
+      "allowed": "Voluntary signed-in user comments; owner moderation separate",
+      "not_proven": "Real reviewer consent, adoption or sustained maintainer monitoring"
+    },
+    {
+      "adapter": "Static RSS",
+      "authority": "SOURCE_FILE_ONLY",
+      "proof": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/feed.xml",
+      "allowed": "Reader-pull when actually reachable and subscribed",
+      "not_proven": "Active push task, subscribers or non-GitHub mirror"
+    },
+    {
+      "adapter": "Metricool",
+      "authority": "CONNECTED_ACCOUNT_METADATA_READ_ONLY",
+      "proof": "Connected settings show rickpublic Bluesky and a YouTube channel; no CoCivium brand ownership proven",
+      "allowed": "Read relevant already-authorized account metadata",
+      "not_proven": "CoCivium publication authority, posts, subscriptions, permission for bulk outreach"
+    },
+    {
+      "adapter": "CoVIA",
+      "authority": "CANDIDATE_ADAPTER",
+      "proof": "CoCivium public receiver manifest labels dedicated CoVIA transport HELD_NO_DEDICATED_RECEIVER",
+      "allowed": "Draft/validate a typed candidate, not send",
+      "not_proven": "Authenticated receiver, actual message acceptance or live community"
+    },
+    {
+      "adapter": "CoPolitic domains",
+      "authority": "PLANNED_IN_MASTER_PLAN",
+      "proof": "Public policy repository placeholder, copolitic.org returned 404 in independent web attempt",
+      "allowed": "Propose brand route and public-safe content only",
+      "not_proven": "Owner-controlled DNS, copolitic.com redirect, deployed policy website"
+    },
+    {
+      "adapter": "CoStead / CoGateway",
+      "authority": "UNOBSERVED_LOCAL_SUBSTRATE",
+      "proof": "No readback or authenticated node connection in this wave",
+      "allowed": "Design candidate cold-copy and relay contract",
+      "not_proven": "Independent custody, delivery or automatic failover"
+    },
+    {
+      "adapter": "Substack / books / videos",
+      "authority": "EDITORIAL_TEMPLATES_ONLY",
+      "proof": "Publisher kit has outlines; no direct publication receipt",
+      "allowed": "Keep drafts and source references",
+      "not_proven": "Published posts, books or rendered videos"
+    }
+  ],
+  "brand_and_rights": {
+    "consistent_identity": "Use CoCivium as project identity; distinguish CoRelay, CoPlay and independent civic source services by purpose, not by assumed shared channel ownership.",
+    "CoVIA": "Explicitly label candidate AI reviewer/client; never impersonate a human or imply dedicated transport, adoption, affiliation or endorsement.",
+    "satire": "FICTIONAL SPOOF AD label must accompany creative adaptations; no false news or official impersonation.",
+    "civic": "Nonpartisan authoritative public links; separate donor-finance education from corruption findings or voting persuasion.",
+    "external_channels": "A connected personal account is not the CoCivium brand account without verified ownership, scope, and actual publication permission.",
+    "reuse_license": "NO_LICENSE_OR_NOTICE_FILE_FOUND_IN_REPOSITORY_TREE_AT_REVIEW; no general redistribution license verified",
+    "reuse_rule": "Source visibility does not automatically grant copyright reuse or trademark rights. Confirm author/contributor rights and adopt a deliberate license before advertising unrestricted FOSS remix rights."
+  },
+  "evidence_ladder": [
+    "SOURCE_EXISTS",
+    "DEPLOYMENT_COMPLETED",
+    "INDEPENDENT_HOST_READBACK",
+    "ACCESSIBLE_REAL_BROWSER",
+    "VOLUNTARY_FIRST_USE",
+    "MEASURABLE_USEFUL_OUTCOME",
+    "INDEPENDENT_REPLICATION",
+    "AUTHORIZED_ADAPTER_PICKUP",
+    "VERIFIED_CONTINUITY_ACROSS_FAILURE"
+  ],
+  "current_counts": {
+    "public_source_verified": 1,
+    "successful_pages_workflow_observed": 1,
+    "independent_outside_client_http_proof": 0,
+    "voluntary_participant_reports_observed": 0,
+    "social_posts_sent_in_wave": 0,
+    "books_published_in_wave": 0,
+    "videos_uploaded_in_wave": 0,
+    "coVIA_dedicated_receivers_verified": 0,
+    "independent_restore_domains_verified": 0
+  },
+  "failure_domain_reality": {
+    "current_public_source_host_ci_feedback": "GITHUB_SHARED_FAILURE_DOMAIN",
+    "distinct_urls_are_not_independent_providers": true,
+    "github_outage": "PUBLIC_SOURCE_PAGES_FEED_AND_ISSUES_LOSS_EXPECTED__NO_PROVEN_AUTOMATIC_FAILOVER",
+    "metricool_outage": "CURRENT_STATIC_PAGES_NOT_DEPENDENT_ON_METRICOOL__NO_COCIVIUM_POSTING_WAS_DEPENDENT",
+    "CoVIA_outage": "NO_CURRENT_LIVE_DISTRIBUTION_DEPENDENCY__ADAPTER_NOT_QUALIFIED",
+    "rss_loss": "HTML_AND_GITHUB_SOURCE_MAY_REMAIN_ON_SAME_PROVIDER__NOT_INDEPENDENT_RECOVERY",
+    "critical_external_links": "External official sources remain distinct reference providers, but link availability not guaranteed",
+    "resilience_target": "Provable cold rebuild from an independent custody domain and a second independent serving destination, with DNS/control-plane separation when justified.",
+    "resilience_proof": "NOT_RUN"
+  },
+  "release_checks": [
+    "Exact source identity and all critical links",
+    "No private fields, tracked forms, unsolicited sends or voter profiling",
+    "Visible true-fiction disclosure and original official-source provenance",
+    "Public issue route only for non-sensitive feedback",
+    "Independent HTTP, keyboard/mobile and screenreader testing",
+    "Rights/license review before encouraging broad derivatives",
+    "Channel-specific sender/account owner and scope, recipient opt-in and unsubscribe where applicable",
+    "Source and receiver proof separated, with rollback/supersession",
+    "Actual independent failure-domain recovery test before high-availability claims"
+  ],
+  "lifecycle": {
+    "selection": "Smallest useful verified improvement at material source change; do not mint unused modules",
+    "states": [
+      "PROPOSED",
+      "SOURCE_READY",
+      "DEPLOYED",
+      "INDEPENDENTLY_READABLE",
+      "USEFULNESS_REVIEWED",
+      "ADOPTED_IN_SCOPE",
+      "RETIRED_OR_SUPERSEDED",
+      "DORMANT_WITH_WAKE"
+    ],
+    "maintenance": "Existing CoEvoAll Pulse and specialist public/review watches are enabled; no new CoRelay-specific scheduled publisher or feedback polling job added.",
+    "sleep": "No material deltas -> stop rather than produce speculative new work",
+    "no_perpetual_guarantee": true
+  },
+  "important_nonclaims": [
+    "PAGE_SOURCE_NE_END_USER_REACH",
+    "GITHUB_PAGES_SUCCESS_NE_OUTSIDE_HTTP_PROOF",
+    "PUBLIC_ISSUE_NE_PARTICIPANT",
+    "METRICOOL_CONNECTION_NE_AUTHORIZED_COCIVIUM_PUBLISHER",
+    "COVIA_LABEL_NE_RECEIVER_ACK",
+    "BOOK_OUTLINE_NE_BOOK",
+    "SHARED_GITHUB_HOST_NE_INDEPENDENT_REDUNDANCY",
+    "MANY_IMPRESSIONS_NE_REAL_BENEFIT",
+    "ENABLED_AUTOMATION_NE_CONTINUOUS_EXECUTION",
+    "NO_LICENSE_NE_OPEN_REUSE_PERMISSION"
+  ]
+}
