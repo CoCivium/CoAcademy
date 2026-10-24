@@ -12,6 +12,16 @@ The goal is not to claim the largest ad campaign in history. The goal is a **rep
 
 A person should be able to encounter the joke, understand the problem, see exactly what CoCivium has and hasn't built, and leave, contribute, or share without signing up.
 
+## Six-campaign public experiment portfolio
+
+**[Try six separate campaign activities](./campaigns/)** · **[Read the machine campaign registry](./campaigns/campaigns.json)**.
+
+One demo is not the strategy. Six independent activities now illustrate distinct campaign mechanisms: portable handoff packet, source/evidence quiz, fictional spoof generation, live page-presentation toggles, direct U.S. official election-source routes, and inspiration-to-counterexample test notes.
+
+Every lane has its own independently testable outcome, limits, counterexample and opt-in sharing rules. The portfolio remains public experimental source, not real audience impact or an automatic distribution engine.
+
+**Next proof:** validate the whole portfolio in an actual browser and recruit consenting first-use participants without profiling them. Do not confuse a synthetic check with a human outcome. Scaling decisions should promote demonstrated utility and maintainability, not raw theoretical fanout.
+
 ## Public pilot
 
 - [CoPlay+ Spoof Lab page](./index.html): three *explicitly fictional* software-workflow spoofs and a voluntary copy/share affordance.
