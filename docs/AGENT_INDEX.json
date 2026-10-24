@@ -48,7 +48,11 @@
     "relay/publisher_kit.json",
     "relay/domain_routes.json",
     "relay/README.md",
-    "relay/product_contract_r0.json"
+    "relay/product_contract_r0.json",
+    "relay/beacon.json",
+    "relay/adapters.json",
+    "relay/resilience.json",
+    "relay/EXTERNAL_READPROOF_20261024_R1.json"
   ],
   "style": {
     "vibe": "CoBeAxaKittenStyle",
@@ -149,5 +153,15 @@
     "feedback_issue": "https://github.com/CoCivium/CoAcademy/issues/3",
     "licensing": "NO_UNRESTRICTED_SOURCE_REUSE_GRANT_VERIFIED",
     "failure_domain": "GITHUB_SINGLE_ORIGIN__NO_INDEPENDENT_MIRROR"
+  },
+  "co_relay_r1": {
+    "human": "relay/",
+    "beacon": "relay/beacon.json",
+    "channel_adapters": "relay/adapters.json",
+    "failure_domains": "relay/resilience.json",
+    "external_readproof": "relay/EXTERNAL_READPROOF_20261024_R1.json",
+    "scheduled_workflow": ".github/workflows/corelay-public-probe.yml",
+    "last_actual_readproof": "PASS_5_OF_5_GITHUB_RUNNER_PREVIOUS_SOURCE_VERSION",
+    "nonclaims": "NO_OFF_PROVIDER_MIRROR__NO_COVIA_RECEIVER__NO_METRICOOL_SEND"
   }
 }
