@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Six practical, privacy-first CoCivium campaign experiments. Create a portable task handoff, challenge a claim, write an honest spoof, check accessibility, find official civic sources, and turn wonder into a test.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/coplay/campaigns/">
+<link rel="alternate" type="application/json" href="./campaigns.json" title="Campaign registry and evidence gates">
+<title>Pick a problem. Leave with something useful. | CoCivium Campaign Experiments</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"CoCivium Campaign Experiments R0","url":"https://cocivium.github.io/CoAcademy/coplay/campaigns/","description":"Six voluntary, browser-local activities in creativity, productivity, evidence literacy, accessibility, civic-information literacy and testable wonder.","isAccessibleForFree":true,"datePublished":"2026-10-24","inLanguage":"en","creator":{"@type":"Organization","name":"CoCivium","url":"https://github.com/CoCivium/CoCivium"}}</script>
+<style>
+:root{color-scheme:dark;--bg:#08131b;--surface:#102b38;--edge:#3d6879;--ink:#f2fafa;--muted:#bcd4da;--accent:#a3ead6;--gold:#f5dbaa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 45% 0%,#225569 0,transparent 48%),var(--bg);color:var(--ink);font:16px/1.56 system-ui,"Segoe UI",Arial,sans-serif}
+body.large-text{font-size:19px}body.contrast{--bg:#000;--surface:#061e27;--edge:#fff;--ink:#fff;--muted:#f3f3f3;--accent:#a4ffeb;--gold:#ffeeb1}
+a{color:var(--accent);text-underline-offset:4px}
+button,textarea,input,select{font:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--gold)!important;outline-offset:3px}
+.wrap{max-width:1140px;margin:auto;padding:22px}
+.head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--edge)}
+.mark{font-size:20px;font-weight:780;letter-spacing:.02em}
+.eyebrow{font-size:12px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.11em}
+h1{font-size:clamp(37px,5.7vw,67px);letter-spacing:-.045em;line-height:1.04;margin:29px 0 14px;max-width:890px}
+h2{font-size:clamp(25px,3vw,33px);letter-spacing:-.02em;margin:8px 0 14px}
+h3{font-size:18px;margin:0 0 6px}
+.lead{color:var(--muted);max-width:780px;font-size:19px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 23px}
+.tag{font-size:12px;border:1px solid var(--edge);padding:6px 10px;border-radius:999px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 28px}
+.tile{display:block;background:linear-gradient(145deg,#193d4b,var(--surface));padding:19px;border-radius:16px;border:1px solid var(--edge);text-decoration:none;color:var(--ink);min-height:156px}
+.tile:hover{border-color:var(--accent);background:#234554}
+.tile p{font-size:14px;color:var(--muted);margin:7px 0}
+.tile small{color:var(--gold);font-weight:700}
+section.module{background:linear-gradient(145deg,#153744,var(--surface));border:1px solid var(--edge);border-radius:18px;padding:24px;margin:20px 0}
+.module p.intro{color:var(--muted);max-width:850px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.field label{display:block;font-weight:650;margin-bottom:6px}
+input[type=text],textarea,select{background:#061e2b;border:1px solid #7699a1;color:white;border-radius:10px;padding:10px 12px;width:100%}
+textarea{min-height:88px;resize:vertical}
+.output{margin-top:12px;min-height:105px;white-space:pre-wrap;overflow-wrap:anywhere}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+.action{padding:11px 15px;color:#092b31;background:var(--accent);border:1px solid var(--accent);border-radius:10px;font-weight:760}
+.action.secondary{background:transparent;color:var(--ink);border-color:#83b6bc}
+.note{font-size:13px;color:var(--muted)}
+.status{color:var(--gold);font-size:13px;min-height:22px}
+.choice{background:#163c49;border:1px solid #85b3be;color:white;padding:9px 12px;border-radius:10px;margin:5px 7px 5px 0}
+.choice[aria-pressed=true]{background:var(--accent);color:#072d33}
+.question{padding:13px;border:1px solid var(--edge);border-radius:12px;margin:10px 0}
+.question p{margin:5px 0 10px}
+.quiz-feedback{color:var(--gold);font-size:14px;margin:8px 0}
+.checkline{display:flex;align-items:center;gap:9px;margin:10px 0}
+.checkline input{width:21px;height:21px}
+.linkrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.linkcard{border:1px solid #79b5ba;border-radius:11px;padding:13px;background:#0a2b35}
+.linkcard strong{display:block}
+.linkcard small{display:block;color:var(--muted);margin-top:5px}
+.crystal{width:94px;height:94px;background:radial-gradient(circle at 31% 25%,#d9f6f1,#62b9bb 30%,#1a5170 74%,#061e2f);clip-path:polygon(50% 0%,66% 21%,94% 13%,79% 43%,100% 62%,68% 70%,58% 100%,36% 76%,10% 94%,20% 57%,0% 33%,32% 28%);float:right;margin:0 0 10px 18px}
+hr{border:0;border-top:1px solid var(--edge);margin:21px 0}
+footer{font-size:13px;color:var(--muted);padding:18px 0;margin:30px 0 8px;border-top:1px solid var(--edge)}
+@media(max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fields{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{padding:14px}.grid,.linkrow{grid-template-columns:1fr}.tile{min-height:auto}.module{padding:17px}.crystal{width:70px;height:70px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="head"><span class="mark">CoCivium ⊂ Campaign Experiments</span><a href="../">Back to the Spoof Lab</a></header>
+<main>
+<h1>Pick a problem.<br>Leave with something useful.</h1>
+<p class="lead">Six independent experiments. None asks you to create an account, surrender personal data, admire our vocabulary, or agree with CoCivium. Use one, challenge it, or ignore it.</p>
+<div class="tags"><span class="tag">Six campaigns</span><span class="tag">Four self-contained interactive tools</span><span class="tag">One accessibility self-check</span><span class="tag">One official-source civic route</span><span class="tag">No tracking or automatic sharing</span></div>
+<nav class="grid" aria-label="Choose a campaign">
+<a class="tile" href="#handoff"><small>01 / Portable work</small><h3>Stop losing context</h3><p>Create a reusable task handoff without sending anything.</p></a>
+<a class="tile" href="#proof"><small>02 / Truth and evidence</small><h3>Proof or promise?</h3><p>Identify exactly what a software claim establishes.</p></a>
+<a class="tile" href="#satire"><small>03 / Humor and creation</small><h3>Write a fictional spoof</h3><p>Turn a software frustration into clearly labeled satire.</p></a>
+<a class="tile" href="#access"><small>04 / Usability</small><h3>Does this work for you?</h3><p>Change readable presentation and try a keyboard check.</p></a>
+<a class="tile" href="#civic"><small>05 / Civic literacy</small><h3>Official sources first</h3><p>Find election information directly, without political profiling.</p></a>
+<a class="tile" href="#wonder"><small>06 / Imagination and inquiry</small><h3>Wonder, then test</h3><p>Turn an unusual idea into a question that evidence could challenge.</p></a>
+</nav>
+<section class="module" id="handoff" aria-labelledby="handoff-title">
+<div class="eyebrow">Campaign 01 · Real activity: make a handoff packet</div><h2 id="handoff-title">Stop losing context between tools.</h2>
+<p class="intro">Type a harmless example task. Generate a portable JSON note with a goal, the last completed step, the next action and a constraint. You decide whether to copy it. No AI or device is contacted.</p>
+<div class="fields">
+<div class="field"><label for="goal">Goal</label><input id="goal" type="text" maxlength="250" value="Prepare one clear summary of the project"></div>
+<div class="field"><label for="done">What was last completed?</label><input id="done" type="text" maxlength="250" value="Drafted three headline candidates"></div>
+<div class="field"><label for="next">Next step</label><input id="next" type="text" maxlength="250" value="Compare clarity and factual accuracy"></div>
+<div class="field"><label for="limit">Constraint</label><input id="limit" type="text" maxlength="250" value="Do not invent user research or audience results"></div>
+</div>
+<div class="controls"><button class="action" id="make-handoff" type="button">Build handoff</button><button class="action secondary" id="copy-handoff" type="button">Copy handoff</button></div>
+<label for="handoff-output">Your portable packet</label><textarea id="handoff-output" class="output" readonly placeholder="Build a handoff to see your packet here."></textarea>
+<p class="status" id="handoff-status" aria-live="polite">No packet created or transmitted.</p>
+<p class="note">This is a data format, not a working cross-provider synchronization service. Never enter passwords, personal voting details or private account information.</p>
+</section>
+<section class="module" id="proof" aria-labelledby="proof-title">
+<div class="eyebrow">Campaign 02 · Real activity: test what counts as evidence</div><h2 id="proof-title">Proof or promise?</h2>
+<p class="intro">Choose the most accurate interpretation. The aim is to challenge our own claims as readily as anyone else's.</p>
+<div class="question" data-question="0"><strong>A GitHub repository contains public application source code. What does that establish?</strong><div class="controls"><button type="button" class="choice" data-q="0" data-a="0">A usable global product</button><button type="button" class="choice" data-q="0" data-a="1">Public source exists</button><button type="button" class="choice" data-q="0" data-a="2">One million users benefited</button></div><p class="quiz-feedback" id="feedback-0" aria-live="polite">Choose an interpretation.</p></div>
+<div class="question" data-question="1"><strong>A website deployment workflow finishes successfully. What does that establish?</strong><div class="controls"><button type="button" class="choice" data-q="1" data-a="0">The deployment workflow succeeded</button><button type="button" class="choice" data-q="1" data-a="1">Every visitor reached the site</button><button type="button" class="choice" data-q="1" data-a="2">Visitors learned more</button></div><p class="quiz-feedback" id="feedback-1" aria-live="polite">Choose an interpretation.</p></div>
+<div class="question" data-question="2"><strong>A consenting tester says a menu label is confusing. What do we know?</strong><div class="controls"><button type="button" class="choice" data-q="2" data-a="0">It proves national campaign impact</button><button type="button" class="choice" data-q="2" data-a="1">It proves everyone dislikes the design</button><button type="button" class="choice" data-q="2" data-a="2">One reported usability issue deserves investigation</button></div><p class="quiz-feedback" id="feedback-2" aria-live="polite">Choose an interpretation.</p></div>
+<p class="status" id="proof-status" aria-live="polite">0 of 3 questions checked in this tab.</p>
+<p class="note">These examples are about epistemic reasoning, not proof that the underlying CoCivium software works at scale.</p>
+</section>
+<section class="module" id="satire" aria-labelledby="satire-title">
+<div class="eyebrow">Campaign 03 · Real activity: generate and review a fictional spoof</div><h2 id="satire-title">Make the absurdity visible.</h2>
+<p class="intro">Choose a familiar frustration. The resulting joke stays explicitly labeled as fiction. It does not impersonate a real advertiser, public official or company endorsement.</p>
+<div class="field"><label for="spoof-choice">What deserves gentle mockery?</label><select id="spoof-choice"><option value="tabs">Too many browser tabs</option><option value="repeat">Repeating context to AI tools</option><option value="permissions">Endless permission dialogs</option></select></div>
+<div class="controls"><button class="action" type="button" id="make-spoof">Create fictional spoof</button><button type="button" class="action secondary" id="copy-spoof">Copy spoof</button></div>
+<label for="spoof-output">Spoof script</label><textarea id="spoof-output" class="output" readonly placeholder="Create a spoof to see it here."></textarea>
+<p class="status" id="spoof-status" aria-live="polite">No advertisement was created, posted or purchased.</p>
+<p class="note">You may freely share your own ideas with appropriate rights and disclosures. This page does not send, schedule or purchase ads.</p>
+</section>
+<section class="module" id="access" aria-labelledby="access-title">
+<div class="eyebrow">Campaign 04 · Real activity: test local presentation options</div><h2 id="access-title">Does the interface accommodate you?</h2>
+<p class="intro">Two changes actually affect this page now. Then use the keyboard, zoom or a screen reader to look for a problem. These controls are not a substitute for a professional accessibility audit.</p>
+<label class="checkline"><input type="checkbox" id="large-text"> Increase text size on this page</label>
+<label class="checkline"><input type="checkbox" id="high-contrast"> Increase contrast on this page</label>
+<p class="note" id="access-status" aria-live="polite">Normal presentation. Your choices remain only in this tab.</p>
+<hr><p><strong>Try:</strong> Press Tab, Shift+Tab and Enter to navigate to one of the activities above. Zoom the browser to 200%. Determine whether the source links remain accessible. Any defect you discover is a useful reason to improve the code.</p>
+<p class="note">No health data, accessibility profile or feedback is sent to CoCivium. You can inspect <a href="https://www.w3.org/WAI/test-evaluate/preliminary/">W3C WAI's preliminary accessibility guidance</a> independently.</p>
+</section>
+<section class="module" id="civic" aria-labelledby="civic-title">
+<div class="eyebrow">Campaign 05 · Real activity: find authoritative election information</div><h2 id="civic-title">Useful civic information beats clever branding.</h2>
+<p class="intro">For U.S. election procedures, start with the actual responsible authorities. The experimental CoCivicLens visualization is optional, not a prerequisite. We neither infer nor request political views.</p>
+<div class="linkrow">
+<a class="linkcard" href="https://vote.gov/register"><strong>Voter registration</strong><small>Vote.gov: choose your state or territory</small></a>
+<a class="linkcard" href="https://www.usa.gov/find-polling-place"><strong>Polling locations</strong><small>USAGov: state and local sources</small></a>
+<a class="linkcard" href="https://vote.gov/guide-to-voting"><strong>Ways to vote</strong><small>Vote.gov: jurisdiction-specific instructions</small></a>
+<a class="linkcard" href="../..//civiclens/"><strong>Optional CoCivicLens experiment</strong><small>Our neutral source-learning demo, not an election office</small></a>
+</div>
+<p class="note">Check deadlines, eligibility, accessibility accommodations, polling hours and procedures directly with the appropriate election office. The regularly scheduled 2026 federal general election is Tuesday, November 3; local rules differ. The extra slash in any source link has no special meaning and will be corrected in the next code revision.</p>
+</section>
+<section class="module" id="wonder" aria-labelledby="wonder-title">
+<div class="crystal" aria-hidden="true"></div><div class="eyebrow">Campaign 06 · Real activity: write a falsifiable curiosity note</div><h2 id="wonder-title">Wonder is welcome. Evidence stays separate.</h2>
+<p class="intro">An unusual dream, an artistic idea or a speculative relation might inspire a worthwhile question. It needn't be evidence that the imagined mechanism exists. Turn the inspiration into a candidate test.</p>
+<div class="fields">
+<div class="field"><label for="observation">What did you observe, experience, or imagine?</label><input type="text" id="observation" maxlength="250" value="I imagined a star-shaped water crystal creating shifting patterns"></div>
+<div class="field"><label for="hypothesis">What might explain or model it?</label><input type="text" id="hypothesis" maxlength="250" value="Different perspectives reveal different relationships"></div>
+<div class="field"><label for="disproof">What observation would challenge that explanation?</label><input type="text" id="disproof" maxlength="250" value="Changing perspective does not change any measured or reported result"></div>
+</div>
+<div class="controls"><button class="action" id="make-wonder" type="button">Build a candidate test</button><button class="action secondary" id="copy-wonder" type="button">Copy test note</button></div>
+<label for="wonder-output">Your distinction between imagination, hypothesis and test</label><textarea class="output" id="wonder-output" readonly placeholder="Write one candidate test, without claiming it has run."></textarea>
+<p class="status" id="wonder-status" aria-live="polite">No test has been performed. No private dream content is read or transmitted.</p>
+</section>
+<section class="module">
+<div class="eyebrow">Campaign multiplication · not an automatic broadcast</div><h2>Remix a useful activity, not merely its slogan.</h2>
+<p class="intro">Each campaign has a different test and a separate success criterion. The public <a href="./campaigns.json">campaign registry</a> includes boundaries and evidence gaps, so an AI reader or future volunteer can inspect the candidate before repeating it.</p>
+<p><a href="../">Explore the satirical public entrypoint</a> · <a href="../README.md">Read the campaign strategy</a> · <a href="https://github.com/CoCivium/CoCivium">Challenge the public project</a></p>
+<p class="note">A public page and source registry are not evidence that strangers have used the experiments or that the campaign has achieved growth. Real impact requires independent observations and consent.</p>
+</section>
+<noscript><section class="module"><strong>JavaScript is off.</strong> The six campaign descriptions, official civic links, accessibility guidance and public research links remain readable. Handoff, proof quiz, spoof creation, presentation toggles and curiosity-note generation require JavaScript.</section></noscript>
+</main>
+<footer>
+CoCivium CoPlay Campaign Experiments R0. No accounts, analytics, automatic network requests, hidden tracking, third-party scripts, automatic campaign publishing or voter profiling. The page processes entered text only in memory; reload to clear it. External links contact their hosts only when clicked. These are source-code demonstrations, not claims of independent audience success or universal operating-system adoption.
+</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+function clipped(id){return ($(id).value||"").trim().slice(0,250)}
+function status(id,txt){$(id).textContent=txt}
+function copy(source,statusId){
+ var value=$(source).value;
+ if(!value){status(statusId,"Nothing to copy. Run the activity first.");return;}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(value).then(function(){status(statusId,"Copied by request. Nothing was sent.");},function(){status(statusId,"Clipboard permission unavailable. Select and copy the output manually.");});}
+ else status(statusId,"Clipboard unavailable. Select and copy the output manually.");
+}
+$("make-handoff").addEventListener("click",function(){
+ var goal=clipped("goal");if(!goal){status("handoff-status","Please enter a goal first.");return;}
+ $("handoff-output").value=JSON.stringify({schema:"CoCivium.PortableTaskHandoff.Example.R0",status:"USER_DRAFT_UNVERIFIED",goal:goal,last_completed:clipped("done"),next_action:clipped("next"),constraint:clipped("limit"),approval:"NOT_AUTHORIZED_FOR_EXTERNAL_EFFECTS",receiver_ack:null},null,2);
+ status("handoff-status","Portable draft created locally. No other AI received or acknowledged it.");
+});
+$("copy-handoff").addEventListener("click",function(){copy("handoff-output","handoff-status")});
+var correct={0:"1",1:"0",2:"2"},answered={};
+document.querySelectorAll("[data-q]").forEach(function(button){
+ button.addEventListener("click",function(){
+  var q=button.getAttribute("data-q"),a=button.getAttribute("data-a"),ok=a===correct[q];
+  answered[q]=ok;
+  document.querySelectorAll('[data-q="'+q+'"]').forEach(function(b){b.setAttribute("aria-pressed",String(b===button))});
+  var why={
+   0:"Public source proves only source availability. Deployment, usefulness and adoption require different observations.",
+   1:"A successful deployment workflow does not prove that an independent outside browser loaded or used the site.",
+   2:"One voluntary report identifies an issue worth investigating, not a national estimate or universal judgment."
+  };
+  status("feedback-"+q,(ok?"Correct. ":"Not quite. ")+why[q]);
+  status("proof-status",Object.keys(answered).length+" of 3 checked; "+Object.values(answered).filter(Boolean).length+" correct. This is local feedback, not a research sample.");
+ });
+});
+var spoofs={
+ tabs:"FICTIONAL SPOOF AD\n\nBreaking: forty-three browser tabs announce a collective bargaining agreement. Their only demand is to be recognized as one coherent task.\n\nActual claim: manual digital handoffs can be difficult. No tabs are known to have unionized.",
+ repeat:"FICTIONAL SPOOF AD\n\nIntroducing Memory-in-a-Box 9000. When one AI forgets your instructions, repeat them until you become the computer's memory department.\n\nActual claim: cross-tool continuity is a real design challenge. This is not an actual product.",
+ permissions:"FICTIONAL SPOOF AD\n\nPermission Paradise: granting permission to ask permission has never been more convenient. The premium edition includes a third confirmation.\n\nActual claim: authorization is essential; pointless repetition is worth solving. No real company is endorsed."
+};
+$("make-spoof").addEventListener("click",function(){$("spoof-output").value=spoofs[$("spoof-choice").value]||"";status("spoof-status","Fictional script prepared locally. Not posted, sent or purchased.");});
+$("copy-spoof").addEventListener("click",function(){copy("spoof-output","spoof-status")});
+function access(){
+ document.body.classList.toggle("large-text",$("large-text").checked);
+ document.body.classList.toggle("contrast",$("high-contrast").checked);
+ status("access-status","Local presentation: "+($("large-text").checked?"larger text":"normal text")+", "+($("high-contrast").checked?"higher contrast":"normal contrast")+". No accessibility profile was collected.");
+}
+$("large-text").addEventListener("change",access);
+$("high-contrast").addEventListener("change",access);
+$("make-wonder").addEventListener("click",function(){
+ var obs=clipped("observation"),hyp=clipped("hypothesis"),fail=clipped("disproof");
+ if(!obs||!fail){status("wonder-status","Provide an inspiration and a possible counterexample first.");return;}
+ $("wonder-output").value="EXPERIMENTAL CURIOSITY NOTE (NOT A FINDING)\n\nInspiration / reported experience: "+obs+"\nCandidate explanation, not established fact: "+(hyp||"Unknown")+"\nCounterexample to seek: "+fail+"\nNext step: define observable outputs, compare alternative explanations, and request consent before involving other people.\nEvidence status: NOT TESTED.";
+ status("wonder-status","Hypothesis and counterexample separated. No experiment has run.");
+});
+$("copy-wonder").addEventListener("click",function(){copy("wonder-output","wonder-status")});
+})();
+</script>
+</body>
+</html>
