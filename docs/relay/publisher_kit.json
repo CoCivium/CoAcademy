@@ -1,0 +1,79 @@
+{
+  "schema": "CoRelay.PublisherKit.R0",
+  "date": "2026-10-24",
+  "status": "DRAFT_FORMATS_ONLY_NOT_POSTED",
+  "source": "https://cocivium.github.io/CoAcademy/relay/",
+  "material": [
+    {
+      "name": "General-interest short post",
+      "medium": "Bluesky / public social",
+      "state": "COPY_ONLY",
+      "text": "You were never supposed to be the operating system. CoCivium has public, inspectable experiments in task handoffs, source checking, humor and civic information. Find a useful improvement or a missing proof. No sign-up required: https://cocivium.github.io/CoAcademy/relay/"
+    },
+    {
+      "name": "Satirical short post",
+      "medium": "Nonpartisan public humor",
+      "state": "COPY_ONLY",
+      "text": "FICTIONAL SPOOF AD: VOTES FOR SALE? Sorry, ballots are not merchandise. Campaign invoices are real public records. The joke includes FEC sources and limits, not allegations: https://cocivium.github.io/CoAcademy/coplay/votes-for-sale/"
+    },
+    {
+      "name": "YouTube Shorts storyboard",
+      "medium": "Video script",
+      "state": "TEXT_ONLY__NO_RENDERED_VIDEO",
+      "estimated_seconds": 35,
+      "beats": [
+        "0-5: FICTIONAL SPOOF AD label; a person copies text between AI windows",
+        "5-13: Why am I the operating system for supposedly intelligent software?",
+        "13-23: Demonstrate a small browser-local task-handoff experiment",
+        "23-30: Public source is real; demonstrated global adoption is not",
+        "30-35: Try it. Challenge it. Improve it. Show public relay URL"
+      ],
+      "requirements": [
+        "Original or correctly licensed visuals and audio",
+        "Captions and transcript",
+        "Verified channel and audience setting before upload"
+      ]
+    },
+    {
+      "name": "Substack or blog article",
+      "medium": "Longer public essay",
+      "state": "OUTLINE_ONLY_NOT_PUBLISHED",
+      "title": "The Human Middleware Problem, and the Evidence We Still Need",
+      "outline": [
+        "Begin with ordinary frustration",
+        "Offer one actual experiment",
+        "Separate source, deployment and public impact",
+        "Invite source and accessibility criticism",
+        "Document how corrections become better independent public tools"
+      ]
+    },
+    {
+      "name": "Journalist or reviewer invitation",
+      "medium": "Optional one-to-one note",
+      "state": "DRAFT_ONLY_NOT_SENT",
+      "text": "CoCivium has published source-inspectable public experiments on human-AI coordination and nonpartisan civic information. The code and deployment workflows are public; audience impact remains unmeasured. An independent critique of source accuracy or accessibility would be useful. Public entry: https://cocivium.github.io/CoAcademy/relay/. No affiliation or endorsement is implied."
+    },
+    {
+      "name": "Book chapter",
+      "medium": "Future long form",
+      "state": "OUTLINE_ONLY_NO_BOOK_FILE",
+      "title": "When Humans Became the Middleware",
+      "sections": [
+        "The coordination tax",
+        "Receipts versus grand claims",
+        "Useful comedy and honest uncertainty",
+        "Official sources before election narratives",
+        "How correction outlives election day",
+        "The right to decline participation"
+      ]
+    }
+  ],
+  "permissions": {
+    "all_formats_require_specific_channel_approval": true,
+    "bulk_unsolicited_email": false,
+    "persuasion_targeting": false,
+    "implied_partner_endorsements": false,
+    "license_and_rights_review": true
+  },
+  "acceptance": "Choose one actually approved channel and one accurate source-linked piece, then verify its independent delivery before scaling."
+}

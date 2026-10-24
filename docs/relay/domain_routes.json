@@ -1,0 +1,97 @@
+{
+  "schema": "CoRelay.DomainAndSubstrateStatus.R0",
+  "as_of": "2026-10-24",
+  "scope": "Evidence-qualified domain and channel roles, not a DNS/ownership inventory",
+  "mappings": [
+    {
+      "id": "cocivium.github.io/CoAcademy",
+      "role": "Active public GitHub source with successful prior Pages deployment workflows",
+      "status": "SOURCE_AND_WORKFLOW_VERIFIED__OUTSIDE_BROWSER_UNVERIFIED"
+    },
+    {
+      "id": "copolitic.org",
+      "role": "Policy and governance-facing domain planned in CoCivium MasterPlan",
+      "status": "PLANNED__DNS_OWNERSHIP_HOSTING_AND_INDEPENDENT_READBACK_UNVERIFIED"
+    },
+    {
+      "id": "copolitic.com",
+      "role": "Planned .org redirect/alias",
+      "status": "PLANNED_NOT_CONFIGURED_OR_VERIFIED"
+    },
+    {
+      "id": "CoPolitic-site",
+      "role": "Separate public Github repository",
+      "status": "EXISTS__PLACEHOLDER_README_ONLY__NOT_LIVE_POLITICAL_SITE"
+    },
+    {
+      "id": "cocivium.org",
+      "role": "Main mission domain per MasterPlan",
+      "status": "DOMAIN_ROLE_ONLY__CURRENT_HOST_STATUS_NOT_VERIFIED_THIS_WAVE"
+    },
+    {
+      "id": "cocivium.com",
+      "role": "Planned alias",
+      "status": "UNVERIFIED_REDIRECT"
+    },
+    {
+      "id": "cocivium.net",
+      "role": "Planned technical/docs domain",
+      "status": "UNVERIFIED_REDIRECT"
+    },
+    {
+      "id": "CoStead",
+      "role": "Durable private custody",
+      "status": "NO_CONNECTION_OR_READPROOF_THIS_WAVE"
+    },
+    {
+      "id": "CoGateway",
+      "role": "Potential transport/receiver",
+      "status": "NO_AUTHENTICATED_ADAPTER_OR_ACK_THIS_WAVE"
+    },
+    {
+      "id": ".sites / .nodes",
+      "role": "Candidate conceptual or exact DNS aliases",
+      "status": "NO_HOSTNAME_TO_ASSUME_WITHOUT_EXACT_REGISTERED_NAME"
+    },
+    {
+      "id": "Metricool-brand",
+      "role": "Existing connected account with YouTube and Bluesky metadata",
+      "status": "READ_ONLY_INSPECTION__NO_POSTED_CONTENT__NO_BRAND_RIGHTS_INFERENCE",
+      "scheduled_queue_window": "2026-10-24 through 2026-11-08",
+      "scheduled_queue": "EMPTY_AT_REVIEW"
+    },
+    {
+      "id": "RickPublic Substack",
+      "role": "Existing documentary publication plans in CoCivium GitHub",
+      "status": "NO_DIRECT_SUBSTACK_CONNECTOR_OR_SEND_RECEIPT_THIS_WAVE"
+    },
+    {
+      "id": "YouTube Shorts",
+      "role": "Potential video projection",
+      "status": "TEXT_STORYBOARD_ONLY__NO_RENDERED_VIDEO"
+    },
+    {
+      "id": "WeTube",
+      "role": "Ambiguous label used by multiple unrelated services",
+      "status": "NO_SELECTED_PLATFORM_ACCOUNT_OR_PUBLICATION"
+    },
+    {
+      "id": "Books / audio / podcast",
+      "role": "Potential long-form derivatives",
+      "status": "OUTLINES_NOT_FINISHED_DISTRIBUTED_MEDIA"
+    }
+  ],
+  "evidence_refs": [
+    "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+    "https://github.com/CoCivium/CoPolitic-site",
+    "https://github.com/CoCivium/CoAcademy"
+  ],
+  "nonclaims": [
+    "PLANNED_NE_LIVE",
+    "SOURCE_NE_WEB_RECEIVER",
+    "CONNECTED_ACCOUNT_NE_APPROVED_CHANNEL",
+    "ALIAS_NE_INDEPENDENT_BACKUP",
+    "COOPERATING_AIS_NE_INDEPENDENT_EVIDENCE",
+    "FOREVER_ASPIRATION_NE_AUTOMATED_PROCESS"
+  ]
+}

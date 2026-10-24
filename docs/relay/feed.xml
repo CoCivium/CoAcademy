@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>CoRelay public source updates (static R0)</title>
+<link>https://cocivium.github.io/CoAcademy/relay/</link>
+<description>Static snapshot of public CoCivium research references; not an always-on feed or a measure of adoption.</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 24 Oct 2026 09:36:00 GMT</lastBuildDate>
+<atom:link href="https://cocivium.github.io/CoAcademy/relay/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>CoRelay: try, challenge and improve</title><link>https://cocivium.github.io/CoAcademy/relay/</link><guid isPermaLink="false">urn:cocivium:corelay:r0:20261024</guid><pubDate>Sat, 24 Oct 2026 09:36:00 GMT</pubDate><description>Voluntary first-use and public source-feedback invitation, not a promotional mailing list.</description></item>
+<item><title>Votes For Sale? Clearly fictional civic satire</title><link>https://cocivium.github.io/CoAcademy/coplay/votes-for-sale/</link><guid isPermaLink="false">urn:cocivium:coplay:votes-for-sale:r0a:20261024</guid><pubDate>Sat, 24 Oct 2026 09:25:00 GMT</pubDate><description>Clearly fictional public-finance satire; campaign spending does not establish vote purchases.</description></item>
+<item><title>Money and Elections: neutral aggregate source lab</title><link>https://cocivium.github.io/CoAcademy/civic-integrity/money-and-elections/</link><guid isPermaLink="false">urn:cocivium:civic:money:r0:20261024</guid><pubDate>Sat, 24 Oct 2026 09:16:00 GMT</pubDate><description>Reader-supplied public aggregates; not a voter-price or political-profile estimator.</description></item>
+<item><title>Civic Integrity: official sources and post-election verification</title><link>https://cocivium.github.io/CoAcademy/civic-integrity/</link><guid isPermaLink="false">urn:cocivium:civic:integrity:r0:20261024</guid><pubDate>Sat, 24 Oct 2026 09:08:00 GMT</pubDate><description>Nonpartisan official voter-information links and procedure-literacy exercises.</description></item>
+</channel></rss>
