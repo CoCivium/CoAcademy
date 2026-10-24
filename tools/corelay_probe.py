@@ -13,6 +13,8 @@ TARGETS = (
     ("beacon", "https://cocivium.github.io/CoAcademy/relay/beacon.json", ('"schema": "CoRelay.AIBeacon.R1"',), "GITHUB"),
     ("feed", "https://cocivium.github.io/CoAcademy/relay/feed.xml", ('<rss version="2.0"', "CoRelay public source updates"), "GITHUB"),
     ("civic", "https://cocivium.github.io/CoAcademy/civic-integrity/", ("Understand the process.", "Report concerns responsibly."), "GITHUB"),
+    ("phoenix", "https://cocivium.github.io/CoAcademy/phoenix/", ("CoPhoenix R0", "26/26", "Wayback"), "GITHUB"),
+    ("phoenix_contract", "https://cocivium.github.io/CoAcademy/phoenix/discovery.json", ('"schema": "CoCivium.CoPhoenix.RecoverabilityProduct.R0"', '"public_capsule_hosted": false'), "GITHUB"),
     ("source_fallback", "https://raw.githubusercontent.com/CoCivium/CoAcademy/master/docs/relay/index.html", ("Try it. Challenge it. Improve it.",), "GITHUB"),
 )
 USER_AGENT = "CoCivium-CoRelay-PublicReadproof/1.0"

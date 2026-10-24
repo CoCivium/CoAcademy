@@ -18,6 +18,20 @@ class CoRelayPublicProbeTests(unittest.TestCase):
         self.assertTrue(all(t[1].startswith("https://") for t in TARGETS))
     def test_all_targets_same_failure_domain(self):
         self.assertEqual({t[3] for t in TARGETS}, {"GITHUB"})
+    def test_phoenix_is_separately_scoped(self):
+        by_id = {t[0]: t for t in TARGETS}
+        self.assertEqual(set(("phoenix", "phoenix_contract")).issubset(by_id), True)
+        self.assertEqual(by_id["phoenix"][3], "GITHUB")
+        self.assertEqual(by_id["phoenix_contract"][3], "GITHUB")
+    def test_phoenix_contract_has_nonclaim(self):
+        by_id = {t[0]: t for t in TARGETS}
+        self.assertIn('"public_capsule_hosted": false', by_id["phoenix_contract"][2])
+    def test_new_page_missing_is_failure_even_if_fallback_passes(self):
+        checks = [result(t[0], "PASS") for t in TARGETS]
+        for item in checks:
+            if item["id"] == "phoenix":
+                item["state"] = "FAIL"
+        self.assertEqual(classify(checks), "DEGRADED_WITH_SAME_PROVIDER_SOURCE")
     def test_passing_independent_readback(self):
         checks = [result(t[0], "PASS") for t in TARGETS]
         self.assertEqual(classify(checks), "PASS_PUBLIC_RENDER")
