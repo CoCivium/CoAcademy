@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/cophoenix-public-readproof.yml'
       - 'docs/phoenix/probe_public.py'
+      - 'docs/phoenix/triage_public.py'
 permissions:
   contents: read
 concurrency:
@@ -25,11 +26,21 @@ jobs:
         run: python3 docs/phoenix/probe_public.py --selftest
       - name: Read public pages and source
         run: python3 docs/phoenix/probe_public.py
+      - name: Validate triage classifications
+        run: python3 docs/phoenix/triage_public.py --selftest
+      - name: Derive current worry register without external effects
+        if: always()
+        run: |
+          python3 docs/phoenix/triage_public.py
+          cat co_phoenix_worries.md >> "$GITHUB_STEP_SUMMARY"
       - name: Preserve receipt
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cophoenix-public-readproof-r1
-          path: co_phoenix_public_readproof.json
+          path: |
+            co_phoenix_public_readproof.json
+            co_phoenix_worries.json
+            co_phoenix_worries.md
           retention-days: 14
           if-no-files-found: warn
