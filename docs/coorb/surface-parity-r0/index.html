@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; form-action 'none'; base-uri 'none'">
+<title>CoOrb+ | One work, four surfaces (offline canary)</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1614;--panel:#14231e;--ink:#eff5ee;--muted:#b7c7bd;--line:#365348;--accent:#b0e4bd;--ring:#e7dca1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.52 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1180px;margin:auto;padding:clamp(14px,4vw,45px)}
+header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:0 0 20px}h1{font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.2;margin:.2rem 0}h2{font-size:1.2rem;margin:0 0 .6rem}p{margin:.45em 0}.eyebrow{letter-spacing:.12em;color:var(--accent);font-size:.77rem;text-transform:uppercase;font-weight:700}.muted{color:var(--muted)}.small{font-size:.85rem}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}button{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 15px;cursor:pointer}button[aria-pressed="true"]{border-color:var(--accent);background:#234334}button:hover{border-color:var(--accent)}button:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+.bar{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:13px 17px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}.bar span{word-break:break-word}.pill{display:inline-block;border:1px solid #799889;border-radius:10px;padding:3px 10px;color:#d9e8d9;font-size:.83rem}
+.panel{background:var(--panel);padding:clamp(16px,3vw,28px);border:1px solid var(--line);border-radius:18px}.view{min-height:250px}.stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tile{border:1px solid var(--line);border-radius:12px;padding:15px;min-width:0}.tile h3{margin:0 0 8px;font-size:1rem}.tile p{font-size:.9rem}.info{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,3fr);gap:7px 15px;margin:14px 0}.info dt{color:var(--muted)}.info dd{margin:0;overflow-wrap:anywhere}.meta{border-top:1px solid var(--line);padding-top:18px;margin-top:20px}pre{white-space:pre-wrap;word-break:break-word;background:#0a1714;border-radius:12px;padding:16px;max-height:450px;overflow:auto;font-size:.78rem}
+#lens{color:var(--accent)}.omit{margin-top:15px;padding:12px;border-left:3px solid #99bfa6;background:#13271f}.omit code{overflow-wrap:anywhere}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}footer{margin-top:22px;border-top:1px solid var(--line);padding-top:14px;font-size:.88rem;color:var(--muted)}
+@media(max-width:660px){.stack{grid-template-columns:1fr}.info{grid-template-columns:1fr;gap:3px}.info dd{margin-bottom:12px}.bar{display:block}.bar span{display:block;margin:.5rem 0}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head><body><main>
+<header><div><div class="eyebrow">CoOrb+ / CoOrbWare+ · R0 offline</div><h1>One work. Four surfaces.</h1><p class="muted">A synthetic continuity example, not a live X2 connection or installed desktop overlay.</p></div><span class="pill">No login · No network · No tracking</span></header>
+<div class="bar" aria-label="Invariant work identity"><span><b>Object:</b> <span id="identity"></span></span><span><b>Currentness:</b> <span id="now"></span></span><span><b>Receiver:</b> <span id="receiver"></span></span></div>
+<nav aria-label="Projection selector"><button data-view="glance" aria-pressed="true">Glance</button><button data-view="orb" aria-pressed="false">CoOrb focus</button><button data-view="map" aria-pressed="false">CoMap</button><button data-view="machine" aria-pressed="false">Headless JSON</button></nav>
+<section class="panel" aria-live="polite" aria-atomic="false"><div class="eyebrow" id="lens">Glance</div><div class="view" id="contents"></div><div class="omit" id="omissions"></div></section>
+<section class="meta"><h2>Invariant provenance and authority</h2><dl class="info" id="invariants"></dl><p class="small muted">Every projection is produced from the same embedded work object; omission is disclosed, not mistaken for deletion. No simulated action is promoted to a real receiver acknowledgment.</p></section>
+<footer>Test-only source from a public CoCivium design pattern and a fictional three-lane scenario. No user screenshot, private conversation, YouTube metrics, hidden account state, device status, or automatic provider access is included. CoOrbWare projects work, it does not replace its source.</footer>
+</main><script type="application/json" id="source-object">
+{
+  "schema": "CoCivium.CoOrbSurfaceParity.R0",
+  "object_id": "coorb-parity:fictional-work-001",
+  "class": "SYNTHETIC_PUBLIC_SAFE_DEMO",
+  "title": "One work identity beyond three application windows",
+  "why": "A person should not have to relay currentness, sources and acknowledgments among publishing, research and recovery windows.",
+  "currentness": {"state": "UNVERIFIED_LIVE", "observed_at": null},
+  "source": {"class": "PUBLIC_DESIGN_REFERENCE_PLUS_FICTIONAL_SCENARIO", "ref": "CoCivium/CoCivium:docs/Architecture/COORBWARE_BEYOND_COSOFTWARE_R0_20261024.md", "observed_external_receiver": false},
+  "evidence": {"class": "DESIGN_DEMONSTRATION_ONLY", "claim_verified": false},
+  "authority": {"scope": "READ_ONLY_PREVIEW", "effects_authorized": false},
+  "privacy": {"class": "PUBLIC_SYNTHETIC", "personal_content_included": false},
+  "receiver": {"identity": null, "pickup": "UNPROVEN", "independent_ack": false},
+  "next": "Qualify one local receiver and prove a source-bound pickup before claiming cross-session continuity.",
+  "challenge": "Can four surfaces preserve one identity while making omissions obvious?",
+  "recover": "Reload this file. No data is stored, fetched or sent by the page.",
+  "lanes": [
+    {"id": "publishing", "label": "Publishing", "status": "UNCONNECTED", "concern": "Delivery receipt missing"},
+    {"id": "research", "label": "Research", "status": "UNCONNECTED", "concern": "Source currentness not qualified"},
+    {"id": "recovery", "label": "Recovery", "status": "UNCONNECTED", "concern": "Independent receiver acknowledgment missing"}
+  ],
+  "unknowns": ["X2 live CoBar runtime", "Current YouTube delivery metrics", "Actual provider-session synchronization", "Independent human usability"],
+  "nonclaims": ["SYNTHETIC_NE_LIVE", "RENDER_NE_RECEIVER_ACK", "BROWSER_NE_OS_OVERLAY", "UNKNOWN_NE_FALSE", "PROJECTION_NE_AUTHORITY"]
+}
+</script><script>
+(function(){'use strict';
+const work=JSON.parse(document.getElementById('source-object').textContent);
+const shared=['object_id','class','currentness','source','evidence','authority','privacy','receiver'];
+const views={
+glance:['title','why','next'],
+orb:['title','why','next','challenge','recover','unknowns'],
+map:['title','lanes','unknowns','next'],
+machine:Object.keys(work).filter(k=>!shared.includes(k))};
+function el(tag,text,cls){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined&&text!==null)e.textContent=String(text);return e;}
+function put(parent,tag,text,cls){return parent.appendChild(el(tag,text,cls));}
+const invariants=document.getElementById('invariants');
+const invariantLabels={object_id:'Identity',class:'Evidence scope',currentness:'Currentness',source:'Source / provenance',evidence:'Evidence',authority:'Authority',privacy:'Privacy',receiver:'Receiver'};
+shared.forEach(k=>{put(invariants,'dt',invariantLabels[k]);put(invariants,'dd',typeof work[k]==='object'?JSON.stringify(work[k]):work[k]);});
+document.getElementById('identity').textContent=work.object_id;
+document.getElementById('now').textContent=work.currentness.state;
+document.getElementById('receiver').textContent=work.receiver.pickup;
+function show(view){if(!Object.prototype.hasOwnProperty.call(views,view))return;const content=document.getElementById('contents');content.replaceChildren();document.getElementById('lens').textContent={glance:'Glance / compact',orb:'CoOrb / focused',map:'CoMap / relations',machine:'Headless / full object'}[view];
+if(view==='glance'){put(content,'h2',work.title);put(content,'p',work.why);put(content,'h3','Next qualified step');put(content,'p',work.next);}
+else if(view==='orb'){put(content,'h2',work.title);[['Why',work.why],['Next',work.next],['Challenge',work.challenge],['Recover',work.recover]].forEach(x=>{put(content,'h3',x[0]);put(content,'p',x[1]);});put(content,'h3','Unknowns');const ul=put(content,'ul');work.unknowns.forEach(x=>put(ul,'li',x));}
+else if(view==='map'){put(content,'h2','Three relations, not three truth stores');const grid=put(content,'div',undefined,'stack');work.lanes.forEach(x=>{const box=put(grid,'article',undefined,'tile');put(box,'h3',x.label);put(box,'span',x.status,'pill');put(box,'p',x.concern);});put(content,'h3','Shared next step');put(content,'p',work.next);}
+else{put(content,'h2','Lossless machine source');put(content,'pre',JSON.stringify(work,null,2));}
+const missing=Object.keys(work).filter(k=>!shared.includes(k)&&!views[view].includes(k));document.getElementById('omissions').textContent=missing.length?'Projection omits: '+missing.join(', ')+'. Source remains intact.':'Projection omits: nothing. Full source presented.';
+document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.view)));
+show('glance');
+})();
+</script></body></html>
