@@ -1,0 +1,50 @@
+name: CoOrb CoCopy Daybook R0
+
+on:
+  pull_request:
+    paths:
+      - 'docs/coorb/daybook_r0/**'
+      - '.github/workflows/coorb-cocopy-daybook-r0.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify offline-only browser contract and JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import subprocess
+          import tempfile
+          root=Path('docs/coorb/daybook_r0')
+          html=(root/'index.html').read_text(encoding='utf-8')
+          class P(HTMLParser):
+              def __init__(self): super().__init__(); self.ids=set(); self.scripts=[]; self.remote=[]
+              def handle_starttag(self,tag,attrs):
+                  d=dict(attrs)
+                  if d.get('id'): self.ids.add(d['id'])
+                  if tag=='script' and d.get('src'): self.remote.append(d['src'])
+                  if tag=='link' and d.get('href','').startswith(('https:','http:')): self.remote.append(d['href'])
+              def handle_data(self,data):
+                  self.scripts.append(data)
+          p=P();p.feed(html)
+          assert not p.remote, p.remote
+          assert {'entry-form','entry-text','entry-ref','event-list','reset','download','export','undo'}.issubset(p.ids)
+          assert all(token not in html for token in ('localStorage','sessionStorage','serviceWorker','XMLHttpRequest','fetch('))
+          assert 'USER_ENTERED_IN_THIS_TAB' in html and 'NO_AUTOMATIC_CAPTURE' in html
+          assert 'ORIGINAL' in html and 'REVISION' in html and 'UNKNOWN' in html
+          script=html.split('<script>',1)[1].split('</script>',1)[0]
+          with tempfile.TemporaryDirectory() as directory:
+              check=Path(directory)/'daybook.js'
+              check.write_text(script,encoding='utf-8')
+              subprocess.run(['node','--check',str(check)],check=True)
+          print('PASS_OFFLINE_NO_PASSIVE_CAPTURE_SOURCE_AND_JS_SYNTAX')
+          PY
