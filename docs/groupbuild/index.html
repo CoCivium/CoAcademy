@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1326">
+<meta name="color-scheme" content="dark">
+<title>GroupBuild+ | Better things, built together</title>
+<meta name="description" content="Explore a vision of better teamwork. Form a sample group, discover different strengths, and compare community and managed-service paths. No login.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/groupbuild/">
+<style>
+:root{font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark;--text:#f6fcff;--sub:#d4e4ef;--mint:#befbe4;--line:#a0b3c766;--bg:#081327}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text)}
+a{color:#c8f5ff}button,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #ffe1a2;outline-offset:4px}
+button{touch-action:manipulation}button:disabled{opacity:.6;cursor:default}
+.wrap{width:min(1120px,calc(100% - 34px));margin:auto}
+.top{padding:14px 0;border-bottom:1px solid #bedbea3b;background:#09182e}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{text-decoration:none;color:white;font-size:1.1rem;font-weight:800;letter-spacing:.05em}
+.tag{border:1px solid #d5e4f388;border-radius:24px;padding:5px 11px;font-size:.78rem;color:#e2ecf5}
+.hero{min-height:min(730px,91svh);padding:45px 0 65px;background:radial-gradient(ellipse at 77% 15%,#31697c50,transparent 40%),radial-gradient(ellipse at 15% 75%,#704e9955,transparent 50%),linear-gradient(165deg,#0b233b,#10152d 70%,#091328);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.03fr;gap:clamp(22px,3vw,50px);align-items:center;min-height:520px}
+.eyebrow{letter-spacing:.17em;text-transform:uppercase;font-size:.76rem;color:#c5ffe9;font-weight:700}
+h1{font-size:clamp(3.1rem,6.3vw,6rem);line-height:1.02;letter-spacing:-.065em;margin:12px 0 18px}
+h1 em{font-style:normal;color:#c0f8e7}.lead{font-size:clamp(1.05rem,1.7vw,1.25rem);color:#e2ecf5;max-width:48ch}
+.ctas{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.cta{border:1px solid #b8f6e1;border-radius:13px;padding:14px 20px;font-weight:750;min-height:52px;background:#bbf5df;color:#112c38;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.cta.alt{background:#ffffff0f;border-color:#b5c7de;color:#f6fcff}
+.mini{font-size:.83rem;color:#bcd1e2;max-width:56ch;margin-top:14px}
+.sky{position:relative;width:100%;aspect-ratio:1;min-height:300px;display:grid;place-items:center;overflow:hidden}
+.sky::before{content:"";position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,#a6ffe54a 0,#3489ac3d 28%,#4358c13b 48%,transparent 71%);filter:blur(10px)}
+.orbit{position:absolute;border:1px solid #ccfff6aa;border-radius:50%;width:85%;height:42%;transform:rotate(-27deg)}
+.orbit.two{transform:rotate(58deg);border-color:#e8c3f4aa}.orbit.three{transform:rotate(115deg);width:96%;height:31%;border-color:#99dfffaa}
+.planet{position:absolute;left:50%;top:50%;width:116px;height:116px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 30% 28%,#e8fffc 0,#a3f2e2 22%,#518fc0 50%,#563b94 90%);box-shadow:0 0 80px #86d6f466;display:grid;place-items:center;font-size:1.03rem;font-weight:900;color:#172a49;letter-spacing:-.03em}
+.satellite{position:absolute;width:76px;height:76px;border-radius:50%;border:1px solid #defaf7a3;background:#152d4bdd;color:#f5feff;font-size:.8rem;display:grid;place-items:center;text-align:center;padding:7px;box-shadow:0 8px 30px #0008;backdrop-filter:blur(4px)}
+.s1{left:9%;top:20%}.s2{right:2%;top:24%}.s3{left:8%;bottom:14%}.s4{right:10%;bottom:9%}
+@media(prefers-reduced-motion:no-preference){.sky .orbit{animation:gentleBreath 12s ease-in-out infinite alternate}.planet{animation:pulse 6s ease-in-out infinite alternate}@keyframes gentleBreath{to{scale:1.06}}@keyframes pulse{to{box-shadow:0 0 120px #86d6f4aa}}}
+main>section:not(.hero){padding:60px 0}
+.section-heading{max-width:760px;margin-bottom:27px}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;letter-spacing:-.04em;margin:10px 0}
+.section-heading p{font-size:1.06rem;color:var(--sub)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.door{padding:clamp(22px,4vw,34px);border-radius:23px;border:1px solid #6d9da7;background:radial-gradient(circle at 90% 1%,#55cba83e,transparent 43%),linear-gradient(146deg,#163e46,#142c3f 80%);min-height:330px}
+.door.pay{border-color:#947ac5;background:radial-gradient(circle at 90% 1%,#b885dc52,transparent 43%),linear-gradient(146deg,#322c56,#1c2742 80%)}
+.iconball{font-size:1.65rem;margin:0 0 18px}.door h3{font-size:1.72rem;letter-spacing:-.04em;margin:0 0 8px}.door p{color:#daeaf4}
+.door ul{padding-left:20px;color:#d8e9f1}.door li{margin:5px 0}
+small{color:#c9dbec}.door .name{font-size:.78rem;color:#cbf7e7;text-transform:uppercase;letter-spacing:.12em}
+.pay .name{color:#ebd1ff}
+.studio{background:radial-gradient(ellipse at 7% 60%,#2250786b,transparent 45%),#0a1b31}
+.labs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.panel{border:1px solid #849dbb74;border-radius:20px;background:#172b46b8;padding:clamp(18px,3vw,27px)}
+.panel h3{font-size:1.25rem;margin:0 0 10px}.panel p{color:var(--sub)}
+.choice{display:flex;flex-direction:column;gap:8px}
+.choice button{border:1px solid #829bb9;border-radius:12px;text-align:left;background:#1c3550;color:#f3fcff;padding:13px 15px}
+.choice button[aria-pressed=true]{background:#bff5e2;color:#102b37;border-color:#bff5e2;font-weight:750}
+.result{background:#13263d;border:1px solid #7993b4;border-radius:14px;padding:19px;min-height:300px}
+.result h3{font-size:1.5rem;letter-spacing:-.02em}.result p{color:#d7eaf3}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.pill{border:1px solid #739aaa;border-radius:24px;padding:6px 11px;font-size:.79rem;color:#def6f1}
+.tiny{font-size:.83rem;color:#bcd5e6}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.action{border:1px solid #b2d1e0;background:#b4f2e0;color:#133346;border-radius:10px;padding:11px 14px;font-weight:700}
+.action.secondary{background:#1a304d;color:#ecf8fc}
+.rail{border-left:3px solid #c6b0ff;padding:12px 16px;background:#262e4d;color:#dbe5f3;margin:28px 0;border-radius:0 12px 12px 0}
+.more details{border:1px solid #718ba8;border-radius:13px;padding:14px 18px;margin:11px 0;background:#18283e}
+.more summary{cursor:pointer;font-weight:750}
+.footer{padding:29px 0;border-top:1px solid #94acc34a;color:#c9daeb;font-size:.88rem}
+@media(max-width:800px){.hero-grid,.two,.labs{grid-template-columns:1fr}.sky{max-width:480px;margin:auto;min-height:320px}.hero{min-height:0}.hero-grid{min-height:0}.hero h1{font-size:clamp(2.6rem,10vw,4.5rem)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orbit,.planet{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="../">CoCivium / GroupBuild+</a><span class="tag">Interactive concept preview · Not a live group service</span></div></header>
+<main>
+<section class="hero">
+<div class="wrap hero-grid">
+<div><div class="eyebrow">Collective intelligence, human purpose</div><h1>Better things, <em>built together.</em></h1>
+<p class="lead">Imagine groups that assemble around what matters, discover each contributor's strengths, and keep learning as they make something real.</p>
+<div class="ctas"><a class="cta" href="#studio">Try building a group</a><a class="cta alt" href="#doors">Explore both pathways</a></div>
+<p class="mini">No account, no payments, no signup. This is an illustrative CoProjectField+ experiment, not an operating platform.</p></div>
+<div class="sky" role="img" aria-label="Artistic constellation of purpose, people, artificial intelligence and automation around a shared project.">
+<div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div>
+<div class="planet">Together</div><div class="satellite s1">People</div><div class="satellite s2">Synths</div><div class="satellite s3">Tools</div><div class="satellite s4">Possibility</div>
+</div>
+</div></section>
+<section id="doors"><div class="wrap">
+<div class="section-heading"><div class="eyebrow">One shared foundation · Two distinct promises</div>
+<h2>Give more people the power to build.</h2><p>Shared capabilities need not mean identical organizations, contracts, or experiences. Choose the kind of value you want to create.</p></div>
+<div class="two">
+<article class="door"><div class="iconball" aria-hidden="true">✦</div><div class="name">Proposed community doorway · groupbuild.org</div>
+<h3>Build for our communities</h3><p>Find collaborators, learn together, and make useful things without needing to become a project-management expert first.</p>
+<ul><li>Shared projects and accessible participation</li><li>Open knowledge, contributor credit and impact</li><li>Free, useful first experiences</li></ul><small>No implication of registered nonprofit status.</small></article>
+<article class="door pay"><div class="iconball" aria-hidden="true">✧</div><div class="name">Proposed service doorway · groupbuild.com</div>
+<h3>Make teamwork sustainable</h3><p>Offer managed capabilities, reliable operations, and value people or organizations may choose to pay for.</p>
+<ul><li>Managed projects, integrations and support</li><li>Transparent commercial terms and service levels</li><li>Fair contributor rewards and community reinvestment, where agreed</li></ul>
+<small>Not selling, billing or claiming live products.</small></article>
+</div></div></section>
+<section id="studio" class="studio"><div class="wrap">
+<div class="section-heading"><div class="eyebrow">CoTeaming+ · Micro-production</div><h2>One idea. A team of complementary strengths.</h2>
+<p>Pick a hypothetical project. Watch how a purpose becomes a simple work plan across people, synths and automations. Nothing is transmitted or assigned.</p></div>
+<div class="labs"><div class="panel">
+<h3>What shall we build?</h3>
+<div class="choice" role="group" aria-label="Select an example project">
+<button type="button" data-project="park" aria-pressed="true">Bring a neglected park back to life</button>
+<button type="button" data-project="game" aria-pressed="false">Create an inclusive neighborhood game</button>
+<button type="button" data-project="skills" aria-pressed="false">Help neighbors exchange skills</button>
+</div>
+<p class="tiny">Every example is fictional. Real communities would set their own goals, roles, consent and budgets.</p>
+<div class="rail">CoLeverage+: assign work by qualified, complementary advantage, not an inflexible human/front-end, synth/middle, automation/back-end hierarchy.</div>
+</div>
+<div class="result" aria-live="polite" aria-atomic="true">
+<div class="eyebrow">Example project field</div><h3 id="project-title">Revive a local park</h3>
+<p id="project-goal">Make a shared public space inviting, accessible and cared for.</p>
+<div class="row"><span class="pill">Human purpose</span><span class="pill">Synth coordination</span><span class="pill">Automation proof</span></div>
+<p><strong>People:</strong> <span id="human-role">Residents choose priorities and approve plans.</span></p>
+<p><strong>Synths:</strong> <span id="synth-role">Compare accessible ideas, discover tradeoffs and draft proposals.</span></p>
+<p><strong>Automations:</strong> <span id="auto-role">Track opt-in tasks, dependencies and evidence.</span></p>
+<p><strong>First useful action:</strong> <span id="first-step">Create an accessible list of local priorities and invite consent-based feedback.</span></p>
+<p><strong>Verify success:</strong> <span id="proof">A participant can challenge one proposed priority and see what changed.</span></p>
+<div class="actions"><button type="button" class="action" id="copy">Copy fictional project brief</button><button type="button" class="action secondary" id="route">Compare the two pathways</button></div>
+<div class="tiny" id="copy-status" role="status"></div>
+</div></div>
+</div></section>
+<section><div class="wrap">
+<div class="section-heading"><div class="eyebrow">What makes it different?</div><h2>More proof. Less chasing people.</h2>
+<p>Project-management software should not require one person to become the message carrier for every task.</p></div>
+<div class="two">
+<div class="panel"><h3>Living project memory</h3><p>Stable project identity, decisions, source references, changing requirements, disagreements, outcomes and recovery instructions.</p><p>People can step away without making the project forget what was actually done.</p></div>
+<div class="panel"><h3>Payback beyond money</h3><p>Track value as time saved, skills developed, public benefit, sustainable income, contributor credit and reusable innovations, without reducing every goal to revenue.</p><p>Never silently convert community contributions into commercial property.</p></div>
+</div>
+<div class="rail">The two website names are product proposals. This page does not establish domain deployment, company or charity registration, team accounts, payments, live autonomous agents, Quest integration, or any independently verified benefit.</div>
+<div class="more">
+<details><summary>Go deeper: source, evidence and limitations</summary>
+<p><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/GROUPBUILD_COTEAMING_COPAYBACK_R0_20261101.md">Read the GroupBuild dual-doorway architecture</a></p>
+<p><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COTEAMING_COPROJECTFIELD_R0_20261101.md">Inspect CoTeaming+ / CoProjectField+</a></p>
+<p><a href="https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md">Review the existing domain-role proposal in the Master Plan</a></p>
+<p>This prototype runs entirely within the page. It does not collect location, gaze, device identifiers, email addresses, login credentials or analytics. Your browser and GitHub Pages host may still process ordinary network access data.</p>
+</details></div>
+</div></section>
+</main><footer class="footer"><div class="wrap">CoCivium · GroupBuild+ concept lab. One mission, distinct governance and commerce hypotheses. <a href="../">Return to CoAcademy</a>.</div></footer>
+<script>
+(function(){
+"use strict";
+var projects={
+park:{title:"Revive a local park",goal:"Make a shared public space inviting, accessible and cared for.",human:"Residents choose priorities and approve plans.",synth:"Compare accessible ideas, discover tradeoffs and draft proposals.",auto:"Track opt-in tasks, dependencies and evidence.",first:"Create an accessible list of local priorities and invite consent-based feedback.",proof:"A participant can challenge one proposed priority and see what changed."},
+game:{title:"Build an inclusive neighborhood game",goal:"Design a playful game people of different ages and abilities can enjoy.",human:"Players and creators decide the kind of fun that matters and test accessibility.",synth:"Suggest varied rules and creative themes, highlighting potential barriers.",auto:"Check rule consistency, maintain versions and publish approved test summaries.",first:"Draft one playable rule and try it with a consenting participant.",proof:"A player can finish a round and explain how to improve the rules."},
+skills:{title:"Share skills across a neighborhood",goal:"Help people offer and request useful knowledge without pressure or profiling.",human:"Participants decide what they offer, request and consent to share.",synth:"Suggest optional skill matches and mentor formats without exposing private profiles.",auto:"Maintain opt-in availability, record completed exchanges and support deletion.",first:"Make one voluntary skills-exchange card, with no public identity requirement.",proof:"Two consenting adults complete an exchange and can correct the receipt."}
+};
+var active="park";
+function put(id,value){document.getElementById(id).textContent=value;}
+function display(){
+var p=projects[active];put("project-title",p.title);put("project-goal",p.goal);put("human-role",p.human);put("synth-role",p.synth);put("auto-role",p.auto);put("first-step",p.first);put("proof",p.proof);put("copy-status","");
+}
+document.querySelectorAll("[data-project]").forEach(function(b){b.addEventListener("click",function(){
+active=b.getAttribute("data-project");document.querySelectorAll("[data-project]").forEach(function(x){x.setAttribute("aria-pressed",String(x===b));});display();
+});});
+document.getElementById("copy").addEventListener("click",function(){
+var p=projects[active];var t="GroupBuild+ fictional example: "+p.title+"\nGoal: "+p.goal+"\nPeople: "+p.human+"\nSynths: "+p.synth+"\nAutomations: "+p.auto+"\nFirst action: "+p.first+"\nProof: "+p.proof+"\nNo real team or work created.";
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){put("copy-status","Copied the example brief.");},function(){put("copy-status","Copy was blocked by this browser.");});}
+else{put("copy-status","Clipboard unavailable in this browser. The brief remains visible above.");}
+});
+document.getElementById("route").addEventListener("click",function(){document.getElementById("doors").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"});});
+display();
+})();
+</script>
+</body></html>
