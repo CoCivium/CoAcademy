@@ -50,6 +50,18 @@ a{color:#b8effc}a:focus-visible,button:focus-visible{outline:3px solid #fbe6a5;o
 @media(max-width:750px){.co-hero{grid-template-columns:1fr;min-height:0;padding:25px 0}.co-orb{order:-1;max-width:250px}.co-doors{grid-template-columns:1fr}.co-door{min-height:105px}}
 @media(prefers-reduced-motion:reduce){.co-spin{animation:none!important}.co-door{transition:none!important}}
 
+
+.co-shell{min-height:100svh;background:radial-gradient(ellipse at 73% 30%,#59418a44,transparent 45%),radial-gradient(ellipse at 25% 15%,#16536950,transparent 40%),#0c1020}
+.co-hero{min-height:min(62svh,660px)}.co-hero h1{font-size:clamp(2.9rem,6.6vw,5.8rem);line-height:1.055}.co-orb{max-width:560px}
+.co-start{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.co-start a{border-radius:13px;display:inline-flex;align-items:center;min-height:55px;padding:13px 19px;font-size:1.06rem;font-weight:750;text-decoration:none}
+.co-start .co-primary{background:#bdf6de;color:#102f3b;border:1px solid #bdf6de;box-shadow:0 0 35px #63e6c42b}
+.co-start .co-secondary{color:#e5eeff;border:1px solid #8495b9}
+.co-depth-hint{color:#bacddd;font-size:.83rem;margin-top:16px}
+.co-deep{background:#111b2e;border:1px solid #586d8d;border-radius:17px;padding:18px 21px}.co-deep summary{display:block;cursor:pointer;list-style:none;border-radius:10px;padding:10px 12px;background:#1a2a45;color:#d9f6ec;font-weight:750}.co-deep summary::-webkit-details-marker{display:none}
+.co-deep summary::before{content:"＋ ";font-weight:700}.co-deep[open] summary::before{content:"− "}
+.co-deep summary:focus-visible{outline:3px solid #ffdcaa;outline-offset:3px}.co-catalogue{max-width:1160px}
+@media(max-width:750px){.co-hero{min-height:0;gap:0}.co-start a{width:100%;justify-content:center}.co-shell{min-height:0}.co-orb{max-width:290px}}
+@media(prefers-reduced-motion:reduce){.co-primary{box-shadow:none}}
 </style>
 </head>
 <body>
@@ -61,7 +73,10 @@ a{color:#b8effc}a:focus-visible,button:focus-visible{outline:3px solid #fbe6a5;o
 <div>
 <p class="co-eyebrow">One doorway. Many possible futures.</p>
 <h1>Better worlds begin with <em>better connections.</em></h1>
-<p class="co-lead">What if people and AI could find the missing connections between problems, ideas, and each other, then test which ones actually make life better?</p>
+<p class="co-lead">What if people and AI could find the missing connections between problems, ideas, and each other, then test which ones actually make life better?</p><div class="co-start" aria-label="Start experiencing CoCivium">
+<a class="co-primary" href="experience/">Enter the living world ↗</a>
+<a class="co-secondary" href="kitten/">Make something with BeaxaKitten ♡</a></div>
+<p class="co-depth-hint">No login. No installation. Explore ideas and time in your browser. Leave and return whenever you like.</p>
 </div>
 <div class="co-orb" role="img" aria-label="Illustrated orb linking ideas. This is a symbol, not a live AI system.">
 <svg viewBox="0 0 500 500" aria-hidden="true">
@@ -73,8 +88,8 @@ a{color:#b8effc}a:focus-visible,button:focus-visible{outline:3px solid #fbe6a5;o
 <g fill="#d8fff5"><circle cx="250" cy="250" r="18"/><circle cx="116" cy="180" r="10"/><circle cx="387" cy="175" r="10"/><circle cx="142" cy="357" r="9"/><circle cx="365" cy="351" r="8"/></g>
 </svg>
 </div></div>
-<h2 style="font-size:clamp(1.4rem,3vw,2.1rem);margin:0 0 8px;color:#fff">Choose your first encounter</h2>
-<p style="color:#d1e1ed;margin:0">Start with a living experience. Rotate, explore, change time, or simply watch. Nothing to install or sign up for.</p>
+<h2 style="font-size:clamp(1.4rem,3vw,2.1rem);margin:0 0 8px;color:#fff">Explore at your own pace</h2>
+<p style="color:#d1e1ed;margin:0">Follow what catches your eye. There is nothing to memorize.</p>
 <div class="co-doors">
 <a class="co-door" href="experience/"><strong>✧ Enter the Living World · 3D + CoTime</strong><span>Rotate a constellation of ideas, travel a conceptual timeline, and compare possible futures. Start with wonder.</span></a>
 <a class="co-door" href="#world"><strong>✦ What if we fixed the world?</strong><span>Follow a vast ambition through causes and consequences to a useful first test.</span></a>
@@ -89,7 +104,9 @@ a{color:#b8effc}a:focus-visible,button:focus-visible{outline:3px solid #fbe6a5;o
 <p style="font-size:1.04rem"><a href="coorb/">Explore source-linked CoOrbWare research →</a> &nbsp;·&nbsp; <a href="about/">Read the plain-language story, history and practical doorways →</a></p><p class="co-rail"><strong>Early, honest status:</strong> These are source-linked research previews, not a finished agentic CoCivium product. No visitor account, location, gaze, camera, or microphone access is used on this page. Children should explore with a guardian.</p>
 </div></section>
 
-<section class="co-catalogue" aria-label="CoAcademy research catalogue">
+<section class="co-catalogue" aria-label="Optional research and technical detail">
+<details class="co-deep">
+<summary>Go deeper: research, experiments, source code, and proof</summary>
 <h1>CoAcademy research catalogue</h1>
 <div class="muted">Evergreen public learning surface</div>
 <p>For humans, sessions, agents, AIs, and other curious readers trying not to mistake a headline for reality.</p>
@@ -196,6 +213,7 @@ a{color:#b8effc}a:focus-visible,button:focus-visible{outline:3px solid #fbe6a5;o
     <div>☞ <a href="civiclens/discovery.json">AI-readable discovery and limits</a></div>
   </div>
 </div>
+</details>
 </section>
 </body>
 </html>
