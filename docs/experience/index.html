@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1025"><meta name="color-scheme" content="dark">
+<title>CoCivium | Enter a Living World</title>
+<meta name="description" content="An interactive 3D-perspective journey through people, ideas and time. Explore possible futures, visible causal connections, and real research boundaries. A CoOrbWare public preview.">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://cocivium.github.io/CoAcademy/experience/">
+<meta property="og:type" content="website"><meta property="og:title" content="CoCivium | Enter a Living World"><meta property="og:description" content="Move through ideas in 3D and time. What world might we build together?">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CoCivium Living World R0","url":"https://cocivium.github.io/CoAcademy/experience/","isAccessibleForFree":true,"applicationCategory":"EducationalApplication","description":"An interactive, local-browser conceptual 3D perspective and time exploration with clearly hypothetical futures."}</script>
+<style>
+:root{font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark;--bg:#080d1b;--ink:#eff7ff;--muted:#d3deed;--edge:#657ba6;--mint:#baf2df}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#2b3263,transparent 56%),var(--bg);color:var(--ink)}
+a{color:#b8f2fa}button,select,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.6;cursor:default}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,canvas:focus-visible{outline:3px solid #ffe79f;outline-offset:3px}
+.wrap{width:min(1200px,calc(100% - 32px));margin:auto}
+header{padding:14px 0;border-bottom:1px solid #63739455}nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.brand{font-weight:800;letter-spacing:.05em;color:#fff;text-decoration:none;font-size:1.17rem}.status-pill{font-size:.78rem;border:1px solid #8495b5;color:#e1e9f8;padding:5px 12px;border-radius:30px}
+.intro{padding:25px 0 12px;display:flex;gap:18px;align-items:end;justify-content:space-between;flex-wrap:wrap}
+.eyebrow{font-size:.77rem;letter-spacing:.16em;color:#b8eadb;text-transform:uppercase}h1{font-size:clamp(2.2rem,5.2vw,4.8rem);letter-spacing:-.065em;line-height:1.04;margin:8px 0 11px}h1 em{font-style:normal;color:#bcf5de}
+.lead{font-size:1.07rem;color:#dce9f6;max-width:68ch;margin:0}
+.scene{border:1px solid #667da1;border-radius:19px;background:radial-gradient(circle at 50% 43%,#182747,#070e1d 72%);overflow:hidden;position:relative}
+#universe{display:block;width:100%;height:clamp(320px,54vw,580px);touch-action:none;cursor:grab}
+#universe:active{cursor:grabbing}
+.scene-top{position:absolute;top:13px;left:14px;right:14px;pointer-events:none;display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap}
+.scene-tag{background:#101b32c9;border:1px solid #7489a977;padding:5px 10px;border-radius:99px;font-size:.75rem;color:#e5f4ff}
+.scene-bottom{position:absolute;bottom:12px;left:14px;right:14px;pointer-events:none;display:flex;justify-content:space-between;gap:12px;align-items:end}
+.scene-bottom p{max-width:66ch;background:#111b2ad8;padding:6px 12px;border-radius:10px;margin:0;font-size:.84rem;color:#d8e8f1}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:15px 0}
+.chip{border:1px solid #8ca1c2;background:#192946;color:#f3f9ff;border-radius:11px;padding:11px 14px;min-height:46px}
+.chip[aria-pressed=true]{background:#b9f2e2;border-color:#b9f2e2;color:#10263a;font-weight:720}
+.selectGroup{display:flex;flex-wrap:wrap;gap:8px}
+.timeline{background:linear-gradient(120deg,#1a2340,#141e36);border:1px solid #586f91;border-radius:16px;padding:18px 21px;margin:4px 0 14px}
+.timeline h2{font-size:1.23rem;margin:0 0 9px;letter-spacing:-.025em}
+.timeline label{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#eaf5ff;font-weight:670;flex-wrap:wrap}
+.timeline input{display:block;width:100%;accent-color:#b9f2e2;margin:13px 0;height:25px}
+.ticks{display:flex;justify-content:space-between;color:#d2ddf3;font-size:.83rem;gap:10px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin:15px 0 35px}
+.card{background:#17223d;border:1px solid #50698e;border-radius:15px;padding:20px}
+.card h2{font-size:1.18rem;margin:0 0 11px}
+.card p{color:#d9e4f2;margin:7px 0}
+.card .accent{color:#c7f4db}
+#relation{font-size:1.02rem;min-height:70px}
+.scenario{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.scenario button{border:1px solid #829bb9;background:#253551;color:#eef7ff;border-radius:10px;padding:9px 13px;min-height:44px}
+.scenario button[aria-pressed=true]{background:#b5f1df;border-color:#b5f1df;color:#102434}
+.why{border-left:3px solid #e2c1ec;padding:9px 12px;background:#262945;color:#ece8fa}
+.links{display:flex;gap:9px;flex-wrap:wrap;padding-top:16px}
+.links a{padding:10px 13px;border:1px solid #98b3d0;border-radius:10px;text-decoration:none;font-weight:650}
+.hints{color:#c9d5ea;font-size:.88rem}
+footer{padding:20px 0 34px;border-top:1px solid #55698d;font-size:.85rem;color:#bfcee3}
+@media(max-width:740px){.grid{grid-template-columns:1fr}.scene-bottom p{font-size:.72rem}.scene-top .scene-tag:nth-child(2){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header><nav class="wrap"><a href="../" class="brand">CoCivium · CoOrbWare</a><span class="status-pill">Living World R0 · Public research preview</span></nav></header>
+<main class="wrap">
+<section class="intro"><div><span class="eyebrow">An invitation into possibility</span><h1>Imagine the world <em>in connections.</em></h1>
+<p class="lead">Move through a three-dimensional web of ideas. Shift through time. Discover where care, creativity, evidence and tools might change what happens next.</p></div></section>
+<section class="scene" aria-label="Interactive 3D-perspective relational map">
+<canvas id="universe" tabindex="0" role="img" aria-label="Perspective-projected interactive network of six labeled ideas. Drag to rotate, click a node to explore it, or use keyboard arrows. The time slider changes the hypothetical connections.">Six connected concepts: Care, Knowledge, Creativity, Trust, Community, and Tools.</canvas>
+<div class="scene-top"><span class="scene-tag" id="sceneName">One connected world</span><span class="scene-tag" id="phaseTag">Now · Conceptual model</span></div>
+<div class="scene-bottom"><p>Drag to orbit · Select a glowing node · Arrow keys rotate · No headset sensors or personal data</p></div>
+</section>
+<section class="toolbar" aria-label="Explore and control">
+<span class="hints">Explore a viewpoint:</span>
+<div class="selectGroup" role="group" aria-label="Viewpoint">
+<button type="button" class="chip" data-lens="world" aria-pressed="true">The world</button>
+<button type="button" class="chip" data-lens="create" aria-pressed="false">Making things</button>
+<button type="button" class="chip" data-lens="together" aria-pressed="false">Working together</button>
+</div>
+<button type="button" class="chip" id="motion" aria-pressed="false">Pause motion</button>
+<button type="button" class="chip" id="reset">Reset view</button>
+</section>
+<section class="timeline" aria-label="CoTime interaction">
+<h2>CoTime: what changes when time moves?</h2>
+<label for="time">Slide from yesterday through today toward possible futures <output id="timeValue" for="time">Today · 2026 (conceptual)</output></label>
+<input id="time" type="range" min="0" max="100" step="1" value="50" aria-label="Move between past, present and possible future scenarios">
+<div class="ticks"><span>Earlier ideas</span><span>Today</span><span>Possible futures</span></div>
+<p class="hints">The slider changes an illustrative relationship network. It is <strong>not historical measurement, an AI forecast or a prediction about actual people.</strong></p>
+</section>
+<section class="grid">
+<article class="card" aria-labelledby="relationTitle">
+<h2 id="relationTitle">Find the connections people miss</h2>
+<p class="accent" id="focusName">Selected idea: Care</p>
+<p id="relation" role="status" aria-live="polite">Care connects to knowledge when people notice the needs behind a question.</p>
+<p class="hints">Select different ideas in the glowing world. Their possible relationships change as you move through CoTime.</p>
+<div class="links"><a href="../coorb/">Inspect the source-linked CoOrbWare prototype →</a></div>
+</article>
+<article class="card" aria-labelledby="possibilityTitle"><h2 id="possibilityTitle">Which future would you try?</h2>
+<p>Two directions for the same tools. Neither is inevitable.</p>
+<div class="scenario" role="group" aria-label="Hypothetical directions">
+<button data-scenario="open" aria-pressed="true" type="button">Open, consent-based</button>
+<button data-scenario="closed" aria-pressed="false" type="button">Closed, controlled</button>
+</div>
+<p class="accent" id="possibility">Possible future: People can challenge claims, choose connections, and change their minds.</p>
+<p class="why"><strong>What could distinguish them?</strong> Observe whether participants can inspect a claim, correct errors and withdraw permission without losing their work.</p>
+</article>
+</section>
+<section class="card" style="margin-bottom:30px">
+<h2>What would you like to do next?</h2>
+<p>There is more to explore than watching a beautiful animation. Build a world with BeaxaKitten, follow the real source links, or tell us which connection is missing.</p>
+<div class="links"><a href="../kitten/">Create worlds, games and stories →</a><a href="../about/">About CoCivium →</a><a href="https://github.com/CoCivium/CoCivium/issues">Challenge the research →</a></div>
+<p class="hints">No accounts, cookies, ads, tracking, autoplay audio, gaze collection, artificial streaks or compulsive rewards. This is a perspective-rendered browser illustration, <strong>not immersive VR</strong> and not a functioning world simulator. Movement, choices and hypothetical futures remain on this page.</p>
+</section>
+</main>
+<footer><div class="wrap">CoCivium · Public research preview · <a href="https://github.com/CoCivium/CoAcademy/blob/master/docs/experience/index.html">Inspect this page's source</a> · <a href="../">Return home</a></div></footer>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id),canvas=$("universe"),context=canvas.getContext("2d",{alpha:false});
+if(!context){$("relation").textContent="Your browser cannot draw the interactive map. Use the source-linked CoOrbWare route below.";return;}
+const TAU=Math.PI*2;
+const nodes=[
+{id:"Care",p:[-1.5,.55,.7],rgb:[157,239,206],desc:"Care notices needs that systems might otherwise miss."},
+{id:"Knowledge",p:[-.05,1.52,-.55],rgb:[166,220,255],desc:"Knowledge is stronger when claims carry sources and uncertainty."},
+{id:"Creativity",p:[1.55,.65,.55],rgb:[255,198,143],desc:"Creativity makes alternative futures imaginable, then testable."},
+{id:"Trust",p:[-.75,-.95,-1.3],rgb:[212,172,252],desc:"Trust grows when evidence can be challenged and corrected."},
+{id:"Community",p:[1,-1.4,.4],rgb:[244,162,210],desc:"Community helps separate shared purpose from centralized control."},
+{id:"Tools",p:[0,-.2,1.75],rgb:[155,227,234],desc:"Tools should extend ability without becoming the owner of a person's choices."}
+];
+const links=[[0,1],[0,4],[0,3],[1,2],[1,3],[1,5],[2,4],[2,5],[3,4],[3,5],[4,5],[0,2]];
+const lenses={world:{text:"One connected world",focus:0},create:{text:"Make a possible world",focus:2},together:{text:"Imagine working together",focus:4}};
+const scenarioPhrases={
+open:"Possible future: People can challenge claims, choose connections, and change their minds.",
+closed:"Possible future: Fewer people can inspect or change the rules, even when the tools become more powerful."
+};
+let yaw=-.28,pitch=.14,turning=true,selected=0,lens="world",scenario="open",time=50,frame=0,drag=null,positions=[];
+let motionReduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(motionReduced)turning=false;
+function resize(){
+const dpr=Math.min(2,window.devicePixelRatio||1),r=canvas.getBoundingClientRect();
+const w=Math.max(300,Math.round(r.width*dpr)),h=Math.max(240,Math.round(r.height*dpr));
+if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+return {w,h,scale:Math.min(w,h)/5.5};
+}
+function phase(){return time<35?"Earlier ideas":time<65?"Today":"Possible futures";}
+function timeText(){return time<35?"Earlier ideas · illustrative":time<65?"Today · 2026 (conceptual)":"Future · scenario, not prediction";}
+function update(){
+$("phaseTag").textContent=phase()+" · Conceptual model";
+$("timeValue").textContent=timeText();
+$("focusName").textContent="Selected idea: "+nodes[selected].id;
+const n=nodes[selected];
+const verb=time<35?"We can ask how "+n.id.toLowerCase()+" has been approached before.":time<65?n.desc:scenario==="open"?"What might "+n.id.toLowerCase()+" enable if participants retain consent and the ability to correct errors?":"What happens to "+n.id.toLowerCase()+" when a few actors control the rules and evidence?";
+$("relation").textContent=verb;
+$("possibility").textContent=scenarioPhrases[scenario];
+$("sceneName").textContent=lenses[lens].text;
+}
+function projection(p,w,h,scale){
+const x=p[0],y=p[1],z=p[2],cy=Math.cos(yaw),sy=Math.sin(yaw);
+const xx=x*cy+z*sy,zz=-x*sy+z*cy,cp=Math.cos(pitch),sp=Math.sin(pitch),yy=y*cp-zz*sp,depth=y*sp+zz*cp;
+const persp=4.7/(4.7+depth*.37);
+return {x:w/2+xx*scale*persp,y:h/2-yy*scale*persp,z:depth,persp};
+}
+function rgb(c,alpha){return "rgba("+c[0]+","+c[1]+","+c[2]+","+alpha+")";}
+function line(a,b,opacity,col,width){
+context.beginPath();context.moveTo(a.x,a.y);context.lineTo(b.x,b.y);
+context.lineWidth=width;context.strokeStyle=rgb(col,opacity);context.stroke();
+}
+function glow(x,y,r,color,alpha){
+const g=context.createRadialGradient(x,y,0,x,y,r);
+g.addColorStop(0,rgb(color,alpha));g.addColorStop(.36,rgb(color,alpha*.34));g.addColorStop(1,rgb(color,0));
+context.fillStyle=g;context.beginPath();context.arc(x,y,r,0,TAU);context.fill();
+}
+function draw(t){
+const {w,h,scale}=resize();
+context.fillStyle="#080f20";context.fillRect(0,0,w,h);
+const shift=frame*.11;
+for(let i=0;i<125;i++){
+const xx=((i*107.17+29)%1000)/1000*w,yy=((i*367.31+15)%1000)/1000*h;
+const a=.13+.12*(Math.sin(i*3+shift*.03)**2);
+context.fillStyle="rgba(206,229,255,"+a+")";context.fillRect(xx,yy,Math.max(1,w/950),Math.max(1,h/600));
+}
+const center={x:w/2,y:h/2};
+glow(center.x,center.y,Math.min(w,h)*.43,[73,91,158],.26);
+positions=nodes.map(n=>projection(n.p,w,h,scale));
+const strength=(time<35?.28:time<65?.53:.8)*(scenario==="open"?1:.64);
+for(let i=0;i<links.length;i++){
+const [a,b]=links[i];if(time<35 && i%3===1)continue;
+if(time<65 && i%5===3)continue;
+const c=nodes[a].rgb,alpha=strength*((a===selected||b===selected)?1:.5);
+line(positions[a],positions[b],alpha,c,Math.max(1.5,w/570));
+if((a===selected||b===selected)&&time>65){
+const f=(Math.sin(t*.0006+i)*.5+.5),p={x:positions[a].x+(positions[b].x-positions[a].x)*f,y:positions[a].y+(positions[b].y-positions[a].y)*f};
+glow(p.x,p.y,scale*.12,c,.53);
+}
+}
+for(const [i,n] of nodes.entries()){
+const p=positions[i],radius=Math.max(6,scale*.092*p.persp)*(i===selected?1.42:1);
+glow(p.x,p.y,radius*3.3,n.rgb,i===selected?.55:.28);
+context.beginPath();context.arc(p.x,p.y,radius,0,TAU);context.fillStyle=rgb(n.rgb,.95);context.fill();
+context.lineWidth=i===selected?Math.max(2,w/500):1.2;context.strokeStyle="rgba(241,253,255,.8)";context.stroke();
+context.font=(i===selected?"700 ":"500 ")+Math.max(13,Math.min(20,w/65))+"px system-ui,sans-serif";
+context.textAlign="center";context.textBaseline="top";context.fillStyle="#e9faff";
+context.shadowColor="#02050f";context.shadowBlur=6;
+context.fillText(n.id,p.x,p.y+radius+5);context.shadowBlur=0;
+}
+if(turning&&!drag){yaw+=.0017*(motionReduced?0:1);frame++;}
+window.requestAnimationFrame(draw);
+}
+function point(ev){const r=canvas.getBoundingClientRect();return {x:(ev.clientX-r.left)*canvas.width/r.width,y:(ev.clientY-r.top)*canvas.height/r.height};}
+canvas.addEventListener("pointerdown",ev=>{drag={x:ev.clientX,y:ev.clientY,startX:ev.clientX,startY:ev.clientY};canvas.setPointerCapture(ev.pointerId);});
+canvas.addEventListener("pointermove",ev=>{if(!drag)return;const dx=ev.clientX-drag.x,dy=ev.clientY-drag.y;yaw+=dx*.009;pitch=Math.max(-1.3,Math.min(1.3,pitch+dy*.007));drag.x=ev.clientX;drag.y=ev.clientY;});
+canvas.addEventListener("pointerup",ev=>{if(!drag)return;const moved=Math.hypot(ev.clientX-drag.startX,ev.clientY-drag.startY);if(moved<12){const p=point(ev);let best=Infinity,hit=-1;positions.forEach((n,i)=>{const d=Math.hypot(n.x-p.x,n.y-p.y);if(d<best){best=d;hit=i;}});if(best<Math.min(canvas.width,canvas.height)*.17){selected=hit;update();}}drag=null;});
+canvas.addEventListener("pointercancel",()=>{drag=null;});
+canvas.addEventListener("keydown",ev=>{let acted=true;if(ev.key==="ArrowLeft")yaw-=.13;else if(ev.key==="ArrowRight")yaw+=.13;else if(ev.key==="ArrowUp")pitch=Math.min(1.3,pitch+.13);else if(ev.key==="ArrowDown")pitch=Math.max(-1.3,pitch-.13);else if(ev.key==="Enter"){selected=(selected+1)%nodes.length;update();}else acted=false;if(acted)ev.preventDefault();});
+$("motion").addEventListener("click",()=>{turning=!turning;$("motion").textContent=turning?"Pause motion":"Resume motion";$("motion").setAttribute("aria-pressed",String(!turning));});
+if(!turning){$("motion").textContent="Resume motion";$("motion").setAttribute("aria-pressed","true");}
+$("reset").addEventListener("click",()=>{yaw=-.28;pitch=.14;selected=lenses[lens].focus;time=50;$("time").value="50";update();});
+$("time").addEventListener("input",ev=>{time=Number(ev.target.value);update();});
+document.querySelectorAll("[data-lens]").forEach(b=>b.addEventListener("click",()=>{
+lens=b.dataset.lens;selected=lenses[lens].focus;document.querySelectorAll("[data-lens]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));update();
+}));
+document.querySelectorAll("[data-scenario]").forEach(b=>b.addEventListener("click",()=>{
+scenario=b.dataset.scenario;document.querySelectorAll("[data-scenario]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));update();
+}));
+document.addEventListener("visibilitychange",()=>{if(document.hidden)turning=false;});
+update();requestAnimationFrame(draw);
+})();
+</script></body></html>
