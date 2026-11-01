@@ -5,17 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="alternate" type="application/rss+xml" title="CoRelay public-source snapshot" href="relay/feed.xml">
 <link rel="alternate" type="application/json" title="CoRelay evidence contract" href="relay/discovery.json">
-<title>CoAcademy ✨</title>
+<title>CoCivium | Explore better connections and big ideas</title>
+<meta name="description" content="Explore CoCivium: big ideas, visual relations, small honest tests, and a family-friendly NickBar preview. A public research project.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/">
 <style>
 body{font-family:Segoe UI,Arial,sans-serif;max-width:1180px;margin:32px auto;padding:0 20px;line-height:1.55;color:#111;background:#fcfcfd}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .card{border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;box-shadow:0 1px 8px rgba(0,0,0,.04)}
 a{text-decoration:none} a:hover{text-decoration:underline}
 small,.muted{color:#555}
+
+/* Human first-use entry R0; existing research catalogue retained below. */
+:root{color-scheme:dark}
+body{max-width:none;margin:0;padding:0;background:#0d1020;color:#eff5ff;line-height:1.5}
+a{color:#b8effc}a:focus-visible,button:focus-visible{outline:3px solid #fbe6a5;outline-offset:4px}
+.co-shell{background:radial-gradient(ellipse at 77% 10%,#3a3476 0%,transparent 62%),#0c1020;color:#eff7ff;padding:0 20px 34px}
+.co-inner{max-width:1160px;margin:auto}
+.co-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:1px solid #ffffff30;padding:20px 0}
+.co-mark{font-size:1.25rem;font-weight:800;letter-spacing:.05em;color:#fff;text-decoration:none}
+.co-note{font-size:.82rem;color:#d2dcf2}
+.co-hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:16px;min-height:350px;padding:35px 0}
+.co-hero h1{font-size:clamp(2.7rem,6vw,5.3rem);line-height:1.03;letter-spacing:-.06em;max-width:700px;margin:10px 0}
+.co-hero h1 em{font-style:normal;color:#b4efdf}.co-hero .co-lead{font-size:clamp(1.06rem,2vw,1.3rem);color:#d5e2f3;max-width:50ch}
+.co-eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#b6dfea}
+.co-orb{width:100%;max-width:410px;margin:auto}.co-orb svg{width:100%;height:auto;filter:drop-shadow(0 15px 36px #0006)}
+.co-spin{transform-origin:50% 50%;animation:co-rotate 60s linear infinite}.co-spin.co-back{animation-direction:reverse;animation-duration:83s}
+@keyframes co-rotate{to{transform:rotate(360deg)}}
+.co-doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0 24px}
+.co-door{display:block;border:1px solid #8295b6;border-radius:18px;background:#1a2541;color:#f0fcff;padding:22px;text-decoration:none;min-height:158px;transition:transform .2s,border-color .2s,background .2s}
+.co-door strong{display:block;font-size:1.3rem;margin-bottom:8px}.co-door span{display:block;color:#d6dff1;font-size:.92rem}
+.co-door:hover{border-color:#aeece4;background:#293f5d;transform:translateY(-3px)}.co-door:focus-visible{outline:3px solid #fbe6a5}
+.co-rail{border-left:3px solid #ceabea;padding:10px 13px;color:#d1d9e8;font-size:.88rem;margin:18px 0 30px}
+.co-world{background:#1a2945;border:1px solid #536e90;border-radius:18px;padding:20px 24px;margin:16px 0 32px}
+.co-world summary{font-size:1.12rem;cursor:pointer;font-weight:700;color:#d5fff3}
+.co-world p{color:#e0e5f4}.co-world ol{color:#e0e5f4}.co-world li{margin:9px 0}.co-world a{color:#c3eeff}
+.co-catalogue{max-width:1180px;margin:25px auto 70px;padding:0 20px}
+.co-catalogue>h1{font-size:1.55rem;color:#eef3ff;margin:0}
+.co-catalogue>p{color:#bfcddd}
+.co-catalogue .grid{margin-top:15px}
+.co-catalogue .card{background:#1a2540;color:#e5efff;border:1px solid #526481;box-shadow:none}
+.co-catalogue .card h2{font-size:1.1rem;color:#f0f5ff}.co-catalogue .card p{color:#d3ddeb}
+.co-catalogue .muted,.co-catalogue small{color:#cbd7e7}
+@media(max-width:750px){.co-hero{grid-template-columns:1fr;min-height:0;padding:25px 0}.co-orb{order:-1;max-width:250px}.co-doors{grid-template-columns:1fr}.co-door{min-height:105px}}
+@media(prefers-reduced-motion:reduce){.co-spin{animation:none!important}.co-door{transition:none!important}}
+
 </style>
 </head>
 <body>
-<h1>✨ CoAcademy</h1>
+
+<section class="co-shell" aria-label="Welcome to CoCivium">
+<div class="co-inner">
+<div class="co-top"><a class="co-mark" href="./">CoCivium</a><span class="co-note">Public research · Explore freely · No login</span></div>
+<div class="co-hero">
+<div>
+<p class="co-eyebrow">One doorway. Many possible futures.</p>
+<h1>Better worlds begin with <em>better connections.</em></h1>
+<p class="co-lead">What if people and AI could find the missing connections between problems, ideas, and each other, then test which ones actually make life better?</p>
+</div>
+<div class="co-orb" role="img" aria-label="Illustrated orb linking ideas. This is a symbol, not a live AI system.">
+<svg viewBox="0 0 500 500" aria-hidden="true">
+<defs><radialGradient id="co-core"><stop stop-color="#e5fff4"/><stop offset=".3" stop-color="#9be3ee"/><stop offset=".74" stop-color="#6757ac"/><stop offset="1" stop-color="#30497b" stop-opacity="0"/></radialGradient></defs>
+<circle cx="250" cy="250" r="138" fill="url(#co-core)" opacity=".75"/>
+<g class="co-spin" fill="none" stroke-width="2"><ellipse cx="250" cy="250" rx="205" ry="110" transform="rotate(-21 250 250)" stroke="#a3f7e9" opacity=".7"/><ellipse cx="250" cy="250" rx="205" ry="110" transform="rotate(66 250 250)" stroke="#e3baf8" opacity=".6"/></g>
+<g class="co-spin co-back" fill="none"><ellipse cx="250" cy="250" rx="220" ry="76" transform="rotate(21 250 250)" stroke="#abd3f8" stroke-width="2" opacity=".6"/></g>
+<path d="M116 180L250 250 387 175M250 250L142 357 365 351 387 175M142 357L116 180" fill="none" stroke="#b1f5e8" stroke-width="2" opacity=".7"/>
+<g fill="#d8fff5"><circle cx="250" cy="250" r="18"/><circle cx="116" cy="180" r="10"/><circle cx="387" cy="175" r="10"/><circle cx="142" cy="357" r="9"/><circle cx="365" cy="351" r="8"/></g>
+</svg>
+</div></div>
+<h2 style="font-size:clamp(1.4rem,3vw,2.1rem);margin:0 0 8px;color:#fff">Choose your first encounter</h2>
+<p style="color:#d1e1ed;margin:0">Start with a big idea. Then find a real place to begin.</p>
+<div class="co-doors">
+<a class="co-door" href="coorb/"><strong>✧ See the whole weave</strong><span>Explore a visual web of relationships, possibilities, and the evidence behind them.</span></a>
+<a class="co-door" href="#world"><strong>✦ What if we fixed the world?</strong><span>Follow a vast ambition through causes and consequences to a useful first test.</span></a>
+<a class="co-door" href="rickbar/?name=NickBar"><strong>♡ Meet BeaxaKitten</strong><span>A friendly first step for curious explorers. NickBar is an early preview, not yet a kitten game.</span></a>
+</div>
+<details class="co-world" id="world">
+<summary>From a world-scale problem to one verifiable change</summary>
+<p><strong>Ambition:</strong> Make trustworthy knowledge useful to everyone, not just people with time, money, and specialist training.</p>
+<ol><li><strong>Causes:</strong> Inaccessible explanations and untraceable claims leave people unable to challenge decisions.</li><li><strong>Leverage:</strong> Link every claim to readable evidence, alternatives and accessible presentations.</li><li><strong>First test:</strong> Can a newcomer explain and contest one complex claim after a short, source-linked encounter?</li><li><strong>What would change our minds?</strong> If readers remain confused or cannot find evidence, redesign the explanation and measure again.</li></ol>
+<p><a href="coorb/">Explore relationships in CoOrbWare →</a></p>
+</details>
+<p class="co-rail"><strong>Early, honest status:</strong> These are source-linked research previews, not a finished agentic CoCivium product. No visitor account, location, gaze, camera, or microphone access is used on this page. Children should explore with a guardian.</p>
+</div></section>
+
+<section class="co-catalogue" aria-label="CoAcademy research catalogue">
+<h1>CoAcademy research catalogue</h1>
 <div class="muted">Evergreen public learning surface</div>
 <p>For humans, sessions, agents, AIs, and other curious readers trying not to mistake a headline for reality.</p>
 
@@ -121,5 +196,6 @@ small,.muted{color:#555}
     <div>☞ <a href="civiclens/discovery.json">AI-readable discovery and limits</a></div>
   </div>
 </div>
+</section>
 </body>
 </html>
