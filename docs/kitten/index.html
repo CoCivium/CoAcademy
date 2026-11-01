@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeaxaKitten | Worlds, Games & Stories · CoCivium</title>
+<meta name="description" content="A calm kitten companion for creators: sketch worlds, game ideas, and stories; discover your creative strengths; keep a private, optional progress journal. Early browser experiment.">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#12162a">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/kitten/">
+<style>
+:root{color-scheme:dark;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;--base:#0c1122;--ink:#eff7ff;--sub:#c6d4e7;--stroke:#52698b;--card:#19243e;--mint:#c0f3e1;--lilac:#d6b8f5}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 80% 0,#303966 0,transparent 55%),var(--base)}
+button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}
+button,a,select{touch-action:manipulation}a{color:#c5effb}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #ffe49d;outline-offset:4px}
+.wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+header{padding:18px 0;border-bottom:1px solid #52698b66}nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;align-items:center}
+.brand{font-size:1.18rem;letter-spacing:.045em;font-weight:800;text-decoration:none;color:#fff}
+.pill{font-size:.83rem;color:#d9e8fb;border:1px solid #8092b2;border-radius:99px;padding:6px 11px}
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(190px,.7fr);gap:25px;align-items:center;padding:35px 0 15px}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#b2e9df}
+h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.07;letter-spacing:-.055em;margin:8px 0 13px}
+h1 em{font-style:normal;color:#c6f4df}.lead{font-size:1.1rem;color:#d9e5f5;max-width:58ch}
+.cat-zone{min-width:0;display:grid;place-items:center;gap:5px}
+.cat-button{position:relative;display:block;border:0;border-radius:35%;padding:7px;background:transparent;min-width:170px;max-width:250px;width:100%;transition:transform .25s}
+.cat-button:hover{transform:rotate(-4deg)}.cat-button svg{width:100%;filter:drop-shadow(0 15px 27px #0014)}
+.cat-button.petted{animation:purr .7s ease-in-out 1}
+@keyframes purr{25%{transform:rotate(-5deg) scale(1.07)}70%{transform:rotate(4deg) scale(1.04)}}
+.cat-status{font-size:.87rem;color:#d6e3f3;text-align:center}
+.section{margin:25px 0 32px}.section h2{font-size:1.5rem;margin:0 0 8px}.sub{color:var(--sub);margin:5px 0 15px}
+.paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.path{border:1px solid #657c9e;background:#1b2843;color:#e9f5ff;border-radius:15px;padding:18px;min-height:124px;text-align:left}
+.path strong{display:block;font-size:1.17rem;margin-bottom:6px}.path span{display:block;color:#cbd9eb;font-size:.91rem}
+.path[aria-pressed=true]{border-color:var(--mint);box-shadow:inset 0 0 0 1px var(--mint);background:#2a4054}
+.panel{background:linear-gradient(130deg,#1c2944,#141d34);border:1px solid #5d7396;border-radius:18px;padding:clamp(17px,3.5vw,29px);margin-top:15px}
+.panel h3{font-size:1.25rem;margin:0 0 13px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+label{display:block;font-size:.9rem;font-weight:700;margin-bottom:5px}
+select{width:100%;background:#101a30;color:#f4f8ff;border-radius:9px;border:1px solid #9bafcc;padding:10px;min-height:46px}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+.action{display:inline-flex;align-items:center;justify-content:center;min-height:45px;background:transparent;border:1px solid #a0b2c8;color:#effbff;border-radius:10px;padding:10px 15px;font-weight:690;text-decoration:none}
+.action.main{color:#102338;background:#b7efe4;border-color:#b7efe4}
+.sketch{border-left:3px solid #bcf5df;background:#283b57;padding:14px 16px;margin-top:17px;min-height:75px;white-space:pre-wrap}
+.sketch strong{display:block}.sketch p{margin:5px 0;color:#e0eaff}
+.adv{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.card{border:1px solid #516a8a;background:#19243d;border-radius:15px;padding:19px}
+.card h3{margin:0 0 7px;font-size:1.12rem}.card p{margin:5px 0;color:#cedbed}
+.strengths{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}
+.strength{background:#293858;border:1px solid #7890ac;border-radius:99px;color:#eaf6ff;padding:9px 13px}
+.strength[aria-pressed=true]{background:#b9efd9;color:#102a32}
+.note{border-left:3px solid #beabed;padding:9px 12px;background:#252743;color:#e4e7f7;font-size:.88rem}
+.inventory{margin:12px 0 0;padding:0;list-style:none}.inventory li{padding:9px 0;border-bottom:1px solid #5b6a8070;color:#d9e7f6}
+.badges{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0}
+.badge{padding:9px 12px;border-radius:12px;border:1px solid #687f9e;background:#283956;color:#f2f7ff;font-size:.87rem}
+.badge.locked{opacity:.6}
+.journal{list-style:none;margin:12px 0;padding:0;max-height:260px;overflow:auto}.journal li{border:1px solid #64799b;border-radius:10px;margin:8px 0;padding:10px 13px;background:#1f304b}
+.journal time{font-size:.8rem;color:#cbd7e7}.journal p{margin:5px 0}
+footer{border-top:1px solid #52698b80;padding:21px 0 32px;color:#c7d5e8;font-size:.9rem}
+@media(max-width:740px){.hero{grid-template-columns:1fr}.cat-zone{order:-1}.cat-button{max-width:180px}.paths,.adv,.grid2{grid-template-columns:1fr}.path{min-height:100px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head><body>
+<header><nav class="wrap"><a href="../" class="brand">CoCivium · BeaxaKitten</a><span class="pill">Creative companion · Browser prototype</span></nav></header>
+<main class="wrap">
+<section class="hero" aria-label="Welcome">
+<div><p class="eyebrow">Creator's corner</p><h1>Make worlds. <em>Grow possibilities.</em></h1>
+<p class="lead">BeaxaKitten likes big dreams, strange inventions, and small discoveries. She won't grade you as a person. She'll help you see what you've made and what you might try next.</p>
+<p class="note">Experiment only: This kitten lives on this webpage, not across Quest apps or devices. No accounts, camera, microphone, location, eye tracking, payments or uploads.</p></div>
+<div class="cat-zone">
+<button id="pet" class="cat-button" type="button" aria-label="Pet BeaxaKitten; a friendly local animation" title="Pet the kitten">
+<svg viewBox="0 0 230 225" role="img" aria-labelledby="kittenDesc"><title id="kittenDesc">A friendly luminous kitten sitting with its tail curled</title>
+<defs><linearGradient id="fur" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7fff8"/><stop offset=".65" stop-color="#a9dff0"/><stop offset="1" stop-color="#8c9ddd"/></linearGradient></defs>
+<path d="M143 147q71-5 55 43q-11 20-42 2" fill="none" stroke="#91a7e6" stroke-width="19" stroke-linecap="round"/>
+<ellipse cx="115" cy="171" rx="66" ry="43" fill="#9eb2e6" stroke="#30456e" stroke-width="5"/>
+<path d="M45 84L29 20 82 45Q115 34 148 45L204 20 188 90Q204 144 154 162Q101 181 56 153Q19 130 45 84Z" fill="url(#fur)" stroke="#2b4268" stroke-width="6" stroke-linejoin="round"/>
+<path d="M49 71L42 36 74 55M182 70L191 35 159 55" fill="#e5aede"/>
+<ellipse cx="83" cy="103" rx="9" ry="13" fill="#1c2851"/><ellipse cx="150" cy="103" rx="9" ry="13" fill="#1c2851"/>
+<circle cx="87" cy="99" r="3" fill="white"/><circle cx="153" cy="99" r="3" fill="white"/>
+<path d="M107 121L124 121 115 130Z" fill="#b55d99"/><path d="M115 130q-13 14-28 4m28-4q12 14 28 4" fill="none" stroke="#284162" stroke-width="4" stroke-linecap="round"/>
+<path d="M71 126L22 120m49 15l-46 14m133-23l49-6m-49 15l46 14" stroke="#b7d0ea" stroke-width="3"/>
+<ellipse cx="78" cy="197" rx="26" ry="13" fill="#bdd8f5"/><ellipse cx="148" cy="197" rx="26" ry="13" fill="#bdd8f5"/>
+</svg></button>
+<div class="cat-status" role="status" aria-live="polite" id="cat-status">BeaxaKitten is resting. Tap to say hello.</div>
+</div></section>
+<section class="section" aria-labelledby="makeTitle"><h2 id="makeTitle">What shall we invent?</h2><p class="sub">Every great creation begins with a sketch. Choose a path and make one.</p>
+<div class="paths">
+<button class="path" data-path="worlds" aria-pressed="true" type="button"><strong>🌍 Worlds</strong><span>Build places and decide how they work.</span></button>
+<button class="path" data-path="games" aria-pressed="false" type="button"><strong>🎮 Games</strong><span>Invent challenges, rules, and rewards.</span></button>
+<button class="path" data-path="stories" aria-pressed="false" type="button"><strong>✨ Stories</strong><span>Imagine characters and surprise endings.</span></button>
+</div>
+<div class="panel" aria-label="Creator workbench">
+<h3 id="bench-title">Sketch a world</h3><p class="sub" id="bench-help">Choose two ingredients for a world nobody has visited before.</p>
+<div class="grid2">
+<div><label id="label-a" for="idea-a">Environment</label><select id="idea-a"></select></div>
+<div><label id="label-b" for="idea-b">Special rule</label><select id="idea-b"></select></div>
+</div>
+<div class="actions"><button class="action main" id="preview" type="button">Create a sketch</button><button class="action" id="clear-sketch" type="button">Start over</button></div>
+<div class="sketch" id="sketch" role="status" aria-live="polite">Your new idea will appear here. Nothing is saved automatically.</div>
+<div class="actions"><button class="action" id="save" type="button" disabled>Save this sketch to this browser + earn a badge</button></div>
+<p class="sub">A saved sketch earns a local **Creator Seed** badge. Badges and CoDots here are playful, not money or a rating of you. No daily streaks or pressure.</p>
+</div></section>
+<section class="section" aria-labelledby="advTitle">
+<h2 id="advTitle">Your advantages and where they help</h2><p class="sub">Pick what you enjoy. BeaxaKitten will suggest how to use that strength. You decide what fits.</p>
+<div class="adv">
+<div class="card"><h3>What do you enjoy doing?</h3><div class="strengths">
+<button class="strength" data-strength="drawing" type="button" aria-pressed="false">Drawing</button>
+<button class="strength" data-strength="building" type="button" aria-pressed="false">Building</button>
+<button class="strength" data-strength="rules" type="button" aria-pressed="false">Inventing rules</button>
+<button class="strength" data-strength="telling" type="button" aria-pressed="false">Telling stories</button>
+</div><p id="strength-result" role="status" aria-live="polite">Choose a strength to see where it could help.</p></div>
+<div class="card"><h3>What this browser can offer</h3><ul class="inventory">
+<li><strong>World, game, and story sketches:</strong> available here.</li>
+<li id="xr-status"><strong>Immersive VR:</strong> not checked yet.</li>
+<li><strong>Sharing a creation:</strong> only when you choose to export it and your guardian approves where it goes.</li>
+<li><strong>Other headset apps:</strong> this page cannot see or control them.</li>
+</ul><p class="note">A browser feature check is not proof that a headset, mic, or game is connected. Your imagination is the important capability.</p></div>
+</div></section>
+<section class="section" aria-labelledby="journalTitle"><h2 id="journalTitle">My creator trail</h2><p class="sub">Earn badges for sketches you choose to keep, not for time spent online. Nothing here measures a person's worth.</p>
+<div class="adv">
+<div class="card"><h3>Badges and looks</h3><div id="badges" class="badges" aria-live="polite"></div><p id="dots">CoDots: 0, pretend local creator points.</p>
+<label for="skin">Kitten look</label><select id="skin"><option value="moon">Moon mist (starter)</option><option value="mint">Mint sparkle (after a sketch)</option><option value="violet">Violet comet (after three paths)</option></select></div>
+<div class="card"><h3>Private sketch journal</h3>
+<p class="sub">Only sketches you explicitly save are kept in this browser's storage. No name is required, and clearing browser storage can remove them.</p>
+<ul class="journal" id="journal" aria-label="Saved sketches"></ul>
+<div class="actions"><button class="action" id="export" type="button">Export my journal</button><button class="action" id="erase" type="button">Erase local journal</button></div>
+<p id="journal-status" role="status" aria-live="polite" class="sub"></p>
+</div></div></section>
+<section class="section note" aria-label="Boundaries"><strong>Built for curiosity, not surveillance.</strong> No behavioral analytics or personal scoring. No location, gaze, microphone, camera, push alerts, ads, payments, social sharing, or cloud sync. This is an ordinary responsive browser page with optional local storage, not an installed Quest-wide guardian. Adult guidance is recommended for younger creators. Local browser storage is not a secure vault or cross-device backup.</section>
+</main><footer><div class="wrap"><a href="../">CoAcademy</a> · <a href="../rickbar/?name=NickBar">NickBar status portal</a> · <a href="../coorb/">CoOrbWare visual research</a> · CoCivium prelaunch prototype.</div></footer>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const models={
+ worlds:{title:"Sketch a world",help:"Choose two ingredients for a world nobody has visited before.",la:"Environment",lb:"Special rule",a:["Floating islands","An underwater city","A forest on the Moon","A library inside a giant tree"],b:["Every door asks a riddle","Plants are friendly inventors","Time moves when someone sings","Robots learn from birds"],draft:(a,b)=>"Imagine "+a.toLowerCase()+". Here, "+b.charAt(0).toLowerCase()+b.slice(1)+". What should a visitor explore first?"},
+ games:{title:"Invent a game",help:"Combine a challenge with a surprising rule.",la:"Challenge",lb:"Twist",a:["Rescue lost stars","Build a bridge together","Find the hidden garden","Repair a broken spaceship"],b:["Everyone can change one rule","Helping others wins bonus moves","Mistakes reveal secret paths","Players invent the last level"],draft:(a,b)=>"Game pitch: "+a+". The twist: "+b.charAt(0).toLowerCase()+b.slice(1)+". How could you tell whether a player is having fun?"},
+ stories:{title:"Begin a story",help:"Choose a hero and a challenge.",la:"Hero",lb:"Unexpected problem",a:["A curious kitten","A tiny dragon","A shy robot","A young world-builder"],b:["The stars have disappeared","Nobody remembers how to laugh","A city has lost its maps","A friend is trapped in a painting"],draft:(a,b)=>"Once there was "+a.toLowerCase()+". One day, "+b.charAt(0).toLowerCase()+b.slice(1)+". What brave, funny or kind thing happens next?"}
+};
+let path="worlds",draft=null,saved=[];
+const key="cocivium.beaxakitten.creatorTrail.r0";
+try{const val=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(val)){saved=val.filter(x=>x&&typeof x.text==="string"&&["worlds","games","stories"].includes(x.path)).slice(-50);}}catch(e){saved=[];}
+function optionize(select,items){select.replaceChildren();items.forEach((item,i)=>{const o=document.createElement("option");o.value=String(i);o.textContent=item;select.append(o);});}
+function setPath(next){if(!models[next])return;path=next;draft=null;const m=models[next];$("bench-title").textContent=m.title;$("bench-help").textContent=m.help;$("label-a").textContent=m.la;$("label-b").textContent=m.lb;optionize($("idea-a"),m.a);optionize($("idea-b"),m.b);$("sketch").textContent="Choose two ingredients, then create your sketch. Nothing is saved automatically.";$("save").disabled=true;document.querySelectorAll("[data-path]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.path===next)));}
+document.querySelectorAll("[data-path]").forEach(b=>b.addEventListener("click",()=>setPath(b.dataset.path)));
+$("preview").addEventListener("click",()=>{const m=models[path],a=m.a[Number($("idea-a").value)||0],b=m.b[Number($("idea-b").value)||0];draft=m.draft(a,b);$("sketch").textContent=draft;$("save").disabled=false;});
+$("clear-sketch").addEventListener("click",()=>{draft=null;$("sketch").textContent="Cleared. Try another combination.";$("save").disabled=true;});
+function render(){
+const badges=$("badges");badges.replaceChildren();const paths=new Set(saved.map(x=>x.path));
+const specs=[["Creator Seed",saved.length>=1],["World Weaver",paths.has("worlds")],["Game Inventor",paths.has("games")],["Story Spark",paths.has("stories")],["Three-Path Explorer",paths.size===3]];
+specs.forEach(([label,have])=>{const el=document.createElement("span");el.className="badge"+(have?"":" locked");el.textContent=(have?"★ ":"○ ")+label;badges.append(el);});
+$("dots").textContent="CoDots: "+saved.length*10+" (pretend local creator points; nothing to buy).";
+const journal=$("journal");journal.replaceChildren();
+if(!saved.length){const li=document.createElement("li");li.textContent="No saved sketches yet. That's okay.";journal.append(li);}
+for(const item of [...saved].reverse().slice(0,12)){const li=document.createElement("li"),title=document.createElement("strong"),p=document.createElement("p");title.textContent=item.path.charAt(0).toUpperCase()+item.path.slice(1)+" · Sketch";p.textContent=item.text;li.append(title,p);journal.append(li);}
+const skin=$("skin");skin.options[1].disabled=saved.length<1;skin.options[2].disabled=paths.size<3;if(skin.selectedOptions[0].disabled)skin.value="moon";
+}
+$("save").addEventListener("click",()=>{if(!draft)return;const next={path,text:draft};const candidate=[...saved,next].slice(-50);try{localStorage.setItem(key,JSON.stringify(candidate));saved=candidate;$("journal-status").textContent="Saved in this browser only. Creator Seed and CoDots reflect saved sketches, not personal worth.";render();}catch(e){$("journal-status").textContent="Browser storage unavailable. Sketch wasn't saved. You can still export later if you permit storage."; }});
+$("erase").addEventListener("click",()=>{if(!window.confirm("Erase all BeaxaKitten sketches saved in this browser? This cannot be undone."))return;try{localStorage.removeItem(key);}catch(e){}saved=[];$("journal-status").textContent="Local journal cleared.";render();});
+$("export").addEventListener("click",()=>{const data=JSON.stringify({format:"cocivium-beaxakitten-journal-r0",entries:saved},null,2);const blob=new Blob([data],{type:"application/json"}),url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="beaxakitten-creator-trail.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$("journal-status").textContent="Export requested. Share your sketches only when you choose, with a guardian if appropriate.";});
+const ideas={drawing:"Drawing can help you design creatures, places, maps, and game characters. Try Worlds or Stories.",building:"Building can help you turn imaginary places into levels, models, or explorable environments. Try Worlds.",rules:"Inventing rules can help you make games fair, surprising, and fun. Try Games.",telling:"Telling stories can help you invent characters, adventures, and videos. Try Stories."};
+document.querySelectorAll("[data-strength]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-strength]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));$("strength-result").textContent=ideas[b.dataset.strength];}));
+const pet=$("pet"),status=$("cat-status");let count=0;pet.addEventListener("click",()=>{count++;pet.classList.remove("petted");void pet.offsetWidth;pet.classList.add("petted");status.textContent=["Purr. What shall we make?","A good idea starts with curiosity.","Even a tiny sketch can grow into a world."][count%3];setTimeout(()=>pet.classList.remove("petted"),750);});
+$("skin").addEventListener("change",()=>{const colors={moon:"none",mint:"hue-rotate(25deg) saturate(1.25)",violet:"hue-rotate(85deg) saturate(1.3)"};pet.style.filter=colors[$("skin").value]||"none";});
+async function detectXR(){const el=$("xr-status");if(!("xr" in navigator)){el.textContent="Immersive VR: WebXR interface not visible to this browser. A different browser or context may support it.";return;}
+if(typeof navigator.xr.isSessionSupported!=="function"){el.textContent="Immersive VR: WebXR API exists, immersive support not checked.";return;}
+try{const supported=await navigator.xr.isSessionSupported("immersive-vr");el.textContent=supported?"Immersive VR: this browser reports support; this kitten page is still a flat prototype.":"Immersive VR: this browser does not report immersive-vr support here.";}catch(e){el.textContent="Immersive VR: support check unavailable or blocked; status unknown.";}}
+setPath("worlds");render();detectXR();
+})();
+</script></body></html>
