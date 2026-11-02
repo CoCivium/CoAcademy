@@ -33,7 +33,7 @@ small,.fine{font-size:13px;color:var(--muted)}.warn{border-left:4px solid var(--
 <div class="kicker">Audio feedback / CoAura+ / CoSurface+</div>
 <h1>Make silence informative.</h1>
 <p>When an assistant pauses, users cannot tell whether it heard them, is thinking, or lost the connection. This page demonstrates small, recognizable cues for those distinct events. Audio begins <strong>only after you opt in</strong>.</p>
-<p class="warn">This is a manual browser simulation. It does not listen to a microphone, observe ChatGPT sessions, repair Bluetooth, choose an earbud, or infer which ear played a sound. No live conversation or device agent is connected.</p>
+<p class="warn">This is a manual browser simulation. The speech-active switch is manually controlled; this page cannot detect real speech. It does not listen to a microphone, observe ChatGPT sessions, repair Bluetooth, choose an earbud, or infer which ear played a sound. No live conversation or device agent is connected.</p>
 <div class="controls">
 <button id="enable" type="button">Enable local sounds</button>
 <button id="disable" class="secondary" type="button">Mute sounds</button>
@@ -42,6 +42,7 @@ small,.fine{font-size:13px;color:var(--muted)}.warn{border-left:4px solid var(--
 <label for="volume">Cue volume <input id="volume" type="range" min="0" max="30" value="12" step="1"></label>
 <output id="vol-label" for="volume">12%</output>
 <label><input id="haptic" type="checkbox"> Vibration where supported</label>
+<label><input id="speech" type="checkbox"> Simulate speech active (suppress cues)</label>
 </div>
 <p id="audio-status" class="fine" role="status">Sounds off by default. Visual events work without audio.</p>
 </section>
@@ -107,6 +108,7 @@ function stopPulse() {
 }
 function volume() { return Number(byId("volume").value)/100; }
 function play(kind) {
+ if(byId("speech").checked) return "suppressed-speech-active";
  if(!enabled || !context) return "muted";
  try {
   if(context.state!=="running") return "audio-context-not-running";
@@ -128,6 +130,7 @@ function play(kind) {
  }
 }
 function vibrate(kind) {
+ if(byId("speech").checked) return "suppressed-speech-active";
  if(!byId("haptic").checked || typeof navigator.vibrate!=="function") return "off-or-unsupported";
  const pattern={received:[20],processing:[24],ready:[30,45,30],interrupted:[60,45,60],restored:[35,40,35],failed:[100,40,100]}[kind];
  try { return navigator.vibrate(pattern)?"requested":"declined"; } catch (_) {return "unavailable";}
