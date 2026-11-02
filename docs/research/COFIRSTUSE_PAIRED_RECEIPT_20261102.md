@@ -28,15 +28,18 @@ One web vantage on 2026-11-02; a web fetch failure is not an authoritative DNS o
 | Burden | Multiple concepts and doorways | Clear task but fictional output; no route to real consensual project intake |
 
 ## Specific source findings
-- docs/index.html has TWO h1 elements: main hero and nested research catalogue. This is a reproducible failure of the comparator's one_h1 check. Fix should demote ONLY the catalogue heading to h2, retaining the single visible hero h1.
+- Initially docs/index.html had TWO h1 elements (hero and research catalogue), failing comparator's one_h1 rule. Corrected ONLY the catalogue heading to h2 in branch commit 480e87da2da82f0e592434a4310bc27b3e112ad2; fresh source readback blob d41f3ba9bed4072f49614512404e93a7699e1629 confirms exactly ONE h1. Not merged or deployed; tests not executed.
 - Repeated destination links on CoAcademy and About pages do not by themselves prove broken paths: some appear in optional depth views, as expected navigation. Comparator reports duplicate href strings but does not resolve targets.
 - Real-device accessibility, contrast, screen-reader reading order, clipboard success, physical-device claims, real participant task outcomes, and recovery after provider loss are UNVERIFIED.
 - Do not treat source availability, browser fetch status, proposed domains, or this document as ACK, operational deployment, legal incorporation, independent acceptance, or canon.
 
 ## Next wake / highest-value proof
 1. Recheck intended cocivium.org apex and www origins, source owner, confidentiality, release authorization, and rollback; existing CoSteward#60 stays HOLD. Do not touch DNS.
-2. On an isolated development branch, apply and test the single h1 -> h2 catalogue correction against unchanged comparator and tests; merge/publish only via release process.
+2. On the isolated development branch, execute comparator and unit tests against the corrected homepage; obtain release-owner review before any merge/publish. The source correction is committed but not runtime-tested.
 3. Repeat the allowlisted GET-only live matrix from two independent vantage points and preserve response/status evidence; no shard traversal.
 4. Test one newcomer finishing a GroupBuild fictional brief and exporting/retaining it, and one visitor finishing CoCivium discovery, with consent and accessibility observations. No human success claim until observed.
 
-Effects of this receipt: documentation-only GitHub branch commit. No DNS, payment, outreach, origin, canon, runtime, private shard, or hosted site mutation.
+## Targeted link source existence (2026-11-02 follow-up)
+Eleven direct link destinations were fetched from the same branch, without a web crawl: docs/rickbar/index.html, docs/coorb/index.html, docs/device-first/index.html, docs/coplay/votes-for-sale/index.html, docs/relay/index.html, docs/relay/feed.xml, docs/relay/discovery.json, docs/relay/observer-map/registry.json, docs/LATEST.md, docs/AGENT_INDEX.json, docs/research/CIV2_TO_CIV3_BOUNDARY_READINESS_R0.json. All eleven returned source blobs. This checks repository path existence only, not successful public navigation, full-link coverage, or absence of broken redirects.
+
+Effects of this branch: research receipt and exactly one h1->h2 source correction, with commit/readback evidence. No DNS, payment, outreach, origin, canon, runtime, private shard, or hosted site mutation.
