@@ -36,9 +36,35 @@ with sync_playwright() as playwright:
     assert rows[-1]["haptic"] == "suppressed-speech-active"
 
     page.locator("#speech").uncheck()
+    # Virtual time verifies that a changed state cancels queued processing pulses.
+    page.clock.install()
     page.locator('[data-event="processing"]').click()
     page.locator('[data-event="restored"]').click()
     assert page.locator("#state").inner_text() == "Restored"
+    prior = [json.loads(line) for line in page.locator("#receipts").inner_text().splitlines()]
+    page.clock.run_for(4100)
+    later = [json.loads(line) for line in page.locator("#receipts").inner_text().splitlines()]
+    assert len(later) == len(prior), "stale processing pulse survived state change"
+
+    # Processing pulses are finite: a maximum of three follow-up notifications.
+    page.locator('[data-event="processing"]').click()
+    page.clock.run_for(13200)
+    rows = [json.loads(line) for line in page.locator("#receipts").inner_text().splitlines()]
+    pulse_count = sum(row["kind"] == "processing-pulse" for row in rows)
+    assert pulse_count == 3, f"expected three bounded pulses, got {pulse_count}"
+    page.clock.run_for(5000)
+    rows_after = [json.loads(line) for line in page.locator("#receipts").inner_text().splitlines()]
+    assert sum(row["kind"] == "processing-pulse" for row in rows_after) == 3
+    page.locator('[data-event="failed"]').click()
+    assert page.locator("#state").inner_text() == "Failed"
+
+    # Receipt retention is bounded, even under repeated user-triggered events.
+    for _ in range(85):
+        page.locator('[data-event="received"]').click()
+    rows = [json.loads(line) for line in page.locator("#receipts").inner_text().splitlines()]
+    assert len(rows) == 80
+    assert rows[-1]["kind"] == "received"
+    assert all(row["route"] == "unverified" for row in rows)
 
     page.locator("#self-test").click()
     assert "PASS" in page.locator("#test-status").inner_text()
