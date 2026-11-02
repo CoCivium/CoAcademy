@@ -1,0 +1,27 @@
+name: CoChirp browser regression
+on:
+  pull_request:
+    paths:
+      - "docs/cochirp/**"
+      - "tests/test_cochirp_browser.py"
+      - ".github/workflows/cochirp-browser.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install isolated browser test dependencies
+        run: |
+          python -m pip install --disable-pip-version-check playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Test CoChirp simulated UX and privacy boundary
+        run: python tests/test_cochirp_browser.py
