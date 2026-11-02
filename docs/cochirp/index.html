@@ -33,7 +33,7 @@ small,.fine{font-size:13px;color:var(--muted)}.warn{border-left:4px solid var(--
 <div class="kicker">Audio feedback / CoAura+ / CoSurface+</div>
 <h1>Make silence informative.</h1>
 <p>When an assistant pauses, users cannot tell whether it heard them, is thinking, or lost the connection. This page demonstrates small, recognizable cues for those distinct events. Audio begins <strong>only after you opt in</strong>.</p>
-<p class="warn">This is a manual browser simulation. The speech-active switch is manually controlled; this page cannot detect real speech. It does not listen to a microphone, observe ChatGPT sessions, repair Bluetooth, choose an earbud, or infer which ear played a sound. No live conversation or device agent is connected.</p>
+<p class="warn">This is a manual browser simulation. The speech-active switch is manually controlled; this page cannot detect real speech. It does not listen to a microphone, observe ChatGPT sessions, repair Bluetooth, choose an earbud, or infer which ear played a sound. No live conversation or device agent is connected. Sound currently playing is stopped when you mute, simulate speaking, or leave the page.</p>
 <div class="controls">
 <button id="enable" type="button">Enable local sounds</button>
 <button id="disable" class="secondary" type="button">Mute sounds</button>
@@ -91,6 +91,7 @@ const cue = Object.freeze({
  failed:[[290,.180],[250,.180]]
 });
 let context = null, enabled = false, seq = 0, pulseTimer = null, pulseCount = 0;
+const activeSounds = new Set();
 let state = "waiting";
 let receipts = [];
 const maxReceipts = 80;
@@ -107,11 +108,21 @@ function stopPulse() {
  if(pulseTimer !== null) { clearTimeout(pulseTimer); pulseTimer = null; }
 }
 function volume() { return Number(byId("volume").value)/100; }
+function stopAudio() {
+ for(const entry of activeSounds) {
+  try { entry.amp.gain.cancelScheduledValues(context.currentTime);
+        entry.amp.gain.setValueAtTime(0,context.currentTime);
+        entry.osc.stop(context.currentTime); } catch (_) {}
+ }
+ if(typeof navigator.vibrate==="function") try {navigator.vibrate(0);} catch (_) {}
+}
 function play(kind) {
  if(byId("speech").checked) return "suppressed-speech-active";
  if(!enabled || !context) return "muted";
+ if(volume()===0) return "zero-volume";
  try {
   if(context.state!=="running") return "audio-context-not-running";
+  stopAudio();
   let t=context.currentTime+.018;
   cue[kind].forEach(([hz,duration])=>{
    const osc=context.createOscillator(), amp=context.createGain();
@@ -120,6 +131,8 @@ function play(kind) {
    amp.gain.linearRampToValueAtTime(volume(),t+.012);
    amp.gain.exponentialRampToValueAtTime(.0001,t+duration);
    osc.connect(amp);amp.connect(context.destination);
+   const entry={osc,amp};activeSounds.add(entry);
+   osc.onended=()=>{activeSounds.delete(entry);osc.disconnect();amp.disconnect();};
    osc.start(t);osc.stop(t+duration+.015);
    t+=duration+.035;
   });
@@ -168,11 +181,22 @@ byId("enable").addEventListener("click",async()=>{
 });
 byId("disable").addEventListener("click",()=>{
  enabled=false;
+ stopAudio();
  if(context) context.suspend().catch(()=>{});
  byId("audio-status").textContent="Muted. Visual receipts continue.";
 });
 byId("volume").addEventListener("input",()=>{
  byId("vol-label").textContent=byId("volume").value+"%";
+ if(volume()===0) stopAudio();
+});
+byId("speech").addEventListener("change",()=>{
+ if(byId("speech").checked) {
+  stopAudio();
+  byId("notice").textContent="Speech-active simulation: ongoing cues immediately silenced; future cues suppressed.";
+  record("speech-active",{audio:"silenced",haptic:"cancel-requested",auto:false});
+ } else {
+  record("speech-inactive",{audio:"unchanged",haptic:"unchanged",auto:false});
+ }
 });
 document.querySelectorAll("[data-event]").forEach(b=>{
  b.addEventListener("click",()=>fire(b.dataset.event,false));
@@ -184,7 +208,7 @@ byId("self-test").addEventListener("click",()=>{
  record("self-check",{result:ok?"PASS":"FAIL",scope:"logic-only"});
 });
 byId("clear").addEventListener("click",()=>{
- stopPulse();state="waiting";pulseCount=0;receipts=[];seq=0;
+ stopPulse();stopAudio();state="waiting";pulseCount=0;receipts=[];seq=0;
  byId("state").textContent="Waiting for a simulated event";
  byId("notice").textContent="No event has run.";
  draw();
@@ -197,9 +221,13 @@ byId("copy").addEventListener("click",async()=>{
  } catch(_) {byId("test-status").textContent="Copy unavailable in this browser. Receipts remain visible.";}
 });
 document.addEventListener("visibilitychange",()=>{
- if(document.hidden) stopPulse();
+ if(document.hidden) {
+  stopPulse();stopAudio();
+  if(state==="processing") byId("notice").textContent="Tab hidden: processing pulses stopped; no claim about actual session health.";
+  record("page-hidden",{audio:"silenced",haptic:"cancel-requested",auto:true});
+ }
 });
-window.addEventListener("pagehide",stopPulse);
+window.addEventListener("pagehide",()=>{stopPulse();stopAudio();});
 })();
 </script>
 </body>
