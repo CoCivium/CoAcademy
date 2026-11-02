@@ -1,0 +1,48 @@
+name: CoFirstUse source-only PR checks
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/cofirstuse_checks.yml'
+      - 'docs/**'
+      - 'scripts/cofirstuse_compare.py'
+      - 'scripts/test_cofirstuse_compare.py'
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout proposed source
+        uses: actions/checkout@v4
+
+      - name: Test comparator regressions (no network)
+        env:
+          PYTHONPATH: scripts
+        run: python3 -m unittest discover -s scripts -p 'test_cofirstuse_compare.py' -v
+
+      - name: Inspect exactly five allowlisted pages (no live fetch)
+        env:
+          PYTHONPATH: scripts
+        run: |
+          python3 - <<'PY'
+          from cofirstuse_compare import run, SOURCES
+          report = run('.', live=False)
+          assert report['live_checks'] == [], 'Live probes must remain disabled'
+          actual = report['targets']
+          assert len(actual) == len(SOURCES) == 5, 'Unexpected source scope'
+          failures = []
+          for item in actual:
+              if item.get('source_status'):
+                  failures.append(f"{item['id']}: {item['source_status']}")
+                  continue
+              bad = [key for key, ok in item['source_checks'].items() if not ok]
+              print(f"{item['id']}: {item['source_checks_passed']}/{item['source_checks_total']} static checks; bad={bad}")
+              if bad:
+                  failures.append(f"{item['id']}: {bad}")
+          assert not failures, 'Source checks failed: ' + '; '.join(failures)
+          print('PASS: five bounded source documents; no external requests or release')
+          PY
