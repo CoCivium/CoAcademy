@@ -24,13 +24,18 @@ jobs:
           PYTHONPATH: scripts
         run: python3 -m unittest discover -s scripts -p 'test_cofirstuse_compare.py' -v
 
-      - name: Inspect exactly five allowlisted pages (no live fetch)
+      - name: Write bounded machine-readable source receipt (no live fetch)
+        run: python3 scripts/cofirstuse_compare.py --repo-root . --output cofirstuse-source-report.json
+
+      - name: Validate exactly five allowlisted pages from the emitted receipt
         env:
           PYTHONPATH: scripts
         run: |
           python3 - <<'PY'
-          from cofirstuse_compare import run, SOURCES
-          report = run('.', live=False)
+          import json
+          from pathlib import Path
+          from cofirstuse_compare import SOURCES
+          report = json.loads(Path('cofirstuse-source-report.json').read_text(encoding='utf-8'))
           assert report['live_checks'] == [], 'Live probes must remain disabled'
           actual = report['targets']
           assert len(actual) == len(SOURCES) == 5, 'Unexpected source scope'
@@ -39,10 +44,22 @@ jobs:
               if item.get('source_status'):
                   failures.append(f"{item['id']}: {item['source_status']}")
                   continue
+              if SOURCES.get(item['id']) != item['path']:
+                  failures.append(f"{item['id']}: unexpected source path")
+                  continue
               bad = [key for key, ok in item['source_checks'].items() if not ok]
               print(f"{item['id']}: {item['source_checks_passed']}/{item['source_checks_total']} static checks; bad={bad}")
               if bad:
                   failures.append(f"{item['id']}: {bad}")
           assert not failures, 'Source checks failed: ' + '; '.join(failures)
-          print('PASS: five bounded source documents; no external requests or release')
+          print('PASS: five bounded source documents; JSON receipt retained; no live fetch')
           PY
+
+      - name: Preserve source report for independent next-wake review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cofirstuse-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: cofirstuse-source-report.json
+          if-no-files-found: warn
+          retention-days: 14
