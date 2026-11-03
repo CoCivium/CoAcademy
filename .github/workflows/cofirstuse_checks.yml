@@ -63,3 +63,55 @@ jobs:
           path: cofirstuse-source-report.json
           if-no-files-found: warn
           retention-days: 14
+
+  receipt-pickup:
+    needs: source-only
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Fetch upstream receipt without source checkout
+        uses: actions/download-artifact@v4
+        with:
+          name: cofirstuse-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: proof
+      - name: Validate received evidence and fail-closed outcome
+        env:
+          UPSTREAM: ${{ needs.source-only.result }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          data = json.loads(Path("proof/cofirstuse-source-report.json").read_text())
+          expected = {
+            "cocivium-home": "docs/index.html",
+            "living-world": "docs/experience/index.html",
+            "beaxa-kit": "docs/kitten/index.html",
+            "about": "docs/about/index.html",
+            "groupbuild": "docs/groupbuild/index.html",
+          }
+          assert data.get("schema") == "CoFirstUse.Comparator.R0"
+          assert data.get("live_checks") == []
+          got = data.get("targets", [])
+          assert len(got) == len(expected)
+          seen = set()
+          for target in got:
+            name = target["id"]
+            assert name in expected and name not in seen
+            seen.add(name)
+            assert target["path"] == expected[name]
+            assert re.fullmatch(r"[0-9a-f]{64}", target["source_sha256"])
+            assert target["source_checks_total"] == 10
+            assert target["source_checks_passed"] == 10
+            assert len(target["source_checks"]) == 10
+            assert all(v is True for v in target["source_checks"].values())
+            assert target["live_http"] == "NOT_TESTED_BY_SOURCE_MODE"
+            assert target["real_person_outcome"] == "UNVERIFIED"
+            assert target["device_accessibility"] == "UNVERIFIED"
+          assert seen == set(expected)
+          assert os.environ["UPSTREAM"] == "success"
+          print("PASS second job: source receipt picked up and checked")
+          print("LIMIT same CI provider, no independent end-user or runtime proof")
+          PY
