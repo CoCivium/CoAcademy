@@ -82,36 +82,91 @@ jobs:
           UPSTREAM: ${{ needs.source-only.result }}
         run: |
           python3 - <<'PY'
-          import json, os, re
+          import copy, json, os, re
           from pathlib import Path
-          data = json.loads(Path("proof/cofirstuse-source-report.json").read_text())
-          expected = {
+          
+          EXPECTED = {
             "cocivium-home": "docs/index.html",
             "living-world": "docs/experience/index.html",
             "beaxa-kit": "docs/kitten/index.html",
             "about": "docs/about/index.html",
             "groupbuild": "docs/groupbuild/index.html",
           }
-          assert data.get("schema") == "CoFirstUse.Comparator.R0"
-          assert data.get("live_checks") == []
-          got = data.get("targets", [])
-          assert len(got) == len(expected)
-          seen = set()
-          for target in got:
-            name = target["id"]
-            assert name in expected and name not in seen
-            seen.add(name)
-            assert target["path"] == expected[name]
-            assert re.fullmatch(r"[0-9a-f]{64}", target["source_sha256"])
-            assert target["source_checks_total"] == 10
-            assert target["source_checks_passed"] == 10
-            assert len(target["source_checks"]) == 10
-            assert all(v is True for v in target["source_checks"].values())
-            assert target["live_http"] == "NOT_TESTED_BY_SOURCE_MODE"
-            assert target["real_person_outcome"] == "UNVERIFIED"
-            assert target["device_accessibility"] == "UNVERIFIED"
-          assert seen == set(expected)
-          assert os.environ["UPSTREAM"] == "success"
+          FLAGS = {
+            "html", "viewport", "one_h1", "visual_surface",
+            "navigation_or_task", "keyboard_focus_css", "reduced_motion_css",
+            "limitations_disclosed", "no_external_script_src", "all_img_have_alt",
+          }
+          
+          def validate(report, upstream):
+            assert report.get("schema") == "CoFirstUse.Comparator.R0"
+            assert report.get("live_checks") == [], "unexpected live probe"
+            targets = report.get("targets", [])
+            assert isinstance(targets, list) and len(targets) == len(EXPECTED)
+            seen = set()
+            for item in targets:
+              identity = item["id"]
+              assert identity in EXPECTED and identity not in seen, "unexpected/duplicate ID"
+              seen.add(identity)
+              assert item["path"] == EXPECTED[identity], "wrong source path"
+              assert re.fullmatch(r"[0-9a-f]{64}", item["source_sha256"]), "invalid source hash format"
+              checks = item["source_checks"]
+              assert isinstance(checks, dict) and set(checks) == FLAGS, "unexpected check keys"
+              assert item["source_checks_total"] == len(FLAGS)
+              assert item["source_checks_passed"] == len(FLAGS)
+              assert all(value is True for value in checks.values()), "failed source check"
+              assert item["live_http"] == "NOT_TESTED_BY_SOURCE_MODE"
+              assert item["real_person_outcome"] == "UNVERIFIED"
+              assert item["device_accessibility"] == "UNVERIFIED"
+            assert seen == set(EXPECTED), "incomplete source coverage"
+            assert upstream == "success", "producer not successful"
+          
+          data = json.loads(Path("proof/cofirstuse-source-report.json").read_text(encoding="utf-8"))
+          validate(data, os.environ["UPSTREAM"])
           print("PASS second job: source receipt picked up and checked")
-          print("LIMIT same CI provider, no independent end-user or runtime proof")
+          
+          def rejected(label, candidate, upstream="success"):
+            try:
+              validate(candidate, upstream)
+            except (AssertionError, KeyError, TypeError, ValueError):
+              print("PASS negative fixture:", label)
+            else:
+              raise AssertionError("false-green receiver accepted " + label)
+          
+          missing = copy.deepcopy(data)
+          missing["targets"].pop()
+          rejected("missing-target", missing)
+          
+          duplicate = copy.deepcopy(data)
+          duplicate["targets"][-1] = copy.deepcopy(duplicate["targets"][0])
+          rejected("duplicate-target", duplicate)
+          
+          wrong_path = copy.deepcopy(data)
+          wrong_path["targets"][0]["path"] = "docs/other.html"
+          rejected("wrong-path", wrong_path)
+          
+          missing_hash = copy.deepcopy(data)
+          missing_hash["targets"][0]["source_sha256"] = "UNVERIFIED"
+          rejected("invalid-hash", missing_hash)
+          
+          false_flag = copy.deepcopy(data)
+          false_flag["targets"][0]["source_checks"]["one_h1"] = False
+          rejected("false-flag", false_flag)
+          
+          replaced_flag = copy.deepcopy(data)
+          del replaced_flag["targets"][0]["source_checks"]["one_h1"]
+          replaced_flag["targets"][0]["source_checks"]["made_up_check"] = True
+          rejected("substituted-flag", replaced_flag)
+          
+          unexpected_live = copy.deepcopy(data)
+          unexpected_live["live_checks"].append({"url":"https://unapproved.example/"})
+          rejected("unexpected-live", unexpected_live)
+          
+          false_person = copy.deepcopy(data)
+          false_person["targets"][0]["real_person_outcome"] = "VERIFIED"
+          rejected("unverified-person-claimed", false_person)
+          
+          rejected("failed-upstream", data, "failure")
+          print("LIMIT same GitHub service; source hash format only, no independent source rehash")
+          print("LIMIT no actual browser, human acceptance, deployment or provider failover")
           PY
