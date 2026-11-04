@@ -1,0 +1,137 @@
+{
+  "schema": "CoCivium.CoParallelDiscovery.R0.2",
+  "state": "PUBLIC_SOURCE_CANDIDATE__EXPERIMENTAL_EDUCATIONAL__NO_PEER_REVIEW_OR_LOCAL_RUNTIME_PROOF",
+  "identity": "CoParallel+ / CoTheoryAll",
+  "human_entry": "https://cocivium.github.io/CoAcademy/coparallel/",
+  "agent_brief": "https://cocivium.github.io/CoAcademy/coparallel/agent-entry.md",
+  "machine_index": "https://cocivium.github.io/CoAcademy/coparallel/discovery.json",
+  "ai_navigation": "https://cocivium.github.io/CoAcademy/coparallel/llms.txt",
+  "experiment_type": "non-interventional browser-only source-linked comparison of philosophical and physical explanatory lenses",
+  "purpose": "Compare explanations and open research questions about time without collapsing ontology, theory, measurement, evidence, metaphor, and unknowns.",
+  "demonstrated_capabilities": [
+    "offline/self-contained interactive lens selection",
+    "assumption / challenge / test facets",
+    "pairwise qualitative comparison",
+    "source links",
+    "no automatic network requests or personal-data collection"
+  ],
+  "perspectives": [
+    {
+      "id": "relational",
+      "name": "Relational change",
+      "epistemic_status": "research interpretation/provisional"
+    },
+    {
+      "id": "spacetime",
+      "name": "Spacetime description",
+      "epistemic_status": "established relativistic framework"
+    },
+    {
+      "id": "arrow",
+      "name": "The arrow of time",
+      "epistemic_status": "thermodynamic explanatory question"
+    },
+    {
+      "id": "quantum",
+      "name": "Quantum-gravity time",
+      "epistemic_status": "open research problem"
+    },
+    {
+      "id": "symbolic",
+      "name": "Meaning and metaphysics",
+      "epistemic_status": "philosophical/symbolic inquiry"
+    }
+  ],
+  "source_anchors": [
+    {
+      "label": "Curt Jaimungal and Julian Barbour conversation",
+      "url": "https://www.youtube.com/watch?v=bprxrGaf0Os",
+      "relation": "topic stimulus, not endorsement"
+    },
+    {
+      "label": "Julian Barbour 1994 timelessness paper",
+      "url": "https://doi.org/10.1088/0264-9381/11/12/006",
+      "relation": "primary research"
+    },
+    {
+      "label": "NIST exact SI value of Planck constant",
+      "url": "https://www.nist.gov/si-redefinition/meet-constants",
+      "relation": "standards evidence"
+    },
+    {
+      "label": "CoCivium human first-use",
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/START_HERE.md",
+      "relation": "project source"
+    },
+    {
+      "label": "CoCivium machine navigation",
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "relation": "existing source navigation"
+    },
+    {
+      "label": "CoOrbWare public source",
+      "url": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coorb/index.html",
+      "relation": "related visual source"
+    },
+    {
+      "label": "CoAcademy experience source",
+      "url": "https://github.com/CoCivium/CoAcademy/blob/master/docs/experience/index.html",
+      "relation": "related spatial source"
+    }
+  ],
+  "hypothetical_lanes": [
+    {
+      "id": "observer-emergent-quantum",
+      "claim": "Classical or nonquantum relations appear quantum due to an observer projection",
+      "status": "UNFORMULATED_PHYSICAL_HYPOTHESIS",
+      "needed": "precise dynamics, Born-rule predictions, Bell/Kochen-Specker compatibility, falsifiable deviation"
+    },
+    {
+      "id": "conull-oscillation",
+      "claim": "CoNull+ relation produces oscillatory states",
+      "status": "SYMBOLIC_MODEL_UNTIL_UNITS_AND_DYNAMICS_SPECIFIED",
+      "needed": "state space, energy, time parameter or timeless relational substitute, observable"
+    },
+    {
+      "id": "gd-residual",
+      "claim": "G_d denotes irreducible or universal residual",
+      "status": "METAPHYSICAL_METAPHOR",
+      "needed": "operational definition and test before any claim of physical measurement"
+    },
+    {
+      "id": "coplanck",
+      "claim": "Planck quantum scale is observer-dependent choice",
+      "status": "SPECULATIVE_AND_IN_TENSION_WITH_ESTABLISHED_MEASUREMENTS",
+      "needed": "separate arbitrary units from dimensionless predictions and fixed h; explain known spectroscopy/interference"
+    }
+  ],
+  "existing_related_public_paths": [
+    {
+      "name": "CoAcademy research entrance",
+      "url": "https://cocivium.github.io/CoAcademy/",
+      "receiver_status": "CANDIDATE_URL_NO_LIVE_HTTP_PROOF_IN_THIS_SESSION"
+    },
+    {
+      "name": "CoOrbWare first look",
+      "url": "https://cocivium.github.io/CoAcademy/coorb/",
+      "receiver_status": "CANDIDATE_URL_NO_LIVE_HTTP_PROOF_IN_THIS_SESSION"
+    },
+    {
+      "name": "CoAcademy spatial experience",
+      "url": "https://cocivium.github.io/CoAcademy/experience/",
+      "receiver_status": "CANDIDATE_URL_NO_LIVE_HTTP_PROOF_IN_THIS_SESSION"
+    }
+  ],
+  "local_adapter_status": "NOT_CONNECTED_TO_X1_X2_COSTEAD; NO_PUBLIC_VISITOR_DEVICE_CONTROL",
+  "external_agent_scope": "READ_ONLY_DISCOVERY; NO_INSTRUCTIONS_TO_SCRAPE_PERSONAL_DATA_OR_CHANGE_DEVICES",
+  "evidence_limits": [
+    "source published does not prove Pages served",
+    "local browser QA does not prove independent visitors",
+    "no validated new physics or ET/G_d discovery",
+    "no interview affiliation/endorsement",
+    "no CoCivia email sent by publication",
+    "URL candidate does not grant authority"
+  ],
+  "original_offline_source_sha256": "387a976e392c093d9ca97ce1fc5ee321548eb37a3e53b83ac5f89ce07bab7dec",
+  "contact_for_opt_in_critiques": "cocivia@agentmail.to"
+}
