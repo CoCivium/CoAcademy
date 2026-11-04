@@ -1,5 +1,5 @@
 {
-  "schema": "CoCivium.CoNavProjection.R0",
+  "schema": "CoCivium.CoNavProjection.R0.1",
   "state": "PUBLIC_EXPERIMENTAL_PROJECTION__NO_LOCAL_AGENT_RUNTIME_AUTHORITY",
   "updated_utc": "2026-11-04T08:25:00Z",
   "human_url": "https://cocivium.github.io/CoAcademy/conav/",
@@ -141,5 +141,11 @@
     "Can one source-backed nav schema serve humans and AI readers?",
     "Can receiver-specific projections share stable identities without losing provenance?",
     "Do visitors reach a useful demo faster than with a traditional directory?"
+  ],
+  "static_matrix": "https://cocivium.github.io/CoAcademy/conav/matrix.html",
+  "markdown_matrix": "https://github.com/CoCivium/CoAcademy/blob/master/docs/conav/matrix.md",
+  "nonclaims_extra": [
+    "Static list fallback is the primary safe route when JavaScript/visual UX fails",
+    "Source link and browser URL are separate verifiability layers"
   ]
 }
