@@ -1,0 +1,145 @@
+{
+  "schema": "CoCivium.CoNavProjection.R0",
+  "state": "PUBLIC_EXPERIMENTAL_PROJECTION__NO_LOCAL_AGENT_RUNTIME_AUTHORITY",
+  "updated_utc": "2026-11-04T08:25:00Z",
+  "human_url": "https://cocivium.github.io/CoAcademy/conav/",
+  "machine_url": "https://cocivium.github.io/CoAcademy/conav/discovery.json",
+  "source": "CoAcademy docs sources and CoCivium public AI index",
+  "authoritative_root": "Existing CoCivium CoAcademy public source, not a new canon",
+  "principle": "ONE_RESEARCH_OBJECT_MANY_RECEIVER_PROJECTIONS",
+  "caveats": [
+    "GitHub commits verified but independent Pages HTTP not verified this session",
+    "PUBLIC_DISCOVERY_NE_LOCAL_DEVICE_CONTROL",
+    "CANON_NE_SOURCE_FILE",
+    "NAVIGATION_NE_ENDORSEMENT_OR_PRIVILEGES",
+    "PUBLIC_SOURCE_NE_PUBLIC_VISITOR_ACCEPTANCE",
+    "ALL_SURFACES_CLAIM_NE_EIGHT_LINK_EXPERIMENT"
+  ],
+  "nodes": [
+    {
+      "id": "time",
+      "label": "Time and reality",
+      "type": "Research",
+      "summary": "Compare relational change, spacetime, entropy, quantum-gravity time and meaning.",
+      "live": "https://cocivium.github.io/CoAcademy/coparallel/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coparallel/index.html",
+      "agent": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coparallel/agent-entry.md",
+      "topics": [
+        "Physics",
+        "Research",
+        "AI"
+      ],
+      "status": "PUBLIC_SOURCE_VERIFIED__HTTP_UNVERIFIED"
+    },
+    {
+      "id": "orb",
+      "label": "CoOrbWare First Look",
+      "type": "Visual",
+      "summary": "Explore connected claims, alternatives and source-bound uncertainty.",
+      "live": "https://cocivium.github.io/CoAcademy/coorb/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coorb/index.html",
+      "agent": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coorb/discovery.json",
+      "topics": [
+        "Visual",
+        "Research",
+        "AI"
+      ],
+      "status": "PUBLIC_SOURCE_VERIFIED__HTTP_UNVERIFIED"
+    },
+    {
+      "id": "world",
+      "label": "Living World and CoTime",
+      "type": "Visual",
+      "summary": "A spatial browser perspective on people, ideas and possible futures.",
+      "live": "https://cocivium.github.io/CoAcademy/experience/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/experience/index.html",
+      "agent": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "topics": [
+        "Visual",
+        "Culture"
+      ],
+      "status": "PUBLIC_SOURCE_VERIFIED__HTTP_UNVERIFIED"
+    },
+    {
+      "id": "relay",
+      "label": "CoRelay+ feedback",
+      "type": "Participation",
+      "summary": "Inspect voluntary experiments, source corrections and public feedback channels.",
+      "live": "https://cocivium.github.io/CoAcademy/relay/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/index.html",
+      "agent": "https://github.com/CoCivium/CoAcademy/blob/master/docs/relay/discovery.json",
+      "topics": [
+        "Participation",
+        "AI"
+      ],
+      "status": "PUBLIC_SOURCE_VERIFIED__HTTP_UNVERIFIED"
+    },
+    {
+      "id": "civil",
+      "label": "CoCivicLens+",
+      "type": "Evidence",
+      "summary": "Inspect civic questions using sources, challenges and accessible explanations.",
+      "live": "https://cocivium.github.io/CoAcademy/civiclens/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/civiclens/index.html",
+      "agent": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "topics": [
+        "Evidence",
+        "Participation"
+      ],
+      "status": "EXISTING_PUBLIC_CANDIDATE__LIVE_HTTP_UNVERIFIED"
+    },
+    {
+      "id": "play",
+      "label": "CoPlay+ experiments",
+      "type": "Culture",
+      "summary": "Clearly fictional, participatory experiments that expose assumptions and persuasion.",
+      "live": "https://cocivium.github.io/CoAcademy/coplay/",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/coplay/index.html",
+      "agent": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "topics": [
+        "Culture",
+        "Visual"
+      ],
+      "status": "EXISTING_PUBLIC_CANDIDATE__LIVE_HTTP_UNVERIFIED"
+    },
+    {
+      "id": "machine",
+      "label": "AI / IA source discovery",
+      "type": "AI",
+      "summary": "Machine-readable CoCivium currentness navigation, source provenance and nonclaims.",
+      "live": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "agent": "https://github.com/CoCivium/CoCivium/blob/main/ai/session-bootstrap.json",
+      "topics": [
+        "AI",
+        "Research"
+      ],
+      "status": "PUBLIC_SOURCE_VERIFIED__NO_REMOTE_RUNTIME_AUTHORITY"
+    },
+    {
+      "id": "first",
+      "label": "Start here in 60 seconds",
+      "type": "Onboarding",
+      "summary": "Bring one question; begin without learning the entire CoAll vocabulary.",
+      "live": "https://github.com/CoCivium/CoCivium/blob/main/START_HERE.md",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/START_HERE.md",
+      "agent": "https://github.com/CoCivium/CoCivium/blob/main/ai/index.json",
+      "topics": [
+        "Onboarding",
+        "AI"
+      ],
+      "status": "PUBLIC_SOURCE_VERIFIED__LOCAL_INSTALL_UNPROVEN"
+    }
+  ],
+  "local_projections": {
+    "X1": "UNTESTED",
+    "X2": "REMOTE_OFFLINE",
+    "CoStead": "UNVERIFIED",
+    "phone": "NO_INSTALLED_RECEIVER_PROOF"
+  },
+  "research_questions": [
+    "Can one source-backed nav schema serve humans and AI readers?",
+    "Can receiver-specific projections share stable identities without losing provenance?",
+    "Do visitors reach a useful demo faster than with a traditional directory?"
+  ]
+}
