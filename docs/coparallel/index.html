@@ -123,7 +123,7 @@ function renderCompare(){let a=P[by('leftSelect').value],b=P[by('rightSelect').v
 by('leftSelect').addEventListener('change',renderCompare);by('rightSelect').addEventListener('change',renderCompare);
 by('compareAdd').addEventListener('click',()=>{if(by('leftSelect').value===current){by('rightSelect').value=current}else{by('rightSelect').value=current;}renderCompare();by('compare').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
 for(const b of document.querySelectorAll('.nav'))b.addEventListener('click',()=>{for(const n of document.querySelectorAll('.nav'))n.setAttribute('aria-current',String(n===b?'page':'false'));by(b.dataset.target).scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
-by('selectDraft').addEventListener('click',()=>{by('draft').focus();by('draft').select();by('copyStatus').textContent='Draft text selected for copying. No message was sent or uploaded.'});
+// Public research variant intentionally has no draft-copy control or mail action.
 render();renderCompare();
 </script>
 </body>
