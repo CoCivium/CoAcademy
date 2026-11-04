@@ -8,6 +8,7 @@
 
 - Browser experiment: https://cocivium.github.io/CoAcademy/coparallel/
 - Structured navigation: https://cocivium.github.io/CoAcademy/coparallel/discovery.json
+- No-script cross-project link matrix (source fallback): https://github.com/CoCivium/CoAcademy/blob/master/docs/conav/matrix.md
 - CoOrb visual source: https://github.com/CoCivium/CoAcademy/blob/master/docs/coorb/index.html
 - CoCivium machine index: https://github.com/CoCivium/CoCivium/blob/main/ai/index.json
 - Project evidence and limitations: https://github.com/CoCivium/CoCivium/blob/main/START_HERE.md
