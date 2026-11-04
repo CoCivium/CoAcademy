@@ -1,0 +1,11 @@
+# CoParallel+ / CoTheoryAll
+
+> Public experimental interactive research comparison of time and related explanatory lenses, with source and uncertainty preserved. Not a validated physical theory or local runtime.
+
+- [Human interactive research experiment](https://cocivium.github.io/CoAcademy/coparallel/)
+- [Research brief for external AIs](https://cocivium.github.io/CoAcademy/coparallel/agent-entry.md)
+- [Structured evidence/discovery JSON](https://cocivium.github.io/CoAcademy/coparallel/discovery.json)
+- [CoCivium existing machine index](https://github.com/CoCivium/CoCivium/blob/main/ai/index.json)
+- [Project first-use and current limitations](https://github.com/CoCivium/CoCivium/blob/main/START_HERE.md)
+
+No automatic authority, scraping, email, telemetry, local-device access, or scientific endorsement is implied.
