@@ -1,0 +1,84 @@
+name: Public Pages exact-object readback
+# Bounded proof of GitHub Pages publication for CoParallel+/CoNav+.
+# A source commit, synthetic browser test, or scheduled run is NOT audience reach.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - docs/coparallel/**
+      - docs/conav/**
+      - .github/workflows/public-pages-readback.yml
+  schedule:
+    - cron: '31 8 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: pages-readback
+  cancel-in-progress: true
+jobs:
+  verify-public-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact source
+        uses: actions/checkout@v4
+      - name: Inspect independent HTTPS receiver and compare source bytes
+        env:
+          SOURCE_COMMIT: ${{ github.sha }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, time, urllib.request
+          base = 'https://cocivium.github.io/CoAcademy/'
+          targets = [
+              ('CoParallel interactive', 'docs/coparallel/index.html', base + 'coparallel/'),
+              ('CoParallel research data', 'docs/coparallel/discovery.json', base + 'coparallel/discovery.json'),
+              ('CoNav visual index', 'docs/conav/index.html', base + 'conav/'),
+              ('CoNav static matrix', 'docs/conav/matrix.html', base + 'conav/matrix.html'),
+              ('CoNav machine data', 'docs/conav/discovery.json', base + 'conav/discovery.json'),
+          ]
+          results = []
+          for name, path, url in targets:
+              src = pathlib.Path(path).read_bytes()
+              expected = hashlib.sha256(src).hexdigest()
+              item = {'name': name, 'url': url, 'source_path': path,
+                      'source_sha256': expected, 'receiver_state': 'NOT_VERIFIED'}
+              for attempt in range(1, 4):
+                  try:
+                      req = urllib.request.Request(url, headers={'User-Agent':'CoCiviumPublicReadback/0.1', 'Accept':'text/html,application/json'})
+                      with urllib.request.urlopen(req, timeout=15) as res:
+                          data = res.read(300000)
+                          item.update({'http_status': res.status, 'receiver_bytes': len(data),
+                                       'receiver_sha256': hashlib.sha256(data).hexdigest(),
+                                       'receiver_state': 'EXACT_MATCH' if data == src else 'SOURCE_MISMATCH',
+                                       'attempt': attempt})
+                          if data == src:
+                              break
+                  except Exception as e:
+                      item.update({'receiver_state': 'HTTP_OR_DNS_FAILURE',
+                                   'error': type(e).__name__ + ': ' + str(e)[:250],
+                                   'attempt': attempt})
+                  if attempt < 3:
+                      time.sleep(6 * attempt)
+              results.append(item)
+              print(name + ' => ' + item['receiver_state'], flush=True)
+          report = {'schema': 'CoCivium.PagesReadback.R0', 'source_commit': os.environ.get('SOURCE_COMMIT'),
+                    'scope': 'independent GitHub-hosted runner HTTP GET against public Pages endpoints',
+                    'results': results, 'exact_matches': sum(x['receiver_state']=='EXACT_MATCH' for x in results),
+                    'count': len(results),
+                    'nonclaims': ['SOURCE_COMMIT_NE_LIVE_SITE', 'PAGES_PASS_NE_INDEPENDENT_USER_ACCEPTANCE',
+                                  'REMOTE_HTTP_PASS_NE_X2_COSTEAD_RUNTIME',
+                                  'NO_AUTOMATED_OUTREACH_OR_PERSONAL_DATA']}
+          pathlib.Path('pages-readback-report.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps({'exact_matches':report['exact_matches'], 'count':report['count'],
+                            'source_commit':report['source_commit']}))
+          if report['exact_matches'] != report['count']:
+              raise SystemExit('HOLD: not all public URLs independently match exact checked-out source')
+          PY
+      - name: Preserve readback receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-readback-receipt
+          path: pages-readback-report.json
+          retention-days: 30
