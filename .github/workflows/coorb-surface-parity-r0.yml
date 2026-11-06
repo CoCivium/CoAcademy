@@ -1,0 +1,31 @@
+name: CoOrb surface parity R0
+on:
+  pull_request:
+    paths:
+      - 'docs/coorb/surface-parity-r0/**'
+      - '.github/workflows/coorb-surface-parity-r0.yml'
+permissions:
+  contents: read
+jobs:
+  offline-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python parity and forbidden-effects tests
+        run: python3 -B -m unittest discover -s docs/coorb/surface-parity-r0 -p test_parity.py -v
+      - name: Check offline fixture and four headless projections
+        run: |
+          python3 -m json.tool docs/coorb/surface-parity-r0/work-object.json > /dev/null
+          for v in glance orb map machine; do
+            python3 docs/coorb/surface-parity-r0/project.py --view "$v" > /dev/null
+          done
+      - name: Check browser JavaScript syntax without launching a browser
+        run: |
+          node - <<'JS'
+          const fs=require('fs');
+          const x=fs.readFileSync('docs/coorb/surface-parity-r0/index.html','utf8');
+          const matches=[...x.matchAll(/<script(?:[^>]*?)>([\s\S]*?)<\/script>/g)];
+          new Function(matches[matches.length-1][1]);
+          console.log('PASS_INLINE_JS_PARSE');
+          JS
