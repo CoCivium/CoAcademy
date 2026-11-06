@@ -1,0 +1,172 @@
+name: CoFirstUse source-only PR checks
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/cofirstuse_checks.yml'
+      - 'docs/**'
+      - 'scripts/cofirstuse_compare.py'
+      - 'scripts/test_cofirstuse_compare.py'
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout proposed source
+        uses: actions/checkout@v4
+
+      - name: Test comparator regressions (no network)
+        env:
+          PYTHONPATH: scripts
+        run: python3 -m unittest discover -s scripts -p 'test_cofirstuse_compare.py' -v
+
+      - name: Write bounded machine-readable source receipt (no live fetch)
+        run: python3 scripts/cofirstuse_compare.py --repo-root . --output cofirstuse-source-report.json
+
+      - name: Validate exactly five allowlisted pages from the emitted receipt
+        env:
+          PYTHONPATH: scripts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from cofirstuse_compare import SOURCES
+          report = json.loads(Path('cofirstuse-source-report.json').read_text(encoding='utf-8'))
+          assert report['live_checks'] == [], 'Live probes must remain disabled'
+          actual = report['targets']
+          assert len(actual) == len(SOURCES) == 5, 'Unexpected source scope'
+          failures = []
+          for item in actual:
+              if item.get('source_status'):
+                  failures.append(f"{item['id']}: {item['source_status']}")
+                  continue
+              if SOURCES.get(item['id']) != item['path']:
+                  failures.append(f"{item['id']}: unexpected source path")
+                  continue
+              bad = [key for key, ok in item['source_checks'].items() if not ok]
+              print(f"{item['id']}: {item['source_checks_passed']}/{item['source_checks_total']} static checks; bad={bad}")
+              if bad:
+                  failures.append(f"{item['id']}: {bad}")
+          assert not failures, 'Source checks failed: ' + '; '.join(failures)
+          print('PASS: five bounded source documents; JSON receipt retained; no live fetch')
+          PY
+
+      - name: Preserve source report for independent next-wake review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cofirstuse-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: cofirstuse-source-report.json
+          if-no-files-found: warn
+          retention-days: 14
+
+  receipt-pickup:
+    needs: source-only
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Fetch upstream receipt without source checkout
+        uses: actions/download-artifact@v4
+        with:
+          name: cofirstuse-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: proof
+      - name: Validate received evidence and fail-closed outcome
+        env:
+          UPSTREAM: ${{ needs.source-only.result }}
+        run: |
+          python3 - <<'PY'
+          import copy, json, os, re
+          from pathlib import Path
+          
+          EXPECTED = {
+            "cocivium-home": "docs/index.html",
+            "living-world": "docs/experience/index.html",
+            "beaxa-kit": "docs/kitten/index.html",
+            "about": "docs/about/index.html",
+            "groupbuild": "docs/groupbuild/index.html",
+          }
+          FLAGS = {
+            "html", "viewport", "one_h1", "visual_surface",
+            "navigation_or_task", "keyboard_focus_css", "reduced_motion_css",
+            "limitations_disclosed", "no_external_script_src", "all_img_have_alt",
+          }
+          
+          def validate(report, upstream):
+            assert report.get("schema") == "CoFirstUse.Comparator.R0"
+            assert report.get("live_checks") == [], "unexpected live probe"
+            targets = report.get("targets", [])
+            assert isinstance(targets, list) and len(targets) == len(EXPECTED)
+            seen = set()
+            for item in targets:
+              identity = item["id"]
+              assert identity in EXPECTED and identity not in seen, "unexpected/duplicate ID"
+              seen.add(identity)
+              assert item["path"] == EXPECTED[identity], "wrong source path"
+              assert re.fullmatch(r"[0-9a-f]{64}", item["source_sha256"]), "invalid source hash format"
+              checks = item["source_checks"]
+              assert isinstance(checks, dict) and set(checks) == FLAGS, "unexpected check keys"
+              assert item["source_checks_total"] == len(FLAGS)
+              assert item["source_checks_passed"] == len(FLAGS)
+              assert all(value is True for value in checks.values()), "failed source check"
+              assert item["live_http"] == "NOT_TESTED_BY_SOURCE_MODE"
+              assert item["real_person_outcome"] == "UNVERIFIED"
+              assert item["device_accessibility"] == "UNVERIFIED"
+            assert seen == set(EXPECTED), "incomplete source coverage"
+            assert upstream == "success", "producer not successful"
+          
+          data = json.loads(Path("proof/cofirstuse-source-report.json").read_text(encoding="utf-8"))
+          validate(data, os.environ["UPSTREAM"])
+          print("PASS second job: source receipt picked up and checked")
+          
+          def rejected(label, candidate, upstream="success"):
+            try:
+              validate(candidate, upstream)
+            except (AssertionError, KeyError, TypeError, ValueError):
+              print("PASS negative fixture:", label)
+            else:
+              raise AssertionError("false-green receiver accepted " + label)
+          
+          missing = copy.deepcopy(data)
+          missing["targets"].pop()
+          rejected("missing-target", missing)
+          
+          duplicate = copy.deepcopy(data)
+          duplicate["targets"][-1] = copy.deepcopy(duplicate["targets"][0])
+          rejected("duplicate-target", duplicate)
+          
+          wrong_path = copy.deepcopy(data)
+          wrong_path["targets"][0]["path"] = "docs/other.html"
+          rejected("wrong-path", wrong_path)
+          
+          missing_hash = copy.deepcopy(data)
+          missing_hash["targets"][0]["source_sha256"] = "UNVERIFIED"
+          rejected("invalid-hash", missing_hash)
+          
+          false_flag = copy.deepcopy(data)
+          false_flag["targets"][0]["source_checks"]["one_h1"] = False
+          rejected("false-flag", false_flag)
+          
+          replaced_flag = copy.deepcopy(data)
+          del replaced_flag["targets"][0]["source_checks"]["one_h1"]
+          replaced_flag["targets"][0]["source_checks"]["made_up_check"] = True
+          rejected("substituted-flag", replaced_flag)
+          
+          unexpected_live = copy.deepcopy(data)
+          unexpected_live["live_checks"].append({"url":"https://unapproved.example/"})
+          rejected("unexpected-live", unexpected_live)
+          
+          false_person = copy.deepcopy(data)
+          false_person["targets"][0]["real_person_outcome"] = "VERIFIED"
+          rejected("unverified-person-claimed", false_person)
+          
+          rejected("failed-upstream", data, "failure")
+          print("LIMIT same GitHub service; source hash format only, no independent source rehash")
+          print("LIMIT no actual browser, human acceptance, deployment or provider failover")
+          PY
