@@ -44,6 +44,16 @@ header{padding:14px 0;border-bottom:1px solid #63739455}nav{display:flex;align-i
 .scenario button{border:1px solid #829bb9;background:#253551;color:#eef7ff;border-radius:10px;padding:9px 13px;min-height:44px}
 .scenario button[aria-pressed=true]{background:#b5f1df;border-color:#b5f1df;color:#102434}
 .why{border-left:3px solid #e2c1ec;padding:9px 12px;background:#262945;color:#ece8fa}
+.evidence-lens{margin:3px 0 28px}.evidence-lens>p{max-width:83ch}
+.evidence-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:15px 0}
+.evidence-case{background:#101b32;border:1px solid #7189ad;border-radius:12px;overflow:hidden}
+.evidence-case summary{cursor:pointer;padding:14px 15px;min-height:53px;color:#caf7e3;font-weight:730}
+.evidence-case summary:focus-visible{outline:3px solid #ffe79f;outline-offset:-4px}
+.evidence-case[open] summary{border-bottom:1px solid #566f94}
+.evidence-body{padding:3px 15px 15px}.evidence-body p{font-size:.93rem;margin:11px 0;color:#dce7f5}
+.evidence-body strong{color:#f3fbff}.evidence-links{font-size:.92rem}
+@media(max-width:880px){.evidence-list{grid-template-columns:1fr}}
+
 .links{display:flex;gap:9px;flex-wrap:wrap;padding-top:16px}
 .links a{padding:10px 13px;border:1px solid #98b3d0;border-radius:10px;text-decoration:none;font-weight:650}
 .hints{color:#c9d5ea;font-size:.88rem}
@@ -94,6 +104,38 @@ footer{padding:20px 0 34px;border-top:1px solid #55698d;font-size:.85rem;color:#
 <p class="accent" id="possibility">Possible future: People can challenge claims, choose connections, and change their minds.</p>
 <p class="why"><strong>What could distinguish them?</strong> Observe whether participants can inspect a claim, correct errors and withdraw permission without losing their work.</p>
 </article>
+</section>
+<section class="card evidence-lens" id="evidenceLens" aria-labelledby="evidenceLensTitle">
+<h2 id="evidenceLensTitle">Test a real claim, not a headline</h2>
+<p>Three public, source-linked case studies. Expand any case to compare <strong>what was observed</strong>, a serious alternative explanation and a test that could change the conclusion. These are dated research snapshots, not a live feed or automated discovery service.</p>
+<div class="evidence-list">
+<details class="evidence-case">
+<summary>AI-directed physical experiments · Nov 4</summary>
+<div class="evidence-body">
+<p><strong>Reported observation:</strong> The AutoDNA team's <em>Nature</em> study describes coordination of more than 20 instrument types across over 11,000 operations, including a 3.2-fold gain for concurrent protocol execution under its studied conditions.</p>
+<p><strong>Alternative:</strong> Task-specific scheduling, engineered equipment and hardware parallelism may explain part of the gain. Publication is not independent replication or unrestricted agency.</p>
+<p><strong>What would change our mind?</strong> An unrelated lab reproducing safe protocols with matched non-agent baselines, independently checked outcomes, fault recovery and total human effort.</p>
+<p class="evidence-links"><a href="https://www.nature.com/articles/s41586-026-11228-6">Inspect the primary Nature paper</a></p>
+</div></details>
+<details class="evidence-case">
+<summary>AI research speed · Nov 5</summary>
+<div class="evidence-body">
+<p><strong>Measured estimate:</strong> METR reports a 1.9-fold increase in Anthropic's assessed benchmark-progress rate (95% interval: 1.5 to 2.8). It does not establish that AI caused the entire increase.</p>
+<p><strong>Alternative:</strong> Benchmark sensitivity, non-AI research improvements and information withheld from public review could change causal interpretation.</p>
+<p><strong>What would change our mind?</strong> Preregistered future capability predictions, independently audited benchmarks and transparent comparisons of AI-assisted and non-assisted R&amp;D.</p>
+<p class="evidence-links"><a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/">Inspect METR's methods and limitations</a></p>
+</div></details>
+<details class="evidence-case">
+<summary>Search for alien signals · Nov 3</summary>
+<div class="evidence-body">
+<p><strong>Observed:</strong> A SETI Institute pilot observed the anti-solar point for about 17 hours and found no technosignature. Roughly 1.9 million initial radio detections were explained by human-generated interference.</p>
+<p><strong>Alternative:</strong> The survey covers limited times, frequencies and detection thresholds; a negative pilot cannot exclude all extraterrestrial life or technology.</p>
+<p><strong>What would change our mind?</strong> Repeated source-localized signals, independently replicated with interference and instrument artifacts excluded, followed by the responsible scientific verification process.</p>
+<p class="evidence-links"><a href="https://www.seti.org/news/when-should-we-listen-for-alien-signals">Inspect the SETI Institute's report</a></p>
+</div></details>
+</div>
+<p class="hints">Observation is not interpretation. Shared sources are not independent confirmation. This page cannot transmit signals, modify accounts or run experiments.</p>
+<div class="links"><a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Public/COALL_FRONTIER_PUBLIC_EVIDENCE_REVIEW_R0_20261108.md">Explore the full source-linked frontier review</a></div>
 </section>
 <section class="card" style="margin-bottom:30px">
 <h2>What would you like to do next?</h2>
@@ -202,8 +244,9 @@ canvas.addEventListener("pointermove",ev=>{if(!drag)return;const dx=ev.clientX-d
 canvas.addEventListener("pointerup",ev=>{if(!drag)return;const moved=Math.hypot(ev.clientX-drag.startX,ev.clientY-drag.startY);if(moved<12){const p=point(ev);let best=Infinity,hit=-1;positions.forEach((n,i)=>{const d=Math.hypot(n.x-p.x,n.y-p.y);if(d<best){best=d;hit=i;}});if(best<Math.min(canvas.width,canvas.height)*.17){selected=hit;update();}}drag=null;});
 canvas.addEventListener("pointercancel",()=>{drag=null;});
 canvas.addEventListener("keydown",ev=>{let acted=true;if(ev.key==="ArrowLeft")yaw-=.13;else if(ev.key==="ArrowRight")yaw+=.13;else if(ev.key==="ArrowUp")pitch=Math.min(1.3,pitch+.13);else if(ev.key==="ArrowDown")pitch=Math.max(-1.3,pitch-.13);else if(ev.key==="Enter"){selected=(selected+1)%nodes.length;update();}else acted=false;if(acted)ev.preventDefault();});
-$("motion").addEventListener("click",()=>{turning=!turning;$("motion").textContent=turning?"Pause motion":"Resume motion";$("motion").setAttribute("aria-pressed",String(!turning));});
-if(!turning){$("motion").textContent="Resume motion";$("motion").setAttribute("aria-pressed","true");}
+function syncMotion(){const paused=!turning;$("motion").textContent=paused?"Resume motion":"Pause motion";$("motion").setAttribute("aria-pressed",String(paused));}
+$("motion").addEventListener("click",()=>{turning=!turning;syncMotion();});
+syncMotion();
 $("reset").addEventListener("click",()=>{yaw=-.28;pitch=.14;selected=lenses[lens].focus;time=50;$("time").value="50";update();});
 $("time").addEventListener("input",ev=>{time=Number(ev.target.value);update();});
 document.querySelectorAll("[data-lens]").forEach(b=>b.addEventListener("click",()=>{
@@ -212,7 +255,7 @@ lens=b.dataset.lens;selected=lenses[lens].focus;document.querySelectorAll("[data
 document.querySelectorAll("[data-scenario]").forEach(b=>b.addEventListener("click",()=>{
 scenario=b.dataset.scenario;document.querySelectorAll("[data-scenario]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));update();
 }));
-document.addEventListener("visibilitychange",()=>{if(document.hidden)turning=false;});
+document.addEventListener("visibilitychange",()=>{if(document.hidden){turning=false;syncMotion();}});
 update();requestAnimationFrame(draw);
 })();
 </script></body></html>
