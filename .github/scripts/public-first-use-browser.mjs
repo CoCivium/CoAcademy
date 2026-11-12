@@ -147,13 +147,29 @@ async function checkMega(browser, item) {
         .filter(el => el.right > vw + 2 && el.left < vw + 1000)
         .sort((a,b)=>b.right-a.right)
         .slice(0,12);
+      const scrollContainers = [document.documentElement, document.body, ...document.querySelectorAll("body *")]
+        .filter(el => el.scrollWidth > el.clientWidth + 2)
+        .map(el => {
+          const rect=el.getBoundingClientRect();
+          return {
+            name:el.tagName.toLowerCase(), id:el.id || null,
+            classes:String(el.className?.baseVal || el.className || "").slice(0,75),
+            parent:String(el.parentElement?.className?.baseVal || el.parentElement?.className || "").slice(0,75),
+            scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,
+            right:Math.round(rect.right),overflowX:getComputedStyle(el).overflowX,
+          };
+        })
+        .sort((a,b)=>(b.scrollWidth-b.clientWidth)-(a.scrollWidth-a.clientWidth))
+        .slice(0,16);
       return {
         scrollWidth: document.documentElement.scrollWidth,
-        clientWidth: vw, overshooting,
+        clientWidth: vw, overshooting,scrollContainers,
       };
     });
     if (dims.scrollWidth > dims.clientWidth + 2)
       console.error("ATLAS_MOBILE_OVERFLOW_ELEMENTS " + JSON.stringify(dims.overshooting));
+    if (dims.scrollWidth > dims.clientWidth + 2)
+      console.error("ATLAS_SCROLL_CONTAINERS " + JSON.stringify(dims.scrollContainers));
     assertNoHorizontalOverflow(dims);
     assert.deepEqual(external, []);
     assert.deepEqual(browserErrors, []);
