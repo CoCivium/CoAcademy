@@ -7,6 +7,8 @@ on:
     paths:
       - docs/coparallel/**
       - docs/conav/**
+      - docs/cogbx/**
+      - docs/megascroller/**
       - .github/workflows/public-pages-readback.yml
   schedule:
     - cron: '31 8 * * *'
@@ -36,6 +38,9 @@ jobs:
               ('CoNav visual index', 'docs/conav/index.html', base + 'conav/'),
               ('CoNav static matrix', 'docs/conav/matrix.html', base + 'conav/matrix.html'),
               ('CoNav machine data', 'docs/conav/discovery.json', base + 'conav/discovery.json'),
+              ('CoGbx human/machine UI', 'docs/cogbx/index.html', base + 'cogbx/'),
+              ('CoGbx typed provenance', 'docs/cogbx/discovery.json', base + 'cogbx/discovery.json'),
+              ('CoMegaScroller visual highlights', 'docs/megascroller/index.html', base + 'megascroller/'),
           ]
           results = []
           for name, path, url in targets:
