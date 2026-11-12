@@ -10,6 +10,7 @@ on:
       - docs/cogbx/**
       - docs/megascroller/**
       - .github/workflows/public-pages-readback.yml
+      - .github/scripts/public-first-use-browser.mjs
   schedule:
     - cron: '31 8 * * *'
 permissions:
@@ -87,3 +88,32 @@ jobs:
           name: pages-readback-receipt
           path: pages-readback-report.json
           retention-days: 30
+
+  verify-browser-first-use:
+    # A bounded real-browser canary on explicit changes/dispatch, not another
+    # continuously running watcher or new schedule.
+    if: github.event_name != 'schedule'
+    needs: verify-public-pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout public source
+        uses: actions/checkout@v4
+      - name: Use Node 22 for Playwright
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install scoped headless browser
+        run: |
+          npm install --no-save --no-package-lock --no-audit --no-fund playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Interact with the live published CoGbx and megascroller
+        run: node .github/scripts/public-first-use-browser.mjs
+      - name: Preserve browser QA evidence, including failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-first-use-browser-receipt
+          path: public-first-use-browser-receipt.json
+          if-no-files-found: warn
+          retention-days: 14
