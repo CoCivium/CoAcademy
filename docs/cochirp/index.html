@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="CoChirp+ R0 browser-first, opt-in audio cue experiment with event receipts. No microphone, pairing, or device control.">
+<title>CoChirp+ R0 | Make silence informative</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1622;--panel:#182c3d;--edge:#4f7181;--text:#f1f7ff;--muted:#c1d3e1;--teal:#9ee8d8;--gold:#ffe0a6;--coral:#ffb8a9}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#264d5b,var(--bg) 65%);font:16px/1.55 system-ui,sans-serif;color:var(--text)}
+main{max-width:960px;margin:auto;padding:24px}h1{font-size:clamp(34px,7vw,60px);line-height:1.1;margin:12px 0 20px}h2{font-size:21px;margin:0 0 9px}
+p{max-width:780px}a{color:var(--teal)}.kicker{color:var(--gold);font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}
+.panel{border:1px solid var(--edge);border-radius:16px;background:var(--panel);padding:19px;margin:17px 0}.hero{background:#15333e}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--teal);background:var(--teal);color:#0d2732;padding:10px 14px;font-weight:750}
+button.secondary{background:transparent;color:var(--text);border-color:var(--edge)}button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:15px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.grid button{width:100%;height:100%;min-height:86px;text-align:left}
+.grid small{display:block;font-weight:400;margin-top:3px}
+#state{font-size:27px;font-weight:800;color:var(--teal);margin:8px 0}#notice{font-size:14px;color:var(--gold)}
+#receipts{max-height:280px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#0a1826;border-radius:9px;padding:14px;font:12px/1.6 ui-monospace,monospace}
+label{display:inline-flex;align-items:center;gap:7px}input[type=range]{width:180px;accent-color:var(--teal)}input[type=checkbox]{accent-color:var(--teal);width:18px;height:18px}
+small,.fine{font-size:13px;color:var(--muted)}.warn{border-left:4px solid var(--gold);padding-left:12px;color:var(--muted)}
+@media(max-width:620px){main{padding:14px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:15px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header><a href="../">CoAcademy</a> <span aria-hidden="true">/</span> <strong>CoChirp+</strong> <span class="kicker">R0 local experiment</span></header>
+<section class="panel hero">
+<div class="kicker">Audio feedback / CoAura+ / CoSurface+</div>
+<h1>Make silence informative.</h1>
+<p>When an assistant pauses, users cannot tell whether it heard them, is thinking, or lost the connection. This page demonstrates small, recognizable cues for those distinct events. Audio begins <strong>only after you opt in</strong>.</p>
+<p class="warn">This is a manual browser simulation. The speech-active switch is manually controlled; this page cannot detect real speech. It does not listen to a microphone, observe ChatGPT sessions, repair Bluetooth, choose an earbud, or infer which ear played a sound. No live conversation or device agent is connected. Sound currently playing is stopped when you mute, simulate speaking, or leave the page.</p>
+<div class="controls">
+<button id="enable" type="button">Enable local sounds</button>
+<button id="disable" class="secondary" type="button">Mute sounds</button>
+</div>
+<div class="row">
+<label for="volume">Cue volume <input id="volume" type="range" min="0" max="30" value="12" step="1"></label>
+<output id="vol-label" for="volume">12%</output>
+<label><input id="haptic" type="checkbox"> Vibration where supported</label>
+<label><input id="speech" type="checkbox"> Simulate speech active (suppress cues)</label>
+</div>
+<p id="audio-status" class="fine" role="status">Sounds off by default. Visual events work without audio.</p>
+</section>
+<section class="panel" aria-labelledby="events-title">
+<h2 id="events-title">Trigger an event</h2>
+<p class="fine">Each button generates a simulated event, its cue, a visible state, and a local receipt. The gentle processing pulse stops when the state changes or after a bounded interval.</p>
+<div class="grid">
+<button type="button" data-event="received">Received <small>Soft tick</small></button>
+<button type="button" data-event="processing">Processing <small>Gentle periodic pulse</small></button>
+<button type="button" data-event="ready">Ready <small>Short rising chirp</small></button>
+<button type="button" data-event="interrupted">Interrupted <small>Descending pair</small></button>
+<button type="button" data-event="restored">Restored <small>Rising pair</small></button>
+<button type="button" data-event="failed">Failed <small>Distinct low tone</small></button>
+</div>
+<div id="state" aria-live="polite">Waiting for a simulated event</div>
+<div id="notice" role="status">No event has run.</div>
+</section>
+<section class="panel">
+<h2>Local evidence trail</h2>
+<p class="fine">Events are recorded in memory in this tab only. They are not sent to servers, kept between visits, or represented as real connectivity measurements. Browser scheduling delay is not end-to-end speech latency.</p>
+<div class="controls">
+<button id="self-test" class="secondary" type="button">Run logic self-check</button>
+<button id="copy" class="secondary" type="button">Copy receipts</button>
+<button id="clear" class="secondary" type="button">Clear receipts</button>
+</div>
+<pre id="receipts" aria-label="Local event receipts">No receipts yet.</pre>
+<p id="test-status" class="fine" role="status">Logic self-check not run.</p>
+</section>
+<footer class="fine">
+<p>Experimental CoChirp+ R0. Intended integration: authorized app event stream → CoChirp cue scheduler → user-selected audio/haptics/visual surface → timestamped receipts. Pairing, earbud selection and real speech-path latency require separate instrumented tests.</p>
+<p>Privacy: no analytics, network requests, microphone access, cookies or persistent storage. The sound uses the browser Web Audio API only when enabled. Unexpected sound during speech should be considered a defect, not a feature.</p>
+</footer>
+<noscript>JavaScript is required to simulate cues. No device is monitored.</noscript>
+</main>
+<script>
+(function () {
+"use strict";
+const byId = id => document.getElementById(id);
+const names = Object.freeze(["received","processing","ready","interrupted","restored","failed"]);
+const cue = Object.freeze({
+ received:[[620,.055]],
+ processing:[[400,.080]],
+ ready:[[600,.080],[820,.110]],
+ interrupted:[[620,.110],[410,.145]],
+ restored:[[440,.095],[700,.120]],
+ failed:[[290,.180],[250,.180]]
+});
+let context = null, enabled = false, seq = 0, pulseTimer = null, pulseCount = 0;
+const activeSounds = new Set();
+let state = "waiting";
+let receipts = [];
+const maxReceipts = 80;
+function draw() {
+ byId("receipts").textContent = receipts.length ? receipts.map(r=>JSON.stringify(r)).join("\n") : "No receipts yet.";
+}
+function record(kind, extra) {
+ const row = Object.assign({schema:"CoChirp.Event.R0",seq:++seq,at:new Date().toISOString(),kind:kind,source:"user-triggered-browser-simulation",route:"unverified"},extra||{});
+ receipts.push(row);
+ if(receipts.length>maxReceipts) receipts.shift();
+ draw();
+}
+function stopPulse() {
+ if(pulseTimer !== null) { clearTimeout(pulseTimer); pulseTimer = null; }
+}
+function volume() { return Number(byId("volume").value)/100; }
+function stopAudio() {
+ for(const entry of activeSounds) {
+  try { entry.amp.gain.cancelScheduledValues(context.currentTime);
+        entry.amp.gain.setValueAtTime(0,context.currentTime);
+        entry.osc.stop(context.currentTime); } catch (_) {}
+ }
+ if(typeof navigator.vibrate==="function") try {navigator.vibrate(0);} catch (_) {}
+}
+function play(kind) {
+ if(byId("speech").checked) return "suppressed-speech-active";
+ if(!enabled || !context) return "muted";
+ if(volume()===0) return "zero-volume";
+ try {
+  if(context.state!=="running") return "audio-context-not-running";
+  stopAudio();
+  let t=context.currentTime+.018;
+  cue[kind].forEach(([hz,duration])=>{
+   const osc=context.createOscillator(), amp=context.createGain();
+   osc.type="sine";osc.frequency.setValueAtTime(hz,t);
+   amp.gain.setValueAtTime(0,t);
+   amp.gain.linearRampToValueAtTime(volume(),t+.012);
+   amp.gain.exponentialRampToValueAtTime(.0001,t+duration);
+   osc.connect(amp);amp.connect(context.destination);
+   const entry={osc,amp};activeSounds.add(entry);
+   osc.onended=()=>{activeSounds.delete(entry);osc.disconnect();amp.disconnect();};
+   osc.start(t);osc.stop(t+duration+.015);
+   t+=duration+.035;
+  });
+  return "queued-in-browser";
+ } catch(error) {
+  byId("audio-status").textContent="Sound could not play: "+String(error&&error.message||error);
+  return "audio-error";
+ }
+}
+function vibrate(kind) {
+ if(byId("speech").checked) return "suppressed-speech-active";
+ if(!byId("haptic").checked || typeof navigator.vibrate!=="function") return "off-or-unsupported";
+ const pattern={received:[20],processing:[24],ready:[30,45,30],interrupted:[60,45,60],restored:[35,40,35],failed:[100,40,100]}[kind];
+ try { return navigator.vibrate(pattern)?"requested":"declined"; } catch (_) {return "unavailable";}
+}
+function fire(kind, automatic) {
+ if(!Object.prototype.hasOwnProperty.call(cue,kind)) return;
+ stopPulse();
+ state=kind;
+ byId("state").textContent=kind.charAt(0).toUpperCase()+kind.slice(1);
+ const playback=play(kind), haptic=vibrate(kind);
+ byId("notice").textContent=(automatic?"Bounded demonstration pulse. ":"Simulated event. ")+"Audio: "+playback+"; vibration: "+haptic+".";
+ record(kind,{audio:playback,haptic:haptic,monotonic_ms:Math.round(performance.now()),auto:!!automatic});
+ if(kind==="processing") {
+  pulseCount=0;
+  const pulse=()=>{
+   if(state!=="processing" || pulseCount>=3) return;
+   pulseCount++;
+   const audio=play("processing"), haptic=vibrate("processing");
+   record("processing-pulse",{audio:audio,haptic:haptic,auto:true,monotonic_ms:Math.round(performance.now())});
+   if(pulseCount<3) pulseTimer=setTimeout(pulse,4000);
+   else {pulseTimer=null;byId("notice").textContent="Periodic cue limit reached. No infinite beeping. State still simulated: processing.";}
+  };
+  pulseTimer=setTimeout(pulse,4000);
+ }
+}
+byId("enable").addEventListener("click",async()=>{
+ try {
+  if(!context) context=new (window.AudioContext||window.webkitAudioContext)();
+  await context.resume();
+  enabled=context.state==="running";
+  byId("audio-status").textContent=enabled?"Local sounds enabled. No microphone or session access.":"Audio blocked by browser; visual cues remain available.";
+ } catch(e) {
+  enabled=false;byId("audio-status").textContent="Web Audio unavailable: "+String(e&&e.message||e);
+ }
+});
+byId("disable").addEventListener("click",()=>{
+ enabled=false;
+ stopAudio();
+ if(context) context.suspend().catch(()=>{});
+ byId("audio-status").textContent="Muted. Visual receipts continue.";
+});
+byId("volume").addEventListener("input",()=>{
+ byId("vol-label").textContent=byId("volume").value+"%";
+ if(volume()===0) stopAudio();
+});
+byId("speech").addEventListener("change",()=>{
+ if(byId("speech").checked) {
+  stopAudio();
+  byId("notice").textContent="Speech-active simulation: ongoing cues immediately silenced; future cues suppressed.";
+  record("speech-active",{audio:"silenced",haptic:"cancel-requested",auto:false});
+ } else {
+  record("speech-inactive",{audio:"unchanged",haptic:"unchanged",auto:false});
+ }
+});
+document.querySelectorAll("[data-event]").forEach(b=>{
+ b.addEventListener("click",()=>fire(b.dataset.event,false));
+});
+byId("self-test").addEventListener("click",()=>{
+ const ok=names.length===6&&names.every(k=>Array.isArray(cue[k])&&cue[k].length>0&&cue[k].every(n=>n.length===2&&n[0]>0&&n[1]>0))&&maxReceipts===80;
+ const result=ok?"PASS: six cue shapes and bounded receipt store. Not a speaker, Bluetooth or timing test.":"FAIL: cue definition invariant.";
+ byId("test-status").textContent=result;
+ record("self-check",{result:ok?"PASS":"FAIL",scope:"logic-only"});
+});
+byId("clear").addEventListener("click",()=>{
+ stopPulse();stopAudio();state="waiting";pulseCount=0;receipts=[];seq=0;
+ byId("state").textContent="Waiting for a simulated event";
+ byId("notice").textContent="No event has run.";
+ draw();
+});
+byId("copy").addEventListener("click",async()=>{
+ try {
+  if(!navigator.clipboard || !navigator.clipboard.writeText) throw new Error("clipboard unavailable");
+  await navigator.clipboard.writeText(receipts.map(r=>JSON.stringify(r)).join("\n"));
+  byId("test-status").textContent="Copied local receipts. No data was submitted.";
+ } catch(_) {byId("test-status").textContent="Copy unavailable in this browser. Receipts remain visible.";}
+});
+document.addEventListener("visibilitychange",()=>{
+ if(document.hidden) {
+  stopPulse();stopAudio();
+  if(state==="processing") byId("notice").textContent="Tab hidden: processing pulses stopped; no claim about actual session health.";
+  record("page-hidden",{audio:"silenced",haptic:"cancel-requested",auto:true});
+ }
+});
+window.addEventListener("pagehide",()=>{stopPulse();stopAudio();});
+})();
+</script>
+</body>
+</html>
