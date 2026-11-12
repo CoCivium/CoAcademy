@@ -137,6 +137,9 @@ async function checkMega(browser, item) {
           return {
             name: el.tagName.toLowerCase(), id: el.id || null,
             classes: String(el.className?.baseVal || el.className || "").slice(0,75),
+            parent: String(el.parentElement?.className?.baseVal || el.parentElement?.className || "").slice(0,70),
+            grandparent: String(el.parentElement?.parentElement?.className?.baseVal || el.parentElement?.parentElement?.className || "").slice(0,70),
+            label: String(el.textContent || "").slice(0,45).replace(/\s+/g," "),
             right: Math.round(rect.right), left: Math.round(rect.left),
             width: Math.round(rect.width),
           };
