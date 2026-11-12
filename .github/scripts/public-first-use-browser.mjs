@@ -129,10 +129,28 @@ async function checkMega(browser, item) {
       assert.ok(link.href?.startsWith("https://github.com/CoCivium/CoCivium/blob/main/"),
         "source link missing or unexpected destination");
     }
-    const dims = await page.evaluate(() => ({
-      scrollWidth: document.documentElement.scrollWidth,
-      clientWidth: document.documentElement.clientWidth,
-    }));
+    const dims = await page.evaluate(() => {
+      const vw = document.documentElement.clientWidth;
+      const overshooting = [...document.querySelectorAll("body *")]
+        .map(el => {
+          const rect = el.getBoundingClientRect();
+          return {
+            name: el.tagName.toLowerCase(), id: el.id || null,
+            classes: String(el.className?.baseVal || el.className || "").slice(0,75),
+            right: Math.round(rect.right), left: Math.round(rect.left),
+            width: Math.round(rect.width),
+          };
+        })
+        .filter(el => el.right > vw + 2 && el.left < vw + 1000)
+        .sort((a,b)=>b.right-a.right)
+        .slice(0,12);
+      return {
+        scrollWidth: document.documentElement.scrollWidth,
+        clientWidth: vw, overshooting,
+      };
+    });
+    if (dims.scrollWidth > dims.clientWidth + 2)
+      console.error("ATLAS_MOBILE_OVERFLOW_ELEMENTS " + JSON.stringify(dims.overshooting));
     assertNoHorizontalOverflow(dims);
     assert.deepEqual(external, []);
     assert.deepEqual(browserErrors, []);
