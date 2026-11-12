@@ -1,0 +1,49 @@
+{
+  "schema": "CoAcademy.CoGbxPublicProjection.R0",
+  "publication_state": "PUBLIC_SOURCE_PROJECTION_CANDIDATE",
+  "product_state": "STATIC_OFFLINE_BROWSER_EXEMPLAR_NOT_X2_NATIVE_DESKTOP",
+  "public_route_if_pages_deployed": "https://cocivium.github.io/CoAcademy/cogbx/",
+  "source": {
+    "repository": "CoCivium/CoCivium",
+    "path": "examples/cogbx_ux_exemplar_r0/index.html",
+    "git_blob_sha": "0d7f308341cd0026efdebabc9bcdcfc3e5f0d45b",
+    "branch_at_copy": "main",
+    "upstream_url": "https://github.com/CoCivium/CoCivium/blob/main/examples/cogbx_ux_exemplar_r0/index.html",
+    "local_mirror": "docs/cogbx/index.html",
+    "derivative_method": "BYTE_EXACT_MIRROR",
+    "license_url": "https://github.com/CoCivium/CoCivium/blob/main/LICENSE"
+  },
+  "evidence": {
+    "source_scope_ci": "https://github.com/CoCivium/CoCivium/actions/runs/43125273367",
+    "test_scope": "DOM_SHIM_AND_SOURCE_CHECKS_NOT_BROWSER_ACCESSIBILITY_OR_REAL_X2",
+    "readback": "EXACT_GIT_BLOB_PARITY_PREVIEW_BRANCH",
+    "live_http_verification": "NOT_YET_VERIFIED",
+    "client_visual_accessibility": "NOT_INDEPENDENTLY_TESTED"
+  },
+  "views": [
+    "ORB_MAP",
+    "TEXT",
+    "AMBIENT",
+    "OPTIONAL_3D",
+    "OPT_IN_READ_ONLY_SOURCE_PACKET"
+  ],
+  "safety": {
+    "synthetic_only": true,
+    "real_device_observation": false,
+    "provider_calls": 0,
+    "network_calls": 0,
+    "storage_writes": 0,
+    "external_effects": 0,
+    "authorized_os_changes": false,
+    "credentials_collected": false,
+    "user_account_required": false
+  },
+  "currentness_policy": "REFETCH_SOURCE_BEFORE_FUTURE_PROMOTION",
+  "no_claims": [
+    "GIT_SOURCE_NE_WEBSITE_DEPLOYED",
+    "WEBSITE_HTTP_200_NE_HUMAN_ACCEPTANCE",
+    "PROJECTION_NE_SOURCE",
+    "OFFLINE_DEMO_NE_RUNTIME",
+    "SAME_GITHUB_PROVIDER_NE_INDEPENDENT_HOST"
+  ]
+}
