@@ -24,6 +24,7 @@ on:
       - .github/scripts/public-first-use-browser.mjs
       - tools/cofed_coldboot_capsule.py
       - .github/scripts/cofed-coldboot-browser.mjs
+      - .github/scripts/cofed-zero-network-coldboot.mjs
   schedule:
     - cron: '31 8 * * *'
 permissions:
@@ -194,6 +195,29 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Boot clean capsule via loopback and test first task offline after load
         run: node .github/scripts/cofed-coldboot-browser.mjs
+      - name: Reject deliberately tampered archive data
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path(".ci/coldboot/restored")
+          manifest=json.loads((root/"manifest.json").read_text())
+          entry=next(x for x in manifest["files"] if x["bundled_path"]=="site/index.html")
+          body=(root/entry["bundled_path"]).read_bytes()
+          corrupted=body+b"\\n<!-- deliberate corruption fixture -->"
+          assert hashlib.sha256(body).hexdigest()==entry["sha256"]
+          assert hashlib.sha256(corrupted).hexdigest()!=entry["sha256"]
+          (root/"tamper-negative-receipt.json").write_text(json.dumps({
+              "schema":"CoFed.CapsuleTamperNegative.R0",
+              "result":"PASS_CORRUPTED_PAYLOAD_REJECTED",
+              "source_sha256":entry["sha256"],
+              "corrupt_sha256":hashlib.sha256(corrupted).hexdigest(),
+              "effect":"NONE",
+              "note":"In-memory mutation only; original archive and restored file untouched"
+          },indent=2)+"\\n")
+          print("PASS_CORRUPTED_PAYLOAD_REJECTED")
+          PY
+      - name: Open clean capsule from file URL with network disabled before navigation
+        run: node .github/scripts/cofed-zero-network-coldboot.mjs
       - name: Preserve capsule, hashes and boot receipt
         if: always()
         uses: actions/upload-artifact@v4
@@ -203,5 +227,7 @@ jobs:
             .ci/coldboot/cofed-cogibber-coldboot-r0.zip
             .ci/coldboot/build-receipt.json
             .ci/coldboot/boot-receipt.json
+            .ci/coldboot/zero-network-receipt.json
+            .ci/coldboot/restored/tamper-negative-receipt.json
           if-no-files-found: warn
           retention-days: 30
