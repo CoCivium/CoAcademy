@@ -246,6 +246,59 @@ async function checkCloudOps(browser,item){
   } finally { await context.close(); }
 }
 
+async function checkFederation(browser,item){
+  const context = await browser.newContext({
+    viewport:item.viewport,reducedMotion:item.reducedMotion,serviceWorkers:"block",
+  });
+  const page = await context.newPage();
+  const external = [], browserErrors=[];
+  page.on("request",request=>checkOrigin(request,external));
+  page.on("pageerror",error=>browserErrors.push(error.name));
+  try {
+    const response = await page.goto(BASE+"constellation/federation/",{
+      waitUntil:"load",timeout:30000,
+    });
+    assert.equal(response?.status(),200);
+    const fetchResult=await context.request.get(BASE+"constellation/federation/fixture.json");
+    assert.equal(fetchResult.status(),200);
+    const source=await fetchResult.json();
+    assert.equal(source.schema,"CoAll.CoFed.FailureIsolationFixture.R0");
+    assert.equal(source.scenarios.length,7);
+    assert.equal(await page.locator("#scenarios button").count(),7);
+    const embed=JSON.parse(await page.locator("#fixture").textContent());
+    assert.deepEqual(embed.scenarios,source.scenarios,
+      "human scenario source must match exact machine scenario entries");
+    await context.setOffline(true);
+    for(const scenario of source.scenarios){
+      await page.locator('#scenarios button[data-id="'+scenario.id+'"]').click();
+      assert.equal(await page.locator("#current").textContent(),scenario.title);
+      assert.equal(await page.locator("#effectState").textContent(),String(scenario.effects));
+      assert.equal(await page.locator("#writeState").textContent(),scenario.state.write.replaceAll("_"," "));
+      assert.equal(await page.locator('#scenarios button[aria-pressed="true"]').count(),1);
+    }
+    await page.locator('#scenarios button[data-id="coordinator_offline"]').focus();
+    await page.keyboard.press("Enter");
+    assert.equal(await page.locator("#current").textContent(),"Coordinator unavailable");
+    assert.equal(await page.locator("#localState").textContent(),"AVAILABLE FROM LOADED PAGE");
+    assert.equal(await page.locator("#writeState").textContent(),"DENIED");
+    const dimensions=await page.evaluate(()=>({
+      clientWidth:document.documentElement.clientWidth,
+      scrollWidth:document.documentElement.scrollWidth,
+      reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches,
+    }));
+    assertNoHorizontalOverflow(dimensions);
+    assert.equal(dimensions.reducedMotion,item.reducedMotion==="reduce");
+    assert.deepEqual(external,[],"no cross-origin browser requests");
+    assert.deepEqual(browserErrors,[],"no uncaught browser exceptions");
+    return {view:item.name,result:"PASS",http_status:200,
+      scenario_count:source.scenarios.length,
+      exact_human_machine_scenario_parity:true,offline_after_load_switch:true,
+      keyboard_selection:true,external_effects:0,third_party_requests:0,
+      horizontal_overflow:false,reduced_motion:dimensions.reducedMotion,
+      page_errors:0};
+  } finally { await context.close(); }
+}
+
 const report = {
   schema: "CoAcademy.PublicFirstUseBrowserReadback.R0",
   source_commit: process.env.GITHUB_SHA || "LOCAL_UNBOUND",
@@ -268,6 +321,7 @@ try {
     report.tests.push({surface:"megascroller", ...await checkMega(browser, item)});
     report.tests.push({surface:"cofront", ...await checkCoFront(browser, item)});
     report.tests.push({surface:"cloudops", ...await checkCloudOps(browser, item)});
+    report.tests.push({surface:"federation", ...await checkFederation(browser, item)});
   }
   report.result = "PASS_SCOPED_BROWSER_INTERACTIONS";
 } catch (error) {
