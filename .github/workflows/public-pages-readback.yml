@@ -4,11 +4,21 @@ name: Public Pages exact-object readback
 on:
   workflow_dispatch:
   push:
+    branches: [master]
     paths:
       - docs/coparallel/**
       - docs/conav/**
       - docs/cogbx/**
       - docs/megascroller/**
+      - docs/index.html
+      - docs/discover/**
+      - docs/cogibber/**
+      - docs/laneset/**
+      - docs/reviewpanel/**
+      - docs/transparency/**
+      - docs/constellation/cloudops/**
+      - docs/constellation/positioning/**
+      - docs/assets/cofront/**
       - .github/workflows/public-pages-readback.yml
       - .github/scripts/public-first-use-browser.mjs
   schedule:
@@ -34,6 +44,20 @@ jobs:
           import hashlib, json, os, pathlib, time, urllib.request
           base = 'https://cocivium.github.io/CoAcademy/'
           targets = [
+              ('CoAcademy first-use home', 'docs/index.html', base),
+              ('CoAcademy discovery hub', 'docs/discover/index.html', base + 'discover/'),
+              ('CoFront shared task-card style', 'docs/assets/cofront/cofront-r0.css', base + 'assets/cofront/cofront-r0.css'),
+              ('CoFront pattern metadata', 'docs/assets/cofront/cofront-r0.json', base + 'assets/cofront/cofront-r0.json'),
+              ('CoGibber first task', 'docs/cogibber/index.html', base + 'cogibber/'),
+              ('CoGibber machine twin', 'docs/cogibber/discovery.json', base + 'cogibber/discovery.json'),
+              ('CoAthene R1 learner task', 'docs/laneset/r1/index.html', base + 'laneset/r1/'),
+              ('CoReviewPanel human review', 'docs/reviewpanel/index.html', base + 'reviewpanel/'),
+              ('CoReviewPanel machine twin', 'docs/reviewpanel/discovery.json', base + 'reviewpanel/discovery.json'),
+              ('CoAcademy Trust page', 'docs/transparency/index.html', base + 'transparency/'),
+              ('CoAcademy Trust machine facts', 'docs/transparency/site.json', base + 'transparency/site.json'),
+              ('CoPosition comparison', 'docs/constellation/positioning/index.html', base + 'constellation/positioning/'),
+              ('CoCloudOps use-case catalogue', 'docs/constellation/cloudops/index.html', base + 'constellation/cloudops/'),
+              ('CoCloudOps machine catalogue', 'docs/constellation/cloudops/catalog.json', base + 'constellation/cloudops/catalog.json'),
               ('CoParallel interactive', 'docs/coparallel/index.html', base + 'coparallel/'),
               ('CoParallel research data', 'docs/coparallel/discovery.json', base + 'coparallel/discovery.json'),
               ('CoNav visual index', 'docs/conav/index.html', base + 'conav/'),
