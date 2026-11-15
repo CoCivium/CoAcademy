@@ -161,6 +161,18 @@
       "url": "https://github.com/CoCivium/CoAcademy",
       "scope": "Pages source, documentation, and experiments",
       "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "entment",
+      "title": "EntMent AI-first interface",
+      "audience": [
+        "human",
+        "researcher",
+        "AI or machine reader"
+      ],
+      "url": "https://entment.org/",
+      "scope": "Related CoAura interface; previous CoSites plan associates EntMent with education/CoAcademy, but no implemented migration of CoAcademy or CoAthene is verified.",
+      "status": "OBSERVED_HTTP_200_2026-11-15__NOT_MIGRATION_PROOF"
     }
   ],
   "machine_endpoints": [
@@ -228,5 +240,17 @@
     "SOURCE_FOR",
     "HAS_UNVERIFIED_RECEIVER"
   ],
-  "next_proof": "Independently confirm new deployed hub and exact source; then verify crawl/index signals via authorized search-console owner, accessible first-task completion, and independently reviewed link destinations."
+  "next_proof": "Independently confirm new deployed hub and exact source; then verify crawl/index signals via authorized search-console owner, accessible first-task completion, and independently reviewed link destinations.",
+  "relations": {
+    "entment_site_family": {
+      "status": "HISTORICAL_DESIGN_INTENT_NOT_MIGRATION",
+      "planned_relation": "EntMent serves AI-first and education/mentorship entry; CoAcademy education and CoAthene inquiry are related capabilities, not verified relocated code",
+      "prior_as_of": "2026-05-28",
+      "current_entment_url": "https://entment.org/",
+      "current_academy_url": "https://cocivium.github.io/CoAcademy/",
+      "entment_repository": "https://github.com/CoCivium/EntMent",
+      "coacademy_repository": "https://github.com/CoCivium/CoAcademy",
+      "no_domain_canonical_change": true
+    }
+  }
 }
