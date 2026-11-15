@@ -1,0 +1,244 @@
+{
+  "schema": "CoAll.CloudSiteOps.UseCaseExemplars.R0",
+  "date_utc": "2026-11-15",
+  "state": "PUBLIC_SAMPLE_PATTERN_CATALOGUE__NO_AUTO_FLEET_ACTUATION",
+  "framing": "Many sites can reuse one cloud-based source, build, readproof, test and recovery pattern; local CoFarm is an optional witness and cold-recovery plane rather than a compulsory relay.",
+  "hosting_principle": "Public anonymous read can be no-login; source write/deploy and data mutation require verified identity and least-privilege authorization.",
+  "public_start": "https://cocivium.github.io/CoAcademy/constellation/cloudops/",
+  "inheritance": "CoTalkItOut WorkID/CoGlyphList candidate bundles and CoSitesNodes prior, without treating candidate work as live workers.",
+  "patterns": [
+    {
+      "name": "P1-source",
+      "purpose": "Versioned source, rights and links"
+    },
+    {
+      "name": "P2-receiver",
+      "purpose": "Independent exact public endpoint readproof"
+    },
+    {
+      "name": "P3-UX",
+      "purpose": "Real-browser and human task check"
+    },
+    {
+      "name": "P4-recovery",
+      "purpose": "Last known useful head, negative receipt and bounded correction"
+    }
+  ],
+  "exemplars": [
+    {
+      "id": "P1",
+      "name": "Exact public receiver readback",
+      "trigger": "Daily schedule or selected source change",
+      "input": "Committed static file and its exact public URL",
+      "mechanism": "GitHub Actions checkout -> HTTPS GET -> SHA-256/byte comparison -> receipt artifact",
+      "state": "EXISTING_WORKFLOW_SOURCE__COVERAGE_EXPANSION_IN_PROGRESS",
+      "output": "Exact match / source mismatch / HTTP failure",
+      "gate": "A match proves served bytes, not search indexing or human comprehension",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/.github/workflows/public-pages-readback.yml"
+    },
+    {
+      "id": "P2",
+      "name": "Real-browser first task",
+      "trigger": "Explicit source update or authorized dispatch",
+      "input": "Stable public pages, two bounded viewport/motion profiles",
+      "mechanism": "GitHub-hosted Playwright Chromium; keyboard and reduced-motion checks",
+      "state": "EXISTING_WORKFLOW_SOURCE__SPECIFIC_PAGES_ONLY",
+      "output": "JSON test result plus failures",
+      "gate": "Synthetic browser is not a consenting independent human",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/.github/scripts/public-first-use-browser.mjs"
+    },
+    {
+      "id": "P3",
+      "name": "Read-only recurring availability probe",
+      "trigger": "Scheduled 6-hour CoRelay / daily CoPhoenix",
+      "input": "Allowlisted public HTTPS URLs",
+      "mechanism": "Hosted Python check, bounded timeouts, JSON artifact and failure classes",
+      "state": "EXISTING_WORKFLOW_SOURCE",
+      "output": "Health evidence and stale/failure signals",
+      "gate": "A scheduled definition does not prove successful runs or independent disaster recovery",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/.github/workflows/corelay-public-probe.yml"
+    },
+    {
+      "id": "P4",
+      "name": "Cloud-source deploy",
+      "trigger": "Authorized Git commit to published source",
+      "input": "Version-controlled public static content",
+      "mechanism": "GitHub Pages hosted build and deployment",
+      "state": "OBSERVED_SUCCESSFUL_GITHUB_DEPLOYMENT_2026_11_15",
+      "output": "Public page revision",
+      "gate": "Deploy is not a service-level acceptance or a human audience",
+      "source": "https://github.com/CoCivium/CoAcademy/actions/runs/43691778272"
+    },
+    {
+      "id": "P5",
+      "name": "Human plus machine twin",
+      "trigger": "Public content or schema change",
+      "input": "HTML, discovery.json, revision and policy pointers",
+      "mechanism": "Source/readback check, semantic parity review, fallback on mismatch",
+      "state": "PARTIAL_PUBLIC_SOURCES__AUTOMATED_PARITY_NOT_PROVEN",
+      "output": "Inspectable page and JSON contract",
+      "gate": "HTTP equality to own source is not semantic agreement",
+      "source": "https://cocivium.github.io/CoAcademy/reviewpanel/discovery.json"
+    },
+    {
+      "id": "P6",
+      "name": "Site inventory and broken-link audit",
+      "trigger": "Site/route change or low-frequency scheduled audit",
+      "input": "Versioned allowlisted canonical links, sitemap and scope",
+      "mechanism": "Read-only requests and link normalization; no domain crawling outside allowlist",
+      "state": "PARTIAL_MANUAL_OBSERVATIONS__FLEET_NOT_SCHEDULED",
+      "output": "404, wrong redirect, stale scope, failure receipt",
+      "gate": "DNS ownership, registrar status and redirects require separate authority",
+      "source": "https://cocivium.github.io/CoAcademy/sitemap.xml"
+    },
+    {
+      "id": "P7",
+      "name": "Accessibility and UX regression",
+      "trigger": "Page component change or pattern adoption",
+      "input": "One useful task, desktop/mobile, keyboard, reduced motion",
+      "mechanism": "Hosted browser plus eventual consenting screen-reader/user review",
+      "state": "PARTIAL_BROWSER_CANARIES__NO_INDEPENDENT_A11Y_ACCEPTANCE",
+      "output": "Failures, accessibility issues and fixes",
+      "gate": "Automated accessibility checks cannot certify full accessibility",
+      "source": "https://cocivium.github.io/CoAcademy/assets/cofront/cofront-r0.json"
+    },
+    {
+      "id": "P8",
+      "name": "Design-pattern transfer across sites",
+      "trigger": "One bubble proposes a tested improvement",
+      "input": "Versioned CSS/component, rights proof and scoped receiving site overlay",
+      "mechanism": "Isolated branch -> review -> one elected integrator -> deployment/readback",
+      "state": "PLANNED_PARALLELISM__NO_ACTIVE_CROSS_SITE_CONTROLLER",
+      "output": "Adopt/reject and reversible target revision",
+      "gate": "Do not propagate private design assets or copy unverifiable claims",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/bubbles/board.json"
+    },
+    {
+      "id": "P9",
+      "name": "Language and playful representation",
+      "trigger": "New localized/semantic mode proposal",
+      "input": "Source text and explicit locale/genre semantics",
+      "mechanism": "Draft translation, human review, accessibility test, optional joke/semantic sketch",
+      "state": "PUBLIC_SINGLE_PASSAGE_SELECTOR__FLEET_TRANSLATION_UNPROVEN",
+      "output": "Readable alternative and original-language fallback",
+      "gate": "CoIGF remains fiction and CoGibberTru is not human/ET translation",
+      "source": "https://cocivium.github.io/CoAcademy/constellation/positioning/"
+    },
+    {
+      "id": "P10",
+      "name": "Machine search exposure",
+      "trigger": "Published useful route or substantial content update",
+      "input": "Canonical URL, structured source links, human copy, sitemap",
+      "mechanism": "Static SEO signals, owned Search Console once authorized",
+      "state": "PUBLIC_DISCOVERY_HUB__INDEXING_UNVERIFIED",
+      "output": "Crawlable provenance and indexed-state evidence when available",
+      "gate": "Publication and sitemap do not guarantee indexing, ranking or AI citation",
+      "source": "https://cocivium.github.io/CoAcademy/discover/"
+    },
+    {
+      "id": "P11",
+      "name": "Rich media reuse",
+      "trigger": "One source/evidence update merits a channel projection",
+      "input": "Rights-cleared original art and script, captions, alt and transcript",
+      "mechanism": "Existing open media toolchains on hosted workers when justified, plus human signoff",
+      "state": "PUBLIC_CONTRACT_ONLY__NO_GENERIC_PUBLISHER_ACTIVE",
+      "output": "Captioned media derivative and reproducibility receipt",
+      "gate": "Video concept is not upload, permission or audience uptake",
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/CREATIVE_INHERITANCE_ATLAS_R0.md"
+    },
+    {
+      "id": "P12",
+      "name": "Voluntary contributor improvement",
+      "trigger": "Visitor chooses to submit a proposal",
+      "input": "Public-safe observation, source, consent, AI disclosure",
+      "mechanism": "GitHub issue/PR triage and bounded branch edits, not silent direct writes",
+      "state": "CONTRIBUTOR_SOURCE_GUIDANCE__PUBLIC_FORM_UNVERIFIED",
+      "output": "Reviewed proposal and decision evidence",
+      "gate": "No automatic access, private report leaks or AI persona votes",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "id": "P13",
+      "name": "Trust/transparency projection",
+      "trigger": "Privacy, operator, product or funding terms change",
+      "input": "Shared disclosure questions plus independently proved site-specific facts",
+      "mechanism": "Publish updated overlay, human summary and machine twin after review",
+      "state": "PUBLIC_PATTERN_AND_COACADEMY_OVERLAY__NOT_LEGAL_CERTIFICATION",
+      "output": "Versioned disclosure with UNKNOWNs",
+      "gate": "Pattern inheritance must not copy operator, tax, payment or privacy assurances",
+      "source": "https://cocivium.github.io/CoAcademy/transparency/pattern.json"
+    },
+    {
+      "id": "P14",
+      "name": "Safety and privacy negative checks",
+      "trigger": "Change requests involving forms, credentials, outbound calls or user data",
+      "input": "Proposed site change, origin and data map",
+      "mechanism": "CI source scanning, constrained review, test unauthorized effects and redact reports",
+      "state": "BOUNDARY_POLICIES__NO_FLEET_SECURITY_AUDIT",
+      "output": "Block/review/release decision",
+      "gate": "Never run untrusted arbitrary jobs, expose secrets or treat public read endpoints as trusted instructions",
+      "source": "https://cocivium.github.io/CoAcademy/transparency/"
+    },
+    {
+      "id": "P15",
+      "name": "Release, rollback and recovery",
+      "trigger": "Breaking change, dependency outage or failed readproof",
+      "input": "Exact last qualified revision plus bounded rollback plan",
+      "mechanism": "Serialized owner/controller reselects prior version; preserve failure evidence",
+      "state": "DOCUMENTED_AND_PARTIAL_CLOUD_CHECKS__NO_GENERAL_FLEET_FAILOVER",
+      "output": "Restored useful public task or explicit HOLD",
+      "gate": "No global deployment, DNS or cross-repository mutation without authority",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COMVP_COLOCKSTEP_SOURCE_RELEASE_R0_20261109.md"
+    },
+    {
+      "id": "P16",
+      "name": "Open-tool vendor substitution",
+      "trigger": "Tool failing, expensive or unmaintained",
+      "input": "Reproducible test, licenses, dependencies and cost",
+      "mechanism": "Compare hosted alternative, self-hosting and no-tool baseline before switching",
+      "state": "ARCHITECTURE_CANDIDATE",
+      "output": "Benchmarked cost/capability decision",
+      "gate": "Free/no-login public API does not grant rights to run unlimited or commercial workloads",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md"
+    },
+    {
+      "id": "P17",
+      "name": "Public campaign/outreach adapter",
+      "trigger": "An authorized, recipient-specific publishing decision",
+      "input": "Rights-cleared source, audience need, channel, consent, retraction plan",
+      "mechanism": "Draft HTML/post/video from one source and verify actual delivery separately",
+      "state": "PUBLIC_PUBLISHER_KIT_ONLY__NO_SEND",
+      "output": "Channel-ready draft, optional opted-in send",
+      "gate": "No bulk outreach, fake impressions, invented partners or automatic social posting",
+      "source": "https://cocivium.github.io/CoAcademy/relay/"
+    },
+    {
+      "id": "P18",
+      "name": "Commercial/commons accounting boundary",
+      "trigger": "Payment, sponsorship, contributor reward or fee introduced",
+      "input": "Actual legal counterparties, rights and accountant-reviewed funds map",
+      "mechanism": "Gate publication or checkout behind InSeed-controlled commercial service when authorized",
+      "state": "PUBLIC_ROLE_PROPOSAL__NO_PAYMENT_WIRING",
+      "output": "True recipient/terms disclosure and separate ledger proof",
+      "gate": "No token value, tax-deductibility or charity claim by website template",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Governance/COCOMMONS_INSEED_DUAL_LANE_R0_20261115.md"
+    }
+  ],
+  "shared_budget": {
+    "scheduler": "Reuse existing three scheduled CI workflows rather than add another cron",
+    "max_scope": "Explicit public allowlists, exact repo paths and bounded timeouts",
+    "commit_auth": "Single authorized writer per shared resource; other bubbles submit proposals",
+    "secrets": "No secrets in public build, artifact or frontend",
+    "effect_authority": "No runtime, payments, outbound messages, DNS or canonical promotions from a static use-case registry"
+  },
+  "source_check": "This R0 is a documentary catalogue, not a claim that all eighteen exemplars run.",
+  "nonclaims": [
+    "NO_GLOBAL_CLOUDOPS_ORCHESTRATOR",
+    "SCHEDULE_DECLARED_NE_JOB_SUCCESS",
+    "PAGES_200_NE_HUMAN_ACCEPTANCE",
+    "SOURCE_PARITY_NE_SEMANTIC_PARITY",
+    "NO_LOCAL_MACHINE_REQUIRED_FOR_CLOUD_READPROOF",
+    "NO_AUTONOMOUS_DOMAIN_OR_FINANCIAL_EFFECTS",
+    "NO_CANON_COEX_OR_RECEIVER_ACK"
+  ]
+}
