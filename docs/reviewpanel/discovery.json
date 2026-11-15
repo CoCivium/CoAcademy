@@ -1,0 +1,262 @@
+{
+  "schema": "CoCivium.CoReviewPanel.SiteExemplar.R0",
+  "edition": "2026-11-15",
+  "status": "PUBLIC_ADVISORY_FIXTURE__NO_AUTONOMOUS_PANEL",
+  "site_scope": "CoCivium/CoAcademy public GitHub Pages at specific sampled paths; not all domains or website fleet",
+  "origin": "2026-11-15T06:43:13Z user suggestion; derived public-safe model",
+  "source_policy": [
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COREVIEW_PANEL_LIFECYCLE_R0.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COROLE_SPACE_PREVIEW_R0.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Governance/COREVIEW_SPINE_R0.md"
+  ],
+  "sample_time_note": "Bounded X2 HTTPS checks during 2026-11-15 06:44-06:48 UTC; values are historical snapshots, not live telemetry",
+  "sample_method": "curl.exe -L -sS -o NUL -w status/size/content_type --max-time 6-8; read-only remote device",
+  "sites": [
+    {
+      "id": "home",
+      "name": "CoAcademy",
+      "type": "human_page",
+      "href": "https://cocivium.github.io/CoAcademy/",
+      "status": 200,
+      "format": "text/html",
+      "bytes": 23696
+    },
+    {
+      "id": "orb",
+      "name": "CoOrb",
+      "type": "human_page",
+      "href": "https://cocivium.github.io/CoAcademy/coorb/",
+      "status": 200,
+      "format": "text/html",
+      "bytes": 13990
+    },
+    {
+      "id": "play",
+      "name": "CoPlay",
+      "type": "human_page",
+      "href": "https://cocivium.github.io/CoAcademy/coplay/",
+      "status": 200,
+      "format": "text/html",
+      "bytes": 14207
+    },
+    {
+      "id": "lane",
+      "name": "CoAthene R1",
+      "type": "human_page",
+      "href": "https://cocivium.github.io/CoAcademy/laneset/r1/",
+      "status": 200,
+      "format": "text/html",
+      "bytes": 22002
+    },
+    {
+      "id": "relay",
+      "name": "CoRelay",
+      "type": "human_page",
+      "href": "https://cocivium.github.io/CoAcademy/relay/",
+      "status": 200,
+      "format": "text/html",
+      "bytes": 9561
+    },
+    {
+      "id": "orb-json",
+      "name": "CoOrb discovery",
+      "type": "machine_json",
+      "href": "https://cocivium.github.io/CoAcademy/coorb/discovery.json",
+      "status": 200,
+      "format": "application/json",
+      "bytes": 3458
+    },
+    {
+      "id": "play-json",
+      "name": "CoPlay discovery",
+      "type": "machine_json",
+      "href": "https://cocivium.github.io/CoAcademy/coplay/discovery.json",
+      "status": 200,
+      "format": "application/json",
+      "bytes": 5664
+    },
+    {
+      "id": "relay-json",
+      "name": "CoRelay discovery",
+      "type": "machine_json",
+      "href": "https://cocivium.github.io/CoAcademy/relay/discovery.json",
+      "status": 200,
+      "format": "application/json",
+      "bytes": 5205
+    },
+    {
+      "id": "relay-feed",
+      "name": "CoRelay XML feed",
+      "type": "machine_xml",
+      "href": "https://cocivium.github.io/CoAcademy/relay/feed.xml",
+      "status": 200,
+      "format": "application/xml",
+      "bytes": 2090
+    },
+    {
+      "id": "lane-json",
+      "name": "CoAthene learner contract",
+      "type": "machine_json",
+      "href": "https://cocivium.github.io/CoAcademy/laneset/learner-inquiry-contract-r0.json",
+      "status": 200,
+      "format": "application/json",
+      "bytes": 7205
+    },
+    {
+      "id": "llms",
+      "name": "CoAcademy llms.txt",
+      "type": "machine_text",
+      "href": "https://cocivium.github.io/CoAcademy/llms.txt",
+      "status": 404,
+      "format": "text/html",
+      "bytes": 9379
+    },
+    {
+      "id": "ai-index",
+      "name": "CoAcademy ai/index.json",
+      "type": "machine_json",
+      "href": "https://cocivium.github.io/CoAcademy/ai/index.json",
+      "status": 404,
+      "format": "text/html",
+      "bytes": 9379
+    }
+  ],
+  "roles": [
+    {
+      "code": "PROPOSAL",
+      "name": "Builder",
+      "prompt": "What can a visitor accomplish in one clear step?",
+      "check": "Primary action and benefit plainly stated",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    },
+    {
+      "code": "FORMAL_CHECK",
+      "name": "Contract checker",
+      "prompt": "Do the public page and machine schema describe the same boundaries?",
+      "check": "Inspect source, claims and field compatibility",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    },
+    {
+      "code": "EMPIRICAL_CHECK",
+      "name": "Evidence checker",
+      "prompt": "What was observed, when, and by which method?",
+      "check": "Live HTTP plus one actual browser task",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    },
+    {
+      "code": "CHALLENGE",
+      "name": "Skeptic",
+      "prompt": "What observation would refute the headline claim?",
+      "check": "One negative case and strongest simple alternative",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    },
+    {
+      "code": "PERSPECTIVE",
+      "name": "Visitor advocate",
+      "prompt": "Could a first-time, mobile or assistive-tech user understand and stop?",
+      "check": "Manual accessibility and informed UX review",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    },
+    {
+      "code": "PROVENANCE_CHECK",
+      "name": "Source auditor",
+      "prompt": "Which revision, source and permission justify each statement?",
+      "check": "Exact source links, age, rights and source identity",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    },
+    {
+      "code": "SYNTHESIS",
+      "name": "Editor",
+      "prompt": "What passes, fails, or remains unknown without vote laundering?",
+      "check": "Conclusions plus unresolved dissent and next deed",
+      "class": "SYNTHETIC_ROLE_DESCRIPTION_NOT_INDEPENDENT_REVIEWER",
+      "executed": false
+    }
+  ],
+  "test_matrix": {
+    "web": [
+      "status_200",
+      "correct_content_type",
+      "navigate_without_signin",
+      "responsive_view",
+      "keyboard_navigation",
+      "accessibility",
+      "source_link_open",
+      "failure_and_unknown_visibility"
+    ],
+    "machine": [
+      "schema_parse",
+      "content_discovery",
+      "claim_alignment",
+      "provenance_and_time",
+      "no_hidden_instructions",
+      "license_and_sensitivity",
+      "canonical_url",
+      "version_and_retraction"
+    ],
+    "media": [
+      "poster_alt_text",
+      "copyright_and_attribution",
+      "playback_caption",
+      "reduced_motion",
+      "mobile_performance",
+      "media_fallback"
+    ],
+    "risk": [
+      "security_and_privacy",
+      "external_effect_authority",
+      "child_appropriate",
+      "correction_channel",
+      "human_comprehension",
+      "no_fake_independent_vote"
+    ]
+  },
+  "finding_examples": [
+    {
+      "id": "F01",
+      "kind": "OBSERVED_HTTP",
+      "state": "PASS_SCOPED",
+      "text": "Ten sampled endpoint responses returned HTTP 200, including five HTML pages and five structured machine sources; source compatibility and accessibility remain untested."
+    },
+    {
+      "id": "F02",
+      "kind": "OBSERVED_HTTP",
+      "state": "FAIL_SCOPED",
+      "text": "CoAcademy Pages /llms.txt returned 404 at check time. This is a gap at that exact Pages route, not proof the parent CoCivium repository lacks llms.txt."
+    },
+    {
+      "id": "F03",
+      "kind": "OBSERVED_HTTP",
+      "state": "FAIL_SCOPED",
+      "text": "CoAcademy Pages /ai/index.json returned 404 at check time. This is a gap at that exact Pages route, not proof the parent CoCivium repository lacks ai/index.json."
+    },
+    {
+      "id": "F04",
+      "kind": "REVIEW_HELD",
+      "state": "UNKNOWN",
+      "text": "No actual independent first-time human, accessibility audit, rich-media evaluation, or CoReviewPanel human consent witnessed by this packet."
+    }
+  ],
+  "recursion": {
+    "max_depth": 2,
+    "max_rounds": 2,
+    "budget": "ONE_SHARED_BOUNDED_BUDGET",
+    "self_authority": false
+  },
+  "nonclaims": [
+    "PANEL_SEAT_NE_INDEPENDENT_REVIEWER",
+    "HTTP_200_NE_HUMAN_ACCEPTANCE",
+    "STAGED_SITE_NE_DEPLOYED_DOMAIN",
+    "SYNTHETIC_ROLE_NE_PERSON",
+    "STATIC_FIXTURE_NE_RUNTIME_AUTOMATION",
+    "PUBLIC_SOURCE_NE_LIVE_AGENT_RECIPIENT",
+    "NO_COEX_CANON_OR_CROSS_FLEET_RELEASE_CLAIM"
+  ],
+  "next_safe_deed": "Turn F02/F03 into a scoped source/route mismatch check; then test one fresh human-first task and accessibility with explicit consent."
+}
