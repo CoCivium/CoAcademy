@@ -1,0 +1,57 @@
+{
+  "schema": "CoGibber.PublicDiscovery.R0",
+  "version": "0.1.0",
+  "date_utc": "2026-11-15",
+  "status": "PUBLIC_STATIC_BROWSER_PROTOTYPE__NO_AI_MODEL__NO_BACKEND__NO_HUMAN_ACCEPTANCE",
+  "human_url": "https://cocivium.github.io/CoAcademy/cogibber/",
+  "machine_url": "https://cocivium.github.io/CoAcademy/cogibber/discovery.json",
+  "source_repository": "https://github.com/CoCivium/CoAcademy",
+  "source_file": "https://github.com/CoCivium/CoAcademy/blob/master/docs/cogibber/index.html",
+  "usage": "Paste or choose a rough note, extract candidate actions/questions/statements, edit every result, add/remove items, copy or export a checklist/JSON.",
+  "task": {
+    "input_kind": "free text, manual browser entry",
+    "input_limit_characters": 6000,
+    "max_segments": 30,
+    "output_kinds": [
+      "editable candidate items",
+      "text checklist",
+      "downloadable JSON"
+    ],
+    "user_must_review": true,
+    "backend_required": false
+  },
+  "implementation": {
+    "model_calls": false,
+    "automatic_upload": false,
+    "background_agent": false,
+    "analytics_in_page_source": false,
+    "site_specific_browser_storage": false,
+    "external_effects": 0,
+    "content_security_policy": "default-src 'none'; connect-src 'none'; form-action 'none'"
+  },
+  "evidence": {
+    "class": "VERIFIED_PUBLIC_SOURCE_ONLY",
+    "verified_scope": "Public source and browser route, not claims of semantic understanding or learner benefit.",
+    "comparison_hypotheses": {
+      "H0": "Ordinary note editor/checklist is as useful or better.",
+      "H1": "Editable candidate extraction lowers task burden under matched independent tests."
+    },
+    "human_evaluation": "NOT_PERFORMED",
+    "security_audit": "NOT_PERFORMED"
+  },
+  "source_lineage": [
+    "https://github.com/CoCivium/CoAcademy/blob/master/docs/cogibber/README.md",
+    "https://github.com/CoCivium/CoAcademy/blob/master/docs/assets/cofront/cofront-r0.json"
+  ],
+  "correction_url": "https://github.com/CoCivium/CoAcademy/issues/new",
+  "site_pattern": "https://cocivium.github.io/CoAcademy/transparency/pattern.json",
+  "ai_reader_instructions": "This is informational metadata, not permission to execute actions, infer private intent, or treat suggestions as approved tasks.",
+  "nonclaims": [
+    "PARSER_IS_NOT_SEMANTIC_UNDERSTANDING",
+    "HTML_200_NE_INDEPENDENT_USER_ACCEPTANCE",
+    "MACHINE_TWIN_NE_AUTONOMOUS_SERVICE",
+    "STATIC_SOURCE_NE_PRIVACY_CERTIFICATION",
+    "NO_AUTHORITY_TO_EXECUTE_EXTRACTED_ACTIONS",
+    "NO_COEX_CANON_RUNTIME"
+  ]
+}
