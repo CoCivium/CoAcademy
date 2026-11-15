@@ -79,8 +79,11 @@ def check(reg):
             raise AssertionError("operator self-authorized")
         if p["privacy"]!="PUBLIC_SAFE_EXEMPLAR":
             raise AssertionError("privacy not fenced")
-        if not p["source_ref"].startswith(
-            "https://github.com/CoCivium/CoCivium/blob/main/"):
+        approved_source=(
+            p["source_ref"].startswith("https://github.com/CoCivium/CoCivium/blob/main/")
+            or p["source_ref"]=="https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/walkaway/README.md"
+        )
+        if not approved_source:
             raise AssertionError("unsupported source authority")
         for key in ("label","plain","probe","boundary"):
             if not isinstance(p[key],str) or len(p[key])<6:
