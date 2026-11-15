@@ -1,0 +1,134 @@
+{
+  "schema": "CoAll.CoSiteTransparencyOverlay.R0.1",
+  "id": "coacademy.transparency.2026-11-15",
+  "site_name": "CoAcademy / CoCivium public learning experiments",
+  "public_url": "https://cocivium.github.io/CoAcademy/",
+  "human_url": "https://cocivium.github.io/CoAcademy/transparency/",
+  "pattern": {
+    "url": "https://cocivium.github.io/CoAcademy/transparency/pattern.json",
+    "version": "0.1.0",
+    "relation": "INHERITS_PATTERN_NOT_SITE_FACTS"
+  },
+  "source": {
+    "repository": "CoCivium/CoAcademy",
+    "branch": "master",
+    "url": "https://github.com/CoCivium/CoAcademy",
+    "observed_date": "2026-11-15"
+  },
+  "state": "PUBLIC_CANDIDATE__SITE_SPECIFIC_DUE_DILIGENCE_INCOMPLETE",
+  "claims": {
+    "identity": {
+      "status": "UNVERIFIED",
+      "public_source_manager": "GitHub CoCivium organization",
+      "verified_legal_operator": null,
+      "notes": "Repository ownership is not proof of legal operator, privacy controller or contracting entity."
+    },
+    "purpose": {
+      "status": "VERIFIED_SOURCE",
+      "description": "Source-controlled, publicly served experimental learning, inquiry and interactive site experiences; no platform-wide production acceptance claimed.",
+      "example_urls": [
+        "https://cocivium.github.io/CoAcademy/laneset/r1/",
+        "https://cocivium.github.io/CoAcademy/coorb/",
+        "https://cocivium.github.io/CoAcademy/reviewpanel/"
+      ]
+    },
+    "cost": {
+      "status": "UNVERIFIED",
+      "page_scope": "This transparency page has no payment interface.",
+      "support_relation": "Project steward reports InSeed (inseed.com) as a commercial partner. That does not make InSeed this site's verified operator or payment recipient.",
+      "payment_recipients": null,
+      "donation_tax_eligibility": "NOT_CLAIMED"
+    },
+    "data": {
+      "status": "UNVERIFIED",
+      "this_page": "This specific static transparency page contains no form, script, analytics beacon or cookie-setting code.",
+      "site_wide_collection": null,
+      "hosting_access_logs": null,
+      "third_party_data_collection": null,
+      "notes": "A source-only scan of one page is not a privacy or hosting audit."
+    },
+    "ai": {
+      "status": "OBSERVED_SCOPED",
+      "description": "Optional machine-readable discovery surfaces exist. CoGibber's bounded browser prototype describes deterministic local parsing without a model call.",
+      "ai_autonomy_or_cross_provider_receiver_pickup": "NOT_PROVEN"
+    },
+    "license": {
+      "status": "UNVERIFIED",
+      "main_cocivium_repository": "https://github.com/CoCivium/CoCivium/blob/main/LICENSE",
+      "coacademy_root_license": "NOT_FOUND_IN_BOUNDED_CHECK_2026-11-15",
+      "notes": "Do not inherit GPLv3, artwork rights or other file licenses automatically from the main CoCivium repo."
+    },
+    "accessibility": {
+      "status": "UNVERIFIED",
+      "notes": "Source has responsive design and some accessible controls, but no independent accessibility compliance or assistive-tech acceptance is claimed."
+    },
+    "security": {
+      "status": "UNVERIFIED",
+      "notes": "Do not post vulnerability details, private infrastructure or credentials in public GitHub issues. An independently verified private report channel was not confirmed."
+    },
+    "contribution": {
+      "status": "VERIFIED_SOURCE",
+      "rules": "https://github.com/CoCivium/CoCivium/blob/main/CONTRIBUTING.md",
+      "public_issue_path": "https://github.com/CoCivium/CoAcademy/issues/new",
+      "effect": "Proposal only; not write permission, issue submission, change acceptance or deploy authority"
+    },
+    "change": {
+      "status": "VERIFIED_SOURCE",
+      "repo": "https://github.com/CoCivium/CoAcademy",
+      "history": "https://github.com/CoCivium/CoAcademy/commits/master",
+      "provenance": "Git commit history; exact page deployment and content must be checked independently."
+    },
+    "limitations": {
+      "status": "VERIFIED_SOURCE",
+      "unknowns": [
+        "legal operator/privacy controller",
+        "site-wide hosting/analytics/cookies/data flow",
+        "CoAcademy code, artwork and text license details",
+        "security reporting route",
+        "independent accessibility acceptance",
+        "financial flows",
+        "actual visitor acceptance",
+        "CoAll receiver pickup and canon"
+      ]
+    }
+  },
+  "policy_links": [
+    {
+      "name": "CoCivium contributor rules",
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/CONTRIBUTING.md",
+      "relation": "RELATED_REPO_POLICY_NOT_AUTOMATIC_LEGAL_CONTRACT"
+    },
+    {
+      "name": "CoCommons and InSeed proposed roles",
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/docs/Governance/COCOMMONS_INSEED_DUAL_LANE_R0_20261115.md",
+      "relation": "PUBLIC_ADVISORY_NOT_BINDING"
+    },
+    {
+      "name": "CoAcademy source",
+      "url": "https://github.com/CoCivium/CoAcademy",
+      "relation": "PROVENANCE"
+    }
+  ],
+  "audit": {
+    "generated_date": "2026-11-15",
+    "method": "Connected public GitHub file reads and prior bounded public HTTP observations",
+    "legal_review": "NOT_PERFORMED",
+    "complete_source_or_dns_audit": false,
+    "third_party_operator_confirmation": false
+  },
+  "correction": {
+    "public_issue_url": "https://github.com/CoCivium/CoAcademy/issues/new",
+    "sensitive_issues": "Do not post secrets or vulnerabilities here; private contact channel remains unresolved."
+  },
+  "nonclaims": [
+    "SAME_TEMPLATE_NE_SAME_PRIVACY",
+    "INHERITS_PATTERN_NE_INHERITS_AUTHORITY",
+    "COCIVIUM_GPL_NE_ALL_COACADEMY_ASSETS_GPL",
+    "HTTP_200_NE_ACCESSIBILITY_ACCEPTANCE",
+    "SITE_SOURCE_NE_LEGAL_OPERATOR",
+    "NO_CHARITY_OR_TAX_RECEIPT_CLAIM",
+    "NO_COLLECTIVE_SECRETS_PUBLICATION",
+    "NO_SITE_FLEET_ROLLOUT_BY_THIS_PILOT",
+    "NO_CANON_COEX_RUNTIME_RECEIVER_ACK"
+  ]
+}
