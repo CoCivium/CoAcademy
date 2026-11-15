@@ -299,6 +299,78 @@ async function checkFederation(browser,item){
   } finally { await context.close(); }
 }
 
+async function checkWalkaway(browser,item){
+  const context=await browser.newContext({viewport:item.viewport,
+    reducedMotion:item.reducedMotion,serviceWorkers:"block"});
+  const page=await context.newPage();
+  const unexpected=[],runtimeErrors=[];let offsiteBeforeClick=0,githubQueries=0,allowGithub=false;
+  page.on("request",request=>{
+    const url=request.url();
+    if(url.startsWith("https://api.github.com/")){
+      githubQueries++;if(!allowGithub)offsiteBeforeClick++;return;
+    }
+    checkOrigin(request,unexpected);
+  });
+  page.on("pageerror",error=>runtimeErrors.push(error.name));
+  await page.route("https://api.github.com/**",route=>route.fulfill({
+    status:200,contentType:"application/json",
+    headers:{"access-control-allow-origin":"*"},
+    body:JSON.stringify({workflow_runs:[{
+      status:"completed",conclusion:"success",event:"push",
+      created_at:"2026-11-15T16:50:20Z",
+      html_url:"https://github.com/CoCivium/CoAcademy/actions/runs/43737711829"
+    }]})
+  }));
+  try{
+    const resp=await page.goto(BASE+"constellation/walkaway/",{
+      waitUntil:"load",timeout:30000,
+    });
+    assert.equal(resp?.status(),200);
+    const machineResp=await context.request.get(BASE+"constellation/walkaway/status.json");
+    assert.equal(machineResp.status(),200);
+    const m=await machineResp.json();
+    assert.equal(m.schema,"CoAll.CoWalkaway.PublicUXState.R0");
+    const embedded=JSON.parse(await page.locator("#statusRecord").textContent());
+    assert.deepEqual(embedded.proofs,m.proofs,"human proofs and machine proofs diverged");
+    assert.deepEqual(embedded.modes,m.modes,"scenario parity failed");
+    assert.equal(embedded.observed_at_utc,m.observed_at_utc);
+    assert.equal(await page.locator(".proof").count(),8);
+    assert.equal(await page.locator("#choices button").count(),5);
+    assert.equal(githubQueries,0,"GitHub API must be opt-in");
+    allowGithub=true;
+    await page.locator("#refresh").click();
+    await assert.equal(await page.locator("#cloudLink").isVisible(),true);
+    assert.match(await page.locator("#cloudResult").textContent(),/Latest reported cloud run/);
+    assert.equal(githubQueries,1,"one bounded public metadata request");
+    await context.setOffline(true);
+    for(const mode of m.modes){
+      await page.locator('#choices button[data-id="'+mode.id+'"]').click();
+      assert.equal(await page.locator("#modeName").textContent(),mode.label);
+      assert.equal(await page.locator("#modeEffect").textContent(),mode.real_world_effect.replaceAll("_"," "));
+      assert.equal(await page.locator('#choices button[aria-pressed="true"]').count(),1);
+    }
+    await page.locator('#choices button[data-id="no_human"]').focus();
+    await page.keyboard.press("Enter");
+    assert.equal(await page.locator("#modeName").textContent(),"Nobody answers");
+    const dim=await page.evaluate(()=>({
+      scrollWidth:document.documentElement.scrollWidth,
+      clientWidth:document.documentElement.clientWidth,
+      reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches
+    }));
+    assertNoHorizontalOverflow(dim);
+    assert.equal(dim.reducedMotion,item.reducedMotion==="reduce");
+    assert.equal(offsiteBeforeClick,0);
+    assert.deepEqual(unexpected,[]);
+    assert.deepEqual(runtimeErrors,[]);
+    return {view:item.name,result:"PASS",http_status:200,proofs:m.proofs.length,
+      scenarios:m.modes.length,human_machine_parity:true,
+      gitHub_query_only_after_click:true,github_queries:githubQueries,
+      offline_scenarios:true,keyboard_selection:true,
+      reduced_motion:dim.reducedMotion,horizontal_overflow:false,
+      page_errors:0,external_effects:0};
+  }finally{await context.close();}
+}
+
 const report = {
   schema: "CoAcademy.PublicFirstUseBrowserReadback.R0",
   source_commit: process.env.GITHUB_SHA || "LOCAL_UNBOUND",
@@ -322,6 +394,7 @@ try {
     report.tests.push({surface:"cofront", ...await checkCoFront(browser, item)});
     report.tests.push({surface:"cloudops", ...await checkCloudOps(browser, item)});
     report.tests.push({surface:"federation", ...await checkFederation(browser, item)});
+    report.tests.push({surface:"walkaway", ...await checkWalkaway(browser, item)});
   }
   report.result = "PASS_SCOPED_BROWSER_INTERACTIONS";
 } catch (error) {
