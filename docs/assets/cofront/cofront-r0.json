@@ -1,0 +1,61 @@
+{
+  "schema": "CoCivium.CoFront.PublicVisualPattern.R0",
+  "date_utc": "2026-11-15",
+  "release": "PUBLIC_SOURCE_CANDIDATE__NOT_UX_ACCEPTED",
+  "purpose": "Human-first service cards and responsive informative banner derived from preexisting public CoCivium orb/constellation motifs; same HTML is readable without styling.",
+  "styles": "https://cocivium.github.io/CoAcademy/assets/cofront/cofront-r0.css",
+  "source_path": "docs/assets/cofront/cofront-r0.css",
+  "assets": {
+    "external_requests": 0,
+    "fonts": "system only",
+    "art": "original decorative CSS shapes; no user photo, model face, company trademark or third-party footage",
+    "audio": "none",
+    "motion": "hover-only card translation on devices not requesting reduced motion; no autoplay",
+    "text_equivalent": "All task descriptions are static semantic HTML outside artwork"
+  },
+  "adoption": {
+    "intended": [
+      "CoAcademy home",
+      "CoAcademy discovery"
+    ],
+    "automatic_fleet_rollout": false,
+    "site_specific_content": true
+  },
+  "machine_relationships": [
+    {
+      "human": "/CoAcademy/",
+      "machine": "/CoAcademy/discover/discovery.json"
+    },
+    {
+      "human": "/CoAcademy/cogibber/",
+      "machine": "/CoAcademy/cogibber/discovery.json"
+    },
+    {
+      "human": "/CoAcademy/laneset/r1/",
+      "machine": "/CoAcademy/laneset/learner-inquiry-contract-r0.json"
+    },
+    {
+      "human": "/CoAcademy/reviewpanel/",
+      "machine": "/CoAcademy/reviewpanel/discovery.json"
+    }
+  ],
+  "quality_gates": [
+    "source-readback",
+    "CSS-delivery",
+    "viewport-390-and-1440-no-horizontal-overflow",
+    "working-first-action-links",
+    "keyboard-focus",
+    "reduced-motion",
+    "no-console-errors",
+    "non-visual content parity"
+  ],
+  "rights": "Original page-specific CSS art from project-directed site R&D; any later outside media requires separate rights review.",
+  "nonclaims": [
+    "NO_HUMAN_UX_ACCEPTANCE",
+    "NO_COMPETITIVE_SUPERIORITY",
+    "NO_RICH_VIDEO_RENDER",
+    "NO_FLEET_AUTO_DEPLOY",
+    "NO_COEX_CANON_RUNTIME",
+    "NO_INDEPENDENT_RECEIVER_ACK"
+  ]
+}
