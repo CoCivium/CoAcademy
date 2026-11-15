@@ -1,0 +1,116 @@
+{
+  "schema": "CoFed.PortableColdBoot.ProofPacket.R1",
+  "observed_at_utc": "2026-11-15T16:38:39Z",
+  "source_commit": "38943abf6dd198105cd1c4f4839387c4a49e1a93",
+  "source_repository": "CoCivium/CoAcademy",
+  "workflow_run": {
+    "id": 43736545738,
+    "url": "https://github.com/CoCivium/CoAcademy/actions/runs/43736545738",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "verify-public-pages",
+        "job_id": 132880296659,
+        "conclusion": "success",
+        "result": {
+          "exact_matches": 24,
+          "checked": 24
+        }
+      },
+      {
+        "name": "verify-browser-first-use",
+        "job_id": 132880329000,
+        "conclusion": "success",
+        "result": {
+          "checks_passed": 10,
+          "checks_total": 10
+        }
+      },
+      {
+        "name": "verify-coldboot-capsule",
+        "job_id": 132880328994,
+        "conclusion": "success",
+        "result": {
+          "archive_entries_sha256_verified": 5,
+          "loopback_browser_views_passed": 2,
+          "offline_before_navigation_file_browser_views_passed": 2,
+          "altered_payload_sha256_mismatch_detected": true
+        }
+      }
+    ],
+    "artifact": {
+      "id": 14170760966,
+      "name": "cofed-coldboot-capsule-and-receipt",
+      "retention_days": 30,
+      "platform": "GitHub Actions artifact; expiration expected"
+    },
+    "supporting_scope": "Job-level success and console receipt readback via GitHub connector, not independent third-party custody."
+  },
+  "human_first_use": {
+    "entrypoint": "site/index.html",
+    "recovery_path": "repository source -> deterministic ZIP -> clean verified extraction -> local file or loopback page -> first task -> edit -> JSON export",
+    "network_precondition": "offline BEFORE first page navigation for R1 local-file test",
+    "views": [
+      "1440x900 desktop",
+      "390x844 reduced-motion mobile"
+    ],
+    "result": "PASS_SCOPED_TWO_VIEWPORTS",
+    "browser_first_use": "Candidate text extraction, correction and JSON download/visible-preview parity",
+    "does_not_require": "Remote original site for this local file task once bundle is present"
+  },
+  "negative_control": {
+    "type": "SHA256 alteration detection",
+    "scope": "Altered in-memory copy of bundled HTML; original archive unchanged",
+    "result": "MISMATCH_DETECTED",
+    "limit": "Not an end-to-end injected corrupted archive rejection nor independent adversarial security audit"
+  },
+  "cofed_invariants": {
+    "independent_second_provider_cold_boot": "NOT_TESTED",
+    "independent_owner_custody": "NOT_VERIFIED",
+    "external_receiver_readproof": "NOT_RECEIVED",
+    "github_absent_during_capsule_delivery": "NOT_TESTED",
+    "github_absent_during_browser_first_use": "PASS_LOCAL_FILE_ONLY_AFTER_ARCHIVE_PRESENT",
+    "single_elected_writer_for_global_effects": "NO_GLOBAL_EFFECTS_REQUESTED",
+    "portable_task_proven": "PASS_SCOPED",
+    "human_visitor_acceptance": "NOT_TESTED",
+    "code_and_media_license_audit": "INCOMPLETE",
+    "public_site_availability_at_run": "24_SOURCE_OBJECTS_MATCHED"
+  },
+  "next_gate": {
+    "purpose": "Independently administered second failure domain serves a source-pinned useful task with first publisher unavailable.",
+    "authority_preflight": [
+      "Independent operator and hosting rights",
+      "License/asset permission review",
+      "Do not use one provider's infrastructure/account as evidence of separate failure domain",
+      "Private credentials and DNS changes withheld pending approval"
+    ],
+    "acceptance": [
+      "Cold-load from separate provider while GitHub is unavailable",
+      "Exact byte/source hash proof and independent readback",
+      "One useful first-task completion",
+      "Measured RTO, RPO, human relay count",
+      "Data/privacy/rights and rollback validation"
+    ],
+    "current_state": "HELD_FOR_REAL_RECEIVER_AUTHORITY_AND_HOST"
+  },
+  "source_paths": [
+    "tools/cofed_coldboot_capsule.py",
+    ".github/scripts/cofed-coldboot-browser.mjs",
+    ".github/scripts/cofed-zero-network-coldboot.mjs",
+    ".github/workflows/public-pages-readback.yml",
+    "docs/cogibber/index.html",
+    "docs/cogibber/discovery.json"
+  ],
+  "lifecycle": "GITHUB_SOURCE_COMMITTED_AND_WORKFLOW_ARTIFACT_OBSERVED__NO_EXTERNAL_COEX",
+  "nonclaims": [
+    "LOCAL_IS_NOT_LANDED",
+    "VALIDATION_IS_NOT_ACCEPTANCE",
+    "NO_RECEIVER_PICKUP_WITHOUT_EXACT_READPROOF",
+    "NO_INTEGRATION_COEX_CANON_RUNTIME_OR_PUBLIC_INFERENCE",
+    "HASHING_IS_NOT_SEMANTIC_INGESTION",
+    "DISCOVERED_SET_IS_NOT_COMPLETE_HISTORY",
+    "ZERO_NETWORK_BROWSER_FILE_NE_INDEPENDENT_PROVIDER",
+    "PUBLIC_STATUS_PACKET_NE_THIRD_PARTY_ACK",
+    "SIMULATED_DAMAGE_NE_COMPLETE_MALICIOUS_CAPSULE_TEST"
+  ]
+}
