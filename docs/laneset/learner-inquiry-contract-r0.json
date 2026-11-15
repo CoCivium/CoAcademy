@@ -1,0 +1,176 @@
+{
+  "schema": "CoAthene.LearnerInquiryRail.R0",
+  "date": "2026-11-15",
+  "status": "PUBLIC_STRAWBE_CANDIDATE__NOT_VALIDATED_ON_LEARNERS",
+  "purpose": "Turn a story, question, or contradiction into a voluntary and testable improvement in inquiry, without assigning permanent mind types or virtue scores.",
+  "source_lineage": [
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Journal/2026-11-15-ocean-and-minds-that-study.md",
+    "https://github.com/CoCivium/CoAcademy/blob/master/docs/laneset/index.html"
+  ],
+  "distinction": {
+    "dialogue": "A record of utterances shaped by setting, role, prompts, topic familiarity and language.",
+    "observed_practice": "Task-scoped behavior that can be described and rechecked.",
+    "learned_capability": "Transfer or improvement demonstrated under a specified test.",
+    "psychological_trait": "NOT_INFERRED_OR_SCORED",
+    "clinical_state": "NOT_INFERRED_OR_SCORED",
+    "identity_or_sentience": "NOT_INFERRED_OR_SCORED"
+  },
+  "laneset": {
+    "axes": [
+      "question_or_subject",
+      "inquirer_role_not_personality_type",
+      "method",
+      "claim_class",
+      "relation_operator",
+      "consequence",
+      "time_and_context",
+      "privacy_and_permission"
+    ],
+    "relation_operators": [
+      "FORWARD",
+      "INVERSE",
+      "VS",
+      "IN_BETWEEN",
+      "FAN_IN",
+      "ALTERNATIVE",
+      "COUNTERFACTUAL",
+      "RECURSIVE_TURTLE",
+      "TRANSFER"
+    ],
+    "recursive_limit": "At most two unverified nested review loops per exercise before returning to a named observable or explicit UNKNOWN."
+  },
+  "learning_cycle": [
+    {
+      "step": 1,
+      "id": "CHOOSE",
+      "action": "Choose your own useful question and success criterion."
+    },
+    {
+      "step": 2,
+      "id": "SEPARATE",
+      "action": "Distinguish observed evidence, inference, hypothesis, metaphor and unknown."
+    },
+    {
+      "step": 3,
+      "id": "INVERT",
+      "action": "Describe a credible rival or inverse, including a condition under which the original is wrong."
+    },
+    {
+      "step": 4,
+      "id": "PREDICT",
+      "action": "Record a dated prediction and disconfirming outcome before the test."
+    },
+    {
+      "step": 5,
+      "id": "TRY",
+      "action": "Run a reversible bounded exercise or mark it untested."
+    },
+    {
+      "step": 6,
+      "id": "REVIEW",
+      "action": "Retain errors, harms, unexpected positives, affected-party objections and missing data."
+    },
+    {
+      "step": 7,
+      "id": "TRANSFER",
+      "action": "Attempt a related problem with changed context and record any loss of performance."
+    },
+    {
+      "step": 8,
+      "id": "DECIDE",
+      "action": "Keep, revise, stop or retire the idea with a link to its prior version."
+    }
+  ],
+  "first_lesson": {
+    "title": "Can the wave-surfer survive without the next wave?",
+    "seed_type": "METAPHOR_NOT_EMPIRICAL_CLAIM",
+    "original_question": "What sustains a visible form?",
+    "inverse": "What if the form remains viable after sustaining input is removed?",
+    "engineering_translation": "A browser worker receives a stream; removing the stream should produce an honest visible state.",
+    "tested_claim": "A bounded simulation can report a missing input and recover state without claiming to be a conscious entity.",
+    "test_fixture": "Synthetic worker state only; no monitoring of humans, devices, accounts or services.",
+    "disconfirming_result": "UI displays healthy status after input has stopped or invents a continuation.",
+    "optional_second_question": "What remains as evidence when the worker has ended?",
+    "no_answer_required": "The ocean's consciousness or metaphysical continuity"
+  },
+  "formative_measurement": {
+    "unit": "A dated attempt at one task, not a permanent learner profile",
+    "optional_fields": [
+      "source_ref",
+      "task_version",
+      "learner_chosen_goal",
+      "prior_claim",
+      "alternative_claim",
+      "prediction_recorded_before_result",
+      "result",
+      "contradiction_retained",
+      "corrective_step",
+      "independent_reviewer",
+      "learner_reflection",
+      "stop_or_delete_request"
+    ],
+    "evidence_dimensions": [
+      "claim_source_coverage",
+      "credible_alternatives_considered",
+      "disconfirmability",
+      "correctness_on_declared_task",
+      "revision_after_error",
+      "transfer_to_new_context",
+      "reader_comprehension",
+      "harm_and_consent_respect"
+    ],
+    "no_single_score": true,
+    "score_missing_as": "UNKNOWN",
+    "comparison_baseline": "Ordinary notebook and peer challenge, matched to the same tasks",
+    "experiment_rivals": {
+      "H0": "A simple notebook/peer-review workflow is as useful or better for the same learners and tasks.",
+      "H1": "Typed CoLaneSets improve source tracking, correction or transfer enough to justify their overhead."
+    },
+    "bias_controls": [
+      "predeclare_tasks",
+      "include_negative_results",
+      "counterbalance_test_order",
+      "blind_one_reviewer_when_feasible",
+      "include_assistant_prompting_as_confounder",
+      "do_not_compare_with_unmeasured_regular_human_average"
+    ],
+    "outcome_not_claimed": "NO_HUMAN_LEARNING_GAIN_VERIFIED"
+  },
+  "learner_rights": {
+    "participation": "VOLUNTARY_OPT_IN",
+    "choice": "Learner may choose objective, skip items and stop without penalty.",
+    "child_scope": "Age-appropriate experience; guardian consent plus child assent for underage participants; no unsupervised profiling.",
+    "collection_default": "NO_COLLECTION",
+    "device_default": "LOCAL_IN_BROWSER_IF_EXERCISE_IS_RUN",
+    "identifier_default": "NONE",
+    "third_party_data": "EXCLUDE_FROM_PUBLIC_EXERCISES",
+    "public_story_permission": "SEPARATE_EXACT_DRAFT_REVIEW_AND_CONSENT",
+    "model_training": "NOT_GRANTED_BY_PARTICIPATION",
+    "corrections": "A learner can dispute a characterization and retain a dated correction.",
+    "sensitive_data": "Do not infer protected attributes, mental-health conditions, intelligence, consciousness or inherent worth from text."
+  },
+  "value_direction": {
+    "desired": "More useful, accurate, revisable and ethically accountable inquiries",
+    "bad_outcome_rule": "Keep harm and failure as harm and failure; never automatically relabel them good",
+    "affected_parties": "Independent objections count even if they contradict the narrator",
+    "no_inevitable_ascent": true
+  },
+  "terms": {
+    "CoScendence": "Existing exploratory family for improvement or becoming; no validated aggregate psychometric meaning.",
+    "CoSendence": "Exact user spelling on 2026-11-15 is preserved as unresolved term candidate, not silently equated with CoScendence."
+  },
+  "currentness": {
+    "prototype": "Public GitHub source exists; separate web-serving/readers may need fresh checks",
+    "actual_users": "NO_ENROLLED_OR_CONSENTED_COHORT_CLAIM",
+    "actual_effects": "NONE_FROM_THIS_SPEC"
+  },
+  "nonclaims": [
+    "PUBLIC_CANDIDATE_NOT_CANON",
+    "NO_CLINICAL_OR_COGNITIVE_TRAIT_INFERENCE",
+    "NO_SENTIENCE_MEASURE",
+    "NO_PROVEN_COSCENDENCE_GAIN",
+    "NO_AUTOMATED_SURVEILLANCE",
+    "NO_PUBLIC_PROFILE_OF_NAMED_PERSON",
+    "NO_USER_COHORT_OR_RUNTIME_PROOF"
+  ]
+}
