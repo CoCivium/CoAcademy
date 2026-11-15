@@ -1,0 +1,583 @@
+{
+  "schema": "CoAll.CoPatterna.LazyRelationalTestRegistry.R0",
+  "date_utc": "2026-11-15",
+  "revision": "R0",
+  "state": "PUBLIC_SOURCE_DERIVED_EXEMPLAR__NO_CONTROL_PLANE_OR_REAL_WORKER",
+  "purpose": "Turn recovered CoZillion+ and CoAllBloom+ operator families into bounded, source-linked challenge cases for the existing WorkID/CoWalkaway frontier. One truth, two views.",
+  "human_url": "https://cocivium.github.io/CoAcademy/constellation/patterns/",
+  "machine_url": "https://cocivium.github.io/CoAcademy/constellation/patterns/registry.json",
+  "provenance": [
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COINTERSTICE_COINVERSION_COGLYPH_INPUT_FABRIC_R0_20261024.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COGBX_UNIVERSAL_UX_EXEMPLAR_R0_20261027.md",
+    "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/walkaway/README.md",
+    "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/bubbles/board.json",
+    "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/walkaway/status.json"
+  ],
+  "baseline": {
+    "observed": "2026-11-15",
+    "object": "CoWalkaway.X2.PublicSourceMissedWake.20261115.R0",
+    "evidence_scope": "User-scoped X2 private readproof, four local tests and local receipt hash; raw private artifact is not republished here.",
+    "observed_result": "PASS_LOCAL_DURABLE_SOURCE_AUDIT_AND_REPLAY",
+    "retry_result": "NOOP_PRIOR_RESULT_REUSED",
+    "duplicate_source_result": "CONFLICT_REJECTED",
+    "scheduled_wake": "NOT_PROVEN",
+    "independent_receiver_ack": "NOT_OBSERVED",
+    "coex": "NOT_PROVEN"
+  },
+  "family_count": 7,
+  "families": [
+    {
+      "id": "epistemic",
+      "label": "Truth and uncertainty",
+      "why": "Separate evidence, absence, observation, interpretation and alternatives"
+    },
+    {
+      "id": "structure",
+      "label": "Structure and substitution",
+      "why": "Simplify dependencies and discover compatible alternatives"
+    },
+    {
+      "id": "coordination",
+      "label": "Coordination and ownership",
+      "why": "Parallelize proposals without multiplying effect authority"
+    },
+    {
+      "id": "time",
+      "label": "Time and recovery",
+      "why": "Preserve exact continuity through staleness, interruption and no-change"
+    },
+    {
+      "id": "stress",
+      "label": "Stress and self-critique",
+      "why": "Use bounded failures to challenge both results and test methods"
+    },
+    {
+      "id": "interface",
+      "label": "Receivers and representation",
+      "why": "Keep one truth accessible in several media and contexts"
+    },
+    {
+      "id": "value",
+      "label": "Care and useful selection",
+      "why": "Prioritize independent benefit while reducing coercion, cost and burden"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "NULL",
+      "family": "epistemic",
+      "label": "Null/unknown",
+      "plain": "Keep unknown, absent, false and withheld as distinct states.",
+      "probe": "Erase the ACK but retain the result. Does status become UNKNOWN rather than SUCCESS?",
+      "boundary": "Unknown cannot grant a write.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "INVERT",
+      "family": "epistemic",
+      "label": "Inversion",
+      "plain": "Reverse assumptions, direction or viewpoint to locate a hidden dependency.",
+      "probe": "Ask what fails if the source appears successful but the receiver never applied it.",
+      "boundary": "Inverse is a question, not a proof.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COINTERSTICE_COINVERSION_COGLYPH_INPUT_FABRIC_R0_20261024.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "ELSE",
+      "family": "epistemic",
+      "label": "Orthogonal alternative",
+      "plain": "Try a different path beyond yes/no or winner/loser.",
+      "probe": "Find a useful first task that needs neither a central dispatcher nor a new AI session.",
+      "boundary": "Alternative is not automatically superior.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "FALSIFY",
+      "family": "epistemic",
+      "label": "Falsifier",
+      "plain": "Define evidence that would disprove a claimed success.",
+      "probe": "Deliberately show that a generated green dashboard has no receiver-origin result.",
+      "boundary": "Refutation must be reproducible.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "FACTOR",
+      "family": "structure",
+      "label": "Factor into shared primitives",
+      "plain": "Remove duplicated mechanics while preserving site-specific facts.",
+      "probe": "Replace two identical retry implementations with one versioned idempotency contract.",
+      "boundary": "Never propagate a site's privacy facts.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "DECOUPLE",
+      "family": "structure",
+      "label": "Decouple failure domains",
+      "plain": "Remove an unnecessary dependency while preserving essential contracts.",
+      "probe": "Disable a catalogue; confirm a pinned first-use tool still works.",
+      "boundary": "Loaded-page survival differs from cold independent hosting.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "SUBSTITUTE",
+      "family": "structure",
+      "label": "Substitute providers or components",
+      "plain": "Prove one component can replace another without a silent capability loss.",
+      "probe": "Recover the same public task from another host using pinned bytes and rights proof.",
+      "boundary": "An equivalent URL is not an independent failure domain.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "COMPOSE",
+      "family": "structure",
+      "label": "Compose cautiously",
+      "plain": "Connect two qualified primitives through typed input/output and failure boundaries.",
+      "probe": "Compose source readproof plus fenced local queue, with ACK held separate.",
+      "boundary": "Composed parts do not automatically inherit authority.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "FANOUT",
+      "family": "coordination",
+      "label": "Fan-out proposals",
+      "plain": "Generate independent candidate work while one actor owns each colliding effect.",
+      "probe": "Challenge one WorkID using evidence, privacy and accessibility lenses in parallel.",
+      "boundary": "Many proposals do not mean many live workers.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "FANIN",
+      "family": "coordination",
+      "label": "Fan-in with dissent",
+      "plain": "Dedupe exact proposals and preserve genuine disagreement.",
+      "probe": "Same WorkID and source digest collapse; different payload stays CONFLICT.",
+      "boundary": "Never use newest-wins for authority.",
+      "source_ref": "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/walkaway/README.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "FENCE",
+      "family": "coordination",
+      "label": "Fenced lease",
+      "plain": "Bind a writer to exact WorkID, source, owner, epoch and expiry.",
+      "probe": "Complete once at epoch 1, then reject a stale finisher.",
+      "boundary": "Local SQLite DONE is not external ACK.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/examples/cotalkitout/due_work_catchup_r0.py",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "CUTSET",
+      "family": "coordination",
+      "label": "Single contested cut",
+      "plain": "Identify the smallest shared resource that must be serialized.",
+      "probe": "Allow independent site pages; hold two edits to one shared sitemap.",
+      "boundary": "Serializing collision does not block all other work.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "EVENTLOG",
+      "family": "time",
+      "label": "Event sourcing / receipts",
+      "plain": "Record durable cause, effect and replay conditions instead of depending on a live tab.",
+      "probe": "Restart from committed source and result without relying on the preceding chat.",
+      "boundary": "A log is not an effect by itself.",
+      "source_ref": "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/walkaway/README.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "REPLAY",
+      "family": "time",
+      "label": "Idempotent replay",
+      "plain": "The same input and WorkID should not create a second effect.",
+      "probe": "Run the same verified local source audit again and require zero new writes.",
+      "boundary": "External idempotency still needs a real receiver test.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/examples/cotalkitout/due_work_catchup_r0.py",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "FRESH",
+      "family": "time",
+      "label": "Currentness and expiry",
+      "plain": "Expire stale observations without erasing their historical evidence.",
+      "probe": "Advance the clock without new source bytes; status must become STALE.",
+      "boundary": "Interpreted-at time is not source-observed time.",
+      "source_ref": "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/walkaway/README.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "SLEEP",
+      "family": "time",
+      "label": "Quiescence / wake",
+      "plain": "Sleep when no useful authorized delta exists; wake only for qualified triggers.",
+      "probe": "Re-run unchanged evidence and require no new output or human interrupt.",
+      "boundary": "Sleep must not swallow an owed deadline.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "CHAOS",
+      "family": "stress",
+      "label": "Bounded fault injection",
+      "plain": "Introduce one controlled failure to reveal a missing recovery path.",
+      "probe": "Kill a test process after durable claim but before simulated acknowledgment.",
+      "boundary": "Do not fault-inject production without authority.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "METAMORPH",
+      "family": "stress",
+      "label": "Metamorphic testing",
+      "plain": "Change something that should not affect the result, then check invariants.",
+      "probe": "Reverse proposal arrival order; deduped fan-in must be identical.",
+      "boundary": "A passing synthetic invariant is not a human outcome.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "TURTLE",
+      "family": "stress",
+      "label": "Bounded recursive review",
+      "plain": "Challenge the work, then challenge the challenger with a finite stop.",
+      "probe": "At review depth three, stop under the two-level challenge budget.",
+      "boundary": "Recursion cannot renew an expired lease.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "CONTRADICT",
+      "family": "stress",
+      "label": "Adversarial disagreement",
+      "plain": "Hold inconsistent variants instead of averaging unsupported claims.",
+      "probe": "Two model proposals assert different result bytes under one WorkID.",
+      "boundary": "Votes by synthetic personas are not independent witnesses.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "PROJECT",
+      "family": "interface",
+      "label": "Receiver-relative projection",
+      "plain": "Render one evidence object for text, Orb, phone or machine readers.",
+      "probe": "Human status and machine JSON show the same HOLD, source and scope.",
+      "boundary": "Rendering never changes source truth.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COGBX_UNIVERSAL_UX_EXEMPLAR_R0_20261027.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "A11Y",
+      "family": "interface",
+      "label": "Accessible equivalence",
+      "plain": "Provide keyboard, text, reduced-motion and compact-view equivalents.",
+      "probe": "Complete one first-use task using keyboard on reduced-motion mobile.",
+      "boundary": "Viewport emulation is not screen-reader acceptance.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COINTERSTICE_COINVERSION_COGLYPH_INPUT_FABRIC_R0_20261024.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "TRANSLATE",
+      "family": "interface",
+      "label": "Translation with loss ledger",
+      "plain": "Preserve original meaning when changing language, medium or substrate.",
+      "probe": "Make every simplified/glyph wording trace to a source claim and named loss.",
+      "boundary": "Fictional CoIGF is not actual ET translation.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "INBETWEEN",
+      "family": "interface",
+      "label": "Typed interstice",
+      "plain": "Notice gaps between events without inferring consent or private intent.",
+      "probe": "An absent click or long pause must not authorize a WorkID.",
+      "boundary": "Dwell and silence are not consent.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COINTERSTICE_COINVERSION_COGLYPH_INPUT_FABRIC_R0_20261024.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "VALUE",
+      "family": "value",
+      "label": "Benefit vector",
+      "plain": "Choose on verified utility, proof, independence, fairness, cost and reversibility.",
+      "probe": "Prefer a cheap source repair over ten agent sessions with no useful result.",
+      "boundary": "Do not collapse welfare to an uncalibrated single score.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "CARE",
+      "family": "value",
+      "label": "G_dSide stewardship lens",
+      "plain": "Test care, non-coercion, consent, protection and benefit without mystical proof claims.",
+      "probe": "Compare a user-calming HOLD with a false urgent notification.",
+      "boundary": "Philosophy is not authority or empirical discovery.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "RETIRE",
+      "family": "value",
+      "label": "Retirement and metabolize",
+      "plain": "Retire stale or duplicative branches while keeping their lineage retrievable.",
+      "probe": "Mark an unused watcher proposal dormant without destroying the prior proof.",
+      "boundary": "Retirement is not deletion or supersession without authority.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COZILLION_GENERATIVE_RELATION_GRAMMAR_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    },
+    {
+      "id": "NULLACTION",
+      "family": "value",
+      "label": "Do-nothing counterfactual",
+      "plain": "Ask whether acting produces more value than a correctly quiet state.",
+      "probe": "If the source remains identical and the task is DONE, return NO_ACTION.",
+      "boundary": "A no-op needs bounded evidence, not perpetual checking.",
+      "source_ref": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COALLBLOOM_OPTIONALITY_BASIN_R0_20261026.md",
+      "status": "EXISTING_OR_CANDIDATE_OPERATOR__NOT_DEPLOYED_BY_THIS_REGISTRY",
+      "effect_authority": "NONE",
+      "privacy": "PUBLIC_SAFE_EXEMPLAR"
+    }
+  ],
+  "cases": [
+    {
+      "id": "missing_ack",
+      "title": "The result exists, but nobody acknowledges it",
+      "short": "Missing ACK",
+      "trigger": "Completed local source verification; independent receiver effect unknown.",
+      "operators": [
+        "NULL",
+        "FENCE",
+        "EVENTLOG",
+        "FALSIFY"
+      ],
+      "next_safe": "Inspect the receiver's exact WorkID and source digest before considering any retry.",
+      "blocked": "Never equate a producer receipt or an X2 read with the target receiver's ACK.",
+      "expected_state": "HOLD_RECEIVER_ACK_UNKNOWN",
+      "external_effects": 0
+    },
+    {
+      "id": "duplicate_work",
+      "title": "A task arrives twice",
+      "short": "Duplicate or replay",
+      "trigger": "Same WorkID and identical source is proposed again.",
+      "operators": [
+        "REPLAY",
+        "FANIN",
+        "METAMORPH",
+        "SLEEP"
+      ],
+      "next_safe": "Read back the original committed result; issue no duplicate write.",
+      "blocked": "Do not restart a completed external effect merely because a webhook repeats.",
+      "expected_state": "NOOP_EXACT_REPLAY",
+      "external_effects": 0
+    },
+    {
+      "id": "source_changed",
+      "title": "Source changed while the work was in flight",
+      "short": "Source drift",
+      "trigger": "A pinned source digest no longer matches the candidate payload.",
+      "operators": [
+        "FRESH",
+        "FENCE",
+        "INVERT",
+        "RETIRE"
+      ],
+      "next_safe": "HOLD the old WorkID and propose a separately reviewed successor source.",
+      "blocked": "Never silently replace the payload for an existing approved WorkID.",
+      "expected_state": "HOLD_SOURCE_CONFLICT",
+      "external_effects": 0
+    },
+    {
+      "id": "two_writers",
+      "title": "Two workers both claim the same effect",
+      "short": "Split writer",
+      "trigger": "Conflicting variants target a shared sitemap or other colliding resource.",
+      "operators": [
+        "CUTSET",
+        "CONTRADICT",
+        "FANIN",
+        "TURTLE"
+      ],
+      "next_safe": "Retain both proposals and elect one authorized writer, or hold.",
+      "blocked": "Last-write-wins and synthetic review votes do not convey authority.",
+      "expected_state": "HOLD_ELECTED_WRITER",
+      "external_effects": 0
+    },
+    {
+      "id": "provider_down",
+      "title": "The central provider disappears",
+      "short": "Provider down",
+      "trigger": "Discovery coordinator or original publisher is not reachable.",
+      "operators": [
+        "DECOUPLE",
+        "SUBSTITUTE",
+        "EVENTLOG",
+        "CHAOS"
+      ],
+      "next_safe": "Cold-start a source-pinned first task on an independently authorized receiver.",
+      "blocked": "A GitHub-runner file:// boot does not prove second-provider recovery.",
+      "expected_state": "HOLD_SECOND_HOST_PROOF",
+      "external_effects": 0
+    },
+    {
+      "id": "no_delta",
+      "title": "Nothing has changed",
+      "short": "No material change",
+      "trigger": "Source and exact result remain current and already verified.",
+      "operators": [
+        "SLEEP",
+        "NULLACTION",
+        "VALUE",
+        "RETIRE"
+      ],
+      "next_safe": "Return an evidenced no-op, then sleep until a qualified change.",
+      "blocked": "Do not manufacture work or interrupt a person merely to keep a session alive.",
+      "expected_state": "QUIESCE_NO_EFFECT",
+      "external_effects": 0
+    },
+    {
+      "id": "visitor_confused",
+      "title": "A newcomer cannot complete the first useful task",
+      "short": "UX failure",
+      "trigger": "A site is attractive but the user cannot find what it actually does.",
+      "operators": [
+        "PROJECT",
+        "A11Y",
+        "TRANSLATE",
+        "ELSE"
+      ],
+      "next_safe": "Test one plain-language first-use path against an incumbent and notebook baseline.",
+      "blocked": "Decoration, glyphs and agent metadata cannot substitute for a usable service.",
+      "expected_state": "HOLD_HUMAN_ACCEPTANCE",
+      "external_effects": 0
+    },
+    {
+      "id": "too_many_branches",
+      "title": "The possibility tree becomes the project",
+      "short": "Combinatorial overload",
+      "trigger": "More candidate labels and AI sessions appear than independently useful outcomes.",
+      "operators": [
+        "FACTOR",
+        "COMPOSE",
+        "TURTLE",
+        "CARE"
+      ],
+      "next_safe": "Select one high-value reversible test; leave other relations addressable, not active.",
+      "blocked": "Infinite addressability does not authorize infinite recursion, compute or effects.",
+      "expected_state": "BOUND_TO_ONE_CANARY",
+      "external_effects": 0
+    }
+  ],
+  "operational_rule": "ADDRESSABLE_RELATIONS_NE_ACTIVE_WORKERS; operator suggestions are test hypotheses, not commands or authority.",
+  "selection": {
+    "active_case_max": 1,
+    "operators_per_case": 4,
+    "max_turtle_depth": 2,
+    "generate_all_combinations": false,
+    "default_behavior": "ONE_CASE_FOUR_TEST_IDEAS_NO_AUTOMATIC_ACTION",
+    "score_axes": [
+      "receiver_value",
+      "information_gain",
+      "evidence_gain",
+      "reversibility",
+      "fairness",
+      "cost",
+      "maintenance_debt",
+      "proof_debt",
+      "lockin"
+    ],
+    "required_negative_controls": [
+      "UNKNOWN_NE_ACK",
+      "DUPLICATE_NE_SECOND_EFFECT",
+      "SOURCE_DRIFT_NE_UPDATE",
+      "DUPLICATE_WRITER_NE_LAST_WRITE_WINS",
+      "NO_DELTA_NE_WORK",
+      "G_DSIDE_NE_AUTHORITY"
+    ]
+  },
+  "evaluation_limits": {
+    "browser_test": "Tested UI parity, keyboard and viewport if hosted CI green; not independent humans.",
+    "program_test": "Deterministic registry and negative fixture checks, no real actuators.",
+    "privacy": "No private directories, credentials, raw user messages or account data in this public registry.",
+    "release": "Source commit and GitHub Pages readback are not CoEx, owner receiver pickup or canon."
+  },
+  "nonclaims": [
+    "NO_NEW_COTERMS_CREATED",
+    "SOURCE_PATTERNS_NE_DEPLOYED_RUNTIME",
+    "SCENARIOS_NE_LIVE_NODE_OBSERVATIONS",
+    "METAPHOR_NE_EVIDENCE",
+    "GD_RELATIONS_NE_AUTHORITY",
+    "ADDRESSABLE_NE_ACTIVE",
+    "REGISTRY_NE_COOWNEDWORK_RECEIVER",
+    "LOCAL_IS_NOT_LANDED",
+    "VALIDATION_IS_NOT_ACCEPTANCE",
+    "NO_RECEIVER_PICKUP_WITHOUT_EXACT_READPROOF",
+    "NO_INTEGRATION_COEX_CANON_RUNTIME_OR_PUBLIC_INFERENCE",
+    "HASHING_IS_NOT_SEMANTIC_INGESTION",
+    "DISCOVERED_SET_IS_NOT_COMPLETE_HISTORY"
+  ]
+}
