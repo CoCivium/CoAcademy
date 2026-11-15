@@ -1,0 +1,232 @@
+{
+  "schema": "CoAcademy.DiscoverySurface.v0.1",
+  "generated_date": "2026-11-15",
+  "title": "CoCivium public research discovery",
+  "canonical": "https://cocivium.github.io/CoAcademy/discover/",
+  "status": "PUBLIC_RESEARCH_INDEX_CANDIDATE__NOT_CANON_NOT_ENDORSED",
+  "audiences": [
+    "human",
+    "academic researcher",
+    "developer",
+    "AI or machine reader"
+  ],
+  "about": "CoCivium is an experimental public R&D project exploring collaboration, interfaces, inquiry and governance; published artifacts may be provisional.",
+  "purposes": [
+    "Find a useful public task",
+    "Inspect source and exact claims",
+    "Compare alternatives and failures",
+    "Challenge a hypothesis",
+    "Locate machine-readable twins"
+  ],
+  "entries": [
+    {
+      "id": "first",
+      "title": "Start with CoCivium",
+      "audience": [
+        "human",
+        "researcher"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/",
+      "scope": "Crawlable human first-use site",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "about",
+      "title": "What is CoCivium?",
+      "audience": [
+        "human",
+        "researcher"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/about/",
+      "scope": "Plain-language project explanation and limitations",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "orb",
+      "title": "Explore CoOrb",
+      "audience": [
+        "human",
+        "researcher"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/coorb/",
+      "scope": "Public experimental interface, not production installation",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "play",
+      "title": "Explore CoPlay",
+      "audience": [
+        "human"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/coplay/",
+      "scope": "Public play/exploration prototype",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "lanes",
+      "title": "Compare inquiry views",
+      "audience": [
+        "human",
+        "researcher"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/laneset/r1/",
+      "scope": "Browser source-navigation experiment; no proven learning effect",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "panel",
+      "title": "Challenge public sites",
+      "audience": [
+        "human",
+        "researcher",
+        "developer"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/reviewpanel/",
+      "scope": "Seven synthetic review lenses, no independent reviewer claim",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "relay",
+      "title": "CoRelay public evidence",
+      "audience": [
+        "human",
+        "researcher"
+      ],
+      "url": "https://cocivium.github.io/CoAcademy/relay/",
+      "scope": "Public source/evidence snapshot",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    },
+    {
+      "id": "theory",
+      "title": "CoTheoryAll and assumptions",
+      "audience": [
+        "researcher",
+        "developer"
+      ],
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/docs/Public/CoTheoryAll_Substack_Draft_2026-10-06.md",
+      "scope": "Draft research map with falsifiability and explicit nonclaims",
+      "status": "GITHUB_SOURCE_READBACK_2026-11-15"
+    },
+    {
+      "id": "journal",
+      "title": "Ocean and the minds that study",
+      "audience": [
+        "researcher",
+        "human"
+      ],
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/docs/Journal/2026-11-15-ocean-and-minds-that-study.md",
+      "scope": "Editorial metaphor and inquiry design, not sentience or cognition result",
+      "status": "GITHUB_SOURCE_READBACK_2026-11-15"
+    },
+    {
+      "id": "govern",
+      "title": "Public R&D and release boundaries",
+      "audience": [
+        "researcher",
+        "developer"
+      ],
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/PRELAUNCH.md",
+      "scope": "Public research posture, rights and open critique",
+      "status": "GITHUB_SOURCE_READBACK_2026-11-15"
+    },
+    {
+      "id": "reviewpolicy",
+      "title": "How review panels are scoped",
+      "audience": [
+        "researcher",
+        "developer"
+      ],
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COREVIEW_PANEL_LIFECYCLE_R0.md",
+      "scope": "Seven role seats; synthetic reviews are not independent reviewers",
+      "status": "GITHUB_SOURCE_READBACK_2026-11-15"
+    },
+    {
+      "id": "repo",
+      "title": "CoCivium research code and issues",
+      "audience": [
+        "developer",
+        "researcher"
+      ],
+      "url": "https://github.com/CoCivium/CoCivium",
+      "scope": "Repository code, history and issue tracker; repository is not governing canon",
+      "status": "GITHUB_SOURCE_AVAILABLE"
+    },
+    {
+      "id": "acad_repo",
+      "title": "CoAcademy public source",
+      "audience": [
+        "developer",
+        "researcher"
+      ],
+      "url": "https://github.com/CoCivium/CoAcademy",
+      "scope": "Pages source, documentation, and experiments",
+      "status": "OBSERVED_HTTP_200_2026-11-15"
+    }
+  ],
+  "machine_endpoints": [
+    {
+      "url": "https://cocivium.github.io/CoAcademy/coorb/discovery.json",
+      "format": "application/json",
+      "scope": "CoOrb machine discovery"
+    },
+    {
+      "url": "https://cocivium.github.io/CoAcademy/coplay/discovery.json",
+      "format": "application/json",
+      "scope": "CoPlay machine discovery"
+    },
+    {
+      "url": "https://cocivium.github.io/CoAcademy/relay/discovery.json",
+      "format": "application/json",
+      "scope": "CoRelay machine discovery"
+    },
+    {
+      "url": "https://cocivium.github.io/CoAcademy/relay/feed.xml",
+      "format": "application/xml",
+      "scope": "CoRelay feed"
+    },
+    {
+      "url": "https://cocivium.github.io/CoAcademy/reviewpanel/discovery.json",
+      "format": "application/json",
+      "scope": "CoReviewPanel review fixture"
+    },
+    {
+      "url": "https://cocivium.github.io/CoAcademy/laneset/learner-inquiry-contract-r0.json",
+      "format": "application/json",
+      "scope": "CoAthene learner inquiry schema"
+    },
+    {
+      "url": "https://cocivium.github.io/CoAcademy/AGENT_INDEX.json",
+      "format": "application/json",
+      "scope": "Older CoAcademy machine index; currentness must be checked"
+    }
+  ],
+  "declared_boundaries": {
+    "no_institutional_endorsement": true,
+    "no_ai_instructions": true,
+    "not_a_search_engine_submission": true,
+    "indexing_unknown": true,
+    "not_entire_site_inventory": true,
+    "not_complete_coall_canon": true,
+    "site_nodes_and_domains_not_implied_live": true,
+    "no_credentials_or_private_network_data": true,
+    "no_perimeter_institute_affiliation_claim": true
+  },
+  "lastmod_policy": "Only assign lastmod to a page when a real dated significant modification of that page is supported. This index has creation date 2026-11-15. Historical URLs retain prior sitemap dates.",
+  "inspection_summary": {
+    "date": "2026-11-15",
+    "description": "Bounded X2 HTTP and connected GitHub source checks, not search index evidence",
+    "sitemap_prior_status": "DID_NOT_LIST_NEW_CoATHENE_OR_CoREVIEWPANEL",
+    "robots_host": "https://cocivium.github.io/robots.txt",
+    "robots_host_response": 404,
+    "robots_scope_note": "Only host-root robots.txt controls crawlers for this host; no project subpath file is claimed to do so."
+  },
+  "relation_types": [
+    "IS_HUMAN_VIEW_OF",
+    "IS_MACHINE_TWIN_OF",
+    "EXPLAINS",
+    "CHALLENGES",
+    "SOURCE_FOR",
+    "HAS_UNVERIFIED_RECEIVER"
+  ],
+  "next_proof": "Independently confirm new deployed hub and exact source; then verify crawl/index signals via authorized search-console owner, accessible first-task completion, and independently reviewed link destinations."
+}
