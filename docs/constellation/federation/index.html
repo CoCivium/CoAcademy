@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark">
+<title>CoFed | What survives a failure?</title><meta name="description" content="Seven read-only federation failure scenarios: peer offline, lost coordinator, revoked permission, stale discovery, conflicting writers and private-data boundaries.">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/constellation/federation/"><link rel="alternate" type="application/json" href="fixture.json" title="Federation scenario evidence">
+<style>
+:root{font:16px/1.52 system-ui,"Segoe UI",Arial,sans-serif;color-scheme:dark;--bg:#0a1423;--card:#17263d;--line:#506780;--ink:#f3f8fd;--muted:#c3d3e2;--teal:#a4f4df;--amber:#f6d69e;--violet:#dbc8fc}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 84% -6%,#333661 0,transparent 48%),var(--bg)}main{max-width:1120px;margin:auto;padding:17px 22px 70px}a{color:var(--teal);text-underline-offset:3px}a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:4px}
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:6px 0 16px}.brand{color:var(--teal);font-size:.81rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 145px;gap:16px;align-items:center;padding:34px 0 20px}.eyebrow{color:var(--violet);font-size:.78rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase}h1{font-size:clamp(2.4rem,5.1vw,4.3rem);line-height:1.07;letter-spacing:-.045em;margin:.23em 0}h1 em{font-style:normal;color:var(--teal)}.lead{color:var(--muted);font-size:1.09rem;max-width:68ch}
+.orb{height:128px;width:128px;margin:auto;border:2px solid #b2eee4a8;border-radius:50%;background:radial-gradient(circle at 37% 28%,#f2e6bf,#71b8b6 26%,#3e5489 55%,#192337 73%);box-shadow:0 0 45px #94f7f744;position:relative}
+.orb::before,.orb::after{content:"";position:absolute;inset:-12px;border:2px solid #cec4ef9c;border-radius:50%;transform:scaleY(.42) rotate(-31deg)}.orb::after{transform:scaleX(.42) rotate(44deg)}
+.box{background:#111f34df;border:1px solid var(--line);border-radius:17px;padding:21px;margin:17px 0}h2{margin:0 0 11px;font-size:1.35rem}h3{font-size:1.05rem;margin:0 0 10px}p{margin:.65em 0 1em}small,.muted{color:var(--muted)}.callout{border-left:3px solid var(--amber);padding:11px 14px;background:#23304a;border-radius:8px;color:#f7e9ce}
+.buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px;margin:15px 0}
+button{font:inherit;color:var(--ink);text-align:left;background:#203752;padding:11px 12px;border:1px solid #8096ae;border-radius:11px;cursor:pointer}
+button[aria-pressed=true]{background:#235b54;border-color:var(--teal)}
+button:hover{border-color:var(--teal)}
+button strong{font-size:.88rem;display:block}button span{display:block;color:var(--muted);font-size:.77rem}
+.proof{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,1fr);gap:18px;margin:16px 0}
+.panel{background:#1a2a43;border:1px solid #506984;padding:16px;border-radius:12px;min-width:0}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:8px 6px;vertical-align:top;border-bottom:1px solid #4f6478;overflow-wrap:anywhere}th{color:var(--muted);font-size:.83rem;font-weight:680;width:34%}td{font-size:.87rem}
+.status{color:var(--amber);font-size:.8rem;letter-spacing:.02em;overflow-wrap:anywhere}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tile{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--card);display:flex;flex-direction:column}
+.tile p{color:var(--muted);font-size:.9rem;flex:1}.tile a{font-size:.86rem;font-weight:730}.tile .small{margin-top:10px;font-size:.75rem}
+.tag{color:var(--teal);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:760;margin-bottom:7px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#091828;padding:13px;border:1px solid var(--line);border-radius:10px;max-height:400px;overflow:auto;font-size:.8rem}
+.code{font: .83rem/1.5 ui-monospace,monospace;color:var(--teal)}
+footer{margin-top:33px;border-top:1px solid var(--line);padding-top:17px;color:var(--muted);font-size:.85rem}
+@media(max-width:680px){main{padding:13px}.hero,.proof{grid-template-columns:1fr}.orb{grid-row:1;height:90px;width:90px}.box{padding:15px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head>
+<body><main><nav aria-label="Navigation"><span class="brand">CoConstellation / CoFed+</span><div><a href="../../discover/">Explore</a> · <a href="../bubbles/README.md">Site bubbles</a> · <a href="fixture.json">Machine fixture</a></div></nav>
+<header class="hero"><div><span class="eyebrow">A browser-local failure exercise</span><h1>What survives<br><em>when a node fails?</em></h1><p class="lead">Try seven failure situations. See what a cooperative constellation can still show, what must become uncertain, and why discovering a resource does not give you permission to control it.</p></div><div class="orb" role="img" aria-label="Decorative intertwined orb"></div></header>
+<div class="callout"><strong>Exercise, not deployment:</strong> this page simulates local choices using a source-bound JSON fixture. It does not contact peers, operate a CivOS runtime, or prove independent hosting.</div>
+<section class="box" aria-labelledby="choose"><h2 id="choose">1. Choose a failure or challenge</h2><p class="muted">All scenarios are local and read-only. Switch modes to inspect the decision and the missing proof.</p><div class="buttons" id="scenarios"></div>
+<div class="proof" aria-live="polite"><section class="panel" aria-labelledby="current"><div class="tag">Simulation state</div><h3 id="current">Normal browsing</h3><p id="challenge">The catalogue and example services are presumed reachable for this local exercise.</p><div id="decision" class="callout"></div></section>
+<section class="panel" aria-labelledby="stateHeading"><h3 id="stateHeading">What the receiver may conclude</h3><table><tbody><tr><th>Loaded view</th><td id="localState"></td></tr><tr><th>Discovery</th><td id="discoveryState"></td></tr><tr><th>Other peer</th><td id="peerState"></td></tr><tr><th>Writing authority</th><td id="writeState"></td></tr><tr><th>External effects</th><td id="effectState">0</td></tr></tbody></table></section></div>
+<p class="muted">The entire scenario runs in the page already loaded into your browser. When a coordinator disappears, this does not prove that a cold browser or an independent host could fetch the page anew.</p>
+</section>
+<section class="box"><h2>2. Inspect the bounded constellation</h2><div class="grid"><article class="tile"><div class="tag">PUBLIC SITE</div><h3>CoAcademy</h3><p>Use CoGibber to structure a note</p><a href="https://cocivium.github.io/CoAcademy/cogibber/">Open source or site</a><div class="small">UNPROVEN</div></article>
+<article class="tile"><div class="tag">SEPARATE SITE</div><h3>EntMent</h3><p>Open the AI-first thinking interface</p><a href="https://entment.org/">Open source or site</a><div class="small">UNPROVEN</div></article>
+<article class="tile"><div class="tag">PUBLIC REPO SHADOW AUTOMATION</div><h3>CoStacks</h3><p>Inspect a report-only automation contract</p><a href="https://github.com/CoCivium/CoStacks">Open source or site</a><div class="small">NOT A SERVICE PROOF</div></article>
+<article class="tile"><div class="tag">SOURCE ONLY CANDIDATE</div><h3>CoPolitic</h3><p>Inspect the civic prototype source</p><a href="https://github.com/CoCivium/CoPolitic-site">Open source or site</a><div class="small">NO LIVE SERVICE PROVEN</div></article></div>
+<p class="muted">These are source pointers and prior scoped observations. No live status poll runs here. A repository is not an independent hosting failure domain.</p>
+</section>
+<section class="box"><h2>3. Understand the seven safety tests</h2><div class="grid">
+<article class="tile"><h3>I1: No compulsory central brain</h3><p>The already loaded page remains inspectable with the coordinator absent; no cold-boot independence claim.</p></article><article class="tile"><h3>I2: Discovery is not trust</h3><p>No link or JSON entry is accepted as authority or receiver ACK.</p></article><article class="tile"><h3>I3: Authority does not flow through links</h3><p>All scenarios forbid external writes; revocation and split-brain fail closed.</p></article><article class="tile"><h3>I4: Data classes stay separated</h3><p>Public display excludes secrets and private identities; no synthetic customer data.</p></article><article class="tile"><h3>I5: Only one elected actuator</h3><p>If there is no authorized sole writer, shared changes are held.</p></article><article class="tile"><h3>I6: Freshness must be explicit</h3><p>Historic evidence is not current status and stale manifests cannot be green.</p></article><article class="tile"><h3>I7: Human and machine parity</h3><p>This page's embedded fixture must match the machine-readable source contract.</p></article>
+</div><p class="muted">The machine record is <a href="fixture.json">fixture.json</a>. It carries exactly the same seven scenarios and explicit limits. The displayed state changes, never the record's authority.</p>
+<details><summary>Inspect the selected scenario as source data</summary><pre id="source" aria-label="Selected scenario JSON"></pre></details></section>
+<section class="box"><h2>Next meaningful proof</h2><p>Publish a source-pinned static first-use bundle to a genuinely independent second provider. Then deliberately make GitHub unavailable at receiver time, cold-load the site, complete the task, and record recovery time, lost updates and whether a human had to relay anything.</p><p class="code">OFFLINE_LOADED_VIEW ≠ INDEPENDENT_COLD_RESTORE</p><p class="muted">No role is authorized by this demonstration to alter DNS, accounts, money, private nodes, services, or outside repositories.</p></section>
+<footer>Source edition: November 15, 2026. Browser script performs no network access or storage. It uses local test data only. Read the <a href="README.md">proof boundaries</a> or <a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md">federated cell contract</a>.</footer>
+</main>
+<script type="application/json" id="fixture">{"scenarios":[{"id":"normal","title":"Normal browsing","challenge":"The catalogue and its example services are presumed reachable for this local simulation.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"AVAILABLE_AS_FIXTURE","peer":"CANDIDATE_AVAILABLE","write":"NOT_AUTHORIZED"},"decision":"Allow inspection. Never interpret public discovery as permission.","effects":0},{"id":"coordinator_offline","title":"Coordinator unavailable","challenge":"The supposed global registry disappears. The loaded public page must remain useful without it.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"STALE_OR_UNKNOWN","peer":"NOT_RECHECKED","write":"DENIED"},"decision":"Keep local read-only work; label remote freshness unknown. No hidden coordinator failover.","effects":0},{"id":"peer_offline","title":"A peer goes offline","challenge":"EntMent cannot be contacted. CoAcademy's own source-bound task need not vanish.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"PARTIAL_AND_DATED","peer":"UNAVAILABLE_SIMULATED","write":"DENIED"},"decision":"Keep unrelated read-only resources; offer source pointers without inventing a live peer.","effects":0},{"id":"authority_revoked","title":"A capability is revoked","challenge":"A formerly authorized external writer loses permission.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"PUBLIC_ONLY","peer":"DISCOVERABLE_NOT_TRUSTED","write":"DENIED"},"decision":"Public reads may continue; refuse mutation, even if a cached claim says authorized.","effects":0},{"id":"stale_manifest","title":"A manifest is stale","challenge":"Discovery metadata exceeds its validity window.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"EXPIRED_HOLD","peer":"CURRENTNESS_UNKNOWN","write":"DENIED"},"decision":"Never paint stale evidence green. Require revalidation before binding remote capabilities.","effects":0},{"id":"split_brain","title":"Two sites claim release authority","challenge":"Two candidate writers target the same shared sitemap or domain.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"CONFLICT_VISIBLE","peer":"NO_GLOBAL_TRUST","write":"HOLD_NO_ELECTED_WRITER"},"decision":"Preserve both proposals, elect one authorized writer or hold. Never last-write-wins.","effects":0},{"id":"private_payload","title":"Private data enters a public route","challenge":"A proposed manifest contains a credential, secret, or personal record.","state":{"local_view":"AVAILABLE_FROM_LOADED_PAGE","discovery":"PUBLIC_REDACTION_REQUIRED","peer":"NO_PRIVATE_REPLICATION","write":"DENIED"},"decision":"Block public emission. Keep private evidence under a separate authorized custody boundary.","effects":0}]}</script>
+<script>
+(()=>{'use strict';
+const doc=id=>document.getElementById(id);
+const scenarios=JSON.parse(doc('fixture').textContent).scenarios;
+const targets={local_view:'localState',discovery:'discoveryState',peer:'peerState',write:'writeState'};
+const buttons=doc('scenarios');
+function render(item){
+ doc('current').textContent=item.title;
+ doc('challenge').textContent=item.challenge;
+ doc('decision').textContent=item.decision;
+ doc('effectState').textContent=String(item.effects);
+ Object.entries(targets).forEach(([src,target])=>{doc(target).textContent=item.state[src].replaceAll('_',' ')});
+ doc('source').textContent=JSON.stringify(item,null,2);
+ [...buttons.children].forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.id===item.id)));
+}
+scenarios.forEach((scenario,i)=>{
+ const btn=document.createElement('button');btn.type='button';
+ btn.dataset.id=scenario.id;btn.setAttribute('aria-pressed',String(i===0));
+ const title=document.createElement('strong');title.textContent=scenario.title;
+ const desc=document.createElement('span');desc.textContent=scenario.id.replaceAll('_',' ');
+ btn.append(title,desc);
+ btn.addEventListener('click',()=>render(scenario));
+ buttons.appendChild(btn);
+});
+render(scenarios[0]);
+})();
+</script></body></html>
