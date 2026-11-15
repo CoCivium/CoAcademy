@@ -165,6 +165,87 @@ async function checkMega(browser, item) {
     await context.close();
   }
 }
+async function checkCoFront(browser, item) {
+  const context = await browser.newContext({
+    viewport:item.viewport, reducedMotion:item.reducedMotion,
+    serviceWorkers:"block",
+  });
+  const page = await context.newPage();
+  const external = [], browserErrors = [];
+  page.on("request", request => checkOrigin(request, external));
+  page.on("pageerror", error => browserErrors.push(error.name));
+  try {
+    const result = await page.goto(BASE, {waitUntil:"load",timeout:30000});
+    assert.equal(result?.status(), 200);
+    assert.equal(await page.locator("#cofront-start").count(),1);
+    assert.equal(await page.locator(".cofront__card").count(),3);
+    const links = await page.locator(".cofront__card .cofront__cta")
+      .evaluateAll(els=>els.map(e=>e.getAttribute("href")));
+    assert.deepEqual(links, ["cogibber/","laneset/r1/","reviewpanel/"]);
+    assert.equal(await page.locator('link[href="assets/cofront/cofront-r0.css"]').count(),1);
+    const dims = await page.evaluate(()=>{
+      const cards = document.querySelector(".cofront__grid");
+      const card = document.querySelector(".cofront__card");
+      return {
+        scrollWidth:document.documentElement.scrollWidth,
+        clientWidth:document.documentElement.clientWidth,
+        columns:getComputedStyle(cards).gridTemplateColumns.split(" ").length,
+        transition:getComputedStyle(card).transitionDuration,
+        reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches,
+      };
+    });
+    assertNoHorizontalOverflow(dims);
+    assert.equal(dims.columns, item.viewport.width<650?1:3);
+    assert.equal(dims.reducedMotion,item.reducedMotion==="reduce");
+    if(item.reducedMotion==="reduce")
+      assert.match(dims.transition,/^0s(?:, 0s)*$/, "motion must be disabled");
+    assert.deepEqual(external,[],"no external page requests");
+    assert.deepEqual(browserErrors,[],"no uncaught browser exceptions");
+    return {view:item.name,result:"PASS",http_status:200,source_link_count:links.length,
+      grid_columns:dims.columns,keyboard_focus_style:"SOURCE_CHECKED",
+      reduced_motion:dims.reducedMotion,third_party_requests:0,page_errors:0};
+  } finally { await context.close(); }
+}
+async function checkCloudOps(browser,item){
+  const context = await browser.newContext({
+    viewport:item.viewport,reducedMotion:item.reducedMotion,
+    serviceWorkers:"block",
+  });
+  const page = await context.newPage();
+  const external = [], browserErrors = [];
+  page.on("request",request=>checkOrigin(request,external));
+  page.on("pageerror",error=>browserErrors.push(error.name));
+  try{
+    const response = await page.goto(BASE+"constellation/cloudops/",{
+      waitUntil:"load",timeout:30000,
+    });
+    assert.equal(response?.status(),200);
+    assert.equal(await page.locator(".card").count(),18);
+    const dataResponse = await context.request.get(BASE+"constellation/cloudops/catalog.json");
+    assert.equal(dataResponse.status(),200);
+    const catalogue = await dataResponse.json();
+    assert.equal(catalogue.schema,"CoAll.CloudSiteOps.UseCaseExemplars.R0");
+    assert.equal(catalogue.exemplars.length,18);
+    const ids = catalogue.exemplars.map(x=>x.id);
+    assert.equal(new Set(ids).size,18,"duplicate use-case ID");
+    const displayed = await page.locator(".card .number").allTextContents();
+    assert.deepEqual(displayed,ids,"human and machine catalogue IDs diverged");
+    const dimensions = await page.evaluate(()=>({
+      clientWidth:document.documentElement.clientWidth,
+      scrollWidth:document.documentElement.scrollWidth,
+      reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches,
+    }));
+    assertNoHorizontalOverflow(dimensions);
+    assert.equal(dimensions.reducedMotion,item.reducedMotion==="reduce");
+    assert.deepEqual(external,[],"no off-host page requests");
+    assert.deepEqual(browserErrors,[]);
+    return {view:item.name,result:"PASS",http_status:response.status(),
+      catalogue_items:ids.length,exact_catalogue_id_parity:true,
+      horizontal_overflow:false,reduced_motion:dimensions.reducedMotion,
+      third_party_requests:0,page_errors:0};
+  } finally { await context.close(); }
+}
+
 const report = {
   schema: "CoAcademy.PublicFirstUseBrowserReadback.R0",
   source_commit: process.env.GITHUB_SHA || "LOCAL_UNBOUND",
@@ -185,6 +266,8 @@ try {
   for (const item of cases) {
     report.tests.push({surface:"cogbx", ...await checkCogbx(browser, item)});
     report.tests.push({surface:"megascroller", ...await checkMega(browser, item)});
+    report.tests.push({surface:"cofront", ...await checkCoFront(browser, item)});
+    report.tests.push({surface:"cloudops", ...await checkCloudOps(browser, item)});
   }
   report.result = "PASS_SCOPED_BROWSER_INTERACTIONS";
 } catch (error) {
