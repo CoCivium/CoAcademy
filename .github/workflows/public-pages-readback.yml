@@ -28,7 +28,8 @@ on:
       - tools/cowalkaway_fanin_canary.py
       - docs/constellation/bubbles/**
       - docs/constellation/walkaway/**
-      - docs/constellation/walkaway/**
+      - docs/constellation/patterns/**
+      - tools/copatterna_registry_canary.py
   schedule:
     - cron: '31 8 * * *'
 permissions:
@@ -70,6 +71,8 @@ jobs:
               ('CoFed typed fixture', 'docs/constellation/federation/fixture.json', base + 'constellation/federation/fixture.json'),
               ('CoWalkaway calm UX', 'docs/constellation/walkaway/index.html', base + 'constellation/walkaway/'),
               ('CoWalkaway machine status', 'docs/constellation/walkaway/status.json', base + 'constellation/walkaway/status.json'),
+              ('CoPatterna human explorer', 'docs/constellation/patterns/index.html', base + 'constellation/patterns/'),
+              ('CoPatterna machine registry', 'docs/constellation/patterns/registry.json', base + 'constellation/patterns/registry.json'),
               ('CoParallel interactive', 'docs/coparallel/index.html', base + 'coparallel/'),
               ('CoParallel research data', 'docs/coparallel/discovery.json', base + 'coparallel/discovery.json'),
               ('CoNav visual index', 'docs/conav/index.html', base + 'conav/'),
@@ -253,11 +256,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Test bounded fan-in without steward, effects or external access
         run: python3 tools/cowalkaway_fanin_canary.py
+      - name: Test CoPatterna bounded source registry and ten negative mutations
+        run: python3 tools/copatterna_registry_canary.py
       - name: Preserve exact no-effect report for independent inspection
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cowalkaway-source-fanin-canary
-          path: .ci/walkaway/fan-in-canary.json
+          path: |
+            .ci/walkaway/fan-in-canary.json
+            .ci/patterns/registry-proof.json
           if-no-files-found: warn
           retention-days: 30
