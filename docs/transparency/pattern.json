@@ -1,0 +1,114 @@
+{
+  "schema": "CoAll.CoSiteTransparencyPattern.R0.1",
+  "pattern_id": "coall.site.transparency.r0",
+  "name": "Shared transparency pattern for sites/nodes",
+  "version": "0.1.0",
+  "status": "PUBLIC_REUSABLE_CANDIDATE__NOT_GOVERNING_CANON",
+  "published_date": "2026-11-15",
+  "purpose": "One discoverable short disclosure plus a structured per-site overlay; sites inherit questions and formats, not factual assertions.",
+  "background": [
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Evolution/COPUBLIC_CONSTELLATION_MEGASCROLLER_R0.json",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Launch/COCOMMONS_PUBLIC_FIRST_TRANSITION_ADVISORY_20261111.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COFREE_EVOLVING_PUBLICATION_COMMONS_R0_20261026.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/CONTRIBUTING.md"
+  ],
+  "required_questions": [
+    {
+      "id": "identity",
+      "ask": "Who is responsible for this public experience?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "purpose",
+      "ask": "What does this site offer, to whom, and in what experimental state?",
+      "unknown_is_valid": false
+    },
+    {
+      "id": "cost",
+      "ask": "What costs money, if anything, and who receives it?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "data",
+      "ask": "What user data is collected by site code, hosting and third parties, and for which purposes?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "ai",
+      "ask": "Does AI operate, assist or interpret here? What does it not do?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "license",
+      "ask": "Which code, text, media and user contributions are covered by what permissions?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "accessibility",
+      "ask": "What has been tested for access, low-bandwidth use and inclusive UX?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "security",
+      "ask": "Where can a security issue be reported without public exposure?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "contribution",
+      "ask": "How can visitors and authorized AI teams suggest corrections and improvements?",
+      "unknown_is_valid": true
+    },
+    {
+      "id": "change",
+      "ask": "Where are dated versions, corrections, provenance and retirement records?",
+      "unknown_is_valid": false
+    },
+    {
+      "id": "limitations",
+      "ask": "Which assertions remain unverified, stale or disputed?",
+      "unknown_is_valid": false
+    }
+  ],
+  "inheritance": {
+    "style": "PATTERN_INHERITANCE_WITH_EXPLICIT_OVERRIDES",
+    "edge_types": [
+      "INHERITS_PATTERN",
+      "SITE_SPECIFIC_FACT",
+      "OVERRIDES_WITH_EVIDENCE",
+      "REFERENCES_POLICY",
+      "CHALLENGES",
+      "SUPERSEDED_BY",
+      "SHARES_HOSTING_WITH"
+    ],
+    "rules": [
+      "Do not copy a provider, payment, privacy or license claim from one site to another without independent site-specific evidence.",
+      "A site overlay must record pattern version, responsible source, observation date, evidence class, exceptions and UNKNOWNs.",
+      "Inheritance only distributes disclosure prompts, format and optional shared policy URLs, not legal authority or operational state.",
+      "Human summary and machine overlay must not contradict; when evidence conflicts display HELD/DISPUTED and a correction path.",
+      "Changing a shared pattern requires versioned comparison; do not silently overwrite site-specific exceptions or governance decisions.",
+      "Node internals, private topology, credentials, security vulnerabilities and protected personal details must not be emitted by public projection."
+    ]
+  },
+  "value_states": [
+    "VERIFIED_SOURCE",
+    "OBSERVED_SCOPED",
+    "STEWARD_REPORTED",
+    "PROPOSED",
+    "UNVERIFIED",
+    "NOT_APPLICABLE",
+    "DISPUTED",
+    "HELD"
+  ],
+  "release_gates": [
+    "RIGHTS_PRIVACY_SECURITY_REVIEW",
+    "SOURCE_COMMIT_READBACK",
+    "PUBLIC_HTTP_READBACK",
+    "PARITY_CHECK",
+    "INDEPENDENT_USABILITY_CHECK_WHEN_CLAIMED"
+  ],
+  "signoff": "None by publication. Not a legal privacy policy, contractual assurance, compliance certification, canon or automatic fleet update.",
+  "bootstrap_next": "Pilot a public CoAcademy overlay and invite a maintainer to resolve missing legal operator, privacy hosting and code licensing before stronger public guarantees.",
+  "source_url": "https://cocivium.github.io/CoAcademy/transparency/pattern.json",
+  "machine_example": "https://cocivium.github.io/CoAcademy/transparency/site.json",
+  "human_example": "https://cocivium.github.io/CoAcademy/transparency/"
+}
