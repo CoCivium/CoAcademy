@@ -11,6 +11,9 @@
 - [CoReviewPanel](https://cocivium.github.io/CoAcademy/reviewpanel/): synthetic review lenses, not independent people.
 - [CoRelay](https://cocivium.github.io/CoAcademy/relay/): public evidence/feed surface.
 
+## Related public interface
+- [EntMent](https://entment.org/): separate CoAura AI-first beacon. Historical education/mentorship site-family association is not a completed CoAcademy or CoAthene migration.
+
 ## Primary machine routes
 - [Structured discovery directory](https://cocivium.github.io/CoAcademy/discover/discovery.json)
 - [Sitemap](https://cocivium.github.io/CoAcademy/sitemap.xml)
