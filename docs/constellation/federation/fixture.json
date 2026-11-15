@@ -1,0 +1,238 @@
+{
+  "schema": "CoAll.CoFed.FailureIsolationFixture.R0",
+  "edition": "2026-11-15",
+  "state": "PUBLIC_BROWSER_LOCAL_SIMULATION__NOT_LIVE_FEDERATION",
+  "human_url": "https://cocivium.github.io/CoAcademy/constellation/federation/",
+  "machine_url": "https://cocivium.github.io/CoAcademy/constellation/federation/fixture.json",
+  "source_policy": [
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Evolution/COALL_GITHUB_EVOLUTION_FABRIC_R0.md",
+    "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COORBWARE_BEYOND_COSOFTWARE_R0_20261024.md"
+  ],
+  "purpose": "A standalone, source-bound, no-network browser exercise of fail-closed federation decisions and independent-view continuity when a coordinator, peer, or authority is missing.",
+  "terminology": {
+    "CoConstellation": "Discovery and relation map. A link is not availability.",
+    "CoFed": "Candidate peering and compatibility interface; not a deployed CoFed service.",
+    "CivOS": "Candidate operating UX that may project across cells/devices; no standalone deployed CivOS runtime verified.",
+    "CoStax": "Candidate modular stack recipes; not proven synonymous with CoStacks.",
+    "CoStacks": "Existing public, shadow/report-only automation repository. No global deployment controller.",
+    "CoOrbWare": "Receiver-relative projection grammar, not a new source of truth.",
+    "CoEvo": "Versioned proposals, independent checks, authorized promotion and recoverability."
+  },
+  "graph_nodes": [
+    {
+      "id": "coacademy",
+      "label": "CoAcademy",
+      "kind": "PUBLIC_SITE",
+      "first_task": "Use CoGibber to structure a note",
+      "public_url": "https://cocivium.github.io/CoAcademy/cogibber/",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/cogibber/index.html",
+      "observed_http": "PASS_200_AT_PRIOR_BOUNDED_CHECK",
+      "operator_legal_status": "UNVERIFIED",
+      "independent_failure_domain": "UNPROVEN"
+    },
+    {
+      "id": "entment",
+      "label": "EntMent",
+      "kind": "SEPARATE_SITE",
+      "first_task": "Open the AI-first thinking interface",
+      "public_url": "https://entment.org/",
+      "evidence": "https://github.com/CoCivium/EntMent/blob/main/README.md",
+      "observed_http": "PASS_200_AT_PRIOR_BOUNDED_CHECK",
+      "operator_legal_status": "UNVERIFIED",
+      "independent_failure_domain": "UNPROVEN"
+    },
+    {
+      "id": "costacks",
+      "label": "CoStacks",
+      "kind": "PUBLIC_REPO_SHADOW_AUTOMATION",
+      "first_task": "Inspect a report-only automation contract",
+      "public_url": "https://github.com/CoCivium/CoStacks",
+      "evidence": "https://github.com/CoCivium/CoStacks/blob/main/README.md",
+      "observed_http": "REPO_SOURCE_READ",
+      "operator_legal_status": "UNVERIFIED",
+      "independent_failure_domain": "NOT_A_SERVICE_PROOF"
+    },
+    {
+      "id": "copolitic",
+      "label": "CoPolitic",
+      "kind": "SOURCE_ONLY_CANDIDATE",
+      "first_task": "Inspect the civic prototype source",
+      "public_url": "https://github.com/CoCivium/CoPolitic-site",
+      "evidence": "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
+      "observed_http": "COPOLITIC_ORG_404_AT_PRIOR_CHECK",
+      "operator_legal_status": "UNVERIFIED",
+      "independent_failure_domain": "NO_LIVE_SERVICE_PROVEN"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "normal",
+      "title": "Normal browsing",
+      "challenge": "The catalogue and its example services are presumed reachable for this local simulation.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "AVAILABLE_AS_FIXTURE",
+        "peer": "CANDIDATE_AVAILABLE",
+        "write": "NOT_AUTHORIZED"
+      },
+      "decision": "Allow inspection. Never interpret public discovery as permission.",
+      "effects": 0
+    },
+    {
+      "id": "coordinator_offline",
+      "title": "Coordinator unavailable",
+      "challenge": "The supposed global registry disappears. The loaded public page must remain useful without it.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "STALE_OR_UNKNOWN",
+        "peer": "NOT_RECHECKED",
+        "write": "DENIED"
+      },
+      "decision": "Keep local read-only work; label remote freshness unknown. No hidden coordinator failover.",
+      "effects": 0
+    },
+    {
+      "id": "peer_offline",
+      "title": "A peer goes offline",
+      "challenge": "EntMent cannot be contacted. CoAcademy's own source-bound task need not vanish.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "PARTIAL_AND_DATED",
+        "peer": "UNAVAILABLE_SIMULATED",
+        "write": "DENIED"
+      },
+      "decision": "Keep unrelated read-only resources; offer source pointers without inventing a live peer.",
+      "effects": 0
+    },
+    {
+      "id": "authority_revoked",
+      "title": "A capability is revoked",
+      "challenge": "A formerly authorized external writer loses permission.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "PUBLIC_ONLY",
+        "peer": "DISCOVERABLE_NOT_TRUSTED",
+        "write": "DENIED"
+      },
+      "decision": "Public reads may continue; refuse mutation, even if a cached claim says authorized.",
+      "effects": 0
+    },
+    {
+      "id": "stale_manifest",
+      "title": "A manifest is stale",
+      "challenge": "Discovery metadata exceeds its validity window.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "EXPIRED_HOLD",
+        "peer": "CURRENTNESS_UNKNOWN",
+        "write": "DENIED"
+      },
+      "decision": "Never paint stale evidence green. Require revalidation before binding remote capabilities.",
+      "effects": 0
+    },
+    {
+      "id": "split_brain",
+      "title": "Two sites claim release authority",
+      "challenge": "Two candidate writers target the same shared sitemap or domain.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "CONFLICT_VISIBLE",
+        "peer": "NO_GLOBAL_TRUST",
+        "write": "HOLD_NO_ELECTED_WRITER"
+      },
+      "decision": "Preserve both proposals, elect one authorized writer or hold. Never last-write-wins.",
+      "effects": 0
+    },
+    {
+      "id": "private_payload",
+      "title": "Private data enters a public route",
+      "challenge": "A proposed manifest contains a credential, secret, or personal record.",
+      "state": {
+        "local_view": "AVAILABLE_FROM_LOADED_PAGE",
+        "discovery": "PUBLIC_REDACTION_REQUIRED",
+        "peer": "NO_PRIVATE_REPLICATION",
+        "write": "DENIED"
+      },
+      "decision": "Block public emission. Keep private evidence under a separate authorized custody boundary.",
+      "effects": 0
+    }
+  ],
+  "invariants": [
+    {
+      "id": "I1",
+      "title": "No compulsory central brain",
+      "rule": "The already loaded page remains inspectable with the coordinator absent; no cold-boot independence claim."
+    },
+    {
+      "id": "I2",
+      "title": "Discovery is not trust",
+      "rule": "No link or JSON entry is accepted as authority or receiver ACK."
+    },
+    {
+      "id": "I3",
+      "title": "Authority does not flow through links",
+      "rule": "All scenarios forbid external writes; revocation and split-brain fail closed."
+    },
+    {
+      "id": "I4",
+      "title": "Data classes stay separated",
+      "rule": "Public display excludes secrets and private identities; no synthetic customer data."
+    },
+    {
+      "id": "I5",
+      "title": "Only one elected actuator",
+      "rule": "If there is no authorized sole writer, shared changes are held."
+    },
+    {
+      "id": "I6",
+      "title": "Freshness must be explicit",
+      "rule": "Historic evidence is not current status and stale manifests cannot be green."
+    },
+    {
+      "id": "I7",
+      "title": "Human and machine parity",
+      "rule": "This page's embedded fixture must match the machine-readable source contract."
+    }
+  ],
+  "task": "Switch from normal to coordinator unavailable while offline; inspect the surviving local read-only view and the explicit authority HOLD.",
+  "readiness": {
+    "independent_service_cells_proven": 0,
+    "independent_failure_domains_proven": 0,
+    "simulated_scenarios": 7,
+    "public_source_examples": 4,
+    "action_permissions": 0,
+    "external_effects": 0,
+    "human_acceptance": "UNTESTED",
+    "cold_restore": "UNTESTED",
+    "operator_consent": "NOT_APPLICABLE_TO_STATIC_FIXTURE"
+  },
+  "test_design": {
+    "hosted_runner": "Existing CoAcademy GitHub Actions: Public Pages exact-object readback and scoped Chromium canary",
+    "browser_viewports": [
+      "1440x900",
+      "390x844 reduced motion"
+    ],
+    "offline_scope": "After initial page load only, not offline cold start",
+    "negative_controls": [
+      "authority grant",
+      "duplicate writer",
+      "stale green",
+      "secret leakage",
+      "semantic parity mismatch"
+    ],
+    "consent": "No external participant involved"
+  },
+  "nonclaims": [
+    "BROWSER_SIMULATION_NE_FEDERATED_RUNTIME",
+    "LOADED_PAGE_OFFLINE_NE_COLD_RESTORE",
+    "SAME_PROVIDER_REPO_NE_INDEPENDENT_FAILURE_DOMAIN",
+    "PUBLIC_MANIFEST_NE_AUTHORITY",
+    "HTTP_200_NE_REMOTE_RECEIVER_ACK",
+    "NO_REAL_PEER_HANDSHAKE",
+    "NO_NONPUBLIC_DOMAIN_SCAN",
+    "NO_CLIENT_PROFILING",
+    "NO_COEX_CANON_OR_INTEGRATION"
+  ],
+  "next_proof": "Move the same exact public source bundle to an independently administered second provider without GitHub at receiver time, cold-start its first-use task, measure RTO/RPO and exact readproof, then consented first-user task. Do not assert this from the fixture."
+}
