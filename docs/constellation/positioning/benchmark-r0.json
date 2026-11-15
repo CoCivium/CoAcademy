@@ -1,0 +1,282 @@
+{
+  "schema": "CoConstellation.Positioning.EvidenceComparators.R0",
+  "as_of": "2026-11-15",
+  "state": "SOURCE_BACKED_DESK_COMPARISON__NOT_PRODUCT_SUPERIORITY",
+  "source_predecessor": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COOMNIPIE_MULTIEXEMPLAR_COMPARISON_R0_20261101.md",
+  "creative_predecessor": "https://github.com/CoCivium/CoAcademy/blob/master/docs/constellation/CREATIVE_INHERITANCE_ATLAS_R0.md",
+  "purpose": "One testable, human-readable value proposition and relevant external exemplars per elected service line; source-backed competitor capabilities, explicitly hypothetical CoCivium advantages.",
+  "comparison_basis": "Public official descriptions plus publicly visible CoCivium/GitHub sources; no independent matched task study or competitive product audit performed.",
+  "entries": [
+    {
+      "id": "cogibber",
+      "site": "CoGibber",
+      "product": "Note-to-action preview",
+      "site_type": "live browser canary",
+      "url": "https://cocivium.github.io/CoAcademy/cogibber/",
+      "promise": "Turn a messy note into editable action candidates and questions, then copy or export the result.",
+      "comparators": [
+        {
+          "name": "Goblin Tools",
+          "url": "https://goblin.tools/",
+          "observed_strength": "Many simple single-purpose aids including Compiler, Magic ToDo and Formalizer."
+        },
+        {
+          "name": "Grammarly",
+          "url": "https://www.grammarly.com/ai-writing-assistant",
+          "observed_strength": "Contextual writing, rewriting and cross-app workflows."
+        }
+      ],
+      "possible_edge": "Source-visible, browser-local candidate extraction with corrections and explicit limits.",
+      "gap": "Goblin Tools already delivers a very clear first-use promise; CoGibber's precision, editability and task speed have not won an independent matched test.",
+      "test": "Same messy note; blind assessment of useful items, false extractions, edit burden, time and portability.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "coathene",
+      "site": "CoAthene / EntMent",
+      "product": "Inquiry exercise / mentoring",
+      "site_type": "published R1 canary plus separate EntMent site",
+      "url": "https://cocivium.github.io/CoAcademy/laneset/r1/",
+      "promise": "Explore a question, test an alternative, and keep what the evidence actually showed.",
+      "comparators": [
+        {
+          "name": "Khan Academy Khanmigo",
+          "url": "https://www.khanacademy.org/khanmigo",
+          "observed_strength": "Guided AI tutoring integrated with a broad learning library."
+        },
+        {
+          "name": "Mozilla Common Voice",
+          "url": "https://commonvoice.mozilla.org/en",
+          "observed_strength": "Community-produced multilingual data with language participation and validation."
+        }
+      ],
+      "possible_edge": "Typed inversions, preserved contradictions and optional human+AI critique without permanent mind rankings.",
+      "gap": "No demonstrated learning gain, longitudinal cohort, child assent framework in production, or comparable breadth of content.",
+      "test": "Matched learner tasks versus a notebook and an established guided-tutor approach; delayed transfer, error correction and cognitive load.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "review",
+      "site": "CoReviewPanel",
+      "product": "Public site challenge",
+      "site_type": "live review fixture",
+      "url": "https://cocivium.github.io/CoAcademy/reviewpanel/",
+      "promise": "Check what a public site proves, what failed, and what remains unknown.",
+      "comparators": [
+        {
+          "name": "GitHub pull requests",
+          "url": "https://docs.github.com/en/get-started/using-github/communicating-on-github",
+          "observed_strength": "Repository-scoped issues, change review and discussion."
+        },
+        {
+          "name": "Figma Community",
+          "url": "https://help.figma.com/hc/en-us/articles/360038510693-Guide-to-the-Figma-Community",
+          "observed_strength": "Shared design resources, templates, plugins, remix and collaborative feedback."
+        }
+      ],
+      "possible_edge": "A single evidence-bound review trail accessible to non-programmers and machines.",
+      "gap": "Synthetic role lenses are not independent human review, source parity acceptance, or actionable maintenance workflows.",
+      "test": "New visitor correctly finds a false positive and its source; compare against a plain issue form.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "constellation",
+      "site": "CoConstellation / CoAcademy",
+      "product": "Find tools and their proofs",
+      "site_type": "live public discovery + source-only bubble board",
+      "url": "https://cocivium.github.io/CoAcademy/discover/",
+      "promise": "Find one useful public experiment, its source, a challenge route, and a way to improve it.",
+      "comparators": [
+        {
+          "name": "Hugging Face Spaces",
+          "url": "https://huggingface.co/docs/hub/spaces",
+          "observed_strength": "Simple publication and discovery of working ML demos, collaboration and optional compute."
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Main_Page",
+          "observed_strength": "Clear multilingual public entrypoints and community-curated content."
+        }
+      ],
+      "possible_edge": "Cross-site evidence and lineage, reusable patterns, open corrections and source-to-public readproof.",
+      "gap": "No evidence yet that constellation navigation reduces discovery friction against mature portals.",
+      "test": "30-second stranger success finding a task, source, limitations and correction route.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "cocivium",
+      "site": "CoCivium commons",
+      "product": "Open R&D and contribution",
+      "site_type": "public project candidate",
+      "url": "https://github.com/CoCivium/CoCivium",
+      "promise": "Try open research tools, inspect evidence, and contribute improvements voluntarily.",
+      "comparators": [
+        {
+          "name": "Mozilla Common Voice",
+          "url": "https://commonvoice.mozilla.org/en",
+          "observed_strength": "Small clear participant actions and publicly reusable multilingual data."
+        },
+        {
+          "name": "GitHub open-source contribution",
+          "url": "https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github",
+          "observed_strength": "Documented contribution, code testing, issue reporting and non-code work."
+        }
+      ],
+      "possible_edge": "Integrated human-and-AI proposal formats, reversibility and falsifiability.",
+      "gap": "No proof of independent sustained contributor flow or certified legal nonprofit status.",
+      "test": "Volunteer finds a first contribution in under three minutes and an independent maintainer can process it.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "copolitic",
+      "site": "CoPolitic",
+      "product": "Civic fact / source navigation",
+      "site_type": "repository pointer; domain unqualified",
+      "url": "https://github.com/CoCivium/CoPolitic-site",
+      "promise": "Trace one civic claim to sources, uncertainties and a correction path.",
+      "comparators": [
+        {
+          "name": "Our World in Data",
+          "url": "https://ourworldindata.org/about",
+          "observed_strength": "Accessible explanatory research, free charts and downloadable data with source metadata."
+        }
+      ],
+      "possible_edge": "Explicit separation of civic information, satire, evidence and unsupported allegations.",
+      "gap": "No remotely comparable research corpus, independent editorial process or deployed CoPolitic.org product.",
+      "test": "Reader locates a reliable primary source and distinguishes fact from satire without added confusion.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "inseed",
+      "site": "InSeed / CoCommons commercial partner",
+      "product": "Commercial service and public R&D boundaries",
+      "site_type": "partner site, roles subject to entity proof",
+      "url": "https://inseed.com/",
+      "promise": "Understand a specific InSeed service, who contracts, its cost, and its relation to the open commons.",
+      "comparators": [
+        {
+          "name": "Red Hat",
+          "url": "https://www.redhat.com/en/about/subscription-model-faq",
+          "observed_strength": "Explicit commercial subscriptions, support, maintenance and open-source lineage."
+        }
+      ],
+      "possible_edge": "Clear separation between independent FOSS research and optional paid professional work.",
+      "gap": "No current service pricing, contract acceptance, privacy/accounting audit or support comparison evidenced in this packet.",
+      "test": "Potential client correctly identifies the provider, deliverable, support terms and cost without guessing.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "groupbuild",
+      "site": "GroupBuild / CoVIA",
+      "product": "Consent-based collaborative handoff",
+      "site_type": "candidate interface / domain unqualified",
+      "url": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COTEAMING_COPROJECTFIELD_R0_20261101.md",
+      "promise": "Invite a collaborator to one clearly scoped, reversible task with permission and a recovery path.",
+      "comparators": [
+        {
+          "name": "Matrix",
+          "url": "https://matrix.org/about/",
+          "observed_strength": "Open decentralized, interoperable communications with user choice of host."
+        },
+        {
+          "name": "GitHub collaboration",
+          "url": "https://docs.github.com/en/get-started/using-github/communicating-on-github",
+          "observed_strength": "Issues, pull requests and discussions tied to project context."
+        }
+      ],
+      "possible_edge": "Exact recipient-relative consent, typed delivery/ACK gates and participant-specific roles.",
+      "gap": "No independent live end-to-end CoVIA message or team formation proof; avoid building a duplicate chat stack.",
+      "test": "Consented partner accepts a small task and independently verifies completion and withdrawal.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    },
+    {
+      "id": "language",
+      "site": "CoLanguage+ / CoGibberTru",
+      "product": "Shared language and meaning selector",
+      "site_type": "new single-page prototype proposed",
+      "url": "https://cocivium.github.io/CoAcademy/constellation/positioning/",
+      "promise": "Read a page in a suitable language or viewing style while retaining the original meaning and correction path.",
+      "comparators": [
+        {
+          "name": "Wikipedia language editions",
+          "url": "https://en.wikipedia.org/wiki/Main_Page",
+          "observed_strength": "Extensive independent human-language content and language navigation."
+        },
+        {
+          "name": "LibreTranslate",
+          "url": "https://docs.libretranslate.com/",
+          "observed_strength": "Open, self-hostable machine-translation API with documented boundaries."
+        }
+      ],
+      "possible_edge": "Honest separation of natural-language translations, plain-English simplification, reversible semantic views and fictional styling.",
+      "gap": "Translations are not available fleet-wide, native-speaker parity untested, CoGibberTru decoder not integrated.",
+      "test": "Native reviewer and assistive-technology user recover the same task meaning and follow the same linked action.",
+      "state": "HYPOTHESIS_NOT_BETTER"
+    }
+  ],
+  "unscored_families": [
+    "Blabex",
+    "CoScendence",
+    "BeAxa",
+    "Godspawn",
+    "Opename",
+    "RickPublic",
+    "Ballard Associates",
+    "StartupsBoard",
+    "WhyHead/WiHead"
+  ],
+  "evaluation_dimensions": [
+    "first_task_completion",
+    "correctness",
+    "time_to_value",
+    "source_and_uncertainty",
+    "privacy_and_consent",
+    "accessibility",
+    "user_effort",
+    "portability",
+    "correction_and_recovery",
+    "total_maintenance_cost"
+  ],
+  "method": [
+    "Predeclare one first-use task and public/reviewable ground truth before evaluating a competitor.",
+    "Test CoCivium and competitor on consent-compatible matched work, not by scraping personal data or fabricating accounts.",
+    "Include the no-special-tool baseline and H0 that incumbent or notebook is better.",
+    "Record reviewer independence, disability/mobile conditions, language, test ordering and missing data without personal profiling.",
+    "Keep negative results, failures and versioned outcomes. No blanket site-quality score without representative testing.",
+    "Recheck official comparator behavior, pricing, availability and terms before procurement or public claims."
+  ],
+  "umbrella_copy": {
+    "plain": "Useful things you can try, inspect, and improve.",
+    "explain": "The public research is open to improvement; this is not a claim that every website continuously improves autonomously.",
+    "negative_control": "If you cannot do a useful first task and verify a source, the branding is not a substitute."
+  },
+  "ingredient_identity": {
+    "preferred": "Built with CoCivium",
+    "alternatives": [
+      "Uses an open CoCivium component",
+      "CoCivium-compatible (only with documented conformance tests)"
+    ],
+    "analogy_not_identity": "Intel Inside is a registered trademark of Intel. Do not copy logo styling or imply affiliation.",
+    "badge_conditions": [
+      "exact_component_id_and_version",
+      "public_source_and_license",
+      "documented_capability_that_is_actually_used",
+      "bounded_compatibility_test",
+      "issuance_authority_and_revocation",
+      "visible_status_and_limitations",
+      "explicit_host_operator_identity"
+    ],
+    "status": "NOT_AN_ACTIVE_CERTIFICATION_PROGRAM"
+  },
+  "nonclaims": [
+    "INCUMBENT_SOURCE_MATERIAL_NE_PARTNERSHIP",
+    "PROMISE_NE_PROVEN_DIFFERENTIATION",
+    "HYPOTHETICAL_EDGE_NE_WIN",
+    "NO_AUTONOMOUS_24_7_EVOLUTION",
+    "NO_COACADEMY_COIGF_LANGUAGE_STANDARD",
+    "NO_INTEL_AFFILIATION",
+    "NO_SITE_FLEET_COMPLETENESS",
+    "NO_INDEPENDENT_CUSTOMER_OUTCOME",
+    "NO_COEX_CANON_RUNTIME"
+  ]
+}
