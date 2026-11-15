@@ -372,6 +372,58 @@ async function checkWalkaway(browser,item){
   }finally{await context.close();}
 }
 
+async function checkPatterns(browser,item){
+  const context=await browser.newContext({
+    viewport:item.viewport,reducedMotion:item.reducedMotion,serviceWorkers:"block",
+  });
+  const page=await context.newPage(),unexpected=[],browserErrors=[];
+  page.on("request",request=>checkOrigin(request,unexpected));
+  page.on("pageerror",error=>browserErrors.push(error.name));
+  try{
+    const res=await page.goto(BASE+"constellation/patterns/",{waitUntil:"load",timeout:30000});
+    assert.equal(res?.status(),200);
+    const resp=await context.request.get(BASE+"constellation/patterns/registry.json");
+    assert.equal(resp.status(),200);
+    const registry=await resp.json();
+    assert.equal(registry.schema,"CoAll.CoPatterna.LazyRelationalTestRegistry.R0");
+    assert.equal(registry.families.length,7);
+    assert.equal(registry.patterns.length,28);
+    assert.equal(registry.cases.length,8);
+    const embedded=JSON.parse(await page.locator("#patternSource").textContent());
+    for(const key of ["patterns","cases","families","schema"])
+      assert.deepEqual(embedded[key],registry[key],"source parity "+key);
+    assert.equal(await page.locator(".family").count(),7);
+    assert.equal(await page.locator("#caseButtons button").count(),8);
+    assert.equal(await page.locator("#selectedOperators .selected-card").count(),4);
+    await context.setOffline(true);
+    for(const c of registry.cases){
+      const button=page.locator('#caseButtons button[data-case="'+c.id+'"]');
+      await button.click();
+      assert.equal(await page.locator("#caseTitle").textContent(),c.title);
+      const selected=await page.locator("#selectedOperators .selected-card .op").allTextContents();
+      assert.deepEqual(selected,c.operators);
+      assert.equal(await page.locator('#caseButtons button[aria-pressed="true"]').count(),1);
+      assert.match(await page.locator("#expected").textContent(),new RegExp(c.expected_state));
+    }
+    await page.locator('#caseButtons button[data-case="no_delta"]').focus();
+    await page.keyboard.press("Enter");
+    assert.equal(await page.locator("#caseTitle").textContent(),"Nothing has changed");
+    const dimensions=await page.evaluate(()=>({
+      scrollWidth:document.documentElement.scrollWidth,
+      clientWidth:document.documentElement.clientWidth,
+      reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches,
+    }));
+    assertNoHorizontalOverflow(dimensions);
+    assert.equal(dimensions.reducedMotion,item.reducedMotion==="reduce");
+    assert.deepEqual(unexpected,[]);
+    assert.deepEqual(browserErrors,[]);
+    return {view:item.name,result:"PASS",http_status:200,families:7,operators:28,
+      cases:8,human_machine_parity:true,offline_case_selection:true,
+      keyboard_selection:true,external_effects:0,third_party_requests:0,
+      reduced_motion:dimensions.reducedMotion,horizontal_overflow:false,page_errors:0};
+  }finally{await context.close();}
+}
+
 const report = {
   schema: "CoAcademy.PublicFirstUseBrowserReadback.R0",
   source_commit: process.env.GITHUB_SHA || "LOCAL_UNBOUND",
@@ -396,6 +448,7 @@ try {
     report.tests.push({surface:"cloudops", ...await checkCloudOps(browser, item)});
     report.tests.push({surface:"federation", ...await checkFederation(browser, item)});
     report.tests.push({surface:"walkaway", ...await checkWalkaway(browser, item)});
+    report.tests.push({surface:"patterns", ...await checkPatterns(browser, item)});
   }
   report.result = "PASS_SCOPED_BROWSER_INTERACTIONS";
 } catch (error) {
