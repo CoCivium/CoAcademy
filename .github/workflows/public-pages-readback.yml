@@ -22,6 +22,8 @@ on:
       - docs/assets/cofront/**
       - .github/workflows/public-pages-readback.yml
       - .github/scripts/public-first-use-browser.mjs
+      - tools/cofed_coldboot_capsule.py
+      - .github/scripts/cofed-coldboot-browser.mjs
   schedule:
     - cron: '31 8 * * *'
 permissions:
@@ -144,3 +146,62 @@ jobs:
           path: public-first-use-browser-receipt.json
           if-no-files-found: warn
           retention-days: 14
+
+  verify-coldboot-capsule:
+    # Reuse the existing event-driven workflow. No new cron, remote writer,
+    # provider mirror, credentials, or private source mutation.
+    if: github.event_name != 'schedule'
+    needs: verify-public-pages
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Checkout pinned public source
+        uses: actions/checkout@v4
+      - name: Build deterministic first-use capsule
+        run: python3 tools/cofed_coldboot_capsule.py
+      - name: Extract and independently verify capsule payload
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,zipfile
+          root=pathlib.Path(".ci/coldboot")
+          archive=root/"cofed-cogibber-coldboot-r0.zip"
+          dest=root/"restored"
+          dest.mkdir(parents=True,exist_ok=True)
+          with zipfile.ZipFile(archive) as z:
+              names=z.namelist()
+              assert len(names)==len(set(names)), "duplicate zip entries"
+              assert set(names)=={"SHA256SUMS","manifest.json","site/index.html","site/discovery.json","site/README.md"}
+              assert all(not pathlib.PurePosixPath(n).is_absolute() and ".." not in pathlib.PurePosixPath(n).parts for n in names)
+              z.extractall(dest)
+          manifest=json.loads((dest/"manifest.json").read_text())
+          assert manifest["schema"]=="CoFed.ColdBootCapsule.R0"
+          for item in manifest["files"]:
+              body=(dest/item["bundled_path"]).read_bytes()
+              assert len(body)==item["bytes"]
+              assert hashlib.sha256(body).hexdigest()==item["sha256"],item["bundled_path"]
+          for line in (dest/"SHA256SUMS").read_text().splitlines():
+              expected,name=line.split("  ",1)
+              assert hashlib.sha256((dest/name).read_bytes()).hexdigest()==expected,name
+          print("PASS_CLEAN_EXTRACT_SHA256 "+str(len(names))+" entries")
+          PY
+      - name: Use Node 22 for scoped Chromium
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install scoped local browser
+        run: |
+          npm install --no-save --no-package-lock --no-audit --no-fund playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Boot clean capsule via loopback and test first task offline after load
+        run: node .github/scripts/cofed-coldboot-browser.mjs
+      - name: Preserve capsule, hashes and boot receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cofed-coldboot-capsule-and-receipt
+          path: |
+            .ci/coldboot/cofed-cogibber-coldboot-r0.zip
+            .ci/coldboot/build-receipt.json
+            .ci/coldboot/boot-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
