@@ -1,0 +1,358 @@
+{
+  "schema": "CoAll.CoConstellation.SoftQuarantinedSiteBubbles.R0",
+  "date_utc": "2026-11-15",
+  "stage": "PUBLIC_STATIC_COORDINATION_FIXTURE__NO_LIVE_WORKERS",
+  "authoritative_source": "SOURCE_LANE_ONLY",
+  "reason": "Test site-specific development bubbles and reusable pattern sharing without cross-site effects",
+  "terms": {
+    "CoGlyphList": "UNORDERED_CANDIDATES_NOT_EXECUTED_WORK",
+    "CoGlyphRail": "ORDERED_EVIDENCE_TO_GATE_TO_ELECTED_ACTION",
+    "CoTalkItOut": "SOURCE_BOUND_PLANNING_LANE__NO_AUTONOMOUS_WORKER_INFERRED"
+  },
+  "bubbles": [
+    {
+      "id": "COGIBBER",
+      "site": "CoGibber",
+      "repo": "CoCivium/CoAcademy",
+      "branch": "master",
+      "owned_paths": [
+        "docs/cogibber/**"
+      ],
+      "entry": "https://cocivium.github.io/CoAcademy/cogibber/",
+      "http_observation": 200,
+      "first_task": "Turn a rough note into editable, inspectable structure",
+      "proposal": "Compare minimal and rich-but-quiet original visual treatments on the same task",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/cogibber/index.html",
+      "effect_state": "SOURCE_AND_PUBLIC_HTTP_ONLY",
+      "needs": [
+        "COA11Y_PATTERN",
+        "COMEDIA_PATTERN"
+      ],
+      "proposed_relations": [
+        "INVERT",
+        "CHALLENGE"
+      ]
+    },
+    {
+      "id": "COATHENE",
+      "site": "CoAthene / CoLaneSets",
+      "repo": "CoCivium/CoAcademy",
+      "branch": "master",
+      "owned_paths": [
+        "docs/laneset/**"
+      ],
+      "entry": "https://cocivium.github.io/CoAcademy/laneset/r1/",
+      "http_observation": 200,
+      "first_task": "Compare interpretations with a counterbalanced exercise",
+      "proposal": "Test plain notebook baseline and task comprehension, hold superiority claims",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/laneset/r1/STUDY_PROTOCOL_R1.md",
+      "effect_state": "SOURCE_AND_PUBLIC_HTTP_ONLY",
+      "needs": [
+        "COA11Y_PATTERN",
+        "COREVIEW_PATTERN"
+      ],
+      "proposed_relations": [
+        "VERSUS",
+        "COUNTERFACTUAL"
+      ]
+    },
+    {
+      "id": "COREVIEW",
+      "site": "CoReviewPanel",
+      "repo": "CoCivium/CoAcademy",
+      "branch": "master",
+      "owned_paths": [
+        "docs/reviewpanel/**"
+      ],
+      "entry": "https://cocivium.github.io/CoAcademy/reviewpanel/",
+      "http_observation": 200,
+      "first_task": "Inspect one public-site observation and its limits",
+      "proposal": "Test a first-time human review task and source/machine parity",
+      "evidence": "https://github.com/CoCivium/CoAcademy/blob/master/docs/reviewpanel/discovery.json",
+      "effect_state": "SOURCE_AND_PUBLIC_HTTP_ONLY",
+      "needs": [
+        "COTRANSPARENCY_PATTERN",
+        "COREVIEW_PATTERN"
+      ],
+      "proposed_relations": [
+        "CHALLENGE",
+        "FAN_IN"
+      ]
+    },
+    {
+      "id": "ENTMENT",
+      "site": "EntMent",
+      "repo": "CoCivium/EntMent",
+      "branch": "main",
+      "owned_paths": [
+        "docs/**",
+        "site/public/**"
+      ],
+      "entry": "https://entment.org/",
+      "http_observation": 200,
+      "first_task": "Understand AI-first thinking interface and first useful signal",
+      "proposal": "Check first-task clarity, privacy/operator facts, and optional educational navigation without assuming CoAcademy migration",
+      "evidence": "https://github.com/CoCivium/EntMent/blob/main/README.md",
+      "effect_state": "REPO_SOURCE_AND_PUBLIC_HTTP_ONLY",
+      "needs": [
+        "COTRANSPARENCY_PATTERN",
+        "COA11Y_PATTERN"
+      ],
+      "proposed_relations": [
+        "IN_BETWEEN",
+        "ALTERNATIVE"
+      ]
+    },
+    {
+      "id": "COPOLITIC",
+      "site": "CoPolitic",
+      "repo": "CoCivium/CoPolitic-site",
+      "branch": "main",
+      "owned_paths": [
+        "docs/**"
+      ],
+      "entry": "https://copolitic.org/",
+      "http_observation": 404,
+      "first_task": "Find one public civic-information resource from an accurate source pointer",
+      "proposal": "Use existing read-only repository/onramp while domain authority and deployment remain unverified; no political microtargeting",
+      "evidence": "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
+      "effect_state": "REPO_SOURCE_ONLY__WEB_404",
+      "needs": [
+        "COTRANSPARENCY_PATTERN",
+        "COREVIEW_PATTERN"
+      ],
+      "proposed_relations": [
+        "INVERT",
+        "SOURCE_FOR"
+      ]
+    }
+  ],
+  "shared_patterns": [
+    {
+      "id": "COA11Y_PATTERN",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COVISUAL_PRIORS_TO_SPECS_R0_20261025.md",
+      "scope": "accessible semantics, low-motion equivalent, mobile/keyboard"
+    },
+    {
+      "id": "COREVIEW_PATTERN",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COREVIEW_PANEL_LIFECYCLE_R0.md",
+      "scope": "source-bound synthetic review and independent acceptance"
+    },
+    {
+      "id": "COTRANSPARENCY_PATTERN",
+      "source": "https://cocivium.github.io/CoAcademy/transparency/pattern.json",
+      "scope": "shared questions with site-specific overlay; never copy facts"
+    },
+    {
+      "id": "COMEDIA_PATTERN",
+      "source": "https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COMEDIA_INSPIRATION_CORPUS_R0_20261025.md",
+      "scope": "rights, caption, transcript and source lineage"
+    }
+  ],
+  "work_candidates": [
+    {
+      "work_id": "CSB-261115-COGIBBER",
+      "bubble_id": "COGIBBER",
+      "description": "Compare minimal and rich-but-quiet original visual treatments on the same task",
+      "work_type": "RESEARCH_OR_PROPOSAL_ONLY",
+      "owner": "UNASSIGNED",
+      "reversible": true,
+      "required_prerequisites": [],
+      "optional_pattern_edges": [
+        {
+          "from": "COA11Y_PATTERN",
+          "to": "COGIBBER",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        },
+        {
+          "from": "COMEDIA_PATTERN",
+          "to": "COGIBBER",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        }
+      ],
+      "state": "PROPOSED_NOT_DISPATCHED",
+      "effects_allowed": [],
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/cogibber/index.html",
+      "review_gate": "INDEPENDENT_TEST_AND_RIGHTS_CHECK"
+    },
+    {
+      "work_id": "CSB-261115-COATHENE",
+      "bubble_id": "COATHENE",
+      "description": "Test plain notebook baseline and task comprehension, hold superiority claims",
+      "work_type": "RESEARCH_OR_PROPOSAL_ONLY",
+      "owner": "UNASSIGNED",
+      "reversible": true,
+      "required_prerequisites": [],
+      "optional_pattern_edges": [
+        {
+          "from": "COA11Y_PATTERN",
+          "to": "COATHENE",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        },
+        {
+          "from": "COREVIEW_PATTERN",
+          "to": "COATHENE",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        }
+      ],
+      "state": "PROPOSED_NOT_DISPATCHED",
+      "effects_allowed": [],
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/laneset/r1/STUDY_PROTOCOL_R1.md",
+      "review_gate": "INDEPENDENT_TEST_AND_RIGHTS_CHECK"
+    },
+    {
+      "work_id": "CSB-261115-COREVIEW",
+      "bubble_id": "COREVIEW",
+      "description": "Test a first-time human review task and source/machine parity",
+      "work_type": "RESEARCH_OR_PROPOSAL_ONLY",
+      "owner": "UNASSIGNED",
+      "reversible": true,
+      "required_prerequisites": [],
+      "optional_pattern_edges": [
+        {
+          "from": "COTRANSPARENCY_PATTERN",
+          "to": "COREVIEW",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        },
+        {
+          "from": "COREVIEW_PATTERN",
+          "to": "COREVIEW",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        }
+      ],
+      "state": "PROPOSED_NOT_DISPATCHED",
+      "effects_allowed": [],
+      "source": "https://github.com/CoCivium/CoAcademy/blob/master/docs/reviewpanel/discovery.json",
+      "review_gate": "INDEPENDENT_TEST_AND_RIGHTS_CHECK"
+    },
+    {
+      "work_id": "CSB-261115-ENTMENT",
+      "bubble_id": "ENTMENT",
+      "description": "Check first-task clarity, privacy/operator facts, and optional educational navigation without assuming CoAcademy migration",
+      "work_type": "RESEARCH_OR_PROPOSAL_ONLY",
+      "owner": "UNASSIGNED",
+      "reversible": true,
+      "required_prerequisites": [],
+      "optional_pattern_edges": [
+        {
+          "from": "COTRANSPARENCY_PATTERN",
+          "to": "ENTMENT",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        },
+        {
+          "from": "COA11Y_PATTERN",
+          "to": "ENTMENT",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        }
+      ],
+      "state": "PROPOSED_NOT_DISPATCHED",
+      "effects_allowed": [],
+      "source": "https://github.com/CoCivium/EntMent/blob/main/README.md",
+      "review_gate": "INDEPENDENT_TEST_AND_RIGHTS_CHECK"
+    },
+    {
+      "work_id": "CSB-261115-COPOLITIC",
+      "bubble_id": "COPOLITIC",
+      "description": "Use existing read-only repository/onramp while domain authority and deployment remain unverified; no political microtargeting",
+      "work_type": "RESEARCH_OR_PROPOSAL_ONLY",
+      "owner": "UNASSIGNED",
+      "reversible": true,
+      "required_prerequisites": [],
+      "optional_pattern_edges": [
+        {
+          "from": "COTRANSPARENCY_PATTERN",
+          "to": "COPOLITIC",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        },
+        {
+          "from": "COREVIEW_PATTERN",
+          "to": "COPOLITIC",
+          "type": "OPTIONAL_PATTERN_IMPORT__NOT_PRECEDENCE"
+        }
+      ],
+      "state": "PROPOSED_NOT_DISPATCHED",
+      "effects_allowed": [],
+      "source": "https://github.com/CoCivium/CoPolitic-site/blob/main/README.md",
+      "review_gate": "INDEPENDENT_TEST_AND_RIGHTS_CHECK"
+    }
+  ],
+  "integration": {
+    "shared_paths": [
+      {
+        "repo": "CoCivium/CoAcademy",
+        "paths": [
+          "docs/index.html",
+          "docs/discover/**",
+          "docs/sitemap.xml",
+          "docs/llms.txt"
+        ],
+        "effect_class": "SERIALIZED_BY_ONE_ELECTED_INTEGRATOR"
+      }
+    ],
+    "other_collision_domains": [
+      "public_dns",
+      "published_canonical",
+      "shared_site_patterns",
+      "financial_or_personal_data",
+      "public_campaigns"
+    ],
+    "rule": "MANY_READERS_AND_PROPOSALS_ONE_ELECTED_WRITER_PER_COLLISION_DOMAIN",
+    "merge_algorithm": "Reject writes outside bubble allowlist; propose shared-pattern updates as immutable successors; require impact review, rights, rollback, currentness compare-and-swap, exact recipient readback; preserve dissent and negative results.",
+    "rollback": "Keep predecessor; no background trigger, duplicate writer or automatic sync declared"
+  },
+  "checks": {
+    "schema": [
+      "unique_site_bubble_id",
+      "unique_work_id",
+      "explicit_repo_branch",
+      "no_shared_write_path_overlap",
+      "all_pattern_refs_resolved",
+      "no_cycles_in_required_prerequisites",
+      "finite_recursive_depth",
+      "no_effect_authority_from_proposal",
+      "no_false_website_acceptance"
+    ],
+    "ux": [
+      "one_plain_language_first_task",
+      "minimal_browser_fallback",
+      "accessible_link",
+      "evidence_currentness",
+      "stop_or_exit"
+    ],
+    "review_depth_limit": 2
+  },
+  "observations": {
+    "source": "X2 bounded curl read-only 2026-11-15",
+    "http": {
+      "CoGibber": 200,
+      "CoAthene": 200,
+      "CoReviewPanel": 200,
+      "EntMent": 200,
+      "CoPolitic": 404,
+      "CoContribute": 503
+    },
+    "note": "503 on CoContribute could be transient; needs repeat with evidence; neither status nor 200 establishes UX acceptance."
+  },
+  "result": "CANDIDATE_GRAPH_VALIDATION_PENDING_INDEPENDENT_CONSUMER",
+  "next_proof": "Run deterministic schema/path/cycle validation and publish readback; then one authorized independent human-first task and one separately fenced shared pattern proposal.",
+  "nonclaims": [
+    "NO_REAL_PARALLEL_MODEL_WORKERS",
+    "NO_PRIVATE_HOST_OR_CREDENTIAL_DISCLOSURE",
+    "NO_CROSS_REPO_WRITES",
+    "NO_DEPLOYMENT_OR_DNS_CHANGED",
+    "NO_INDEPENDENT_RECEIVER_ACK",
+    "NO_CANON_OR_COEX",
+    "NO_PARTNER_ENDORSEMENTS",
+    "NO_COLEARNING_OR_AUTONOMY_VALIDATED"
+  ],
+  "validation": {
+    "count": 5,
+    "work_count": 5,
+    "shared_count": 4,
+    "disjoint_owned_paths": 6,
+    "required_edges": 0,
+    "optional_edges": 10,
+    "effect_authority": "NONE",
+    "validation": "PASS_STATIC_IN_PROCESS_NOT_INDEPENDENT_REVIEW"
+  }
+}
