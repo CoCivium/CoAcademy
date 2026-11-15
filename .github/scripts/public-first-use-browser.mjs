@@ -339,7 +339,8 @@ async function checkWalkaway(browser,item){
     assert.equal(githubQueries,0,"GitHub API must be opt-in");
     allowGithub=true;
     await page.locator("#refresh").click();
-    await assert.equal(await page.locator("#cloudLink").isVisible(),true);
+    await page.locator("#cloudLink").waitFor({state:"visible",timeout:6000});
+    assert.equal(await page.locator("#cloudLink").isVisible(),true);
     assert.match(await page.locator("#cloudResult").textContent(),/Latest reported cloud run/);
     assert.equal(githubQueries,1,"one bounded public metadata request");
     await context.setOffline(true);
