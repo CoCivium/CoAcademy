@@ -25,6 +25,9 @@ on:
       - tools/cofed_coldboot_capsule.py
       - .github/scripts/cofed-coldboot-browser.mjs
       - .github/scripts/cofed-zero-network-coldboot.mjs
+      - tools/cowalkaway_fanin_canary.py
+      - docs/constellation/bubbles/**
+      - docs/constellation/walkaway/**
   schedule:
     - cron: '31 8 * * *'
 permissions:
@@ -229,5 +232,29 @@ jobs:
             .ci/coldboot/boot-receipt.json
             .ci/coldboot/zero-network-receipt.json
             .ci/coldboot/restored/tamper-negative-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  verify-steward-optional-fanin:
+    # Distinct read-only CoGlyphList/CoTalkItOut proposal boundary.  This test
+    # does NOT own the CoSession/CoEvo fan-in, issue ACKs, or authorize effects.
+    # A failed website readback should not freeze unrelated safe source analysis.
+    if: always()
+    needs: verify-public-pages
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout scoped public candidate source
+        uses: actions/checkout@v4
+      - name: Test bounded fan-in without steward, effects or external access
+        run: python3 tools/cowalkaway_fanin_canary.py
+      - name: Preserve exact no-effect report for independent inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cowalkaway-source-fanin-canary
+          path: .ci/walkaway/fan-in-canary.json
           if-no-files-found: warn
           retention-days: 30
