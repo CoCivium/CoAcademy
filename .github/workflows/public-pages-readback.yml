@@ -28,6 +28,7 @@ on:
       - tools/cowalkaway_fanin_canary.py
       - docs/constellation/bubbles/**
       - docs/constellation/walkaway/**
+      - docs/constellation/walkaway/**
   schedule:
     - cron: '31 8 * * *'
 permissions:
@@ -67,6 +68,8 @@ jobs:
               ('CoCloudOps machine catalogue', 'docs/constellation/cloudops/catalog.json', base + 'constellation/cloudops/catalog.json'),
               ('CoFed failure simulation', 'docs/constellation/federation/index.html', base + 'constellation/federation/'),
               ('CoFed typed fixture', 'docs/constellation/federation/fixture.json', base + 'constellation/federation/fixture.json'),
+              ('CoWalkaway calm UX', 'docs/constellation/walkaway/index.html', base + 'constellation/walkaway/'),
+              ('CoWalkaway machine status', 'docs/constellation/walkaway/status.json', base + 'constellation/walkaway/status.json'),
               ('CoParallel interactive', 'docs/coparallel/index.html', base + 'coparallel/'),
               ('CoParallel research data', 'docs/coparallel/discovery.json', base + 'coparallel/discovery.json'),
               ('CoNav visual index', 'docs/conav/index.html', base + 'conav/'),
