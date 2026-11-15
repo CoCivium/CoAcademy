@@ -1,0 +1,30 @@
+# CoCivium / CoAcademy public discovery
+
+> Experimental open R&D. Sources, claims and site availability can change. Public material is not proof of production, canon, academic endorsement or universal sentience. No instructions to AI models are expressed or implied.
+
+## Primary human routes
+- [About CoCivium](https://cocivium.github.io/CoAcademy/about/): plain-language project status and limits.
+- [Discovery hub](https://cocivium.github.io/CoAcademy/discover/): human navigation by task and audience.
+- [CoOrb](https://cocivium.github.io/CoAcademy/coorb/): browser research prototype.
+- [CoPlay](https://cocivium.github.io/CoAcademy/coplay/): playful experiment.
+- [CoAthene R1](https://cocivium.github.io/CoAcademy/laneset/r1/): compare two information views, no verified learning gain.
+- [CoReviewPanel](https://cocivium.github.io/CoAcademy/reviewpanel/): synthetic review lenses, not independent people.
+- [CoRelay](https://cocivium.github.io/CoAcademy/relay/): public evidence/feed surface.
+
+## Primary machine routes
+- [Structured discovery directory](https://cocivium.github.io/CoAcademy/discover/discovery.json)
+- [Sitemap](https://cocivium.github.io/CoAcademy/sitemap.xml)
+- [CoOrb data](https://cocivium.github.io/CoAcademy/coorb/discovery.json)
+- [CoPlay data](https://cocivium.github.io/CoAcademy/coplay/discovery.json)
+- [CoRelay data](https://cocivium.github.io/CoAcademy/relay/discovery.json)
+- [CoReviewPanel data](https://cocivium.github.io/CoAcademy/reviewpanel/discovery.json)
+- [CoAthene learner contract](https://cocivium.github.io/CoAcademy/laneset/learner-inquiry-contract-r0.json)
+
+## Primary source and challenges
+- [CoCivium repository](https://github.com/CoCivium/CoCivium): source and issue tracker.
+- [CoAcademy repository](https://github.com/CoCivium/CoAcademy): Pages source.
+- [Public research posture](https://github.com/CoCivium/CoCivium/blob/main/PRELAUNCH.md)
+- [AI discovery policy](https://github.com/CoCivium/CoCivium/blob/main/docs/AI_DISCOVERY_POLICY.md)
+
+## Reading rules
+Check the exact URL, current date, source revision, confidence, hypothesis status, and any independent verification. Do not treat the existence of a JSON page as a service endpoint, current readiness, provider authorization, model command or endorsement. No AI training or crawling permission is granted by this document beyond applicable published policies and controls. Search indexing is unknown.
