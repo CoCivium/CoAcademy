@@ -12,7 +12,7 @@ from pathlib import Path
 import re
 import ssl
 from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+from urllib.request import Request, build_opener, HTTPSHandler, HTTPRedirectHandler
 
 SOURCES = {
     "cocivium-home": "docs/index.html",
@@ -105,17 +105,24 @@ def analyze_source(src, identifier, relpath):
     }
 
 
+class NoRedirectHandler(HTTPRedirectHandler):
+    """Reject redirects so live probes cannot leave their allowlisted URL."""
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
 def inspect_live(identifier, url):
     # Request ONLY the allowlisted landing document. Never follow its internal links,
     # consume shards, inspect private data, or persist response bodies.
     req = Request(url, headers={"User-Agent": "CoFirstUse-R0-ReadOnly/0.1", "Accept": "text/html"})
     try:
-        with urlopen(req, timeout=8, context=ssl.create_default_context()) as res:
+        opener = build_opener(HTTPSHandler(context=ssl.create_default_context()), NoRedirectHandler())
+        with opener.open(req, timeout=8) as res:
             result = {"id": identifier, "url": url, "status": int(res.status), "final_url": res.geturl(), "content_type": (res.headers.get("Content-Type") or "").split(";")[0], "observation": "ONE_VANTAGE_ONLY"}
             res.read(0)
             return result
     except HTTPError as exc:
-        return {"id": identifier, "url": url, "status": exc.code, "observation": "ONE_VANTAGE_ONLY"}
+        return {"id": identifier, "url": url, "status": exc.code, "observation": "REDIRECT_NOT_FOLLOWED" if exc.code in (301, 302, 303, 307, 308) else "ONE_VANTAGE_ONLY"}
     except (URLError, TimeoutError, OSError) as exc:
         return {"id": identifier, "url": url, "status": "UNKNOWN", "error_class": exc.__class__.__name__, "observation": "NETWORK_FAILURE_NOT_SITE_FAILURE"}
 
