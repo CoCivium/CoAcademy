@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "BeAxa",
+  "domain": "beaxa.com",
+  "kind": "public_preview",
+  "description": "Explore friendly digital experiences that help people learn and create.",
+  "purpose": "Playful learning and participation",
+  "exercise": [
+    "Choose a learning activity",
+    "describe an accessible first step",
+    "identify a safety boundary."
+  ],
+  "related_experience": "https://cocivium.github.io/CoAcademy/kitten/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/beaxa.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

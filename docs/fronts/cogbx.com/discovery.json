@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoGbx",
+  "domain": "cogbx.com",
+  "kind": "public_preview",
+  "description": "Explore an interactive experiment for exchanging structured work and evidence.",
+  "purpose": "Structured exchange",
+  "exercise": [
+    "Try the public exemplar",
+    "identify an unclear interaction",
+    "suggest a correction."
+  ],
+  "related_experience": "https://cocivium.github.io/CoAcademy/cogbx/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

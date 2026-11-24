@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "Godspawn",
+  "domain": "godspawn.com",
+  "kind": "public_preview",
+  "description": "Explore a fictional narrative universe and speculative ideas.",
+  "purpose": "Mythos and speculative worldbuilding",
+  "exercise": [
+    "Imagine a fictional civilization",
+    "identify a central conflict",
+    "describe how choices shape its story."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/godspawn.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

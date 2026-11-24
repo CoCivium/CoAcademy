@@ -1,0 +1,972 @@
+{
+  "schema_version": 1,
+  "kind": "public_preview_directory",
+  "entries": [
+    {
+      "schema_version": 1,
+      "name": "BeAxa",
+      "domain": "beaxa.com",
+      "kind": "public_preview",
+      "description": "Explore friendly digital experiences that help people learn and create.",
+      "purpose": "Playful learning and participation",
+      "exercise": [
+        "Choose a learning activity",
+        "describe an accessible first step",
+        "identify a safety boundary."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/kitten/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/beaxa.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "BeAxa",
+      "domain": "beaxa.org",
+      "kind": "public_preview",
+      "description": "Explore friendly digital experiences that help people learn and create.",
+      "purpose": "Playful learning and participation",
+      "exercise": [
+        "Choose a learning activity",
+        "describe an accessible first step",
+        "identify a safety boundary."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/kitten/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/beaxa.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "BlabEx",
+      "domain": "blabex.com",
+      "kind": "public_preview",
+      "description": "Explore communication concepts that make conversations useful without making participation intrusive.",
+      "purpose": "Conversation and communication",
+      "exercise": [
+        "Choose a communication problem",
+        "identify what must remain private",
+        "describe how a participant can correct a misunderstanding."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/blabex.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "BlabEx",
+      "domain": "blabex.org",
+      "kind": "public_preview",
+      "description": "Explore communication concepts that make conversations useful without making participation intrusive.",
+      "purpose": "Conversation and communication",
+      "exercise": [
+        "Choose a communication problem",
+        "identify what must remain private",
+        "describe how a participant can correct a misunderstanding."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/blabex.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "Civium",
+      "domain": "civium.cc",
+      "kind": "public_preview",
+      "description": "Find a useful starting point for community organization and collaborative civic life.",
+      "purpose": "Paths into civic collaboration",
+      "exercise": [
+        "Choose a community problem",
+        "identify the people affected",
+        "select a reversible improvement."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/groupbuild/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/civium.cc/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoAll",
+      "domain": "coall.org",
+      "kind": "public_preview",
+      "description": "Explore how shared work can remain understandable, portable and open to correction.",
+      "purpose": "Connecting ideas and work",
+      "exercise": [
+        "Describe a work object",
+        "identify what another participant needs to recover it",
+        "specify a verifiable outcome."
+      ],
+      "related_experience": "https://github.com/CoCivium/CoCivium",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoAnlex",
+      "domain": "coanlex.com",
+      "kind": "public_preview",
+      "description": "An early concept entrance. The detailed public purpose is still open.",
+      "purpose": "An exploratory concept",
+      "exercise": [
+        "Suggest a useful problem to explore",
+        "identify who would benefit",
+        "propose a small test."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/coanlex.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoAnlex",
+      "domain": "coanlex.org",
+      "kind": "public_preview",
+      "description": "An early concept entrance. The detailed public purpose is still open.",
+      "purpose": "An exploratory concept",
+      "exercise": [
+        "Suggest a useful problem to explore",
+        "identify who would benefit",
+        "propose a small test."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/coanlex.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoCivia",
+      "domain": "cocivia.org",
+      "kind": "public_preview",
+      "description": "Explore approachable ways for people to interact with collaborative systems.",
+      "purpose": "Human-facing participation",
+      "exercise": [
+        "Describe a task you would delegate",
+        "decide what requires your approval",
+        "define a helpful response."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/discover/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoCivium",
+      "domain": "cocivium.com",
+      "kind": "public_preview",
+      "description": "Explore experiments in community organization, governance and verification.",
+      "purpose": "Collaborative community infrastructure",
+      "exercise": [
+        "Choose a community",
+        "describe a coordination challenge",
+        "identify evidence that an improvement helped."
+      ],
+      "related_experience": "https://www.cocivium.org/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoCivium",
+      "domain": "cocivium.net",
+      "kind": "public_preview",
+      "description": "Explore experiments in community organization, governance and verification.",
+      "purpose": "Collaborative community infrastructure",
+      "exercise": [
+        "Choose a community",
+        "describe a coordination challenge",
+        "identify evidence that an improvement helped."
+      ],
+      "related_experience": "https://www.cocivium.org/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.net/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoCivium",
+      "domain": "cocivium.org",
+      "kind": "public_preview",
+      "description": "Explore experiments in community organization, governance and verification.",
+      "purpose": "Collaborative community infrastructure",
+      "exercise": [
+        "Choose a community",
+        "describe a coordination challenge",
+        "identify evidence that an improvement helped."
+      ],
+      "related_experience": "https://www.cocivium.org/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoGbx",
+      "domain": "cogbx.com",
+      "kind": "public_preview",
+      "description": "Explore an interactive experiment for exchanging structured work and evidence.",
+      "purpose": "Structured exchange",
+      "exercise": [
+        "Try the public exemplar",
+        "identify an unclear interaction",
+        "suggest a correction."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/cogbx/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoGbx",
+      "domain": "cogbx.net",
+      "kind": "public_preview",
+      "description": "Explore an interactive experiment for exchanging structured work and evidence.",
+      "purpose": "Structured exchange",
+      "exercise": [
+        "Try the public exemplar",
+        "identify an unclear interaction",
+        "suggest a correction."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/cogbx/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.net/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoGbx",
+      "domain": "cogbx.org",
+      "kind": "public_preview",
+      "description": "Explore an interactive experiment for exchanging structured work and evidence.",
+      "purpose": "Structured exchange",
+      "exercise": [
+        "Try the public exemplar",
+        "identify an unclear interaction",
+        "suggest a correction."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/cogbx/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoGibber",
+      "domain": "cogibber.com",
+      "kind": "public_preview",
+      "description": "Try a browser prototype that extracts candidate actions, questions and statements for correction and export.",
+      "purpose": "From notes to inspectable structure",
+      "exercise": [
+        "Choose a non-sensitive note",
+        "inspect the candidate items",
+        "correct and export the result."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/cogibber/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoGibber",
+      "domain": "cogibber.net",
+      "kind": "public_preview",
+      "description": "Try a browser prototype that extracts candidate actions, questions and statements for correction and export.",
+      "purpose": "From notes to inspectable structure",
+      "exercise": [
+        "Choose a non-sensitive note",
+        "inspect the candidate items",
+        "correct and export the result."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/cogibber/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.net/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoGibber",
+      "domain": "cogibber.org",
+      "kind": "public_preview",
+      "description": "Try a browser prototype that extracts candidate actions, questions and statements for correction and export.",
+      "purpose": "From notes to inspectable structure",
+      "exercise": [
+        "Choose a non-sensitive note",
+        "inspect the candidate items",
+        "correct and export the result."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/cogibber/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoPhone",
+      "domain": "cophone.org",
+      "kind": "public_preview",
+      "description": "Consider accessible communication tools. No phone service is offered by this preview.",
+      "purpose": "Consent-aware communication concepts",
+      "exercise": [
+        "Choose a communication need",
+        "identify an unnecessary interruption",
+        "describe an accessible alternative."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/cophone.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoPolitic",
+      "domain": "copolitic.com",
+      "kind": "public_preview",
+      "description": "Explore evidence-oriented governance and civic participation.",
+      "purpose": "Governance and civic dialogue",
+      "exercise": [
+        "Choose a governance question",
+        "represent competing perspectives fairly",
+        "identify evidence that could change your view."
+      ],
+      "related_experience": "https://cocivium.github.io/CoPolitic-site/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/copolitic.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoPolitic",
+      "domain": "copolitic.org",
+      "kind": "public_preview",
+      "description": "Explore evidence-oriented governance and civic participation.",
+      "purpose": "Governance and civic dialogue",
+      "exercise": [
+        "Choose a governance question",
+        "represent competing perspectives fairly",
+        "identify evidence that could change your view."
+      ],
+      "related_experience": "https://cocivium.github.io/CoPolitic-site/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/copolitic.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoScendence",
+      "domain": "coscendence.com",
+      "kind": "public_preview",
+      "description": "An exploratory concept space for human development and collaborative futures.",
+      "purpose": "Development and collaborative futures",
+      "exercise": [
+        "Name a capability worth improving",
+        "describe a responsible experiment",
+        "distinguish observation from interpretation."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/coscendence.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoScendence",
+      "domain": "coscendence.org",
+      "kind": "public_preview",
+      "description": "An exploratory concept space for human development and collaborative futures.",
+      "purpose": "Development and collaborative futures",
+      "exercise": [
+        "Name a capability worth improving",
+        "describe a responsible experiment",
+        "distinguish observation from interpretation."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/coscendence.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoStonk",
+      "domain": "costonk.com",
+      "kind": "public_preview",
+      "description": "Explore how financial research might be evaluated. This is not an investment service or recommendation.",
+      "purpose": "Financial research concepts",
+      "exercise": [
+        "Choose a hypothetical research question",
+        "identify uncertainty and risks",
+        "compare with a benchmark without trading."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/costonk.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "CoStonk",
+      "domain": "costonk.org",
+      "kind": "public_preview",
+      "description": "Explore how financial research might be evaluated. This is not an investment service or recommendation.",
+      "purpose": "Financial research concepts",
+      "exercise": [
+        "Choose a hypothetical research question",
+        "identify uncertainty and risks",
+        "compare with a benchmark without trading."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/costonk.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "EntMent",
+      "domain": "entment.com",
+      "kind": "public_preview",
+      "description": "Explore concepts for engaging experiences in entertainment and extended reality.",
+      "purpose": "Entertainment and XR",
+      "exercise": [
+        "Describe an enjoyable interaction",
+        "identify a consent or accessibility requirement",
+        "design a small playtest."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/entment.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "EntMent",
+      "domain": "entment.org",
+      "kind": "public_preview",
+      "description": "Explore concepts for engaging experiences in entertainment and extended reality.",
+      "purpose": "Entertainment and XR",
+      "exercise": [
+        "Describe an enjoyable interaction",
+        "identify a consent or accessibility requirement",
+        "design a small playtest."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/entment.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "Godspawn",
+      "domain": "godspawn.com",
+      "kind": "public_preview",
+      "description": "Explore a fictional narrative universe and speculative ideas.",
+      "purpose": "Mythos and speculative worldbuilding",
+      "exercise": [
+        "Imagine a fictional civilization",
+        "identify a central conflict",
+        "describe how choices shape its story."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/godspawn.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "Godspawn",
+      "domain": "godspawn.org",
+      "kind": "public_preview",
+      "description": "Explore a fictional narrative universe and speculative ideas.",
+      "purpose": "Mythos and speculative worldbuilding",
+      "exercise": [
+        "Imagine a fictional civilization",
+        "identify a central conflict",
+        "describe how choices shape its story."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/godspawn.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "GroupBuild",
+      "domain": "groupbuild.com",
+      "kind": "public_preview",
+      "description": "Explore a prototype for making group organization and participation easier to understand.",
+      "purpose": "Community organization and XR",
+      "exercise": [
+        "Try the public experiment",
+        "describe a community task",
+        "suggest a change that would help a newcomer."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/groupbuild/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "GroupBuild",
+      "domain": "groupbuild.org",
+      "kind": "public_preview",
+      "description": "Explore a prototype for making group organization and participation easier to understand.",
+      "purpose": "Community organization and XR",
+      "exercise": [
+        "Try the public experiment",
+        "describe a community task",
+        "suggest a change that would help a newcomer."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/groupbuild/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "If I Had a Penny",
+      "domain": "ifihadapenny.org",
+      "kind": "public_preview",
+      "description": "Consider how modest contributions of time, ideas or resources might create shared value. No payment or donation service is offered.",
+      "purpose": "Small-contribution concepts",
+      "exercise": [
+        "Choose a non-monetary contribution",
+        "define who benefits",
+        "describe how to verify the effect."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/ifihadapenny.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "OpeName",
+      "domain": "opename.com",
+      "kind": "public_preview",
+      "description": "Explore consent-aware identity concepts, portability and correction.",
+      "purpose": "Identity, names and reputation",
+      "exercise": [
+        "Describe an identity problem",
+        "identify information a person should control",
+        "define a correction path."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/opename.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "OpeName",
+      "domain": "opename.org",
+      "kind": "public_preview",
+      "description": "Explore consent-aware identity concepts, portability and correction.",
+      "purpose": "Identity, names and reputation",
+      "exercise": [
+        "Describe an identity problem",
+        "identify information a person should control",
+        "define a correction path."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/opename.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "OrbWare",
+      "domain": "orbware.org",
+      "kind": "public_preview",
+      "description": "Explore ideas for understandable interfaces and interactions.",
+      "purpose": "Compact interface concepts",
+      "exercise": [
+        "Choose information worth showing at a glance",
+        "identify one interaction",
+        "define how a user knows it worked."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/coorb/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/orbware.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "RickBar",
+      "domain": "rickbar.org",
+      "kind": "public_preview",
+      "description": "Explore an existing browser experiment for a compact interface.",
+      "purpose": "An evolving interaction surface",
+      "exercise": [
+        "Try the public exemplar",
+        "identify a task that should take fewer steps",
+        "propose a clearer interaction."
+      ],
+      "related_experience": "https://cocivium.github.io/CoAcademy/rickbar/",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/rickbar.org/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "RickPublic",
+      "domain": "rickpublic.com",
+      "kind": "public_preview",
+      "description": "A public concept entrance for ideas and constructive challenges.",
+      "purpose": "Writing, questions and discussion",
+      "exercise": [
+        "Choose a question",
+        "state the strongest objection to your view",
+        "identify a useful next discussion."
+      ],
+      "related_experience": "https://github.com/CoCivium/CoCivium",
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "StartupsBoard",
+      "domain": "startupsboard.com",
+      "kind": "public_preview",
+      "description": "Consider how projects can communicate purpose, progress and needs. No listing or fundraising service is offered.",
+      "purpose": "Early-stage project concepts",
+      "exercise": [
+        "Describe a hypothetical project",
+        "state a measurable milestone",
+        "identify the help it needs."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/startupsboard.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "WhyHead",
+      "domain": "whyhead.com",
+      "kind": "public_preview",
+      "description": "An early concept entrance for asking useful questions; detailed product scope remains open.",
+      "purpose": "Questions and inquiry",
+      "exercise": [
+        "Choose a question",
+        "distinguish assumptions from observations",
+        "propose an investigation."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/whyhead.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    },
+    {
+      "schema_version": 1,
+      "name": "WiHead",
+      "domain": "wihead.com",
+      "kind": "public_preview",
+      "description": "An early concept entrance, not an established product or service.",
+      "purpose": "An exploratory interface concept",
+      "exercise": [
+        "Describe an interaction that could be easier",
+        "suggest a candidate use",
+        "identify a test."
+      ],
+      "related_experience": null,
+      "public_url": "https://cocivium.github.io/CoAcademy/fronts/wihead.com/",
+      "native_domain_routing": "not_asserted",
+      "service_availability": "not_asserted",
+      "feedback": {
+        "url": "https://github.com/CoCivium/CoAcademy/issues",
+        "visibility": "public",
+        "optional": true,
+        "privacy_warning": "Do not share personal data or private security details"
+      },
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+    }
+  ],
+  "independent_website": {
+    "name": "InSeed",
+    "url": "https://inseed.com/"
+  },
+  "native_domain_routing": "not_asserted",
+  "feedback_public": "https://github.com/CoCivium/CoAcademy/issues"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoCivium",
+  "domain": "cocivium.org",
+  "kind": "public_preview",
+  "description": "Explore experiments in community organization, governance and verification.",
+  "purpose": "Collaborative community infrastructure",
+  "exercise": [
+    "Choose a community",
+    "describe a coordination challenge",
+    "identify evidence that an improvement helped."
+  ],
+  "related_experience": "https://www.cocivium.org/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

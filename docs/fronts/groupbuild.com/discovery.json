@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "GroupBuild",
+  "domain": "groupbuild.com",
+  "kind": "public_preview",
+  "description": "Explore a prototype for making group organization and participation easier to understand.",
+  "purpose": "Community organization and XR",
+  "exercise": [
+    "Try the public experiment",
+    "describe a community task",
+    "suggest a change that would help a newcomer."
+  ],
+  "related_experience": "https://cocivium.github.io/CoAcademy/groupbuild/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

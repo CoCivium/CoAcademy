@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoAll",
+  "domain": "coall.org",
+  "kind": "public_preview",
+  "description": "Explore how shared work can remain understandable, portable and open to correction.",
+  "purpose": "Connecting ideas and work",
+  "exercise": [
+    "Describe a work object",
+    "identify what another participant needs to recover it",
+    "specify a verifiable outcome."
+  ],
+  "related_experience": "https://github.com/CoCivium/CoCivium",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

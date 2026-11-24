@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoPolitic",
+  "domain": "copolitic.com",
+  "kind": "public_preview",
+  "description": "Explore evidence-oriented governance and civic participation.",
+  "purpose": "Governance and civic dialogue",
+  "exercise": [
+    "Choose a governance question",
+    "represent competing perspectives fairly",
+    "identify evidence that could change your view."
+  ],
+  "related_experience": "https://cocivium.github.io/CoPolitic-site/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/copolitic.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

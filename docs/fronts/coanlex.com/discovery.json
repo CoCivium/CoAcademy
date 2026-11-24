@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoAnlex",
+  "domain": "coanlex.com",
+  "kind": "public_preview",
+  "description": "An early concept entrance. The detailed public purpose is still open.",
+  "purpose": "An exploratory concept",
+  "exercise": [
+    "Suggest a useful problem to explore",
+    "identify who would benefit",
+    "propose a small test."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/coanlex.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

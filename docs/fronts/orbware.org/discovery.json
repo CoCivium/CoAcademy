@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "OrbWare",
+  "domain": "orbware.org",
+  "kind": "public_preview",
+  "description": "Explore ideas for understandable interfaces and interactions.",
+  "purpose": "Compact interface concepts",
+  "exercise": [
+    "Choose information worth showing at a glance",
+    "identify one interaction",
+    "define how a user knows it worked."
+  ],
+  "related_experience": "https://cocivium.github.io/CoAcademy/coorb/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/orbware.org/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

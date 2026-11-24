@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "StartupsBoard",
+  "domain": "startupsboard.com",
+  "kind": "public_preview",
+  "description": "Consider how projects can communicate purpose, progress and needs. No listing or fundraising service is offered.",
+  "purpose": "Early-stage project concepts",
+  "exercise": [
+    "Describe a hypothetical project",
+    "state a measurable milestone",
+    "identify the help it needs."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/startupsboard.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

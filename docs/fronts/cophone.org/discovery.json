@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoPhone",
+  "domain": "cophone.org",
+  "kind": "public_preview",
+  "description": "Consider accessible communication tools. No phone service is offered by this preview.",
+  "purpose": "Consent-aware communication concepts",
+  "exercise": [
+    "Choose a communication need",
+    "identify an unnecessary interruption",
+    "describe an accessible alternative."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/cophone.org/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

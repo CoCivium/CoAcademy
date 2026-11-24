@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "Civium",
+  "domain": "civium.cc",
+  "kind": "public_preview",
+  "description": "Find a useful starting point for community organization and collaborative civic life.",
+  "purpose": "Paths into civic collaboration",
+  "exercise": [
+    "Choose a community problem",
+    "identify the people affected",
+    "select a reversible improvement."
+  ],
+  "related_experience": "https://cocivium.github.io/CoAcademy/groupbuild/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/civium.cc/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

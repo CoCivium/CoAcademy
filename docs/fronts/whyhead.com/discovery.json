@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "WhyHead",
+  "domain": "whyhead.com",
+  "kind": "public_preview",
+  "description": "An early concept entrance for asking useful questions; detailed product scope remains open.",
+  "purpose": "Questions and inquiry",
+  "exercise": [
+    "Choose a question",
+    "distinguish assumptions from observations",
+    "propose an investigation."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/whyhead.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

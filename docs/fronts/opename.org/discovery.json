@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "OpeName",
+  "domain": "opename.org",
+  "kind": "public_preview",
+  "description": "Explore consent-aware identity concepts, portability and correction.",
+  "purpose": "Identity, names and reputation",
+  "exercise": [
+    "Describe an identity problem",
+    "identify information a person should control",
+    "define a correction path."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/opename.org/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

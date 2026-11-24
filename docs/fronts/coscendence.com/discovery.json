@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoScendence",
+  "domain": "coscendence.com",
+  "kind": "public_preview",
+  "description": "An exploratory concept space for human development and collaborative futures.",
+  "purpose": "Development and collaborative futures",
+  "exercise": [
+    "Name a capability worth improving",
+    "describe a responsible experiment",
+    "distinguish observation from interpretation."
+  ],
+  "related_experience": null,
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/coscendence.com/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}

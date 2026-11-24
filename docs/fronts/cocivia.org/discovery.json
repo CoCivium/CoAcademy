@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "CoCivia",
+  "domain": "cocivia.org",
+  "kind": "public_preview",
+  "description": "Explore approachable ways for people to interact with collaborative systems.",
+  "purpose": "Human-facing participation",
+  "exercise": [
+    "Describe a task you would delegate",
+    "decide what requires your approval",
+    "define a helpful response."
+  ],
+  "related_experience": "https://cocivium.github.io/CoAcademy/discover/",
+  "public_url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+  "native_domain_routing": "not_asserted",
+  "service_availability": "not_asserted",
+  "feedback": {
+    "url": "https://github.com/CoCivium/CoAcademy/issues",
+    "visibility": "public",
+    "optional": true,
+    "privacy_warning": "Do not share personal data or private security details"
+  },
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+}
