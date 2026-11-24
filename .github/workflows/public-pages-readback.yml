@@ -8,6 +8,7 @@ on:
     paths:
       - docs/coparallel/**
       - docs/conav/**
+      - docs/sites/**
       - docs/cogbx/**
       - docs/megascroller/**
       - docs/index.html
@@ -75,6 +76,11 @@ jobs:
               ('CoPatterna machine registry', 'docs/constellation/patterns/registry.json', base + 'constellation/patterns/registry.json'),
               ('CoParallel interactive', 'docs/coparallel/index.html', base + 'coparallel/'),
               ('CoParallel research data', 'docs/coparallel/discovery.json', base + 'coparallel/discovery.json'),
+              # CoSites human/machine twins; verify served bytes, not freshness of dated DNS data.
+              ('CoSites public status', 'docs/sites/index.html', base + 'sites/'),
+              ('CoSites dated machine status', 'docs/sites/status.json', base + 'sites/status.json'),
+              ('CoSites / CoNodes human relations', 'docs/sites/relations/index.html', base + 'sites/relations/'),
+              ('CoSites / CoNodes typed graph', 'docs/sites/relations/graph.json', base + 'sites/relations/graph.json'),
               ('CoNav visual index', 'docs/conav/index.html', base + 'conav/'),
               ('CoNav static matrix', 'docs/conav/matrix.html', base + 'conav/matrix.html'),
               ('CoNav machine data', 'docs/conav/discovery.json', base + 'conav/discovery.json'),
