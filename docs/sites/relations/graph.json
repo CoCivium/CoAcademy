@@ -1,0 +1,303 @@
+{
+  "schema": "CoSites.SiteNodeNamespaceRelations.R0",
+  "date": "2026-11-24",
+  "state": "PUBLIC_SOURCE_BOUND_DESCRIPTIVE_CANDIDATE__NOT_CANON_OR_RUNTIME",
+  "source_snapshot": {
+    "uri": "https://cocivium.github.io/CoAcademy/sites/status.json",
+    "observed_at": "2026-11-24T06:36:17.779Z",
+    "git_blob_sha1": "feab23afac6f391c924d0bbff717966856075364",
+    "vantage": "X2_SINGLE_DATE_CHECK"
+  },
+  "tld_registry": {
+    "source": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt",
+    "version": "2026112201",
+    "delegated": [
+      "com",
+      "org",
+      "net",
+      "site"
+    ],
+    "literal_node_delegated": false,
+    "warning": "XN--NODE is not the literal NODE label"
+  },
+  "special_use": [
+    {
+      "label": "alt",
+      "scope": "NON_DNS_ALTERNATIVE_NAMESPACE",
+      "source": "https://www.rfc-editor.org/rfc/rfc9476.html"
+    },
+    {
+      "label": "home.arpa",
+      "scope": "RESIDENTIAL_LOCAL_NAMESPACE",
+      "source": "https://www.rfc-editor.org/rfc/rfc8375.html"
+    }
+  ],
+  "internal_contracts": [
+    {
+      "role": "source_kinds",
+      "path": "docs/Architecture/COSOURCE_GRAPH_R0.md",
+      "blob": "301c8951e566de9f9ec0bde16a6b991bd177bd47"
+    },
+    {
+      "role": "service_cells",
+      "path": "docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md",
+      "blob": "f63736c03f15a7ecac04d15c005f42afb7960825"
+    },
+    {
+      "role": "one_source_many_observers",
+      "path": "docs/Architecture/COOMNIFRONT_TIMEBRAID_R0_20261108.md",
+      "blob": "5a0073a241d66606bddaa01e36ba8721f5dd3857"
+    },
+    {
+      "role": "constellation",
+      "path": "docs/Evolution/COPUBLIC_CONSTELLATION_MEGASCROLLER_R0.json",
+      "blob": "9604edb55c3c59f6c2a93d738ea6b2f207dec9db"
+    }
+  ],
+  "vocabulary": {
+    "project": "Durable purpose, not equivalent to a URL or site",
+    "dns_name": "Locator in a specific namespace; registry status is not ownership",
+    "site": "Human or machine projection of versioned source; can be served by multiple nodes",
+    "endpoint": "Exact URI for a human or machine resource; no automatic effect authority",
+    "node": "A bounded service cell/device/runtime; not necessarily publicly addressed",
+    "source": "Versioned record of content, code, rights or evidence",
+    "receipt": "Observed delivery/acceptance/recovery evidence, not synonymous with a citation",
+    "namespace": "Naming and resolution rules, separate from what a node can do"
+  },
+  "nodes": [
+    {
+      "id": "project:copolitic",
+      "type": "project",
+      "label": "CoPolitic research"
+    },
+    {
+      "id": "dns:copolitic.org",
+      "type": "dns_name",
+      "label": "copolitic.org",
+      "state": "HTTP_404_AT_SNAPSHOT"
+    },
+    {
+      "id": "site:copolitic-pages",
+      "type": "site",
+      "label": "CoPolitic public Pages",
+      "uri": "https://cocivium.github.io/CoPolitic-site/",
+      "state": "READBACK_VERIFIED"
+    },
+    {
+      "id": "endpoint:press",
+      "type": "endpoint",
+      "label": "Journalist guide",
+      "uri": "https://cocivium.github.io/CoPolitic-site/press.html"
+    },
+    {
+      "id": "endpoint:machine",
+      "type": "endpoint",
+      "label": "Research crosswalk",
+      "uri": "https://cocivium.github.io/CoPolitic-site/ai/research-crosswalk-r0.json"
+    },
+    {
+      "id": "source:copolitic",
+      "type": "source",
+      "label": "CoPolitic-site repository",
+      "uri": "https://github.com/CoCivium/CoPolitic-site"
+    },
+    {
+      "id": "project:costonk",
+      "type": "project",
+      "label": "CoStonk research concept",
+      "state": "NO_LIVE_FINANCIAL_SERVICE"
+    },
+    {
+      "id": "dns:costonk.com",
+      "type": "dns_name",
+      "label": "costonk.com",
+      "state": "PARKED_AT_SNAPSHOT"
+    },
+    {
+      "id": "dns:costonk.org",
+      "type": "dns_name",
+      "label": "costonk.org",
+      "state": "PARKED_AT_SNAPSHOT"
+    },
+    {
+      "id": "kind:cosite",
+      "type": "site",
+      "label": "CoSite generalization",
+      "state": "CONCEPT"
+    },
+    {
+      "id": "kind:conode",
+      "type": "node",
+      "label": "CoNode generalization",
+      "state": "DESIGN_NO_ACTUATOR_PROOF"
+    },
+    {
+      "id": "namespace:org",
+      "type": "namespace",
+      "label": ".org",
+      "state": "IANA_DELEGATED"
+    },
+    {
+      "id": "namespace:com",
+      "type": "namespace",
+      "label": ".com",
+      "state": "IANA_DELEGATED"
+    },
+    {
+      "id": "namespace:net",
+      "type": "namespace",
+      "label": ".net",
+      "state": "IANA_DELEGATED"
+    },
+    {
+      "id": "namespace:site",
+      "type": "namespace",
+      "label": ".site",
+      "state": "IANA_DELEGATED"
+    },
+    {
+      "id": "namespace:node",
+      "type": "namespace",
+      "label": ".node",
+      "state": "NOT_DELEGATED_LITERAL_PUBLIC_TLD"
+    },
+    {
+      "id": "namespace:alt",
+      "type": "namespace",
+      "label": ".alt",
+      "state": "SPECIAL_NON_DNS"
+    },
+    {
+      "id": "namespace:homearpa",
+      "type": "namespace",
+      "label": "home.arpa",
+      "state": "LOCAL_SPECIAL_USE"
+    }
+  ],
+  "edges": [
+    {
+      "from": "project:copolitic",
+      "type": "INTENDED_BRANDED_NAME",
+      "to": "dns:copolitic.org",
+      "evidence": "INTENT_ONLY",
+      "effect_authorized": false
+    },
+    {
+      "from": "project:copolitic",
+      "type": "PRESENTED_BY_PUBLIC_SITE",
+      "to": "site:copolitic-pages",
+      "evidence": "OBSERVED_PUBLIC",
+      "effect_authorized": false
+    },
+    {
+      "from": "site:copolitic-pages",
+      "type": "EXPOSES_HUMAN",
+      "to": "endpoint:press",
+      "evidence": "OBSERVED_PUBLIC",
+      "effect_authorized": false
+    },
+    {
+      "from": "site:copolitic-pages",
+      "type": "EXPOSES_MACHINE",
+      "to": "endpoint:machine",
+      "evidence": "OBSERVED_PUBLIC",
+      "effect_authorized": false
+    },
+    {
+      "from": "site:copolitic-pages",
+      "type": "HAS_GIT_SOURCE",
+      "to": "source:copolitic",
+      "evidence": "SOURCE_READBACK",
+      "effect_authorized": false
+    },
+    {
+      "from": "dns:copolitic.org",
+      "type": "UNBOUND_TO_INTENDED_SITE",
+      "to": "site:copolitic-pages",
+      "evidence": "HTTP_404_AT_SNAPSHOT",
+      "effect_authorized": false
+    },
+    {
+      "from": "project:costonk",
+      "type": "PROPOSED_NAME",
+      "to": "dns:costonk.org",
+      "evidence": "INTENT_NO_OWNER_PROOF",
+      "effect_authorized": false
+    },
+    {
+      "from": "project:costonk",
+      "type": "PROPOSED_ALIAS",
+      "to": "dns:costonk.com",
+      "evidence": "INTENT_NO_OWNER_PROOF",
+      "effect_authorized": false
+    },
+    {
+      "from": "dns:costonk.com",
+      "type": "PROPOSED_REDIRECT_TO",
+      "to": "dns:costonk.org",
+      "evidence": "HOLD_BOTH_PARKED",
+      "effect_authorized": false
+    },
+    {
+      "from": "kind:conode",
+      "type": "MAY_SERVE",
+      "to": "kind:cosite",
+      "evidence": "DESIGN_ONLY",
+      "effect_authorized": false
+    },
+    {
+      "from": "kind:cosite",
+      "type": "MAY_BE_SERVED_BY_MULTIPLE",
+      "to": "kind:conode",
+      "evidence": "DESIGN_ONLY",
+      "effect_authorized": false
+    },
+    {
+      "from": "dns:copolitic.org",
+      "type": "HAS_SUFFIX",
+      "to": "namespace:org",
+      "evidence": "LEXICAL_ONLY",
+      "effect_authorized": false
+    },
+    {
+      "from": "dns:costonk.org",
+      "type": "HAS_SUFFIX",
+      "to": "namespace:org",
+      "evidence": "LEXICAL_ONLY",
+      "effect_authorized": false
+    },
+    {
+      "from": "dns:costonk.com",
+      "type": "HAS_SUFFIX",
+      "to": "namespace:com",
+      "evidence": "LEXICAL_ONLY",
+      "effect_authorized": false
+    }
+  ],
+  "checks_required": [
+    "AUTHENTICATED_DOMAIN_OWNER",
+    "DNS_TLS_BOUND",
+    "SOURCE_REVISION_READBACK",
+    "HUMAN_AND_MACHINE_PARITY",
+    "ACCESSIBILITY",
+    "INDEPENDENT_NODE_COLD_RESTORE"
+  ],
+  "rails": [
+    "NAME_NE_SITE",
+    "SITE_NE_NODE",
+    "TLD_NE_OWNERSHIP",
+    "SOURCE_NE_PROJECTION",
+    "NODE_DISCOVERY_NE_CONTROL",
+    "ALIAS_INTENT_NE_LIVE_REDIRECT",
+    "TWO_URLS_NE_TWO_FAILURE_DOMAINS"
+  ],
+  "nonclaims": [
+    "NO_NEW_DNS",
+    "NO_DOT_NODE_DELEGATION",
+    "NO_DOMAIN_OWNERSHIP_VERIFICATION",
+    "NO_COSTONK_PRODUCT",
+    "NO_NODE_RUNTIME",
+    "NO_MIRROR_OR_RESTORE_PROOF",
+    "NO_COEX_CANON"
+  ]
+}

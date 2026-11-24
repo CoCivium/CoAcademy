@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"><meta name="referrer" content="no-referrer">
+<meta name="description" content="CoSite and CoNode distinctions: public DNS suffixes versus site, node, project, endpoint, source and evidence; verified IANA references and typed CoCivium relations.">
+<link rel="canonical" href="https://cocivium.github.io/CoAcademy/sites/relations/">
+<link rel="alternate" type="application/json" href="graph.json" title="Source-bound typed relation graph">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'none'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>CoSites / CoNodes | Names are not sites, sites are not nodes</title>
+<style>
+:root{color-scheme:dark;--bg:#081523;--panel:#16283b;--edge:#40576b;--ink:#f0f9ff;--sub:#bbd2e0;--teal:#aaf2dd;--purple:#d2baff;--gold:#ffddaa}*{box-sizing:border-box}
+body{background:radial-gradient(ellipse 80% 50% at 90% 0%,#4c267360,transparent 65%),var(--bg);color:var(--ink);margin:0;font:16px/1.54 system-ui,Segoe UI,sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.skip{position:absolute;top:-90px;left:12px;background:white;color:#071523;padding:8px}.skip:focus{top:10px}
+header,main,footer{max-width:1120px;margin:auto;padding-left:20px;padding-right:20px}
+header{padding-top:18px;padding-bottom:17px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.brand{font-size:22px;font-weight:800;text-decoration:none;color:var(--ink)}.brand span{color:var(--purple)}
+nav{display:flex;gap:15px;flex-wrap:wrap;font-weight:800;font-size:13px}
+main{padding-top:36px;padding-bottom:60px}.eyebrow{color:var(--purple);font-weight:830;text-transform:uppercase;font-size:11px;letter-spacing:.14em;margin:0 0 10px}
+h1{font-size:clamp(2.5rem,5.8vw,4.8rem);line-height:1.08;letter-spacing:-.055em;margin:0 0 15px;max-width:910px}
+h2{font-size:clamp(1.65rem,3vw,2.5rem);line-height:1.18;letter-spacing:-.025em;margin:0 0 18px}
+h3{font-size:1.18rem;margin:0 0 10px}.lead{max-width:830px;color:var(--sub);font-size:1.18rem}
+.section{border-top:1px solid var(--edge);margin-top:33px;padding-top:30px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:18px}
+.card p{font-size:14px;color:var(--sub)}.card small{color:var(--purple);text-transform:uppercase;font-weight:850;font-size:11px;letter-spacing:.07em}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:22px 0}
+.step{background:#173244;border:1px solid #527887;border-radius:10px;padding:16px;min-width:0}
+.step strong{display:block;font-size:1.08rem;overflow-wrap:anywhere}.step small{color:var(--sub);display:block;margin-top:7px}
+.notice{border-left:4px solid var(--gold);background:#282b39;border-radius:0 9px 9px 0;padding:15px 18px;color:#ecedea}
+.tablebox{overflow-x:auto;border:1px solid var(--edge);border-radius:10px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid #334a60}
+thead th{background:#233b4f}tbody tr:nth-child(even){background:#16293d}tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+code{color:#c5f4e8}.sources{color:var(--sub);max-width:880px}footer{padding-top:24px;padding-bottom:45px;border-top:1px solid var(--edge);color:var(--sub);font-size:12px}
+@media(max-width:800px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){header,main,footer{padding-left:15px;padding-right:15px}nav{display:grid;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+nav a{border:1px solid var(--edge);border-radius:8px;padding:7px;text-align:center}.cards{grid-template-columns:1fr}.flow{grid-template-columns:1fr}table{min-width:610px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><a class="brand" href="../">Co<span>Sites</span> / CoNodes</a><nav aria-label="Sections"><a href="#layers">The layers</a><a href="#examples">Real examples</a><a href="#suffix">Suffixes</a><a href="#evidence">Evidence</a></nav></header>
+<main id="main">
+<p class="eyebrow">CoSites + CoNodeMesh research / 24 November 2026</p>
+<h1>A name is not a site. A site is not a node.</h1>
+<p class="lead">A single CoCivium undertaking can have multiple public names, human and machine entrypoints, source repositories and independent service cells. They need different identifiers, authority, versions and evidence. A domain suffix does none of that work automatically.</p>
+<section id="layers" class="section"><p class="eyebrow">The relationships first</p><h2>Six layers worth keeping distinct</h2>
+<div class="cards"><article class="card"><small>1 / Purpose and governance</small><h3>Project</h3><p>CoPolitic remains one project even if its hostname changes.</p></article><article class="card"><small>2 / An address, not the service</small><h3>Domain</h3><p>copolitic.org currently returns 404, despite a live research fallback.</p></article><article class="card"><small>3 / A published view of source</small><h3>CoSite</h3><p>Human and AI/IA readers may use different presentations of the same evidence.</p></article><article class="card"><small>4 / One exact accessible resource</small><h3>Endpoint</h3><p>Press page, JSON, API, or source file. Access does not authorize action.</p></article><article class="card"><small>5 / Service cell or participant</small><h3>CoNode</h3><p>May store or serve many sites; may exist offline without a public domain.</p></article><article class="card"><small>6 / What confirms the relationship</small><h3>Evidence</h3><p>Version, HTTPS readback, rights, independent receiver, and tested recovery.</p></article></div></section>
+<section id="examples" class="section"><p class="eyebrow">Observed and proposed are not synonyms</p><h2>CoPolitic and CoStonk, without invented maturity</h2>
+<div class="flow" aria-label="CoPolitic example">
+<div class="step"><strong>CoPolitic</strong><small>Project / intent</small></div>
+<div class="step"><strong>copolitic.org</strong><small>Planned public name; HTTP 404 at the last audit</small></div>
+<div class="step"><strong><a href="https://cocivium.github.io/CoPolitic-site/">Working site</a></strong><small>GitHub Pages fallback</small></div>
+<div class="step"><strong><a href="https://cocivium.github.io/CoPolitic-site/press.html">Press</a> + <a href="https://cocivium.github.io/CoPolitic-site/ai/research-crosswalk-r0.json">JSON</a></strong><small>Different reader views</small></div>
+</div>
+<p class="notice"><strong>The missing edge:</strong> The branded CoPolitic hostname has not been proven bound to its working public site. A conceptual relation is not a deployed DNS/TLS redirect.</p>
+<p><strong>CoStonk:</strong> <code>costonk.org</code> and <code>costonk.com</code> both served GoDaddy parking pages in the 06:36 UTC audit. A future .com-to-.org redirect is only a proposal, not evidence of an investment service, a canonical publication, or domain-ownership authority. <a href="../">Read the dated 36-domain status</a>.</p>
+<p><strong>CoNode:</strong> A node could be a home server, service process, independent host, offline archive or community-operated cell. That is a capability and custody relationship, not a new TLD or automatic public service. <a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/CIV2_FEDERATED_CELL_HOSTING_R0.md">Examine the existing federated-cell contract</a>.</p>
+</section>
+<section id="suffix" class="section"><p class="eyebrow">Actual DNS versus naming imagination</p><h2>What the suffix establishes</h2>
+<p>The IANA public TLD list updated on 23 November 2026 includes literal <code>COM</code>, <code>ORG</code>, <code>NET</code> and <code>SITE</code>, but not literal <code>NODE</code>. Its <code>XN--NODE</code> line is a different internationalized label, not the literal <code>.node</code> suffix. Distinct IETF special-use namespaces also exist.</p>
+<div class="tablebox"><table><thead><tr><th scope="col">Suffix</th><th scope="col">Kind</th><th scope="col">Meaning</th><th scope="col">Evidence</th></tr></thead><tbody><tr><th scope="row"><code>.com</code></th><td>Delegated public TLD</td><td>A name may be a brand or alias, not necessarily a commercial company.</td><td><a rel="noopener noreferrer" href="https://www.iana.org/domains/root/db/com.html">Standard</a></td></tr>
+<tr><th scope="row"><code>.org</code></th><td>Delegated public TLD</td><td>Does not prove nonprofit or civil authority.</td><td><a rel="noopener noreferrer" href="https://www.iana.org/domains/root/db/org.html">Standard</a></td></tr>
+<tr><th scope="row"><code>.net</code></th><td>Delegated public TLD</td><td>Does not create a distributed network or node.</td><td><a rel="noopener noreferrer" href="https://www.iana.org/domains/root/db/net.html">Standard</a></td></tr>
+<tr><th scope="row"><code>.site</code></th><td>Delegated public TLD</td><td>A real public suffix, not proof of a functioning website.</td><td><a rel="noopener noreferrer" href="https://www.iana.org/domains/root/db/site.html">Standard</a></td></tr>
+<tr><th scope="row"><code>.node</code></th><td>Not delegated in the Nov 23 IANA list</td><td>Use CoNode as a typed capability, not an assumed public URL suffix.</td><td><a rel="noopener noreferrer" href="https://data.iana.org/TLD/tlds-alpha-by-domain.txt">Standard</a></td></tr>
+<tr><th scope="row"><code>.alt</code></th><td>Special-use non-DNS</td><td>Possible alternative namespaces with explicit resolvers and collision controls.</td><td><a rel="noopener noreferrer" href="https://www.rfc-editor.org/rfc/rfc9476.html">Standard</a></td></tr>
+<tr><th scope="row"><code>home.arpa</code></th><td>Special-use local DNS</td><td>For home-network naming, not publicly reachable site addresses.</td><td><a rel="noopener noreferrer" href="https://www.rfc-editor.org/rfc/rfc8375.html">Standard</a></td></tr></tbody></table></div>
+<p class="notice">No suffix proves domain registration, trademark rights, TLS validity, business/nonprofit status or working software. For private names, avoid inventing <code>*.node</code> public URLs. Prefer correctly scoped names under an owned domain or an explicitly designed, standards-aware alternative resolver.</p></section>
+<section id="evidence" class="section"><p class="eyebrow">Two reader views, same distinctions</p><h2>Inspect the typed relations</h2>
+<p>The <a href="graph.json">machine-readable graph</a> identifies <strong>18 sample objects and 14 typed relations</strong>. Its design-only, proposed, HTTP-observed and public-source states remain distinct. These are illustrations and source links, not a complete CoCivium registry or an always-on monitor.</p>
+<p class="sources">Prior art: <a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COSOURCE_GRAPH_R0.md">CoSourceGraph+</a>, <a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Architecture/COOMNIFRONT_TIMEBRAID_R0_20261108.md">CoOmniFront+</a>, <a href="https://github.com/CoCivium/CoCivium/blob/main/docs/Evolution/COPUBLIC_CONSTELLATION_MEGASCROLLER_R0.json">constellation contract</a>, <a href="https://data.iana.org/TLD/tlds-alpha-by-domain.txt">IANA</a>, and <a href="https://www.iana.org/assignments/special-use-domain-names">special-use names</a>. None grants the right to modify a registrar or publish private nodes.</p>
+<p><strong>Next acceptance:</strong> Verify one owned name, an independently confirmed site binding, shared human/AI claim provenance and an actual alternative-node cold restore. Discoverability is not continuity.</p></section></main>
+<footer>CoSites / CoNodes R0 · Source-based design and dated public observations · No domain changes, no federation runtime, no CoEx/canon. Corrections: <a href="https://github.com/CoCivium/CoSteward/issues/60">existing CoSites owner</a>.</footer>
+</body></html>
