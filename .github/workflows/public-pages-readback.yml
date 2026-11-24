@@ -9,6 +9,7 @@ on:
       - docs/coparallel/**
       - docs/conav/**
       - docs/sites/**
+      - tools/cosites_domain_gate.py
       - docs/cogbx/**
       - docs/megascroller/**
       - docs/index.html
@@ -246,6 +247,32 @@ jobs:
             .ci/coldboot/restored/tamper-negative-receipt.json
           if-no-files-found: warn
           retention-days: 30
+
+  observe-branded-domain-gates:
+    # Reuses the incumbent schedule. The job reports unresolved domain gates;
+    # a successful observation is NOT success of any domain binding or TLS.
+    # No DNS mutation, credentials, new watcher or authority elevation.
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout the public fixed-host observer
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Qualify offline classifications and allowlist
+        run: python3 tools/cosites_domain_gate.py --selftest
+      - name: Observe six branded domains without any external effects
+        run: python3 tools/cosites_domain_gate.py --output cosites-domain-gates.json --summary "$GITHUB_STEP_SUMMARY"
+      - name: Preserve negative as well as positive observations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cosites-branded-domain-gates
+          path: cosites-domain-gates.json
+          retention-days: 30
+          if-no-files-found: warn
 
   verify-steward-optional-fanin:
     # Distinct read-only CoGlyphList/CoTalkItOut proposal boundary.  This test
