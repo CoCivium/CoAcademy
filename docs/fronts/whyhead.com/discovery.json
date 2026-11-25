@@ -20,5 +20,19 @@
     "optional": true,
     "privacy_warning": "Do not share personal data or private security details"
   },
-  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+  "related_previews": [
+    {
+      "name": "RickPublic",
+      "domain": "rickpublic.com",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+      "relationship": "suggested_related_exploration"
+    },
+    {
+      "name": "CoAnlex",
+      "domain": "coanlex.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/coanlex.org/",
+      "relationship": "suggested_related_exploration"
+    }
+  ]
 }

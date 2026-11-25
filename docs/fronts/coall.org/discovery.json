@@ -20,5 +20,25 @@
     "optional": true,
     "privacy_warning": "Do not share personal data or private security details"
   },
-  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+  "related_previews": [
+    {
+      "name": "CoGbx",
+      "domain": "cogbx.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+      "relationship": "suggested_related_exploration"
+    },
+    {
+      "name": "OpeName",
+      "domain": "opename.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/opename.org/",
+      "relationship": "suggested_related_exploration"
+    },
+    {
+      "name": "CoCivium",
+      "domain": "cocivium.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+      "relationship": "suggested_related_exploration"
+    }
+  ]
 }

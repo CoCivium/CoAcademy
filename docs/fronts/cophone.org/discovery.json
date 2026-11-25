@@ -20,5 +20,19 @@
     "optional": true,
     "privacy_warning": "Do not share personal data or private security details"
   },
-  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+  "related_previews": [
+    {
+      "name": "BlabEx",
+      "domain": "blabex.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/blabex.org/",
+      "relationship": "suggested_related_exploration"
+    },
+    {
+      "name": "RickBar",
+      "domain": "rickbar.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/rickbar.org/",
+      "relationship": "suggested_related_exploration"
+    }
+  ]
 }

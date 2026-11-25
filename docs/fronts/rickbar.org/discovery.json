@@ -20,5 +20,25 @@
     "optional": true,
     "privacy_warning": "Do not share personal data or private security details"
   },
-  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+  "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+  "related_previews": [
+    {
+      "name": "OrbWare",
+      "domain": "orbware.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/orbware.org/",
+      "relationship": "suggested_related_exploration"
+    },
+    {
+      "name": "CoAll",
+      "domain": "coall.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+      "relationship": "suggested_related_exploration"
+    },
+    {
+      "name": "CoCivia",
+      "domain": "cocivia.org",
+      "url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+      "relationship": "suggested_related_exploration"
+    }
+  ]
 }

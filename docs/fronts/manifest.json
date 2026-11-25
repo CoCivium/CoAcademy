@@ -24,7 +24,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoCivia",
+          "domain": "cocivia.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "EntMent",
+          "domain": "entment.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/entment.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -48,7 +62,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoCivia",
+          "domain": "cocivia.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "EntMent",
+          "domain": "entment.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/entment.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -72,7 +100,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoPhone",
+          "domain": "cophone.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cophone.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -96,7 +138,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoPhone",
+          "domain": "cophone.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cophone.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -120,7 +176,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoPolitic",
+          "domain": "copolitic.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/copolitic.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -144,7 +214,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGbx",
+          "domain": "cogbx.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "OpeName",
+          "domain": "opename.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/opename.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoCivium",
+          "domain": "cocivium.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -168,7 +258,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -192,7 +290,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -216,7 +322,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoCivium",
+          "domain": "cocivium.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "RickBar",
+          "domain": "rickbar.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickbar.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -240,7 +360,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -264,7 +404,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -288,7 +448,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -312,7 +492,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -336,7 +530,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -360,7 +568,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -384,7 +606,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGbx",
+          "domain": "cogbx.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -408,7 +650,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGbx",
+          "domain": "cogbx.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -432,7 +694,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoGbx",
+          "domain": "cogbx.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -456,7 +738,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "BlabEx",
+          "domain": "blabex.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/blabex.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "RickBar",
+          "domain": "rickbar.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickbar.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -480,7 +776,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "Civium",
+          "domain": "civium.cc",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/civium.cc/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -504,7 +814,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "Civium",
+          "domain": "civium.cc",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/civium.cc/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -528,7 +852,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "RickPublic",
+          "domain": "rickpublic.com",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -552,7 +890,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "RickPublic",
+          "domain": "rickpublic.com",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -576,7 +928,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -600,7 +960,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -624,7 +992,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "BeAxa",
+          "domain": "beaxa.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/beaxa.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -648,7 +1030,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "BeAxa",
+          "domain": "beaxa.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/beaxa.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -672,7 +1068,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "RickPublic",
+          "domain": "rickpublic.com",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -696,7 +1100,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "RickPublic",
+          "domain": "rickpublic.com",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -720,7 +1132,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoCivium",
+          "domain": "cocivium.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "EntMent",
+          "domain": "entment.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/entment.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -744,7 +1176,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoCivium",
+          "domain": "cocivium.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "EntMent",
+          "domain": "entment.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/entment.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGibber",
+          "domain": "cogibber.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogibber.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -768,7 +1220,15 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -792,7 +1252,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGbx",
+          "domain": "cogbx.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -816,7 +1290,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoGbx",
+          "domain": "cogbx.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cogbx.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -840,7 +1328,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "RickBar",
+          "domain": "rickbar.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickbar.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoCivia",
+          "domain": "cocivia.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -864,7 +1366,27 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "OrbWare",
+          "domain": "orbware.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/orbware.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoCivia",
+          "domain": "cocivia.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivia.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -888,7 +1410,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "Godspawn",
+          "domain": "godspawn.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/godspawn.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoCivium",
+          "domain": "cocivium.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/cocivium.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -912,7 +1448,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "GroupBuild",
+          "domain": "groupbuild.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/groupbuild.org/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAll",
+          "domain": "coall.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coall.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -936,7 +1486,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "RickPublic",
+          "domain": "rickpublic.com",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/rickpublic.com/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "CoAnlex",
+          "domain": "coanlex.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/coanlex.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     },
     {
       "schema_version": 1,
@@ -960,7 +1524,21 @@
         "optional": true,
         "privacy_warning": "Do not share personal data or private security details"
       },
-      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md"
+      "source_context": "https://github.com/CoCivium/CoCivium/blob/main/plans/MasterPlan.md",
+      "related_previews": [
+        {
+          "name": "WhyHead",
+          "domain": "whyhead.com",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/whyhead.com/",
+          "relationship": "suggested_related_exploration"
+        },
+        {
+          "name": "OrbWare",
+          "domain": "orbware.org",
+          "url": "https://cocivium.github.io/CoAcademy/fronts/orbware.org/",
+          "relationship": "suggested_related_exploration"
+        }
+      ]
     }
   ],
   "independent_website": {
