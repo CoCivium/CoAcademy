@@ -3,10 +3,10 @@
   "name": "RickBar",
   "domain": "rickbar.org",
   "kind": "public_preview",
-  "description": "Explore an existing browser experiment for a compact interface.",
+  "description": "View the public trial-status portal for RickBar. The portal is not the native desktop bar; check it for current release availability.",
   "purpose": "An evolving interaction surface",
   "exercise": [
-    "Try the public exemplar",
+    "Read the current trial status",
     "identify a task that should take fewer steps",
     "propose a clearer interaction."
   ],

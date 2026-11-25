@@ -48,7 +48,7 @@ function makeChecklist(){if(!state)return '';return state.items.map((i,j)=>(j+1)
 async function copy(s,what){if(!state)return;try{await navigator.clipboard.writeText(s);$('actionStatus').textContent=what+' copied. This page did not send the data.'}catch(e){$('actionStatus').textContent='Clipboard permission unavailable. Select and copy the JSON preview manually.'}}
 $('inputForm').addEventListener('submit',e=>{e.preventDefault();structure()});
 $('exampleOne').addEventListener('click',()=>{$('raw').value=samples.one;structure()});$('exampleTwo').addEventListener('click',()=>{$('raw').value=samples.two;structure()});$('exampleThree').addEventListener('click',()=>{$('raw').value=samples.three;structure()});
-$('clearAll').addEventListener('click',()=>{$('raw').value='';state=null;$('results').hidden=true;updateStatus('Cleared. This page does not retain your notes.',false);$('raw').focus()});
+$('clearAll').addEventListener('click',()=>{$('raw').value='';state=null;nextId=0;$('items').replaceChildren();$('jsonPreview').textContent='';$('count').textContent='0 items';$('actionStatus').textContent='No export requested.';$('results').hidden=true;updateStatus('Cleared from this page. Previously copied or downloaded data is not affected.',false);$('raw').focus()});
 $('addItem').addEventListener('click',()=>{if(!state)return;if(state.items.length>=30){$('actionStatus').textContent='Maximum of 30 items reached. Remove an item first.';return;}state.items.push({id:'item-'+(++nextId),kind:'Statement',text:''});render()});
 $('copyPlan').addEventListener('click',()=>copy(makeChecklist(),'Checklist'));
 $('copyJson').addEventListener('click',()=>copy(JSON.stringify(exportObject(),null,2),'JSON'));
