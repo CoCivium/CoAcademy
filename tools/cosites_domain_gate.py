@@ -25,8 +25,8 @@ TARGETS = (
 MAX_BODY = 320_000
 USER_AGENT = "CoCiviumPublicDomainGateReadback/0.1"
 _ALLOWED_REDIRECT_HOSTS = {
-    "copolitic_apex": {"copolitic.org", "www.copolitic.org"},
-    "copolitic_www": {"copolitic.org", "www.copolitic.org"},
+    "copolitic_apex": {"copolitic.org", "www.copolitic.org", "cocivium.github.io"},
+    "copolitic_www": {"copolitic.org", "www.copolitic.org", "cocivium.github.io"},
     "costonk_org": {"costonk.org"},
     "costonk_com": {"costonk.com", "costonk.org"},
     "groupbuild_org": {"groupbuild.org", "www.groupbuild.org"},
@@ -40,8 +40,12 @@ class StrictPublicRedirect(request.HTTPRedirectHandler):
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         u = parse.urlsplit(newurl)
-        if u.scheme != "https" or u.hostname not in self.allowed:
+        if (u.scheme != "https" or u.hostname not in self.allowed or u.username is not None
+                or u.password is not None or u.port not in (None, 443)):
             raise ValueError("REDIRECT_OUTSIDE_HTTPS_HOST_ALLOWLIST")
+        # Bound the external CoPolitic destination to one project root, not GitHub Pages generally.
+        if u.hostname == "cocivium.github.io" and (u.path != "/CoPolitic-site/" or u.query or u.fragment):
+            raise ValueError("REDIRECT_OUTSIDE_COPOLITIC_PAGES_PROJECT_ROOT")
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
@@ -63,6 +67,8 @@ def classify(http, body, final_host, expected_host, marker, name):
     if park:
         return "PARKED_NOT_PUBLIC_SITE"
     if final_host != expected_host:
+        if name in ("copolitic_apex", "copolitic_www") and final_host == "cocivium.github.io":
+            return "COPOLITIC_PAGES_REDIRECT_CONTENT_CANDIDATE_NOT_OWNER_PROOF"
         return "REDIRECT_TARGET_NOT_QUALIFIED"
     if marker.lower() in text.lower() and len(text) >= 200:
         # A source marker may be spoofed, so this is deliberately only a candidate.
@@ -119,6 +125,17 @@ def selftest():
     assert classify(200, b"<h1>CoStonk</h1>" + b" content" * 100, "costonk.org", "costonk.org", "CoStonk", "costonk_com") == "REDIRECT_TARGET_CONTENT_CANDIDATE_NOT_OWNER_PROOF"
     assert classify(200, b"some html" * 100, "costonk.com", "costonk.org", "CoStonk", "costonk_com") == "REDIRECT_TARGET_NOT_QUALIFIED"
     assert classify(None, b"", None, "copolitic.org", "CoPolitic", "copolitic_apex") == "INCONCLUSIVE_TRANSPORT"
+    assert classify(200, b"<h1>CoPolitic</h1>" + b" content" * 100, "cocivium.github.io", "copolitic.org", "CoPolitic", "copolitic_apex") == "COPOLITIC_PAGES_REDIRECT_CONTENT_CANDIDATE_NOT_OWNER_PROOF"
+    handler = StrictPublicRedirect(_ALLOWED_REDIRECT_HOSTS["copolitic_apex"])
+    origin = request.Request("https://copolitic.org/")
+    assert handler.redirect_request(origin, None, 302, "Found", {}, "https://cocivium.github.io/CoPolitic-site/") is not None
+    for disallowed in ("https://cocivium.github.io/other/", "http://cocivium.github.io/CoPolitic-site/", "https://cocivium.github.io/CoPolitic-site/?q=1", "https://cocivium.github.io:444/CoPolitic-site/", "https://user@cocivium.github.io/CoPolitic-site/", "https://user:secret@cocivium.github.io/CoPolitic-site/"):
+        try:
+            handler.redirect_request(origin, None, 302, "Found", {}, disallowed)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("UNSAFE_REDIRECT_ACCEPTED")
     assert not any(t[1].startswith("http://") for t in TARGETS)
     print("PASS_DOMAIN_GATE_EIGHT_NEGATIVE_AND_POSITIVE_FIXTURES")
 
