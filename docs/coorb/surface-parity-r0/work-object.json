@@ -1,0 +1,69 @@
+{
+  "schema": "CoCivium.CoOrbSurfaceParity.R0",
+  "object_id": "coorb-parity:fictional-work-001",
+  "class": "SYNTHETIC_PUBLIC_SAFE_DEMO",
+  "title": "One work identity beyond three application windows",
+  "why": "A person should not have to relay currentness, sources and acknowledgments among publishing, research and recovery windows.",
+  "currentness": {
+    "state": "UNVERIFIED_LIVE",
+    "observed_at": null
+  },
+  "source": {
+    "class": "PUBLIC_DESIGN_REFERENCE_PLUS_FICTIONAL_SCENARIO",
+    "ref": "CoCivium/CoCivium:docs/Architecture/COORBWARE_BEYOND_COSOFTWARE_R0_20261024.md",
+    "observed_external_receiver": false
+  },
+  "evidence": {
+    "class": "DESIGN_DEMONSTRATION_ONLY",
+    "claim_verified": false
+  },
+  "authority": {
+    "scope": "READ_ONLY_PREVIEW",
+    "effects_authorized": false
+  },
+  "privacy": {
+    "class": "PUBLIC_SYNTHETIC",
+    "personal_content_included": false
+  },
+  "receiver": {
+    "identity": null,
+    "pickup": "UNPROVEN",
+    "independent_ack": false
+  },
+  "next": "Qualify one local receiver and prove a source-bound pickup before claiming cross-session continuity.",
+  "challenge": "Can four surfaces preserve one identity while making omissions obvious?",
+  "recover": "Reload this file. No data is stored, fetched or sent by the page.",
+  "lanes": [
+    {
+      "id": "publishing",
+      "label": "Publishing",
+      "status": "UNCONNECTED",
+      "concern": "Delivery receipt missing"
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "status": "UNCONNECTED",
+      "concern": "Source currentness not qualified"
+    },
+    {
+      "id": "recovery",
+      "label": "Recovery",
+      "status": "UNCONNECTED",
+      "concern": "Independent receiver acknowledgment missing"
+    }
+  ],
+  "unknowns": [
+    "X2 live CoBar runtime",
+    "Current YouTube delivery metrics",
+    "Actual provider-session synchronization",
+    "Independent human usability"
+  ],
+  "nonclaims": [
+    "SYNTHETIC_NE_LIVE",
+    "RENDER_NE_RECEIVER_ACK",
+    "BROWSER_NE_OS_OVERLAY",
+    "UNKNOWN_NE_FALSE",
+    "PROJECTION_NE_AUTHORITY"
+  ]
+}
