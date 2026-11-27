@@ -40,7 +40,8 @@ class StrictPublicRedirect(request.HTTPRedirectHandler):
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         u = parse.urlsplit(newurl)
-        if u.scheme != "https" or u.hostname not in self.allowed:
+        if (u.scheme != "https" or u.hostname not in self.allowed or u.username is not None
+                or u.password is not None or u.port not in (None, 443)):
             raise ValueError("REDIRECT_OUTSIDE_HTTPS_HOST_ALLOWLIST")
         # Bound the external CoPolitic destination to one project root, not GitHub Pages generally.
         if u.hostname == "cocivium.github.io" and (u.path != "/CoPolitic-site/" or u.query or u.fragment):
@@ -128,7 +129,7 @@ def selftest():
     handler = StrictPublicRedirect(_ALLOWED_REDIRECT_HOSTS["copolitic_apex"])
     origin = request.Request("https://copolitic.org/")
     assert handler.redirect_request(origin, None, 302, "Found", {}, "https://cocivium.github.io/CoPolitic-site/") is not None
-    for disallowed in ("https://cocivium.github.io/other/", "http://cocivium.github.io/CoPolitic-site/", "https://cocivium.github.io/CoPolitic-site/?q=1"):
+    for disallowed in ("https://cocivium.github.io/other/", "http://cocivium.github.io/CoPolitic-site/", "https://cocivium.github.io/CoPolitic-site/?q=1", "https://cocivium.github.io:444/CoPolitic-site/", "https://user@cocivium.github.io/CoPolitic-site/", "https://user:secret@cocivium.github.io/CoPolitic-site/"):
         try:
             handler.redirect_request(origin, None, 302, "Found", {}, disallowed)
         except ValueError:
